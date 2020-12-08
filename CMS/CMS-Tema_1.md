@@ -55,9 +55,9 @@ Principales conceptos usados ampliamente en criptografía:
 - Raíces primitivas de un cuerpo
 - Exponenciación rápida
 
-### Aritmetica modular
+### Aritmética modular
 
-Conjunto de valores finito y "ciclico".
+Conjunto de valores finito y "cíclico".
 
 Módulo (equivalente al resto de la división):
 
@@ -65,20 +65,22 @@ Módulo (equivalente al resto de la división):
 - `20 mod 5 = 0`
 - `198 mod 27 = 9`
 
-Clases de equivalencia
+Clases de equivalencia:
+
 - Ejemplo módulo 4:
   - -3 equivale a 1 en módulo 4 (`-3 + 4 = 1`)
   - 10 equivale a 2 en módulo 4 (`10 mod 4 = 2`)
   - -9 equivale a 3 en módulo 4 (`-9 mod 4 = 3`)
 
-Operaciones en aritmética modular
+Operaciones en aritmética modular:
+
 - Suma
 - Resta
 - Multiplicación
 - Potencia
   - Ampliamente usado en criptografía de clave pública
   - Exponenciación rápida
-  - Criptografia de clave pública
+  - Criptografía de clave pública
 - La división no es posible
   - Uso de inversos multiplicativos
 
@@ -279,7 +281,7 @@ Se usan para tener funciones en un solo sentido
 ### Problema del Logaritmo discreto (PLD)
 
 - Utilizado en el algoritmo Diffie-Hellman
-- Facil hallar:
+- Fácil hallar:
   - `β = α^x mod p`
 - Calcular el logaritmo es fácil pero no en aritmética modular
   - `x = (log_α β) mod p`
