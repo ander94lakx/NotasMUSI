@@ -1,6 +1,20 @@
 # Links
 
-## Criptografía y Mecanismos de Seguridad
+## Análisis de Vulnerabilidades
+
+- [Hacer e-mail spoofing con SMTP sobre SSL/TLS en Gmail](https://www.elladodelmal.com/2016/02/hacer-e-mail-spoofing-con-smtp-sobre.html)
+- [Tipos de Escaneo](https://hackeruna.com/2016/10/25/tipos-de-escaneo/)
+- [Windows Exploit Suggester: Conoce qué vulnerabilidades y exploits afectan a tus sistemas Windows](https://www.flu-project.com/2016/09/windows-exploit-suggester-conoce-que.html)
+- [Introducción a los exploits: ese pequeño y poderoso mundo](https://www.flu-project.com/2013/08/introduccion-los-exploits-ese-pequeno-y_7086.html)
+- [QRLJacker - QRLJacking Exploitation Framework](https://github.com/OWASP/QRLJacking/tree/master/QRLJacker)
+- [💼 The Social-Engineer Toolkit (SET) 💼](https://github.com/trustedsec/social-engineer-toolkit)
+- [Offensive Security’s Exploit Database Archive](https://www.exploit-db.com/)
+
+## Seguridad en Redes
+
+- [IP Calculator / IP Subnetting](http://jodies.de/ipcalc)
+
+## Criptografía y Mecanismos de seguridad
 
 - [Crypto 101](https://www.crypto101.io/)
 - [Online calculator: Modular inverse of a matrix](https://planetcalc.com/3324/)
@@ -11,26 +25,14 @@
 - [Survey and taxonomy of botnet research through life-cycle | ACM Computing Surveys](https://dl.acm.org/doi/abs/10.1145/2501654.2501659)
 - [Explainer: What Is a Quantum Computer?](https://medium.com/mit-technology-review/explainer-what-is-a-quantum-computer-307ab5c27a6d)
 
-## Seguridad en Redes
-
-- [IP Calculator / IP Subnetting](http://jodies.de/ipcalc)
-
 ## Seguridad en Sistemas Operativos
 
+- [Empire](https://github.com/BC-SECURITY/Empire)
+- [Jugando con GPOs I - Cómo registrar cambios sobre GPOs en tu Directorio Activo](https://www.flu-project.com/2020/12/jugando-con-gpos-1.html)
 - [The day I ruled the world: Deceiving software... - J. Junquera & C. Cilleruelo [RootedCON2020-ES]](https://www.youtube.com/watch?v=wMRAtDDvuiU)
 - [Kerberos (I): ¿Cómo funciona Kerberos? - Teoría - Tarlogic - Ciberseguridad, Ciberinteligencia y RedTeam](https://www.tarlogic.com/blog/como-funciona-kerberos/)
 - [Mitigación de ataques Pass-the-Hash y Pass-the-Ticket](https://www.elladodelmal.com/2014/07/mitagacion-de-ataques-pass-hash-y-pass.html)
 - [ZERODIUM - How to Sell Your 0day Exploit to ZERODIUM](https://zerodium.com/program.html)
-
-## Análisis de Vulnerabilidades
-
-- [Hacer e-mail spoofing con SMTP sobre SSL/TLS en Gmail](https://www.elladodelmal.com/2016/02/hacer-e-mail-spoofing-con-smtp-sobre.html)
-- [Tipos de Escaneo](https://hackeruna.com/2016/10/25/tipos-de-escaneo/)
-- [Windows Exploit Suggester: Conoce qué vulnerabilidades y exploits afectan a tus sistemas Windows](https://www.flu-project.com/2016/09/windows-exploit-suggester-conoce-que.html)
-- [Introducción a los exploits: ese pequeño y poderoso mundo](https://www.flu-project.com/2013/08/introduccion-los-exploits-ese-pequeno-y_7086.html)
-- [QRLJacker - QRLJacking Exploitation Framework](https://github.com/OWASP/QRLJacking/tree/master/QRLJacker)
-- [💼 The Social-Engineer Toolkit (SET) 💼](https://github.com/trustedsec/social-engineer-toolkit)
-- [Offensive Security’s Exploit Database Archive](https://www.exploit-db.com/)
 
 ## Análisis forense
 
@@ -48,7 +50,7 @@
 - [Determine Windows version from offline image » SkullSecurity](https://blog.skullsecurity.org/2010/find-the-windows-version-offline)
 - [RFC 3227 - Guidelines for Evidence Collection and Archiving](https://tools.ietf.org/html/rfc3227)
 
-## Random / Off topic
+## Random / Off-topic
 
 - [CTFtime.org / All about CTF (Capture The Flag)](https://ctftime.org/)
-- [Hack The Box :: Penetration Testing Labs](https://www.hackthebox.eu/)
+- [Hack The Box :: Penetration Testing Labs](https://www.hackthebox.eu)
