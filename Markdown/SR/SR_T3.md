@@ -154,7 +154,31 @@ nueva conexión dentro de una existente)
 una conexión conocida
 
 Estados de una conexión TCP:
-![Estados conexión TCP](img/tcp-state.png)
+
+```
+|    Cliente    |     Firewall     |     Servidor     |
+|               |                  |                  |
+|     -------   |                  |                  |
+|     | SYN |------------+         |                  |
+|     -------   |        |         |                  |
+|               |        v         |                  |
+|               |     -------      |                  |
+|               |     | NEW |-----------------        |
+|               |     -------      |         |        |
+|               |                  |         v        |
+|               |                  |    -----------   |
+|               |                  |    | SYN/ACK |   |
+|               |                  |    -----------   |
+|               |                  |         |        |
+|               | ---------------  |         |        |
+|               | | ESTABLISHED |<-----------+        |           
+|               | --------------   |                  |
+|               |         |        |                  |
+|     -------   |         |        |                  |
+|     | ACK |<------------+        |                  |
+|     -------   |                  |                  |
+|               |                  |                  | 
+```
 
 ### Acciones
 
