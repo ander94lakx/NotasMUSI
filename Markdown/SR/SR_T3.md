@@ -46,12 +46,12 @@ red, etc.
 ## 3. `iptables`
 
 - Componente construido sobre Netfilter
-  - Interceptar y manipular paquetes en capas de red y de transporte.
+    - Interceptar y manipular paquetes en capas de red y de transporte.
 - Herramienta de firewall → Stateful firewall (cortafuego de estados) (seguimiento de las conexiones)
 - Formado por:
-  - Tablas → Contiene cadenas
-  - Cadenas → Contiene reglas de un mismo tipo
-  - Reglas → Requisitos y targets para los paquetes
+    - **Tablas** → Contiene cadenas
+    - **Cadenas** → Contiene reglas de un mismo tipo
+    - **Reglas** → Requisitos y targets para los paquetes
 
 ### Tablas
 
@@ -183,9 +183,9 @@ Estados de una conexión TCP:
 ### Acciones
 
 - Si un paquete cumple los requisitos de la regla:
-  - Se tendrá en cuenta la acción
+    - Se tendrá en cuenta la acción
 - Si no cumple ninguna regla
-  - Se tiene en cuenta la política
+    - Se tiene en cuenta la política
 de la cadena
 
 Acciones comunes:
@@ -215,38 +215,39 @@ Debe fundamentarse en:
 ![Arquitectura simple](img/arq-simp.png)
 
 - Es la más sencilla de todas
-  - Firewall para separa la red interna de internet
+    - Firewall para separa la red interna de internet
 - Problemas:
-  - Para exponer algún servicio hay que exponer la red interna
-  - Ataques laterales
+    - Para exponer algún servicio hay que exponer la red interna
+    - Ataques laterales
 
 ### DMZ
 
 Es una red local que se se ubica entre la red externa y la interna
+
 - Esta aislada de la red interna
 - Se usa para que ciertos servicios se puedan acceder desde el exterior sin tener que acceder a la red interna
 
 #### Arquitecturas con DMZ
 
-####  Multi-Homed host con DMZ (three-legged firewall)
+#### Multi-Homed host con DMZ (three-legged firewall)
 
 ![Multi-Homed host con DMZ (three-legged firewall)](img/mh-dmz.png)
 
 - Ventajas:
-  - Aísla los elementos que se quieren tener accesibles a través de la red exterior
-  - Un único cortafuegos para todo
+    - Aísla los elementos que se quieren tener accesibles a través de la red exterior
+    - Un único cortafuegos para todo
 - Contras:
-  - Dependiendo de la carga puede ser un cuello de botella
+    - Dependiendo de la carga puede ser un cuello de botella
 
 #### Defensa en profundidad (DMZ entre cortafuegos)
 
 ![Defensa en profundidad (DMZ entre cortafuegos)](img/dep.png)
 
 - Ventajas:
-  - Se pueden establecer controles iniciales comunes para la DMZ y la red interna y después establecer un cortafuegos a nivel de aplicación o con configuraciones mas complejas para la red interna
+    - Se pueden establecer controles iniciales comunes para la DMZ y la red interna y después establecer un cortafuegos a nivel de aplicación o con configuraciones mas complejas para la red interna
 - Contras:
-  - Requiere dos cortafuegos[^1]
-  - Si se vulnera el primer cortafuegos la DMZ queda completamente expuesta
+    - Requiere dos cortafuegos[^1]
+    - Si se vulnera el primer cortafuegos la DMZ queda completamente expuesta
 
 **NOTA:** Al usar dos cortafuegos es sumamente recomendable que sean de marcas o modelos diferentes, para evitar que ambos tengan las mismas vulnerabilidades
 
@@ -255,16 +256,16 @@ Es una red local que se se ubica entre la red externa y la interna
 ![Defensa en profundidad (cortafuegos inicial + three-legged firewall)](img/dep2.png)
 
 - Ventajas:
-  - Se puede establecer un primer cortafuegos de hardware y filtrar toda lo no necesario y dejar el resto de paquetes para un análisis mas complejo (como con el anterior)
-  - Si se vulnera el primer firewall no queda ninguna parte de la red expuesta a vulnerabilidades
+    - Se puede establecer un primer cortafuegos de hardware y filtrar toda lo no necesario y dejar el resto de paquetes para un análisis mas complejo (como con el anterior)
+    - Si se vulnera el primer firewall no queda ninguna parte de la red expuesta a vulnerabilidades
 - Contras:
-  - Requiere de dos cortafuegos [^1]
+    - Requiere de dos cortafuegos [^1]
 
 ####  Defensa en profundidad (alta disponibilidad)
 
 ![Defensa en profundidad (alta disponibilidad)](img/dep-ad.png)
 
 - Ventajas:
-  - Dos puntos de acceso a internet: si falla uno el otro sigue activo (aumentas disponibilidad)
+    - Dos puntos de acceso a internet: si falla uno el otro sigue activo (aumentas disponibilidad)
 - Contras:
-  - Aun teniendo dos firewalls con vulnerar uno se accedería a la red interna
+    - Aun teniendo dos firewalls con vulnerar uno se accedería a la red interna

@@ -19,7 +19,7 @@
         - En diciembre de 2018 se aprobó una “nueva LOPD” (**LOPDGDD**)
 
 
-### Conceptos básicos :red_cirle:
+### Conceptos básicos :red_circle:
 
 - **Datos personales**
     - Toda **información** sobre una **persona física identificada o identificable**
