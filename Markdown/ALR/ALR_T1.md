@@ -7,7 +7,7 @@
 - Contrato electrónico:
     - Contrato **llevado a cabo mediante elementos electrónicos** o informáticos cualquiera que sea el objeto (Ej. Viajes, música, películas etc...)
 
-### Características
+### 1.1. Características
 
 - **Elementos**: Régimen general: Objeto + Consentimiento + Causa
 - **Partes**: Desequilibrio técnico y económico. Habituales los contratos de adhesión.
@@ -21,7 +21,7 @@
 
 ## 2. Contratos sobre __bienes__ informáticos
 
-### Contratos sobre hardware
+### 2.1 Contratos sobre hardware
 
 #### A) Compraventa de hardware
 
@@ -66,7 +66,7 @@
     - Mejora la liquidez de la empresa
     - No pesa en el balance. Figura como pasivo extracontable
 
-### Contratos sobre Software
+### 2.2 Contratos sobre Software
 
 Los contratos más comunes sobre el software son las licencias.
 
