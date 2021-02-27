@@ -87,7 +87,7 @@ Autoría en:
 - No estarán protegidos:
     - Ideas y principios
 
-#### B) Duración (Art 26 TRLPI)
+#### B) Duración (Art 26 TRLPI) :red_circle:
 
 - Persona física:
     - Vida del autor + 70 años después del fallecimiento
