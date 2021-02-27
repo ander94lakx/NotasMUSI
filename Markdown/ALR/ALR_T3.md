@@ -392,6 +392,8 @@ Sanciones mas duras, *teóricamente*:
 
 ### Protección de datos en LATAM
 
+> :red_circle: Entran diferencias principales entre la proteccion de datos en LATAM y el modelo español/europeo
+
 #### Consideraciones generales
 
 1. Los países latinoamericanos siguen un **modelo más Europeo que de EEUU**
