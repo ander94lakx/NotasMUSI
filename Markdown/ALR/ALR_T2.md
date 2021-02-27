@@ -87,7 +87,7 @@ Autoría en:
 - No estarán protegidos:
     - Ideas y principios
 
-#### B) Duración (Art 26 TRLPI) :red_circle:
+#### :red_circle: B) Duración (Art 26 TRLPI)
 
 - Persona física:
     - Vida del autor + 70 años después del fallecimiento
@@ -153,7 +153,7 @@ Pasadas esas fechas pasan a **dominio público**
 
 ### Sistema Propiedad intelectual/Industrial
 
-#### Diferencias :red_circle:
+#### :red_circle: Diferencias
 
 |                               | **Propiedad Intelectual** (derechos de autor) | **Propiedad Industrial** (patente)                        |
 |-------------------------------|-----------------------------------------------|-----------------------------------------------------------|
@@ -162,7 +162,7 @@ Pasadas esas fechas pasan a **dominio público**
 | *Nacimiento de la protección* | Nace por la creación                          | Precisa la inscripción                                    |
 | *Requisitos de protección*    | Original (propia de su autor)                 | Novedad de la actividad invientiva, aplicación industrial |
 
-#### Inconvenientes :red_circle:
+#### :red_circle: Inconvenientes
 
 - Propiedad Intelectual:
     - Posibilidad de idénticos resultados
