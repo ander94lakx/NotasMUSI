@@ -121,7 +121,7 @@ Mecanismo para poder interrumpir la prestación de servicios o la retirada de co
             - Si saben que la información es ilícita y **actúan para borrar**/retirar los datos
     - PS que faciliten enlaces a contenidos o instrumentos de búsqueda
 
-### Comunicaciones comerciales por vía electrónica
+### :red_circle: Comunicaciones comerciales por vía electrónica
 
 - Dos sistemas:
     - "**opt in**" o "Sistema de inclusión"
