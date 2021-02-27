@@ -2,14 +2,12 @@
 
 ## 1. Introducción
 
-ANTES: Art. 42 de la Ley 11/2007 (Administración electrónica). A partir del
-mismo se aprobó el RD 3/2010 que regula el ENS.
-AHORA: La Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo que
-deroga:
-a) Ley 30/1992, de Régimen Jurídico de las Administraciones Públicas y del
-Procedimiento Administrativo Común.
-b) Ley 11/2007,de acceso electrónico de los ciudadanos a los Servicios
-Público
+- *ANTES*:
+    - Art. 42 de la Ley 11/2007 (Administración electrónica). A partir del mismo se aprobó el RD 3/2010 que regula el ENS.
+- *AHORA*: 
+    - La Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo que deroga:
+        1. Ley 30/1992, de Régimen Jurídico de las Administraciones Públicas y del Procedimiento Administrativo Común.
+         2. Ley 11/2007,de acceso electrónico de los ciudadanos a los Servicios Públicos
 
 Real Decreto 3/2010, de 8 de enero, por el que se regula el Esquema
 Nacional de Seguridad
@@ -28,21 +26,21 @@ confianza
 electrónicos** cuyos destinatarios sean **ciudadanos** que puedan relacionarse con las **AAPP**
 - Incluye aspectos técnicos, organizativos y medidas de protección
 
-### Principios (Art 4 a 10 del RD 3/2010 ENS) :red_circle:
+### :red_circle: Principios (Art 4 a 10 del RD 3/2010 ENS)
 
-- **SEGURIDAD INTEGRAL**
-- **GESTIÓN DE RIESGOS** (minimizar hasta niveles aceptables)
-- **PREVENCIÓN**, **REACCIÓN** y **RECUPERACIÓN**
-- **LÍNEAS DE DEFENSA**
-- **REEVALUACIÓN PERIÓDICA** de medidas de seguridad
-- FUNCIÓN DIFERENCIADA
-    - Responsable de la *_información_
-    - Responsable del _servicio_
-    - Responsable de la _seguridad_
+- **Seguridad Integral**
+- **Gestión de Riesgos** (minimizar hasta niveles aceptables)
+- **Prevención**, **Reacción** y **Recuperación**
+- **Lineas de Defensa**
+- **Reevaluación Periódica** de medidas de seguridad
+- **Función diferenciada**
+    - Responsable de la *información*
+    - Responsable del *servicio*
+    - Responsable de la *seguridad*
 
 ## 2. Ámbito de aplicación
 
-### Ámbito de aplicación **subjetivo** :red_circle:
+### :red_circle: Ámbito de aplicación **subjetivo**
 
 **SÍ** aplica: (Guía CCN STIC 830)
 
@@ -154,7 +152,7 @@ Artículo 29:
 - Continuidad de la actividad
 - Mejora continua del proceso de seguridad
 
-### Dimensiones de la seguridad en el ENS :red_circle:
+### :red_circle: Dimensiones de la seguridad en el ENS
 
 - **Disponibilidad**.
     - Garantizar que los usuario o sistemas autorizados tienen acceso a los mismos cuando lo requieren
@@ -179,14 +177,16 @@ en sus dimensiones correspondientes.
     - En la práctica, es habitual asociar sistemas de información con aplicaciones
 concretas que ofrecen funcionalidades a un área determinada
 
-### Relación ENS-RGPD
-**El RD 3/2010 que regula el ENS disponía que cumplir el ENS presupone cumplir con la protección de datos**, porque el ENS supone proteger la información de la administración pública y entre esa información  bviamente se encuentran datos de carácter personal.
+### :red_circle: Relación ENS-RGPD 
+
+- **El RD 3/2010 que regula el ENS disponía que cumplir el ENS presupone cumplir con la protección de datos**
+    - El ENS supone proteger la información de la administración pública y entre esa informació se encuentran datos de carácter personal
 
 ### Guias de implatacion ENS
 
 ## 6. ENS como proceso de mejora continua
 
-### Diferencias con ISO 27001
+### :red_circle: Diferencias con ISO 27001
 
 |                                         | **ISO 27001**                                                                                         | **ENS (RD 3/2010)**                                                                                       |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
