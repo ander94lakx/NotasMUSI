@@ -1,21 +1,16 @@
 # Tema 2: Gobierno de la seguridad de la información
 
-## 2.1 Objetivo
+## 2.1 Introducción
 
 Conocer en qué consiste:
 
 - El **gobierno corporativo de la seguridad de la información**
+    - Conceptos enfocados a la **estrategia de la seguridad** y cómo esta debe estar **alineada con los objetivos corporativos**
 - Los **principales estándares** (ISO38500, COBIT, ISO27001, ITIL)
+    - En especial la norma **ISO 27001**
 - Conceptos necesarios para gestionar la protección de la información
 
-## 2.2 Introducción
-
-- Los **conceptos más relevantes en la gestión** de la seguridad de la información
-    - Conceptos enfocados a la **estrategia de la seguridad** y cómo esta debe estar **alineada con los objetivos corporativos**
-
-Entender y conocer en detalle el estándar **ISO 27000** en lo relativo a su marco conceptual y terminología
-
-## 2.3 Gobierno de la seguridad de la información
+## 2.2 Gobierno de la seguridad de la información
 
 > El gobierno es el «conjunto de responsabilidades y prácticas ejercidas por la Dirección con la finalidad de brindar una **dirección estratégica**, garantizar que se logren los **objetivos**, determinar que los **riesgos** se administren en forma apropiada y verificar que los **recursos** de la empresa se utilicen con responsabilidad» (ISACA)
 
@@ -90,7 +85,7 @@ En la seguridad de la información, el gobierno de la seguridad trata de:
 - Estándares y buenas prácticas del sector
 - Las circunstancias tecnológicas y operativas
 
-## 2.4 El estándar ISO 27001
+## 2.3 El estándar ISO 27001
 
 - UNE-ISO/IEC 27001:2013 **"Sistemas de Gestión de la Seguridad de la Información (SGSI). Requisitos"**
 - Es el primero de la serie de estándares ISO 27000
@@ -160,7 +155,7 @@ Ciclo **PDCA**:
     - Asegurar que los procesos del sistema de gestión de seguridad de la información **se implanten y funcionen**
     - Informar a la alta dirección sobre el **desempeño del sistema** y de cualquier **oportunidad de mejora**
 
-## 2.5 Buenas prácticas de seguridad en la gestión de servicios de TI
+## 2.4 Buenas prácticas de seguridad en la gestión de servicios de TI
 
 Servicio de TI:
 > Servicio a uno o más clientes, por un proveedor de servicios de TI. Un servicio de TI se basa en el uso de tecnologías de la información y apoya el cliente en sus procesos de negocio. Un servicio de TI se compone de una combinación de personas, procesos y tecnología, y deben definirse en un acuerdo de nivel de servicio.
@@ -223,7 +218,7 @@ Elementos fundamentales en la gestión de servicios:
 | **Número de test de seguridad**                                          | Número de test de seguridad (y de procesos de formación) llevados a cabo                                        |
 | **Número de problemas identificados durante los test**                   | Número de problemas identificados en el transcurso de los test de seguridad                                     |
 
-## 2.6 El estándar ISO 22301
+## 2.5 El estándar ISO 22301
 
 - Origen en la norma Británica BS 25999
     - Destinada a **responder y proteger ante contingencias**
@@ -283,7 +278,7 @@ Elementos fundamentales en la gestión de servicios:
 5. Realización de las pruebas
     - Verificar la eficacia y eficiencia
 
-## 2.7 Modelos de madurez para la seguridad de la información
+## 2.6 Modelos de madurez para la seguridad de la información
 
 Sirve para situar y **evaluar el grado de desarrollo de una gestión** sistemática, predecible y optimizable
 
