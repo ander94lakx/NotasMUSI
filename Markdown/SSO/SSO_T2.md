@@ -437,3 +437,275 @@ Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.19.0-25-generic x86-64)
         ```bash
         sudo service ssh restart
         ```
+
+## 5.3 Otras medidas de seguridad: Syslog, SELinux, AppArmor, Grsecurity
+
+### Syslog
+
+Sistema estándar logs (local+red)
+► Casi todas las distribuciones de Linux lo tienen
+Permite registrar todo tipo de eventos
+Los mensajes tienen un formato estandarizad
+Los logs se guardan en `/varl/log`
+Servidor para almacenamiento y gestion de logs: `syslogd/syslog-ng/rsyslog`
+Para usarlo se arranca:
+`/etc/init.d/sysklogd`
+Configuración en:
+`/etc/syslog.conf`
+
+#### Niveles de log
+
+- `0`: Emergency
+- `1`: Alerts
+- `2`: Critical
+- `3`: Errors
+- `4`: Warnings
+- `5`: Notification
+- `6`: Information
+- `7`: Debug
+
+#### *Facilities*
+
+- Permiten categorizar los logs
+    - `auth`: Logs de autenticación
+    - `cron`: Logs provenientes del planificador
+    - `daemon`: Logs provenientes de los demonios
+    - `kern`: Logs del kernel
+    - `lpr`: Logs de impresoras
+    - `mail`: Logs del sistema de correo
+    - `user`: Logs provinientes de procesos de usuario
+    - `local0 - local7`: Definidos por el usuario
+    - `syslog`: Logs procedentes del propio syslog
+
+#### logrotate
+
+```bash
+# /etc/logrotate.conf:
+/var/log/syslog {
+    create 700 test test # Permisos y dueños fichero log
+    daily # Rotar el log diariamente
+    size 100M # Rotar el log si llega a 100MB
+    rotate 7 # Mantener histórico de 7 ficheros de log
+    compress # Comprimirlos con gzip
+}
+```
+
+#### Journalctl
+
+- El sistema de logs de systemd
+
+### SELinux
+
+- Es un módulo de seguridad propio del kernel de linux
+    - **Proteger** un sistema contra **malas configuraciones o aplicaciones comprometidas**
+- Define una política de seguridad que establece, por ejemplo, a qué ficheros puede acceder cada proceso (independientemente de sus permisos)
+- SELinux asigna etiquetas asociadas a usuarios y procesos:
+    - Nombre de Usuario
+    - Rol
+    - Tipo/Nivel/Dominio
+- Las restricciones vienen determinadas por las reglas establecidas en la política
+
+#### Discretionary Access Control (DAC)
+
+- Mecanismo de control de acceso común para sistemas UNIX
+    - Todo proceso se ejecuta bajo un usuario y un grupo:
+        - Por ejemplo: `apache` se ejecutará como `apache:apache`
+        - El proceso httpd tiene acceso a todos los ficheros y directorios a los que tiene acceso el usuario apache
+        - Esto se extiende a todos los scripts que se ejecuten bajo este demonio (php, cgi, ...)
+
+#### Mandatory Access Control (MAC) (SELinux)
+
+- Permite **definir permisos** para los procesos **mediante políticas**
+- Controla con qué partes del sistema puede interactuar cada proceso.
+    - Protege datos de acceso no autorizado
+    - Protege otros demonios de acceso no autorizado
+    - Protege puertos/sockets/ficheros
+    - Protege contra exploits
+    - Ayuda a prevenir escaladas de privilegios
+- **No es una solución mágica**
+    - Política correcta de firewall
+    - Monitorización del sistema y logs
+    - Actualizar el sistema / asegurar scripts expuestos al público
+
+#### Modos de SELinux
+
+- Tres modos
+    - **Enforcing**
+        - Alerta y aplica acciones establecidas si se viola alguna regla
+    - **Permissive**
+        - SELinux aplica las políticas pero no toma acciones, solo alerta
+    - **Disabled**
+- Se configura en `/etc/selinux/config`
+
+#### Políticas de SELinux
+
+- La configuración se puede encontrar en `/etc/selinux/config`
+    - *Targeted*
+        - Solo una serie de procesos se controlan con SELinux
+        - Es la política por defecto
+        - Es un control eficaz
+        - Para el resto solo se aplica la politica estándar de linux (DAC)
+    - *Multinivel (MLS/MCS)*:
+        - Control estricto (insfraestructuras críticas, etc.)
+
+### AppArmor
+
+- Programa de seguridad para Linux
+- Fue creado como una alternativa mas sencilla que SELinux
+
+- Perfiles de AppArmor
+    - Ficheros de texto en `/etc/apparmor.d` con los nombres de los binarios
+    - Dos tipos de reglas
+        - *path*:
+            - A que ficheros puede acceder una aplicación
+        . *capability entries*:
+            - Que privilegios puede usar un proceso
+
+    - Dos modos de ejecución:
+        - *complain*: solo logging, no toma acciones.
+        - *enforce*: logging + tomar acciones
+
+### Grsecurity
+
+- Conjunto de parches con mejoras de seguridad para el kernel de Linux
+    - Sistema de control de acceso basado en Roles.
+        - Se definen un conjunto de roles a los que les asigna los privilegios mínimos necesarios para desempeñarlos
+- **Restringe la utilidad de chroot** para prevenir escaladas de privilegios
+- Viene con PAX:
+    - Pila no ejecutable
+    - Espacio de memoria de aplicación solo lectura
+    - **ASLR** (*Address Space Layout Randomization*)
+- Para **evitar *buffer overflows***
+
+## 5.4 Securizar el acceso a red: iptables, SIEM, UTM…
+
+- Bloquear hosts permitidos y denegados
+    - `/etc/hosts.allow` y `/etc/hosts.deny`
+- Cortafuegos (iptables) y otras medidas
+
+### IPTables (Netfilter)
+
+- IPtables: componente de netfilter
+    - Cortafuegos de estado
+    - iptables = Reglas + Cadenas + Tablas
+        - Se define mediante reglas que se evalúan secuencialmente
+        - Las reglas se agrupan en cadenas
+        - A su vez las cadenas se agrupan en tablas asociadas a diferentes tipos de procesamiento de paquetes
+
+#### Tablas
+
+- `filter` → Filtra paquetes (es la que se usa por defecto)
+- `nat` → NAT paquetes
+- `mangle` → Modifica paquetes (por ejemplo su TTL)
+- `raw` → Permite deshabilitar el connection tracking
+- `security` → Usado por SELinux
+
+#### Cadenas
+
+- Varían en funció de la tabla
+    - `INPUT`: paquetes de entrada
+    - `OUTPUT`: paquetes de salida
+    - `FORWARD`: paquetes que no tienen como origen ni destino el cortafuegos
+    - `PREROUTING`: enrutar paquetes de entrada de NAT
+    - `POSTROUTING`: erutar paquetes de salidad de NAT
+
+#### Reglas
+
+```bash
+iptables –t <table> –{A|I|R|D} <chain> <match> –j <target>
+```
+
+Objetivos de reglas `(<target>`):
+
+- `ACCEPT`: Se acepta el paquete
+- `DROP`: Se descarta el paquete
+- `REJECT`: Igual que 'DROP', pero envía un paquete de error al origen
+- `LOG`: Loguear el paquete
+- `QUEUE`: Este destino hace que el paquete sea enviado a una cola de recepción.
+- `DNAT`: Se reescribe la dirección y/o puertos destino del paquete
+- `SNAT`: Se reescribe la dirección y/o puertos origen del paquete con una IP estática
+- `MASQUERADE`: Similar SNAT pero basado en la IP (e.g. dinámica) de la interfaz de salida
+- `<chain>`: Salta a esa cadena y empieza a procesar sus reglas
+- `RETURN` (retorno): El paquete deja de recorrer esa cadena y vuelve a la anterior
+
+### UTM
+
+- *Unified Threat Management*
+- Un producto todo-en-uno que incluye múltiples soluciones de seguridad:
+    - Firewall de red
+    - NIDS
+    - Antivirus
+    - Anti-spam
+    - VPN
+    - Filtro de contenido
+    - Balanceador de carga
+    - Control de acceso basado en identidad
+    - QoS
+    - Prevención de pérdida de datos (DLP)
+    - Emisor de informes
+    - ...
+- Ejemplo: *pfSense*
+
+### SIEM
+
+- *Security Information and Event Management*
+Software que proporciona un **análisis en tiempo real** de las **alertas de seguridad generadas** por los dispositivos hardware y las aplicaciones que hay en una red
+– Ejemplo.: *OSSIM*
+
+## 5.5 Proxies e IDS
+
+### Proxy
+
+- Serivdor intermediarioentre peticiones
+- Permite
+    - Control de acceso
+    - Registro del trafico
+    - Restriccion de contendios
+    - Mejora de rendimiento
+    - Anonimato
+    - ...
+- Ventajas
+    - Tener comunicaciones bajo control
+    - Fácil denegar o permitir el acceso a subredes y equipos
+    - Caché comun (acelera acceso a webs que suelen usar varios usuarios)
+    - Es facil crear *blacklists*
+    - Generacion de informes de trafico
+    - El proxy hace de barrera
+- Desventajas
+    - Es necesrio configurarlo en cada aplicación
+    - Si falla se corta la conexion a internet (proxy de respaldo)
+    - Requiere mantenimiento
+    - Privacidad y seguridad (todo pasa por el proxy)
+
+#### Squid
+
+- Uno de los proxies más famosos para linux
+- Se configura en `/etc/squid/squid.conf`
+- Listas de control de acceso donde se identifica a que elementos se aplica y los filtros
+
+    ```bash
+    acl <nombre_lista> <tipo> <elemento_lista>
+    ```
+
+- Parámetros
+    - `http_port`: Puerto del proxy
+    - `cache_dir`: Directorio donde almacenará la cache
+    - `cache_dir` aufs /var/spool/squid 2048 16 256
+    - `cache_replacement_policy`: Política de reemplazo de objetos en caché
+    - `maximum_object_size`: Tamaño máximo del objeto que va a ser almacenado en cache
+    - `cache_mem`: Memoria de objetos en transito
+
+### IDS
+
+- Programas capaces de **detectar accesos no autorizados** y peticiones maliciosas mediante patrones o heurísticas
+- Tipos de IDS (fuentes de alertas):
+    - **Host-based (HIDS)**
+        - Se ejecuta en el propio quipo final
+        - Sirve para poder detectar intrusiones en el sistema final y recoger información sobre ellas
+        - Ejemplo: *OSSEC*
+    - **Network-based (NIDS)**
+        - Captura tráfico de una interfaz de red (m
+            - Modo online (inline)
+            - Tipo offline (network tap)
+        - Compara las capturas con firmas preestablecidas
+        - Ejemplo: *Snort*
