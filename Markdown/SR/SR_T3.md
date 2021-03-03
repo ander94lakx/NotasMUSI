@@ -261,7 +261,7 @@ Es una red local que se se ubica entre la red externa y la interna
 - Contras:
     - Requiere de dos cortafuegos [^1]
 
-####  Defensa en profundidad (alta disponibilidad)
+#### Defensa en profundidad (alta disponibilidad)
 
 ![Defensa en profundidad (alta disponibilidad)](img/dep-ad.png)
 
