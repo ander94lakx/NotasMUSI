@@ -323,7 +323,7 @@ de una comunicación
 3. Presentación del ticket al servidor final:
     - TGS → Servicio
 
-Mas info: <https://www.tarlogic.com/blog/como-funciona-kerberos/>
+Más info: <https://www.tarlogic.com/blog/como-funciona-kerberos/>
 
 ### Ataques a contraseñas en Windows
 
@@ -343,7 +343,7 @@ Mas info: <https://www.tarlogic.com/blog/como-funciona-kerberos/>
 
 - *Overpass-the-hash*
 - *Pass-the-ticket*
-- En caso de que el atacante tenga acceso de administrador en una maquina:
+- En caso de que el atacante tenga acceso de administrador en una máquina:
     - *Golden/Silver Ticket*
 - Kerberoasting
     - Intentar obtener la contraseña de un servicio a partir de su TGS

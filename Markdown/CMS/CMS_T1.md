@@ -272,9 +272,9 @@ Se usan para tener funciones en un solo sentido
 - Se basa en que es fácil multiplicar dos primos entre sí
     - **pero** o muy difícil encontrar los factores primos que al multiplicarlos entre sí den el producto
 - `p · q = n -> 113 · 113 = 14803`
-    - Con números pequeños es fácil pero con números mas grandes se complica
+    - Con números pequeños es fácil pero con números más grandes se complica
         - No hay un método para hacerlo, solo fuerza bruta
-        - el tiempo necesario para obtener los factores crece de manea exponencial cuanto mas grande sean los factores
+        - el tiempo necesario para obtener los factores crece de manea exponencial cuanto más grande sean los factores
             - En la practica es imposible romperlo
                 - La computación cuántica puede que haga que eso cambie
 

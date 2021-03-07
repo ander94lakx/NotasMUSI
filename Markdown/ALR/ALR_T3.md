@@ -122,11 +122,11 @@
 
 #### C) Licitud del tratamiento (legitimación)
 
-El consentimiento deja de ser la regla general para ser una de las causas posibles. Causas:
+**El consentimiento deja de ser la regla general para ser una de las causas posibles**. Causas:
 
 - **Ejecución de un contrato**
 - Cumplimiento del deber de una **obligación legal** (norma con rango de Ley) 
-- Misión en interés público o ejercicio de poderes públicos (norma con rango de Ley)
+- Misión en **interés público** o ejercicio de poderes públicos (norma con rango de Ley)
 - **Interés legítimo** de responsable o tercero (interés y buena práctica ponderación)
 - **Consentimiento** del interesado
 - Excepcionalmente en supuestos de **urgencias**
@@ -239,7 +239,7 @@ Se aplica a:
     - Las medidas que debía aplicarse estaban basadas exclusivamente en los tipos de datos que se trataban
 - Ahora:
     - Con el **RGPD** los **responsables y los encargados establecen las medidas** técnicas y organizativas para garantizar la **seguridad** 
-    - Se tienen en cuenta mas medidas a parte de los tipos de datos
+    - Se tienen en cuenta más medidas a parte de los tipos de datos
         - Costes
         - Naturaleza, alcance y fines de tratamiento
         - Riesgos para los derechos y libertades
@@ -370,7 +370,7 @@ los datos, incluyendo las consultas previas
 
 #### L) Régimen sancionador (Art 58.2 RGPD)
 
-Sanciones mas duras, *teóricamente*:
+Sanciones más duras, *teóricamente*:
 
 - Multas
     - En España:

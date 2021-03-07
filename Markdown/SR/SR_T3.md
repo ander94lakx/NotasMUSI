@@ -76,7 +76,7 @@ No todas las cadenas existen en todas las tablas
 
 ### Ruta de un paquete en `iptables`
 
-```
+```text
                                XXXXXXXXXXXXXXXXXX
                                XXX     Red    XXX
                                XXXXXXXXXXXXXXXXXX
@@ -155,7 +155,7 @@ una conexión conocida
 
 Estados de una conexión TCP:
 
-```
+```text
 |    Cliente    |     Firewall     |     Servidor     |
 |               |                  |                  |
 |     -------   |                  |                  |
@@ -244,7 +244,7 @@ Es una red local que se se ubica entre la red externa y la interna
 ![Defensa en profundidad (DMZ entre cortafuegos)](img/dep.png)
 
 - Ventajas:
-    - Se pueden establecer controles iniciales comunes para la DMZ y la red interna y después establecer un cortafuegos a nivel de aplicación o con configuraciones mas complejas para la red interna
+    - Se pueden establecer controles iniciales comunes para la DMZ y la red interna y después establecer un cortafuegos a nivel de aplicación o con configuraciones más complejas para la red interna
 - Contras:
     - Requiere dos cortafuegos[^1]
     - Si se vulnera el primer cortafuegos la DMZ queda completamente expuesta
@@ -256,7 +256,7 @@ Es una red local que se se ubica entre la red externa y la interna
 ![Defensa en profundidad (cortafuegos inicial + three-legged firewall)](img/dep2.png)
 
 - Ventajas:
-    - Se puede establecer un primer cortafuegos de hardware y filtrar toda lo no necesario y dejar el resto de paquetes para un análisis mas complejo (como con el anterior)
+    - Se puede establecer un primer cortafuegos de hardware y filtrar toda lo no necesario y dejar el resto de paquetes para un análisis más complejo (como con el anterior)
     - Si se vulnera el primer firewall no queda ninguna parte de la red expuesta a vulnerabilidades
 - Contras:
     - Requiere de dos cortafuegos [^1]

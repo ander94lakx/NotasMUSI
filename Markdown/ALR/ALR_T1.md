@@ -59,7 +59,7 @@
 #### Comparativa Compra/Leasing/Renting
 
 - El **leasing y el renting** son figuras contractuales que se usan normalmente para suministro de **empresas**
-- El contrato de **compraventa** suele ser mas común para **particulares**
+- El contrato de **compraventa** suele ser más común para **particulares**
 
 - Ventajas Renting/Leasing
     - Las cuotas son gastos fiscales reducibles
@@ -98,7 +98,7 @@ Los contratos más comunes sobre el software son las licencias.
 - Ejemplos más comunes
     - GPL
     - Lesser-GPL (LGPL)
-    - Mas info: [Choose a License](https://choosealicense.com/licenses/)
+    - Más info: [Choose a License](https://choosealicense.com/licenses/)
 
 #### C) Licencias del modelo de negocio software de código abierto
 

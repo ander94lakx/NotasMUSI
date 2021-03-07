@@ -198,7 +198,7 @@ concretas que ofrecen funcionalidades a un área determinada
 
 ### Fases del ENS
 
-1. Fase Plan de Adecuación **(PLAN)**
+1. Fase Plan de Adecuación (**PLAN**)
     - Identificación de **roles y responsabilidades**
 
         - Responsable de:
@@ -265,7 +265,7 @@ concretas que ofrecen funcionalidades a un área determinada
             - Valoración económica
             - Estado de implantación al elaborar PMS
 
-2. Fase de Implantación del SGSI **(DO)**
+2. Fase de Implantación del SGSI (**DO**)
 
     - Implementar, mantener y evolucionar el plan de mejora de la seguridad aprobado
     - Definir el modo de medir la eficacia de los controles
@@ -274,7 +274,7 @@ concretas que ofrecen funcionalidades a un área determinada
     - **Operar** todo aquello relevante y que debe ser registrado
     - **Monitorizar** permitiendo una detección tremprana de eventos de seguridad y una respuesta ante incidentes de seguridad
 
-3. Revisión **(CHECK)** y Mejora Continua **(ACT)**
+3. Revisión (**CHECK**) y Mejora Continua (**ACT**)
 
     - Verificación y control del SGSI-ENS
     - Auditoría

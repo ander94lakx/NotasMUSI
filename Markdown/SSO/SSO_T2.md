@@ -95,7 +95,7 @@ Es recomendable utilizar el modo live para hacer cualquier operación previa sob
     - `/var`: ficheros dinámicos, como buffers, logs, ...
 
 Conviene separar en particiones ciertos directorios del sistema
-    - Lo mas común es separar `/boot` y `/home` del resto del fs:
+    - Lo más común es separar `/boot` y `/home` del resto del fs:
         - Se separa el sector de arranque del resto para securizarlo
         - Se separa `/home` del resto para tener por separado los archivos personales
     - Añadir una partición `swap` para paginar memoria
@@ -185,8 +185,8 @@ Actualizar los paquetes es fundamental. Cada distro tiene sus métodos.
 
 #### *Hardening*: Usuarios
 
-- Gestionar los usuarios que hay en el sistema para evitar que tenga privilegios de mas o usuarios no necesarios
-- Hay muchos mas usuarios de los creados "manualmente"
+- Gestionar los usuarios que hay en el sistema para evitar que tenga privilegios de más o usuarios no necesarios
+- Hay muchos más usuarios de los creados "manualmente"
     - Hay programas o servicios que tienen sus propios usuarios y grupos específicos que se son creados automáticamente por ellos
 
 - Comandos básicos
@@ -384,10 +384,10 @@ Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.19.0-25-generic x86-64)
 
 ### Acceso SSH con claves RSA
 
-- Metodo mas seguro que la autenticación por contraseña
+- Metodo más seguro que la autenticación por contraseña
     - Impide ataques por fuerza bruta
     - Limita las máquinas que pueden conectarse
-    - Es mucho mas facil robar una contraseña que una clave RSA
+    - Es mucho más facil robar una contraseña que una clave RSA
         - Las claves RSA se almacenan en las máquinas cliente cifradas con contraseña
 
 - Pasos para configurar acceso a SSH con claves RSA:
@@ -551,7 +551,7 @@ Configuración en:
 ### AppArmor
 
 - Programa de seguridad para Linux
-- Fue creado como una alternativa mas sencilla que SELinux
+- Fue creado como una alternativa más sencilla que SELinux
 
 - Perfiles de AppArmor
     - Ficheros de texto en `/etc/apparmor.d` con los nombres de los binarios

@@ -1,6 +1,6 @@
-# Tema 2: Seguridad en otros Sistemas Operativos
+# Tema 3: Seguridad en otros Sistemas Operativos
 
-## 2.1 Seguridad en macOS
+## 3.1 Seguridad en macOS
 
 ### Autenticación local & Open Directory
 
@@ -120,3 +120,140 @@
     - *Notice* (Nivel 5)
     - *Info* (Nivel 6)
     - *Debug* (Nivel 7)
+
+## 3.2 Seguridad en Android
+
+- Los dispositivos móviles son un punto de ataque en auge en los últimos años
+- Android es el SO móvil más extendido
+
+### ¿Por qué es importante la seguridad en Android?
+
+- Muy presente en el **mundo empresarial**
+    - Acceso a **información sensible**
+    - Ganando terreno a servicios empresariales…
+- Muy presente en la vida personal de muchas personas
+    - Ventana directa a nuestra **privacidad**:
+        - Multimedia
+        - Conversaciones privadas
+        - Emails
+        - Cuentas bancarias
+        - Localización
+        - Gustos
+
+### Arquitectura de Android
+
+![Arquitectura de Android](img/android-stack.png)
+
+- Android aplica el **principio de mínimo privilegio**
+    - Cada capa solo puede acceder a sus propios componentes
+    - Las acciones que puede realizar cada aplicación están limitadas
+- Tiene un **sistema de permisos** a nivel de API
+    - Cada aplicación define que permisos necesita y los solicita al sistema
+    - Los permisos están estandarizados en el sistema
+
+### Pilares de seguridad en Android
+
+1. **Aislamiento de aplicaciones** y **control de permisos**
+    - Controlar qué pueden y no pueden hacer las aplicaciones en el dispositivo
+    - De qué maneras puede afectar una aplicación maliciosa al resto del sistema
+2. **Procedencia** de aplicaciones
+    - ¿Se puede confiar en el autor de la aplicación?
+    - ¿Las aplicaciones son resistentes a modificaciones mal intencionadas?
+3. **Cifrado de datos**
+    - Si perdemos/nos roban/atacan la terminal, ¿están seguros nuestros datos?
+4. **Control de acceso físico**
+    - Como proteger la terminal de usos no autorizados
+
+
+#### Aislamiento de aplicaciones
+
+- Por defecto todas las apps se ejecutan en su propio entorno de **Sandbox**
+    - El modelo de seguridad está basado en el de UNIX
+        - A cada app (cuando se instala) se le asigna un UID y un GID únicos y asocia todos los ficheros a ellos
+            - Asi, solo esa aplicación tiene acceso a ellos
+- Los servicios del Application Framework se ejecutan en un proceso separado (`system_server`)
+
+- El **Kernel** de Linux es el **encargado de aislar** las aplicaciones (sandboxing).
+- La máquina **Dalvik no es una limitación** en cuanto a seguridad:
+    - No está enterado de los mecanismos de aislamiento
+    - No hay diferencia entre programar aplicaciones de manera nativa y en Java
+    - Habilita el uso de JNI (No como JavaME)
+
+#### Permisos
+
+- Se definen en **`AndroidManifest.xml`**
+    - Todas las aplicaciones tienen ese fichero
+- Ejemplos
+    - **`ACCESS_FINE_LOCATION`**: Acceso a la localización exacta (GPS + LTE + WI-FI, ...)
+    - **`ACCESS_WIFI_STATE`**: Acceder a información sobre las redes Wifi
+    - **`CALL_PHONE`**: Permiso para poder iniciar una llamada sin pasar por el marcador
+    - **`CAMERA`**:
+    - **`READ_LOGS`**: Permisos para leer los registros de llamadas
+    - **`READ_SMS`**:
+    - **`SEND_SMS`**:
+    - **`VIBRATE`**:
+    - **`BRICK`**: Permiso para deshabilitar el dispositivo
+    - (listado completo: <https://developer.android.com/reference/android/Manifest.permission.html>)
+- Desde Android 6 se pueden controlar individualmente
+- En las últimas versiones de Android se pueden dar permisos solo en *foreground*
+
+#### Procedencia de Aplicaciones
+
+- **Todos** los `.apk` que se suben a Google Play **deben estar firmados**
+    - PROBLEMA: Pueden ser certificados autofirmados
+    - **Para actualizaciones** es buena medida
+        - Garantiza que la actualización la ha hecho el mismo autor
+- Google Play establece una tasa y datos de tarjeta de crédito para subir aplicaciones
+    - Permite **rastrear al culpable** en caso de que las aplicación sea mailiciosa
+    - Solo es una medida "**disuasoria**"
+- Si se habilita la instalación de `.apk` desde fuentes externas se pierde esa protección
+
+#### Comunicación entre aplicaciones
+
+- Las aplicaciones se ejecutan cada una en su **sandbox**
+- Para comunicarse entre ellas existen diferentes mecanismos en Android_
+    - ***Bundles***: para mandar información (como serializar objetos)
+    - ***Binders***: para obtener referencias a otros servicios (datos +  invocar métodos)
+    - ***Intents***: para invocar componentes (*Activities*)
+
+#### Protección d ememoria
+
+Mecanismos para impedir accesos no debidos a memoria (problemas que puedan surgir de *rootear*):
+
+- *NoExecute*: para impedir ejecución de codigo en la pila o el heap
+- *ProPolice* / *safe_iop*: evitar overflows
+- *calloc()*: integer overflows
+- ***ASLR***: randomizar direcciones para evitar *buffer overflows*
+
+#### Cifrado
+
+- Por defecto, Android cifra la unidad del sistema
+- AES128 + CBC + ESSIV:SHA256
+- Basado en **dm-crypt* del kernel
+- **No es infalible**
+    - **Keylogger** en el **sector de arranque** (si no esta cifrado)
+    - Ataques **Cold Boot**
+
+### "Rootear"
+
+- *Rootear* tiene ventajas
+    - Instalar ROMs
+    - Quitar bloatware
+    - Corregir fallos
+    - Mantener terminales antiguos
+    - ...
+- Antes tenía más sentido
+- Ahora tiene **más desventajas que ventajas**
+    - Vulnerabilidades a nivel de kernel
+    - Vulnerabilidades de diferentes tipos
+    - Si una app explota una de esas vulnerabilidades ***you've been fucked***
+
+### Recomendaciones
+
+- **Actualizar** sistema operativo
+- **No** descargar aplicaciones de **markets desconocidos**
+- Cuidado con las actualizaciones de las apps
+- **No rootear** el teléfono
+- **Cifrar** el dispositivo
+- Deshabilitar servicios cuando no se usen
+- Desinstalar apps cuando no se usen
