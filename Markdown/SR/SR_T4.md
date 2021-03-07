@@ -278,14 +278,14 @@ alert icmp any any -> any any (msg:"ICMP Packet" ; sid:477; rev:3; dsize: > 200;
 ### Tipos de señuelos
 
 - **Baja interacción**
-    - [:heavy_plus_sign:] **Simulan** servicios, aplicaciones y sistemas operativos
-    - [:heavy_plus_sign:] Suponen un **riesgo bajo y son fáciles** de implantar y mantener
-    - [:heavy_minus_sign:] Son fácilmente detectables por atacantes con experiencia
-    - [-] Capturan una cantidad de información limitada
+    - :heavy_plus_sign: **Simulan** servicios, aplicaciones y sistemas operativos
+    - :heavy_plus_sign: Suponen un **riesgo bajo y son fáciles** de implantar y mantener
+    - :heavy_minus_sign: Son fácilmente detectables por atacantes con experiencia
+    - :heavy_minus_sign: Capturan una cantidad de información limitada
 - **Alta interacción**
-    - [:heavy_plus_sign:/:heavy_minus_sign:] Servicios, aplicaciones y SO **reales**
-    - [:heavy_plus_sign:] Capturan **mucha información**
-    - [:heavy_minus_sign:] Suponen un **alto riesgo**
+    - :heavy_plus_sign: / :heavy_minus_sign: Servicios, aplicaciones y SO **reales**
+    - :heavy_plus_sign: Capturan **mucha información**
+    - :heavy_minus_sign: Suponen un **alto riesgo**
 
 - Ejemplos
     - MHN (Modern Honey Network)
