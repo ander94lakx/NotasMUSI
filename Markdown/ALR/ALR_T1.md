@@ -149,7 +149,7 @@ Puntos a rmarcar:
 
 2. Hay cláusulas **obligatorias y otras convenientes**
 
-    - *Obligatorias*: Por ejemplo, objeto y precio o en algunos contratos una cláusula de tratamiento de datos por terceros (proveedor) 
+    - *Obligatorias*: Por ejemplo, objeto y precio o en algunos contratos una cláusula de tratamiento de datos por terceros (proveedor)
     - *Convenientes*: Estarás estarán en función del contrato. Por ejemplo la cláusula de penalización en contratos de desarrollo
 
 3. La **cláusula de responsabilidad** es importantes siempre Pero hay que distinguir entre:

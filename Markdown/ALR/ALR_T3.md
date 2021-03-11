@@ -9,7 +9,6 @@
     - Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales
 - Instrucciones de la AEPD
 
-
 ## 2. Objeto y aplicación
 
 - **homogeneizar la normativa europea sobre protección de datos**
@@ -17,7 +16,6 @@
         - Efecto directo: no requiere trasposición al derecho interno
     - Es exigible desde el 25 de mayo de 2018.
         - En diciembre de 2018 se aprobó una “nueva LOPD” (**LOPDGDD**)
-
 
 ### Conceptos básicos :red_circle:
 
@@ -125,7 +123,7 @@
 **El consentimiento deja de ser la regla general para ser una de las causas posibles**. Causas:
 
 - **Ejecución de un contrato**
-- Cumplimiento del deber de una **obligación legal** (norma con rango de Ley) 
+- Cumplimiento del deber de una **obligación legal** (norma con rango de Ley)
 - Misión en **interés público** o ejercicio de poderes públicos (norma con rango de Ley)
 - **Interés legítimo** de responsable o tercero (interés y buena práctica ponderación)
 - **Consentimiento** del interesado
@@ -167,6 +165,7 @@ Es una forma avanzada del derecho de Acceso (**A**RCO):
 ##### Derecho de supresión (derecho al olvido)
 
 Consecuencia de la aplicación de los derechos de Cancelación y Oposición (AR**CO**) en el ámbito on-line:
+
 - **Derecho a solicitar que sus datos personales sean borrados de internet**
 - Limites:
     - No puede "pisar" otros derechos fundamentales
@@ -238,7 +237,7 @@ Se aplica a:
     - La **LOPD determinaba con detalle las medidas de seguridad** que debían aplicarse
     - Las medidas que debía aplicarse estaban basadas exclusivamente en los tipos de datos que se trataban
 - Ahora:
-    - Con el **RGPD** los **responsables y los encargados establecen las medidas** técnicas y organizativas para garantizar la **seguridad** 
+    - Con el **RGPD** los **responsables y los encargados establecen las medidas** técnicas y organizativas para garantizar la **seguridad**
     - Se tienen en cuenta más medidas a parte de los tipos de datos
         - Costes
         - Naturaleza, alcance y fines de tratamiento
@@ -253,6 +252,7 @@ Incluir principios de protección de datos a lo largo de toda la vida del tratam
 - Finalmente se suprime o finaliza el tratamiento
 
 Teniendo en cuenta:
+
 - Estado de la técnica
 - Coste
 - Naturaleza del tratamiento
@@ -272,7 +272,7 @@ Aplicar medidas técnicas y organizativas apropiadas para que:
 *Definición*:
 
 - Toda violación de la seguridad que ocasione:
-    - Destrucción, pérdida o alteración accidental o ilícita 
+    - Destrucción, pérdida o alteración accidental o ilícita
     - Comunicación o acceso no autorizados
 - A:
     - Datos personales transmitidos, conservados o tratados de otra forma
@@ -392,7 +392,7 @@ Sanciones más duras, *teóricamente*:
 
 ### Protección de datos en LATAM
 
-> :red_circle: Entran diferencias principales entre la proteccion de datos en LATAM y el modelo español/europeo
+> :red_circle: Entran diferencias principales entre la protección de datos en LATAM y el modelo español/europeo
 
 #### Consideraciones generales
 
@@ -414,4 +414,3 @@ Europa (Por ejemplo que España)
 9. En general donde se desarrolla la legislación se crean autoridades de protección de datos
 10. Como vemos al igual que en España existe legislación sectorial además de la general en protección de datos
 11. Algunos países han **adaptado sus legislaciones** siendo más **similares al RGPD** y otros están en proceso
-

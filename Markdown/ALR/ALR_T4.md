@@ -4,10 +4,10 @@
 
 - *ANTES*:
     - Art. 42 de la Ley 11/2007 (Administración electrónica). A partir del mismo se aprobó el RD 3/2010 que regula el ENS.
-- *AHORA*: 
+- *AHORA*:
     - La Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo que deroga:
         1. Ley 30/1992, de Régimen Jurídico de las Administraciones Públicas y del Procedimiento Administrativo Común.
-         2. Ley 11/2007,de acceso electrónico de los ciudadanos a los Servicios Públicos
+        2. Ley 11/2007,de acceso electrónico de los ciudadanos a los Servicios Públicos
 
 Real Decreto 3/2010, de 8 de enero, por el que se regula el Esquema
 Nacional de Seguridad
@@ -86,7 +86,7 @@ Afecta a todos los **servicios** que se prestan a través de medios **electróni
 - Artículo 15:
     - Exigencia de **profesionales cualificados** seleccionados de forma objetiva
 - Artículo 18:
-    - La utilización, (en funcion del nivel de seguridad necesario) de productos que **tengan certificada la funcionalidad de seguridad**
+    - La utilización, (en función del nivel de seguridad necesario) de productos que **tengan certificada la funcionalidad de seguridad**
 - Artículo 19:
     - Se elimina el hecho de que los sistemas no puedan alcanzar ninguna otra funcionalidad
 - Artículo 24:
@@ -96,7 +96,7 @@ Afecta a todos los **servicios** que se prestan a través de medios **electróni
     - La declaración de aplicabilidad deberá estar firmada por el **responsable de seguridad**
         - Las medidas a implantar  podrán ser pos otras compensatorias si se justifica que protegen igual o mejor de los riesgos sobre los activos
 Artículo 29:
-    - Se añade el concepto de Instrucciones técnicas de seguridad 
+    - Se añade el concepto de Instrucciones técnicas de seguridad
         - De obligado cumplimiento
 - Artículo 35:
     - El CCN articulará los procedimientos necesarios para la recopilación y consolidación de la información referente al **Informe de estado de la seguridad**
@@ -112,7 +112,7 @@ Artículo 29:
 - Entrada en vigor:
     - 19 de julio de 2016
 
-### Objectivos
+### Objetivos
 
 - Objetivo general:
     - Integrar requisitos mínimos comunes en materia de:
@@ -177,10 +177,10 @@ en sus dimensiones correspondientes.
     - En la práctica, es habitual asociar sistemas de información con aplicaciones
 concretas que ofrecen funcionalidades a un área determinada
 
-### :red_circle: Relación ENS-RGPD 
+### :red_circle: Relación ENS-RGPD
 
 - **El RD 3/2010 que regula el ENS disponía que cumplir el ENS presupone cumplir con la protección de datos**
-    - El ENS supone proteger la información de la administración pública y entre esa informació se encuentran datos de carácter personal
+    - El ENS supone proteger la información de la administración pública y entre esa información se encuentran datos de carácter personal
 
 ### Guias de implatacion ENS
 

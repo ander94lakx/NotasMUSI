@@ -209,7 +209,6 @@ Mecanismo para poder interrumpir la prestación de servicios o la retirada de co
 #### Prueba (Art. 24 LSSI)
 
 > “La prueba de la celebración de un contrato por vía electrónica y la de las obligaciones que tienen su origen en él se sujetará a las **reglas generales del ordenamiento jurídico**."
-
 > Cuando los contratos celebrados por vía electrónica estén **firmados  electrónicamente** se estará a lo establecido en el artículo 3 de la Ley 59/2003, de 19 de diciembre, de firma electrónica.
 
 - El soporte electrónico en que conste un contrato celebrado por vía electrónica será admisible en juicio como prueba documental

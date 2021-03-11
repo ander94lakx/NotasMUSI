@@ -222,7 +222,7 @@
 
 #### **Tunnel mode**
 
-- Protección a **todo el paquete IP**, ç
+- Protección a **todo el paquete IP**
     - Modifica el paquete (encapsulándolo dentro de otro)
 - **Seguridad entre los extremos** del túnel (podría ser el extremo de la comunicación o no
 

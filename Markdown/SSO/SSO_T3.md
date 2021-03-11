@@ -164,7 +164,6 @@
 4. **Control de acceso físico**
     - Como proteger la terminal de usos no autorizados
 
-
 #### Aislamiento de aplicaciones
 
 - Por defecto todas las apps se ejecutan en su propio entorno de **Sandbox**
@@ -216,7 +215,7 @@
     - ***Binders***: para obtener referencias a otros servicios (datos +  invocar métodos)
     - ***Intents***: para invocar componentes (*Activities*)
 
-#### Protección d ememoria
+#### Protección de memoria
 
 Mecanismos para impedir accesos no debidos a memoria (problemas que puedan surgir de *rootear*):
 
@@ -233,6 +232,23 @@ Mecanismos para impedir accesos no debidos a memoria (problemas que puedan surgi
 - **No es infalible**
     - **Keylogger** en el **sector de arranque** (si no esta cifrado)
     - Ataques **Cold Boot**
+
+### Wi-Fi en Android
+
+- **Preferred Network List (PNL)**
+    - Cada dispositivo almacena una lista de las redes a las que se ha conectado
+    - Lista de SSID y su seguridad
+    - Para intentar conectarse en un futuro
+- **Problema con SSID oculto**:
+        - Si está oculto el SSID el AP no va a mandar información de que está ahi
+        - Entonces es el dispositivo **quien va preguntando por la red**
+        - Con un sniffer se puede capturar esa información
+        - *Rogue AP* para engañar al dispositivo
+        - (Afecta mas en versiones más antiguas)
+
+► Se identifica cada red a través
+de su SSID (nombre de la red)
+y su seguridad.
 
 ### "Rootear"
 
@@ -257,3 +273,93 @@ Mecanismos para impedir accesos no debidos a memoria (problemas que puedan surgi
 - **Cifrar** el dispositivo
 - Deshabilitar servicios cuando no se usen
 - Desinstalar apps cuando no se usen
+
+## 3.3 Seguridad en iOS
+
+### Arquitectura
+
+- Arquitectura por capas, como en Android
+
+### Seguridad del Sistema
+
+- Arranque seguro:
+    - Boot ROM (Apple CA Root) → iBoot → iOS Kernel (XNU).
+- **Autorización del software** de sistema
+    - ID único para cada SoC (ECID - Exclusive Chip Identification)
+    - Solo se puede actualizar el sistema a través de Apple
+- Protección de **integridad**
+    - **Kernel Integrity Protection (KIP)**
+    - Pointer Authentication Codes (PAC)
+        - Previene técnicas ROP (Return Oriented Programming)
+    - Coprocesadores: Sensor imagen, Sensor movimiento, Secure Enclave
+- **Secure Enclave**
+    - **Coprocesador** que realiza las **operaciones de seguridad**
+    - Gestiona las **claves de cifrado** del dispositivo
+    - Realiza autenticación biométrica de **TouchID y FaceID**
+
+### Autenticación
+
+- Passcodes
+- TouchID
+- FaceID
+
+### Proteccioón de datos
+
+►
+Cifrado con soporte hardware:
+▪
+Modulo AES-256 entre memoria flash y RAM
+
+jerarquía de claves para cifrar cada fichero con una clave
+diferente (que se mezclan con el UID del dispositivo):
+
+- Borrado de seguridad
+- Para borrar el dispositivo completamente (wipe) basta con olvidar sus claves.
+- Las aplicaciones pueden especificar la clase de protección  para los archivos de las aplicaciones
+
+Seguridad de las Apps
+
+- **"Walled Garden"**:
+    - Solo se pueden instalar Apps de la **AppStore**
+        - Todas las apps tienen que estar **firmadas** por Apple + Desarrollador
+        - **Proceso para entrar** en la store más **largo y restrictivo**
+    - Hay limitaciones incluso desde entornos de desarrollo (Xcode)
+    - Al instalar la aplicación, se cifra con las claves del dispositivo
+    - Se comprueba la firma cada vez que se instala
+    - La firma se comprueba cada vez que se ejecuta
+    - Además:
+        - Address Space Layout Randomization (ASLR)
+        - ARM Execute Never (XN)
+- **App Sandboxing** (Seatbelt)
+    - Basado en TrustedBSD
+    - Todas corren **bajo el mismo usuario** (diferente a Android)
+    - `.plist` con los **Entitlements** permitidos a la aplicación
+
+### Privacidad
+
+- Mejores controles de privacidad
+
+### Seguridad de Red
+
+- TLS (v1.2) y DTLS para las aplicaciones
+- VPN:
+    - Procotolos: IKEv2/IPSec, SSL-VPN, L2TP/IPSec
+    - Modos: VPN On Demand, Per App VPN y Always-on VPN
+- **Wi-Fi utiliza direcciones MAC aleatorias**
+    - En cada trama de escaneo activo (WiFi Probes)
+    - La MAC cambia cada vez que se desconecta de un AP
+    - A partir de iPhone 6S, solo se anuncian de los SSID ocultos
+- **Mitiga ataques al Wi-Fi y baseband** limitando la memoria a la que puede acceder por DMA:
+    - Bus PCIe dedicado por interfaz.
+    - IOMMU limita acceso a páginas de memoria con paquetes
+- La antena **NFC** está reservada **para el Secure Element** de Apple Pay
+
+### Jailbreak
+
+- Equivalente a "Rootear" un Android
+    - Pero no se suele modificar el arranque.
+- Para instalar aplicaciones o activar características no permitidas por Apple
+    - Suelen instalar un gestor de paquetes alternativo (Cydia)
+- Requiere vulnerabilidades de escalado de privilegios
+    - Cada vez más difíciles de encontrar
+    - Apple actualiza los sistemas para parchearlas y no deja instalar versiones vulnerables

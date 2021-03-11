@@ -96,7 +96,7 @@ Autoría en:
 - En obras colectivas (personas jurídicas):
     - 70 años  
     - desde el día 1 de enero del año siguiente:
-        - de la divulgación lícita del software 
+        - de la divulgación lícita del software
         - o de su creación (no divulgado) si no se hubiera divulgado
 
 Pasadas esas fechas pasan a **dominio público**
@@ -136,7 +136,6 @@ Pasadas esas fechas pasan a **dominio público**
             - 6 meses para resolver -> Silencio positivo = estimada
     - Hay otras formas de prueba
         - Ej.: Depósito
-
 
 ### Marco jurídico
 

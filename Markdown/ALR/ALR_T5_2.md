@@ -122,7 +122,6 @@ electrónicas (*electronic Identification and Trust Services*)
 | Garantías legales    |             :x:            | :heavy_check_mark: :heavy_minus_sign: | :heavy_check_mark: :heavy_plus_sign: |
 | Requiere dispositivo |             :x:            |                  :x:                  |          :heavy_check_mark:          |
 
-
 ### Prestadores de Servicios Electrónicos de Confianza (PSEC)
 
 - Entidades que expiden certificados electrónicos o presta otros servicios en relación con la firma electrónica
@@ -159,11 +158,11 @@ electrónicas (*electronic Identification and Trust Services*)
 
 ##### PSEC en España
 
-Públicos
+- Públicos
     - CERES-FNMT
         - Alcance: todos los ciudadanos
     - Comunidades autónomas (Cataluña, País Vasco y Valencia)
-Privados
+- Privados
     - Colegios profesionales: Abogados, Notarios, Médicos, Ingenieros, Registradores…
 - Categorías de servicios
     - Servicios de certificación basados en certificados **cualificados**

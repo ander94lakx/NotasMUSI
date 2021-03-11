@@ -292,7 +292,7 @@ Son versiones especificas de Windows orientadas a servidores. Añaden funcionali
         - Para autenticarse de manera remota solo hace falta disponer del hash
             - Ataques **Pass-the-Hash**
 
-### Autenticación con Kerberos (SSO basado en Tokens)
+### Autenticación con Kerberos (SSO basado en Tokens) :red_circle:
 
 > Kerberos: Perro de tres cabezas y cola de serpiente según mitología griega,  guardián de la entrada del Templo de Hades
 

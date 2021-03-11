@@ -1,32 +1,32 @@
 # Tema 1: Fundamentos de criptografía y seguridad
 
-## 1. ¿Qué es la criptografía?
+## 1.1 ¿Qué es la criptografía?
 
 - Herramientas matemáticas, técnicas y algoritmos
     - Que con el uso de una o más **claves**
     - Permiten cifrar la información, protegerla y dotarla al menos de:
         - **Confidencialidad** e **Integridad**
 
-## 2. Codificar VS Cifrar
+## 1.2 Codificar VS Cifrar
 
 - Codificar: usar un código para representar elementos
 - Cifrar: transformar inflamación mediante el uso de una **clave**
 
-## 3. Terminología
+## 1.3 Terminología
 
-- Mensaje: mensaje sin cifrar, puede ser texto, stream de bits, cualquier tipo de información.
+- Mensaje: mensaje sin cifrar, puede ser texto, stream de bits, cualquier tipo de información
 - Criptograma: salida que se obtiene tras cifrar un mensaje
 - Clave: elemento que se utiliza para la transformación de un mensaje en un criptograma y viceversa
     - Clave de descifrado: clave que se utiliza para convertir un cifrado de un
 
-## 4. Contextualización de la criptografía
+## 1.4 Contextualización de la criptografía
 
 - Criptología: disciplina que se dedica al estudio de la escritura secreta
     - **Criptografía**: estudia de los algoritmos, protocolos y sistemas que se utilizan para proteger la información
     - Esteganografía: estudia cómo *ocultar* mensajes con información privada por un canal inseguro
     - **Criptoanálisis**: estudia los sistemas criptográficos para encontrar debilidades y romper dichos sistemas
 
-## 5. Clasificación de los criptosistemas
+## 1.5 Clasificación de los criptosistemas
 
 - Criptografía clásica
 - Criptografía moderna
@@ -38,13 +38,13 @@
             - Cifrado en flujo
             - Cifrado por bloque
 
-## 6. Personajes relevantes en el desarrollo de la criptografía
+## 1.6. Personajes relevantes en el desarrollo de la criptografía
 
 - Claude Shannon: padre de la teoría de la información
 - Horst Feistel: desarrolló el algoritmo DES (ya sustituido por AES)
 - Whitfield Diffie y Martin Hellman: desarrollaron un protocolo para establecer claves entre dos partes conocido como protocolo **Diffie-Hellman**
 
-## 7. Matemáticas discretas
+## 1.7 Matemáticas discretas
 
 Son el pilar fundamental de la criptografía.
 Principales conceptos usados ampliamente en criptografía:
@@ -262,7 +262,7 @@ Sirve para encontrar el inverso multiplicativo de x (`x = inv(a, n)`)
         - `5^15 mod 17 = 7`
         - `5^16 mod 17 = 1`
 
-## 8. Problemas matemáticos en la criptografía
+## 1.8 Problemas matemáticos en la criptografía
 
 Se usan para tener funciones en un solo sentido
 
@@ -287,7 +287,7 @@ Se usan para tener funciones en un solo sentido
     - `x = (log_α β) mod p`
     - Aun conociendo α, β y p, hallar x es computacionalmente intratable
 
-## 9. Teoría de la información
+## 1.9 Teoría de la información
 
 ### Concepto de entropía
 
