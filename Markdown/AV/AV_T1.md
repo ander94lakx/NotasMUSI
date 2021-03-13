@@ -124,7 +124,7 @@
 ### Buscadores
 
 - Son una **gran fuente de información**
-- Usan crawlers que en ocasiones **encuentra páginas y archivos que no deberían** estar publicados
+    - Usan crawlers que en ocasiones **encuentran páginas y archivos que no deberían** estar publicados
 - Permiten **buscar subdominios** o dominios asociado
 - Tienen **herramientas avanzadas** para filtrar resultados muy útiles para footprinting
     - Por ejemplo los Google Dorks:
