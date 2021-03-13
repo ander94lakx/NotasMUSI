@@ -1,10 +1,10 @@
 # Tema 1: Búsqueda de vulnerabilidades
 
-## 1.1 Introducción
+## 1. Introducción
 
 ### Conceptos
 
-- Hacker:
+- Hacker
     - **White-Hat**
         - Amplios conocimientos
         - Código ético
@@ -13,7 +13,6 @@
     - **Black-Hat**
         - No cumplen la ley
         - Usuarios malignos
-
 - Metodología
     - Permite realizar los procesos de pentesting y de auditoria en base a las mejores técnicas
     - Ejemplo
@@ -24,12 +23,11 @@
         - **OWASP**: Open Web Application Security Project
         - **OWISAM**: Open Wireless Security Assessment Methodology
         - **OASAM**: Open Android Security Assessment Methodology
-
 - Modalidades de auditoría
     - **Black Box**
         - No se tiene conocimiento del interior del sistema
         - Test de penetración como lo haría un atacante real
-        - Es el mas realista
+        - Es el más realista
     - **White box**
         - Se tiene conocimiento completo del sistema
         - Se hace como si se fuera un empleado interno
@@ -39,18 +37,17 @@
         - Test de penetración como un empleado de la empresa
         - Puede ser realista en ciertos casos (permite ver que puede hacer un empleado desde dentro)
 
-## 1.2 Ingeniería social
+## 2. Ingeniería social
 
-> “El factor determinante de la seguridad de las empresas es la capacidad de los usuarios de interpretar correctamente las políticas de seguridad y hacerlas cumplir” - Kevin Mitnick
+> "El factor determinante de la seguridad de las empresas es la capacidad de los usuarios de interpretar correctamente las políticas de seguridad y hacerlas cumplir" - Kevin Mitnick
 
 - Técnica que trata de **engañar y persuadir**, con la pretensión de **conseguir información útil** y significativa de su **víctima**
 - Lo más común es que se haga a través de **canales tecnológicos** (internet, teléfono), pero no tiene por qué
-- El **punto mas débil** de la seguridad de un sistema es el factor **humano**
+- El **punto más débil** de la seguridad de un sistema es el factor **humano**
 
 ### Phishing
 
 - Técnica que consiste en **suplantar una identidad para obtener información**, normalmente credenciales de acceso como contraseñas y usuarios
-
 - Muchos vectores de ataque
     - Mail
     - SMS, teléfono
@@ -100,7 +97,7 @@
 - Funciona como un Metasploit pero especializado para ingeniería social
 - Repo: <https://github.com/trustedsec/social-engineer-toolkit>
 
-## 1.3 Footprinting
+## 3. Footprinting
 
 - **Footprinting**:
     - Proceso de **búsqueda** de toda la **información pública**, ya sea publica a propósito o por desconocimiento, que pueda haber del sistema a auditar
@@ -158,30 +155,31 @@
     - Netcraft:
         - Para listar y analizar subdominios
         - <http://searchdns.netcraft.com>
-    – Cuwhois:
+    - Cuwhois:
         - Para hacer un whois
         - <http://www.cuwhois.com>
-    – IPTools:
+    - IPTools:
         - <http://www.iptools.com>
-    – Yougetsignal:
-        - Puertos abiertos, localizacion, traza de red
+    - Yougetsignal:
+        - Puertos abiertos, localización, traza de red
         - <http://www.yougetsignal.com>
-    – Intodns:
+    - Intodns:
         - Información sobre el servidor DNS
         - <http://www.intodns.com>
-    – 123people:
+    - 123people:
         - Información sobre personas
         - <http://www.123people.es>
 
 #### Peticiones HTTP
 
-Puede ocurrir que algún webmaster nos intente engañar, colocando por ejemplo en un IIS6 una página
-de error falsa de Apache, por lo que será necesario contrastar la información, por ejemplo,
-consultando el banner del servidor Web.
+- Puede ocurrir que algún webmaster intente engañar:
+    - Colocando por ejemplo en un IIS6 una página de error falsa de Apache
+    - Necesario contrastar la información
+        - Consultar el banner del servidor Web
 
 ### DNS
 
-- Es un punto del que se puede sacar mucha información
+- Es un punto del que se puede sacar **mucha información**
 - 4 Técnicas:
     - **Forzar una transferencia de zona** en el servidor DNS
     - **Resolución inversa** mediante los registros PTR a partir de una IP
@@ -232,17 +230,17 @@ consultando el banner del servidor Web.
 - Tener **separados los correos** de la entidad de los personales
 - **Limpiar de metadatos** los documentos públicos
 
-## 1.4 Fingerprinting
+## 4. Fingerprinting
 
 - El **fingerprinting** es el proceso de **recolección de información** en el que se **interactúa directamente** con los sistemas
 - Obtener información sobre los **recursos** de las máquina(s) de un objetivo:
-    – Puertos abiertos
-    – Hosts en la red
-    – SO utilizado
-    – Software detrás de los puertos
+    - Puertos abiertos
+    - Hosts en la red
+    - SO utilizado
+    - Software detrás de los puertos
         - Versiones
-    – Firewalls, IPS, IDS
-    – Etc.
+    - Firewalls, IPS, IDS
+    - Etc.
 - Lo más típico para realizar esta tarea es el **escaneo de puertos**
     - Dos principales **problemas**:
         - Hace mucho ruido
@@ -316,7 +314,7 @@ consultando el banner del servidor Web.
         - Solo parquees de redes abiertas
             - Capturar paquetes para romper la red
 
-## 1.5 Análisis de la información
+## 5. Análisis de la información
 
 - Tras recopilar una gran cantidad de información, toca analizarla y quedarse con la **información util**
 - **¿Que se puede hacer con cada tipo de información?**

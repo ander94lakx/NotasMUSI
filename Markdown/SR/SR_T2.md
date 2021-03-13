@@ -1,15 +1,15 @@
 # Tema 2: Vulnerabilidades y ataques en redes
 
-## 2.1 Introducción
+## 1. Introducción
 
 - Aumento de la interconexión de sistemas y redes
 - Aumento de transmisión de información sensible por las redes
 - Aumento de capacidades técnicas para hacer ataques de red
 - **Es necesario evaluar la seguridad de la red de una organización**
 
-## 2.2 Modelo de seguridad OSI
+## 2. Modelo de seguridad OSI
 
-- Recomendación X.800 de la ITU
+- Recomendación **X.800 de la ITU**
 - Visión general de la seguridad:
     - **Ataques a la seguridad**
         - Ataques que buscan destruir, robar, exponer, ... información
@@ -28,7 +28,7 @@
                 - No Repudio
                 - Control de acceso
 
-## 2.3 Ataques a la seguridad
+## 3. Ataques a la seguridad
 
 - **Asalto deliberado** a la seguridad del sistema
     - Eludir las protecciones
@@ -52,54 +52,48 @@
     - Modificación de los mensajes
     - Interrupción del servicio
 
-## 2.4 Servicios de seguridad
+## 4. Servicios de seguridad
 
-Servicio suministrado por uno o más niveles de un sistema abierto
-de comunicación, que garantiza la seguridad del sistema y de las
-transferencias de datos.
+- Servicio suministrado por uno o más niveles de un sistema abierto de comunicación
+    - Garantiza la seguridad del sistema y de las transferencias de datos
+- *SERVICIOS:*
+    - **Autenticación** (entidades o datos)
+        - De entidades (con conexión)
+        - Del origen de datos (sin conexión)
+    - **Control de acceso**
+        - Prevención del uso no autorizado de un recurso
+    - Servicio de **Confidencialidad**
+        - De la conexión
+        - No orientada a conexión
+        - De campos seleccionados
+        - Del flujo del tráfico
+    - **Integridad** de los datos
+        - De la conexión con recuperación
+        - De la conexión sin recuperación
+        - De la conexión de campos seleccionados
+        - No orientada a conexión
+        - No orientada a conexión de campos seleccionados
+    - **No repudio**
+        - En origen
+        - En destino
+    - **Disponibilidad**
+        - Cualidad de estar accesible y utilizable a petición de una entidad autorizada
 
-- **Autenticación** (entidades o datos)
-    - De entidades (con conexión)
-    - Del origen de datos (sin conexión)
+## 5. Mecanismos de seguridad
 
-- **Control de acceso**
-    - Prevención del uso no autorizado de un recurso
-
-- Servicio de **Confidencialidad**
-    - De la conexión
-    - No orientada a conexión
-    - De campos seleccionados
-    - Del flujo del tráfico
-
-- **Integridad** de los datos
-    - De la conexión con recuperación
-    - De la conexión sin recuperación
-    - De la conexión de campos seleccionados
-    - No orientada a conexión
-    - No orientada a conexión de campos seleccionados
-
-- **No repudio**
-    - En origen
-    - En destino
-
-- **Disponibilidad**
-    - Cualidad de estar accesible y utilizable a petición de una entidad autorizada
-
-## 2.5 Mecanismos de seguridad
-
-Mecanismo concreto que se utiliza para mitigar ataques y ofrecer servicios de seguridad.
-
-- Cifrado
-- Firma digital
-- Mecanismos de Integridad de los Datos
-- Mecanismos de Control de Acceso
-- Mecanismos de Intercambio de Autenticación
-- Mecanismos de Rellenado de Tráfico
-- Mecanismos de Control de Encaminamiento
-- Mecanismos de Notarización
+- Mecanismo concreto que se utiliza para mitigar ataques y ofrecer servicios de seguridad
+- *Mecanismos:*
+    - Cifrado
+    - Firma digital
+    - Mecanismos de Integridad de los Datos
+    - Mecanismos de Control de Acceso
+    - Mecanismos de Intercambio de Autenticación
+    - Mecanismos de Rellenado de Tráfico
+    - Mecanismos de Control de Encaminamiento
+    - Mecanismos de Notarización
 
 | Servicio / Mecanismo                   | Cifrado | Firma | Control de acceso | Integridad | Intercambio de autentificación | Relleno tráfico | Control del enrutamiento | Notarización |
-|---------------------------------------:|:-------:|:-----:|:-----------------:|:----------:|:------------------------------:|:---------------:|:------------------------:|:------------:|
+|----------------------------------------|---------|-------|-------------------|------------|--------------------------------|-----------------|--------------------------|--------------|
 | Autenticacion entidades origen/destino | :x:     | :x:   |                   |            | :x:                            |                 |                          |              |
 | Autenticacion del origen de los datos  | :x:     | :x:   |                   |            |                                |                 |                          |              |
 | Control de acceso                      |         |       | :x:               |            |                                |                 |                          |              |
@@ -110,7 +104,7 @@ Mecanismo concreto que se utiliza para mitigar ataques y ofrecer servicios de se
 | Disponibilidad                         |         |       |                   | :x:        | :x:                            |                 |                          |              |
 
 | Servicio / Ataque                      | Obtención del mensaje | Análisis del tráfico | Suplantación de identidad | Repetición | Modificación del mensaje | Denegación de servicio (DoS) |
-|---------------------------------------:|:---------------------:|:--------------------:|:-------------------------:|:----------:|:------------------------:|:----------------------------:|
+|----------------------------------------|-----------------------|----------------------|---------------------------|------------|--------------------------|------------------------------|
 | Autenticacion entidades origen/destino |                       |                      | :x:                       |            |                          |                              |
 | Autenticacion del origen de los datos  |                       |                      | :x:                       |            |                          |                              |
 | Control de acceso                      |                       |                      | :x:                       |            |                          |                              |

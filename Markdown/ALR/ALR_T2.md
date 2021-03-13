@@ -15,8 +15,8 @@
 - El régimen jurídico de la propiedad está regulado básicamente en el **Código Civil**: Libro Segundo: Títulos Primero y Segundo.
 - Posibilidad de propiedad tanto de los bienes materiales como inmateriales.
 - Ejemplos
-    - Bienes materiales: Hw
-    - Bienes inmateriales: Sw
+    - Bienes materiales: HW
+    - Bienes inmateriales: SW
 - La vía de protección de los bienes inmateriales son los **derechos de
 Propiedad Intelectual**
 
@@ -75,7 +75,7 @@ Autoría en:
 
 ##### Objeto de protección (Art. 96 LPI)
 
-- **programa de ordenador**
+- **Programa de ordenador**
     - Toda secuencia de instrucciones o indicaciones destinadas a ser utilizadas,  directa o indirectamente, en un sistema informático para realizar una función o  una tarea o para obtener un resultado determinado, cualquiera que fuere su forma de expresión y fijación
 
 - *Condición*: que sea **original** (creación propia)
@@ -87,7 +87,7 @@ Autoría en:
 - No estarán protegidos:
     - Ideas y principios
 
-#### :red_circle: B) Duración (Art 26 TRLPI)
+#### B) Duración (Art 26 TRLPI) :red_circle:
 
 - Persona física:
     - Vida del autor + 70 años después del fallecimiento
@@ -152,7 +152,7 @@ Pasadas esas fechas pasan a **dominio público**
 
 ### Sistema Propiedad intelectual/Industrial
 
-#### :red_circle: Diferencias
+#### Diferencias :red_circle:
 
 |                               | **Propiedad Intelectual** (derechos de autor) | **Propiedad Industrial** (patente)                        |
 |-------------------------------|-----------------------------------------------|-----------------------------------------------------------|
@@ -161,7 +161,7 @@ Pasadas esas fechas pasan a **dominio público**
 | *Nacimiento de la protección* | Nace por la creación                          | Precisa la inscripción                                    |
 | *Requisitos de protección*    | Original (propia de su autor)                 | Novedad de la actividad invientiva, aplicación industrial |
 
-#### :red_circle: Inconvenientes
+#### Inconvenientes :red_circle:
 
 - Propiedad Intelectual:
     - Posibilidad de idénticos resultados
@@ -195,10 +195,10 @@ Diversas vías de protección. Ejemplos:
 ### Sobre la posible patentabilidad del sw en España
 
 - El **SW como tal no se puede patentar** pues no son invenciones
-- La patentabilidad del sw si que es posible respecto de “las invenciones implementadas a través de ordenador”.
+- La patentabilidad del sw si que es posible respecto de "las invenciones implementadas a través de ordenador".
 - Vid. Propuesta Directiva:
 
-> "Se entenderá por invenciones implementadas en ordenador “toda invención para cuya ejecución se requiera la utilización de un ordenador, una red informática u otro aparato programable, al tener la invención una o más características que se realicen total o parcialmente mediante un programa o programas de ordenador”
+> "Se entenderá por invenciones implementadas en ordenador "toda invención para cuya ejecución se requiera la utilización de un ordenador, una red informática u otro aparato programable, al tener la invención una o más características que se realicen total o parcialmente mediante un programa o programas de ordenador"
 
 - Requisitos:
     - Novedad
@@ -212,7 +212,7 @@ Diversas vías de protección. Ejemplos:
 
 La Oficina Europea de Patentes llegó a la conclusión:
 
-> “un programa de ordenador "como tal" no es excluido de patentabilidad si el programa, cuando es ejecutado o cargado en un ordenador, produce, o es capaz de producir, un efecto técnico que va más allá de las interacciones físicas normales entre el programa y el ordenador en el que se ejecuta"
+> "Un programa de ordenador "como tal" no es excluido de patentabilidad si el programa, cuando es ejecutado o cargado en un ordenador, produce, o es capaz de producir, un efecto técnico que va más allá de las interacciones físicas normales entre el programa y el ordenador en el que se ejecuta"
 
 ### Sistema elegido → **Derechos de autor**
 
@@ -232,7 +232,7 @@ Art. 2 de la Ley de Patentes:
 
 Art 12 LPI:
 
-> “.. las colecciones de obras ajenas, de datos o de otros elementos independientes como las antologías y las bases de datos que por la se**lección o disposición de sus contenidos** constituyan **creaciones intelectuales**, sin perjuicio, en su caso, de los derechos que pudieran subsistir sobre dichos contenidos...”
+> ".. las colecciones de obras ajenas, de datos o de otros elementos independientes como las antologías y las bases de datos que por la se**lección o disposición de sus contenidos** constituyan **creaciones intelectuales**, sin perjuicio, en su caso, de los derechos que pudieran subsistir sobre dichos contenidos..."
 
 Libro II, título VIII del TRLPI: **protección sui generis** (art 133 -137)
 

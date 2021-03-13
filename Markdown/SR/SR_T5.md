@@ -1,10 +1,10 @@
 # Tema 5: Protocolos de Seguridad
 
-## 5.1 Introducción
+## 1. Introducción
 
 ![Protocolos de Seguridad](img/protocolos_seguridad.png)
 
-## 5.2 Seguridad en Redes Inalámbricas
+## 2. Seguridad en Redes Inalámbricas
 
 ### Wi-Fi
 
@@ -166,7 +166,7 @@
 #### Ataques WPA3
 
 - **Dragonblood**
-    - Analysing WPA3's Dragonfly Handshake (<https://wpa3.mathyvanhoef.com/>)
+    - *Analysing WPA3's Dragonfly Handshake* (<https://wpa3.mathyvanhoef.com/>)
     - *CERT ID #VU871675*:
         - Downgrade attack against WPA3-Transtition mode leading to dictionary attacks
     - *CERT ID #VU871675*:
@@ -183,7 +183,6 @@
 ### **Recomendaciones** para redes inalámbricas
 
 - **Usar WPA3**
-    - <https://www.wi-fi.org/product-finderresults?sort_by=default&sort_order=desc&capabilities=16>
 - Usar **WPA2 mientras WPA3 no sea posible**
     - Preferiblemente versión Enterprise con un mecanismos EAPTLS, EAP-TTLS
     - Si se usa WPA2-Personal utilizar una clave segura
@@ -193,7 +192,7 @@
 - **WEP no debe utilizarse** salvo que sea la única alternativa
 - **Deshabilitar servicios innecesarios** que pueden ser vulnerables, e.g. **WPS**
 
-## 5.3 IPSec
+## 3. IPSec
 
 > <https://tools.ietf.org/html/rfc4301>
 
@@ -310,7 +309,7 @@ Management Protocol*)
     - SA IPSEC
     - Modo Quick (3)
 
-## 5.4 SSL/TLS
+## 4. SSL/TLS
 
 ### Historia
 
@@ -371,7 +370,7 @@ Management Protocol*)
 
 - **Heartbleed**
     - Error de la librería OpenSSL
-    - Afecto a un gran numero de compañias
+    - Afecto a un gran número de compañias
     - Más info: <http://heartbleed.com/>
 - **POODLE**
     - **Padding Oracle On Downgraded Legacy Encryption**
@@ -385,11 +384,11 @@ Management Protocol*)
 
     ![SSLStrip](img/sslstrip.png)
 
-## 5.5 Redes Privadas Virtuales (VPN)
+## 5. Redes Privadas Virtuales (VPN)
 
 *Virtual Private Networks*
 Proveen canales seguros de Comunicación sobre redes inseguras
-Es una alternativa mas barata y facil a las redes físicas privadas
+Es una alternativa más barata y facil a las redes físicas privadas
 
 ### Arquitecturas VPN
 

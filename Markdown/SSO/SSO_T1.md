@@ -1,6 +1,6 @@
 # Tema 1: Seguridad en Windows 7/8/10
 
-## 1.1 Windows 7
+## 1. Windows 7
 
 ### User Access Control (UAC)
 
@@ -61,7 +61,7 @@ Permite controlar los privilegios:
 - Añade la capacidad de autenticar al usuario mediante sensores biométricos
     - Actualmente no se usa (**Windows Hello**)
 
-## 1.2 Windows 8
+## 2. Windows 8
 
 ### Microsoft Defender
 
@@ -112,7 +112,7 @@ Permite controlar los privilegios:
 - Herramienta que se encarga de actuar como gestor de procesos, servicios, aplicaciones y de monitor del sistema
 - También permite establecer prioridades, controlar las aplicaciones que inician con Windows y reiniciar o detener programas
 
-## 1.3 Windows 10
+## 3. Windows 10
 
 Windows 10 mejora en una serie de aspectos la seguridad con respecto a anteriores versiones:
 
@@ -127,7 +127,7 @@ Windows 10 mejora en una serie de aspectos la seguridad con respecto a anteriore
 - **Windows Hello**
     (autenticación biométrica y multifactor)
 
-## 1.4 Windows Server 2008/2012/2016
+## 4. Windows Server 2008/2012/2016
 
 Son versiones especificas de Windows orientadas a servidores. Añaden funcionalidades típicas como:
 
@@ -172,7 +172,6 @@ Son versiones especificas de Windows orientadas a servidores. Añaden funcionali
 - Dos tipos:
     - **Directivas Locales**: Se establecen **sobre la propia máquina**
     - **Directivas de Grupo** (GPO): Se aplican **sobre el dominio**, o parte de él
-
 - Sitios útiles:
     - `gpedit.msc`
     - `%systemroot%\System32\GroupPolicy` directorio donde se almacenan las GPO
@@ -183,11 +182,7 @@ Son versiones especificas de Windows orientadas a servidores. Añaden funcionali
 - Directivas concretas para gestionar parámetros a la hora de tratar con contraseñas
     - *Secpol.msc → Directivas de cuentas → Directivas de Contraseñas*
 
-### Creación de usuarios y políticas de seguridad
-
-### Copias de seguridad
-
-## 1.5 Contraseñas en Windows
+## 5. Contraseñas en Windows
 
 ### Política de contraseñas
 
@@ -256,17 +251,17 @@ Son versiones especificas de Windows orientadas a servidores. Añaden funcionali
     - [ophcrack](https://sourceforge.net/projects/ophcrack/)
     - [Free Rainbow Tables](https://www.freerainbowtables.com/)
 
-#### Contraseñas de “calidad”
+#### Contraseñas de "calidad"
 
-- Utilizar contraseñas “fuertes” y cambiarlas completamente solo cuando se comprometen
+- Utilizar contraseñas "fuertes" y cambiarlas completamente solo cuando se comprometen
 
 | Problema o técnica    | Solución                                             |
 |-----------------------|------------------------------------------------------|
-| Password Spraying     | *Blacklist* para contraseñas débiles (e.g. “123456”) |
+| Password Spraying     | *Blacklist* para contraseñas débiles (e.g. "123456") |
 | Rainbow Tables        | Usar hashes con *salt*                               |
 | Bruteforce (GPU)      | *Key streching*                                      |
 | Ataque de diccionario | Contraseñas aleatorias                               |
-| Cracking              | Contraseñas +12 caracter "alfanumerosimbólicos"      |
+| Cracking              | Contraseñas +12 caracteres "alfanúmerosimbólicos"    |
 | Password Stuffing     | Nunca reutilizar contraseñas                         |
 | Robo/Keylogger        | 2FA                                                  |
 
@@ -323,15 +318,13 @@ de una comunicación
 3. Presentación del ticket al servidor final:
     - TGS → Servicio
 
-Más info: <https://www.tarlogic.com/blog/como-funciona-kerberos/>
-
 ### Ataques a contraseñas en Windows
 
 #### Ataques a contraseñas (LM/NTLM)
 
 - Ataques online
     - Inyección de DLL
-    - Leer la memoria del proceso LSASS (*Local Security Authority Subsystem*)
+    - **Leer la memoria del proceso LSASS (*Local Security Authority Subsystem*)**
 - Ataques offline
     - Conseguir las credenciales cifradas
         - Herramientas: Cain&Abel, Hashcat...
@@ -341,7 +334,7 @@ Más info: <https://www.tarlogic.com/blog/como-funciona-kerberos/>
 
 #### Ataques a contraseñas (Kerberos)
 
-- *Overpass-the-hash*
+- *Overpass The Hash/Pass The Key (PTK)*
 - *Pass-the-ticket*
 - En caso de que el atacante tenga acceso de administrador en una máquina:
     - *Golden/Silver Ticket*
@@ -350,12 +343,50 @@ Más info: <https://www.tarlogic.com/blog/como-funciona-kerberos/>
 - Herramientas:
     - Mimikatz
 
+##### Overpass The Hash/Pass The Key (PTK)
+
+- **Utilizar el hash del usuario** para conseguir **suplantarle frente al KDC**
+    - Acceder a los servicios del dominio disponibles para dicho usuario
+- Dónde sacar los hashes:
+    - Ficheros SAM (equipos) (Mimikatz)
+    - Fichero `NTDS.DIT` (BD del AD)
+    - Memoria del proceso `lsass` (Mimikatz)
+        - También pueden llegar a sacarse contraseñas en claro
+
+##### Pass The Ticket (PTT)
+
+- Obtener un ticket de usuario y utilizarlo para ganar acceso a los recursos a los que el usuario tenga permisos
+    - Es necesario conseguir también la clave de sesión respectiva
+- Para obtener los tickets:
+    - Man-In-The-Middle (viajan sobre UDP o TCP)
+        - Con eso no se consigue la clave de sesión. No obstante, mediante este técnica no se consigue acceso a la clave de sesión.
+    - Memoria del proceso `lsass`, donde también se pueden encontrar las claves de sesión
+- Es mejor obtener un TGT que un TGS
+- Los tickets caducan en 10h 10h
+
+##### Golden Ticket y Silver Ticket
+
+> KRBTGT: cuenta local por defecto que actúa como cuenta de servicio para el servicio de Distribution Center (KDC) service
+
+- **Golden** Ticket
+    - **Construir un TGT**
+        - Para lo cual se necesita la **clave del krbtgt**
+        - Obtener el **hash NTLM** de la cuenta krbtgt → construir un TGT
+        - Ese TGT puede contar con la caducidad y permisos que se quiera
+            - Solo podrá ser invalidado si expira o cambia la contraseña de la cuenta krbtgt
+
+- **Silver** Ticket
+    - **Construir un TGS**
+        - Para lo cual se necesita la **clave del servicio**
+        - Obtener del **hash NTLM** de la cuenta propietaria del servicio → construir un TGS
+        - **No** funcionará si el servicio verifica el PAC (*Privileged Attribute Certificate*)
+
 Más info:
 
-- <https://www.tarlogic.com/blog/como-atacar-kerberos/>
+- <https://www.tarlogic.com/blog/como-funciona-kerberos/>
 - <https://www.sans.org/blog/kerberos-in-the-crosshairs-golden-tickets-silver-tickets-mitm-and-more/>
 
-## 1.6 Powershell
+## 6. Powershell
 
 - Interfaz de comandos + lenguaje de scripting
     - Construido sobre .NET Framework
@@ -365,30 +396,6 @@ Más info:
 - Funciones PowerShell
 - Ejecutables *standalone*
 - Algunos de sus "comandos básicos" tienen alias para ser equivalentes a los de CMD o shells tipo Unix
-
-| PowerShell (Cmdlet) | PowerShell (Alias)                        | Windows CMD                   | Unix shell                       |
-|---------------------|-------------------------------------------|-------------------------------|----------------------------------|
-| Get-ChildItem       | `gci`, `dir`, `ls`                        | `dir`                         | `ls`                             |
-| Test-Connection     | `ping`                                    | `ping`                        | `ping`                           |
-| Get-Content         | `gc`, `type`, `cat`                       | `type`                        | `cat`                            |
-| Get-Command         | `gcm`                                     | `help`                        | `type`, `which`, `compgen`       |
-| Get-Help            | `help`, `man`                             | `help`                        | `apropos`, `man`                 |
-| Clear-Host          | `cls`, `clear`                            | `cls`                         | `clear`                          |
-| Copy-Item           | `cpi`, `copy`, `cp`                       | `copy`, `xcopy`, `robocopy`   | `cp`                             |
-| Move-Item           | `mi`, `move`, `mv`                        | `move`                        | `mv`                             |
-| Remove-Item         | `ri`, `del`, `erase`, `rmdir`, `rd`, `rm` | `del`, `erase`, `rmdir`, `rd` | `rm`, `rmdir`                    |
-| Rename-Item         | `rni`, `ren`, `mv`                        | `ren`, `rename`               | `mv`                             |
-| Get-Location        | `gl`, `cd`, `pwd`                         | `cd`                          | `pwd`                            |
-| Pop-Location        | `popd`                                    | `popd`                        | `popd`                           |
-| Push-Location       | `pushd`                                   | `pushd`                       | `pushd`                          |
-| Set-Location        | `sl`, `cd`, `chdir`                       | `cd`, `chdir`                 | `cd`                             |
-| Tee-Object          | `tee`                                     | N/A                           | `tee`                            |
-| Write-Output        | `echo`, `write`                           | `echo`                        | `echo`                           |
-| Get-Process         | `gps`, `ps`                               | `tlist`, `tasklist`           | `ps`                             |
-| Stop-Process        | `spps`, `kill`                            | `kill`, `taskkill`            | `kill`                           |
-| Select-String       | `sls`                                     | `findstr`                     | `find`, `grep`                   |
-| Set-Variable        | `sv`, `set`                               | `set`                         | `env`, `export`, `set`, `setenv` |
-| Invoke-WebRequest   | `iwr`, `curl`, `wget`                     |`curl`                         | `wget`, `curl`                   |
 
 ### Comandos útiles en auditoría
 

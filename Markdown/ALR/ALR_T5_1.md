@@ -1,6 +1,6 @@
 # Tema 5: Sociedad de la Información y Comercio Electrónico y Firma Electrónica
 
-## 5.1 - Ley de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI)
+## 1. Ley de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI)
 
 - Ley 34/2002 de Servicios de la Sociedad de la Información y del Comercio
 Electrónico (LSSI)
@@ -33,11 +33,10 @@ Electrónico (LSSI)
 
 ### Principio de libre prestación de servicios (Art. 6 LSSI)
 
-**No** necesidad de **autorización previa** para la prestación de servicios de la
+- **No** necesidad de **autorización previa** para la prestación de servicios de la
 sociedad de la información
-
-- Servicio de intermediación":
-    - Servicio de la sociedad de la información por el que se facilita la  prestación o utilización de otros servicios de la sociedad de la información o el acceso a la información
+- Servicio de intermediación:
+    - Servicio de la sociedad de la información por el que se facilita la prestación o utilización de otros servicios de la sociedad de la información o el acceso a la información
 
 ### Restricciones a la prestación de servicios (Art. 8 LSSI)
 
@@ -51,7 +50,7 @@ sociedad de la información
 
 ### Obligaciones de los PSSI (Art. 9 y SS LSSI)
 
-| **Obligados**                                                                                                                               | **Obligaciones**                                                                                                   |
+| Obligados                                                                                                                                   | Obligaciones                                                                                                       |
 |---------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
 | *Para todos los PSSI*                                                                                                                       | *Información en la página web*                                                                                     |
 | Los proveedores de servicios de Internet, los proveedores de acceso, Prestadores de servicios que usan las redes públicas de comunicaciones | Deber de retención de los datos de tráfico relativos a las comunicaciones electrónicas                             |
@@ -81,7 +80,7 @@ sociedad de la información
 
 ### Deber de colaboración de los prestadores de servicios de intermediación (Art. 11 LSSI)
 
-Mecanismo para poder interrumpir la prestación de servicios o la retirada de contenidos
+- Mecanismo para poder interrumpir la prestación de servicios o la retirada de contenidos
 
 ### Deber de retención de datos de tráfico relativos a las comunicaciones electrónicas
 
@@ -121,12 +120,12 @@ Mecanismo para poder interrumpir la prestación de servicios o la retirada de co
             - Si saben que la información es ilícita y **actúan para borrar**/retirar los datos
     - PS que faciliten enlaces a contenidos o instrumentos de búsqueda
 
-### :red_circle: Comunicaciones comerciales por vía electrónica
+### Comunicaciones comerciales por vía electrónica :red_circle:
 
 - Dos sistemas:
     - "**opt in**" o "Sistema de inclusión"
         - Será necesaria la **previa aceptación** de los destinatarios explícitamente
-    - "**opt out**” o "Sistema de exclusión"
+    - "**opt out**" o "Sistema de exclusión"
         - Por defecto se envían comunicaciones
         - El destinatario **puede rechazar** la correspondencia futura
         - Mientras no las rechace seguirá recibiendo
@@ -158,7 +157,7 @@ Mecanismo para poder interrumpir la prestación de servicios o la retirada de co
     - A condición de que:
         - Se les haya **facilitado información clara y completa** sobre su utilización y fines
         - Hayan dado su **consentimiento**
-    - **Se excluye** de esas oblicagiones el posible almacenamiento o acceso de índole técnica (*cookies técnicas*)
+    - **Se excluye** de esas obligaciones el posible almacenamiento o acceso de índole técnica (*cookies técnicas*)
         - Necesarias para la transmisión
         - Estrictamente necesarias para prestar el servicio que hay exigido expresamente el usuario
 
@@ -181,7 +180,7 @@ Mecanismo para poder interrumpir la prestación de servicios o la retirada de co
 
 ### Contratación electrónica
 
-- "[...] Aquel en que la **oferta y la aceptación** de tratamiento y almacenamiento de datos conectados a una red de telecomunicaciones se transmiten **por medio de equipos electrónicos**”
+- "[...] Aquel en que la **oferta y la aceptación** de tratamiento y almacenamiento de datos conectados a una red de telecomunicaciones se transmiten **por medio de equipos electrónicos**"
     - Contratos entre empresarios (B2B)
     - Contratos entre consumidores (B2C)
     - Contratos entre Administraciones Públicas (B2A)
@@ -208,7 +207,7 @@ Mecanismo para poder interrumpir la prestación de servicios o la retirada de co
 
 #### Prueba (Art. 24 LSSI)
 
-> “La prueba de la celebración de un contrato por vía electrónica y la de las obligaciones que tienen su origen en él se sujetará a las **reglas generales del ordenamiento jurídico**."
+> "La prueba de la celebración de un contrato por vía electrónica y la de las obligaciones que tienen su origen en él se sujetará a las **reglas generales del ordenamiento jurídico**."
 > Cuando los contratos celebrados por vía electrónica estén **firmados  electrónicamente** se estará a lo establecido en el artículo 3 de la Ley 59/2003, de 19 de diciembre, de firma electrónica.
 
 - El soporte electrónico en que conste un contrato celebrado por vía electrónica será admisible en juicio como prueba documental

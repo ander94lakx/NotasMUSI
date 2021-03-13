@@ -1,15 +1,13 @@
 # Tema 4: Autenticación y Funciones Hash
 
-## 4.1 Integridad y autenticación
+## 1. Integridad y autenticación
 
 - La autenticación se puede realizar en base a:
     - Algo que sé (contraseña)
     - Algo que tengo (una tarjeta)
     - Algo que soy (humano con huella dactilar, iris, ...)
-
 - Autenticación completa: Integridad mensaje
     - No se ha modificado al transmitirse o almacenarse
-
 - Enfoques de autenticación
     - Con cifrado convencional
         - Simétrico
@@ -18,7 +16,7 @@
         - Códigos de autenticación
         - Funciones hash
 
-## 4.2 Características y propiedades de las funciones hash
+## 2. Características y propiedades de las funciones hash
 
 - "Huella dactilar de un mensaje o conjunto de bits
 - *Entrada*:
@@ -38,7 +36,7 @@
             - 23 > 50%
         - El esfuerzo medio baja a 2^(n/2)
 
-## 4.3 Esquemas de autenticación
+## 3. Esquemas de autenticación
 
 ### Autenticación sin cifrado
 
@@ -57,7 +55,7 @@
 - Receptor calcula el hash del mensaje
 - Receptor compara el hash calculado con el que ha descifrado
 
-## 4.4 Función hash MD5
+## 4. Función hash MD5
 
 - Diseñada en 1991 por Ron Rivest
 - *litte endian*
@@ -72,7 +70,7 @@
     - 4a ronda `I = (C XOR (B OR NOT D))`
 - **16 vueltas** por rondandas (64 bloques)
 
-## 4.5 Función hash SHA-1
+## 5. Función hash SHA-1
 
 - Diseñada por la NSA en 1995
 - *big endian*
@@ -88,15 +86,15 @@
     - 16 * 32 = 512
 - 16 - 79 modificaciones de las palabras previas
 
-## 4.6 Funciones hash SHA-256
+## 6. Funciones hash SHA-256
 
 - Familia SHA-2 creada por la NSA en 2001
-- SHA-256 el mas famoso
+- SHA-256 el más famoso
     - **Salida de 256 bits**
 - 8 vectores (256 bits)
 - Operaciones muy similares a SHA-1
 
-4.7 Conclusiones y usos futuros
+## 7. Conclusiones y usos futuros
 
 - MD5 roto desde 2004
 - Más usado actualmente SHA-256

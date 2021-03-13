@@ -1,36 +1,35 @@
 # Tema 2: Seguridad en Linux
 
-## 2.1 Introducción a la seguridad en Linux
+## 1. Introducción a la seguridad en Linux
 
-Los OS basados en Linux tienen tres partes: HW, kernel y aplicaciones
+- Los OS basados en Linux tienen tres partes: HW, kernel y aplicaciones
 
 ### Kernel
 
-Para entender la seguridad en el núcleo de Linux hay que tener claro los
+- Para entender la seguridad en el núcleo de Linux hay que tener claro los
 siguientes aspectos:
-Las opciones de red
-Los algoritmos de cifrado que soporta
-Hardware de cifrado que soporta
-El sistema de archivos
-Las herramientas del proyecto GNU
+    - Las opciones de red
+    - Los algoritmos de cifrado que soporta
+    - Hardware de cifrado que soporta
+    - El sistema de archivos
+    - Las herramientas del proyecto GNU
 
 #### El sistema de archivos
 
-En un sistema operativo Linux podemos tener diferentes tipos de archivos:
-
-| Símbolo   | Tipo de archivo                     |
-|-----------|-------------------------------------|
-| `-`       | Archivo regular                     |
-| `d`       | Directorio                          |
-| `l`       | Enlace                              |
-| `c`       | Dispositivos orientado a caracteres |
-| `s`       | Socket                              |
-| `p`       | Pipe                                |
-| `b`       | Dispositivo orientado a bloques     |
+- En un sistema operativo Linux podemos tener diferentes tipos de archivos:
+    - `-`: Archivo regular
+    - `d`: Directorio
+    - `l`: Enlace
+    - `c`: Dispositivos orientado a caracteres
+    - `s`: Socket
+    - `p`: Pipe
+    - `b`: Dispositivo orientado a bloques
 
 ##### Permisos
 
-En función del tipo de archivos se podrá tener unos permisos u otros. La estructura de los permisos (al examinarlos por ejemplo con un `ls -al`) se puede ver al principio de cada entrada:
+- En función del tipo de archivos se podrá tener unos permisos u otros
+- La estructura de los permisos se puede ver al principio de cada entrada
+    - Al examinarlos, por ejemplo, con un `ls -al`:
 
 ```bash
 total 32
@@ -46,7 +45,7 @@ drwxr-xr-x 2 ander ander 4096 Feb 12 22:39 .landscape/
 -rw-r--r-- 1 ander ander    0 Feb 12 22:39 .sudo_as_admin_successful
 ```
 
-En la primera parte es donde se puede apreciar el sistema de permisos:
+- Detalle de permisos:
 
 ```bash
 0 1 2 3 4 5 6 7 8 9     [usr]  [grp]
@@ -60,24 +59,21 @@ d r w x r - x r - x  2  ander  ander  4096  Feb 12 22:39  .landscape/
 - `7-9`: permisos de lectura/escritura/ejecución (rwx) del archivo para el resto
 - `[usr]`: El usuario dueño del archivo
 - `[grp]`: El grupo dueño del archivo
-
-Aclaraciones:
+- Aclaraciones:
     - Permiso de ejecución sobre una carpeta implica que se pueda acceder a ella o no
 
 ### Seguridad en la instalación
 
-La mayor parte de distribuciones disponen de dos modos:
-
-- Arranque normal
-- Arranque en modo *live*
-
-Es recomendable utilizar el modo live para hacer cualquier operación previa sobre los discos o particiones.
+- La mayor parte de distribuciones disponen de dos modos:
+    - Arranque normal
+    - Arranque en modo *live*
+- Recomendable utilizar el modo live para hacer cualquier operación previa sobre los discos o particiones
 
 **Recomendación:** cifrado del disco con LUKS.
 
 #### sistema de carpetas de Linux
 
-- /
+- `/`
     - `/bin`: binarios
     - `/boot`: archivos relacionados con GRUB
     - `/dev`: Discos duros, etc.
@@ -94,7 +90,7 @@ Es recomendable utilizar el modo live para hacer cualquier operación previa sob
     - `/usr`: configuración y aplicaciones instaladas
     - `/var`: ficheros dinámicos, como buffers, logs, ...
 
-Conviene separar en particiones ciertos directorios del sistema
+- **Conviene separar en particiones** ciertos directorios del sistema
     - Lo más común es separar `/boot` y `/home` del resto del fs:
         - Se separa el sector de arranque del resto para securizarlo
         - Se separa `/home` del resto para tener por separado los archivos personales
@@ -102,79 +98,35 @@ Conviene separar en particiones ciertos directorios del sistema
 
 ### Protección del sistema de arranque (BIOS/UEFI, GRUB, Terminal…)
 
-- GRUB es el gestor de arranque por defecto en la mayoría de distribuciones Linux
-- Para protegerlo se puede asignar una contraseña (contra cambios) de la siguiente manera
+- GRUB es el **gestor de arranque por defecto** en la mayoría de distribuciones Linux
+- Para protegerlo se puede asignar una contraseña (contra cambios) de la siguiente manera:
 
-    1. `grub-mkpasswd-pbkdf2` para btener un hash PBKDF2 de la contraseña que queramos configurar
-    contraseña
+```bash
+# 1. grub-mkpasswd-pbkdf2 para obtener un hash PBKDF2 de la contraseña que queramos configurar
+grub-mkpasswd-pbkdf2
 
-    2. Configurar un superusuario con esa contraseña modificando el fichero `/etc/grub.d/40_custom`:
+# 2. Configurar un superusuario con esa contraseña modificando el fichero /etc/grub.d/40_custom:
+set superusers="superusuario"
+password_pbkdf2 superusuario <hash_generado>
 
-        ```bash
-        set superusers="superusuario"
-        password_pbkdf2 superusuario <hash_generado>
-        ```
-
-    3. Editar del fichero`/etc/default/grub` la línea:
-
-        ```bash
-        GRUB_TERMINAL=console
-        ```
-
-    4. `update-grub` para actualizar GRUB
+# 3. Editar del fichero`/etc/default/grub` la línea:
+GRUB_TERMINAL=console
+    
+# 4. update-grub para actualizar GRUB
+update-grub
+```
 
 ### Actualización del sistema operativo
 
-Actualizar los paquetes es fundamental. Cada distro tiene sus métodos.
-
-- Debian (Ubuntu)
-
-    ```bash
-    apt update
-    apt upgrade
-    ```
-
-- Red hat / Fedora
-
-    ```bash
-    yum check-update
-    yum install update
-    ```
-
-- Suse
-
-    ```bash
-    zypper refresh
-    zypper update
-    ```
-
-- Arch linux
-
-    ```bash
-    pacman –Syu
-    ```
-
-- Gentoo
-
-    ```bash
-    emerge rsync
-    emerge --update --deep @world
-    ```
-
-- Slackware
-
-    ```bash
-    slackpkg update
-    slackpkg upgrade-all
-    ```
+- Actualizar los paquetes es fundamental. Cada distro tiene sus métodos
 
 ### Bastionado (*hardening*) del sistema operativo
 
 #### *Hardening*: Ejecución de comandos de administración
 
 - `root` (`UID=0`) es el administrador del sistema y tiene permisos completos
-- solo es recomendable para algunas opraciones de administrador
-    - Es mejor técnica ganar privilegios desde un usuario normal. Dos metodos
+- solo es recomendable para algunas operaciones de administrador
+    - Es mejor técnica ganar privilegios desde un usuario normal. Dos métodos
         1. Convertirse en `root` usando `su`
         2. Usar `sudo`
             - Modificar `/etc/sudoers` para ver que usuarios pueden ejecutar sudo
@@ -247,34 +199,34 @@ Actualizar los paquetes es fundamental. Cada distro tiene sus métodos.
 
 - Para ver que servicios de red hay a la escucha:
 
-    ```bash
-    netstat –atu
-    # O tambien
-    cat /etc/inetd.conf
-    ```
+```bash
+netstat –atu
+# O tambien
+cat /etc/inetd.conf
+```
 
 - Para ver que servicios están habilitados:
 
-    ```bash
-    systemctl list-units | grep enable
-    ```
+```bash
+systemctl list-units | grep enable
+```
 
 - Iniciar y denener servicios
 
-    ```bash
-    # Servicios basados en /etc/init.d
+```bash
+# Servicios basados en /etc/init.d
 
-    sudo /etc/init.d/<service_name> stop    # Denener el servicio
-    sudo /etc/init.d/<service_name> start   # Iniciar el servicio
-    sudo update-rc.d <service_name> disable # Deshabilitar arranque al inicio
-    sudo update-rc.d <service_name> enable  # Habilitar arranque al inicio del sistema
+sudo /etc/init.d/<service_name> stop    # Denener el servicio
+sudo /etc/init.d/<service_name> start   # Iniciar el servicio
+sudo update-rc.d <service_name> disable # Deshabilitar arranque al inicio
+sudo update-rc.d <service_name> enable  # Habilitar arranque al inicio del sistema
 
-    # Servicios basados en Upstart
+# Servicios basados en Upstart
 
-    sudo service <service_name> stop        # Denener el servicio
-    sudo service <service_name> start       # Denener el servicio
-    sudo vi /etc/init/cron.conf             # Modificar arranques al iniciar
-    ```
+sudo service <service_name> stop        # Denener el servicio
+sudo service <service_name> start       # Denener el servicio
+sudo vi /etc/init/cron.conf             # Modificar arranques al iniciar
+```
 
 #### *Hardening*: Cifrado de información
 
@@ -291,9 +243,9 @@ Actualizar los paquetes es fundamental. Cada distro tiene sus métodos.
 - En linux, se puede acceder a las terminales reales mediante CTRL+ALT+F1-12 (dependiendo de que terminales se encuentre habilitadas)
 - Se puede modificar las terminales habilitadas modificando el fichero `/etc/securetty`
 
-## 5.2 Autenticación SSH
+## 2. Autenticación SSH
 
-- El uso de SSH es muy comun para poder realizar labores de administracion o despliegue sobre servidores de manera remota
+- El uso de SSH es muy común para poder realizar labores de administración o despliegue sobre servidores de manera remota
 - SSH es uno de los servicios de Linux más usados
 - Es uno de los vectores principales por donde se puede intentar atacar
     - Fuerza bruta ([Hydra](https://github.com/vanhauser-thc/thc-hydra))
@@ -309,29 +261,13 @@ Actualizar los paquetes es fundamental. Cada distro tiene sus métodos.
 ### OpenSSH: Configuración
 
 - Ficheros de configuración:
-    - Cliente SSH
 
-        ```bash
-        /etc/ssh/ssh_config
-        ```
-
-    - Servidor SSH
-
-        ```bash
-        /etc/ssh/sshd_config
-        ```
-
-    - Configuracion PAM (*Pluggable Authentication Module*)
-
-        ```bash
-        /etc/pam.d/sshd
-        ```
-
-    - Arranque del servicio
-
-        ```bash
-        /etc/init.d/sshd
-        ```
+```bash
+/etc/ssh/ssh_config     # Cliente SSH
+/etc/ssh/sshd_config    # Servidor SSH
+/etc/pam.d/sshd         # Configuracion PAM (Pluggable Authentication Module)
+/etc/init.d/sshd        # Arranque del servicio
+```
 
 #### Configuración segura del servidor SSH
 
@@ -350,108 +286,90 @@ X11Forwarding no                    # Denegar conexiones al servidor gráfico X1
 
 ### Minimizar la exposiciñon de informacion
 
-Ejemplo de banner SSH:
+- Ejemplo de banner SSH:
 
 ```bash
 kali@kali~$ ssh alumno@192.168.1.48
 alumno@192.168.1.48's password
 Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.19.0-25-generic x86-64)
 
- * Documentation: https://help.ubuntu.com
+* Documentation: https://help.ubuntu.com
 ```
 
-*OBJETIVO*: Reducir el banner que se muestra al intentar conectarse por SSH. Pasos:
+- *OBJETIVO*: Reducir el banner que se muestra al intentar conectarse por SSH. Pasos:
 
-1. Abrir el banner y modificarlo
+```bash
+#  1. Abrir el banner y modificarlo
+vi /etc/ssh/sshd_banner
 
-    ```bash
-    vi /etc/ssh/sshd_banner
-    ```
+# 2. Añadir al fichero de configuracion del servidor (`/etc/sshd/sshd_config`) la siguiente linea para usar el banner:
+Banner /etc/ssh/sshd_banner
 
-2. Añadir al fichero de configuracion del servidor (`/etc/sshd/sshd_config`) la siguiente linea para usar el banner:
+# 3. Reiniciar el servicio de SSH:
+/etc/init.d/sshd restart
+```
 
-    ```bash
-    Banner /etc/ssh/sshd_banner
-    ```
-
-3. Reiniciar el servicio de SSH:
-
-    ```bash
-    /etc/init.d/sshd restart
-    ```
-
-*Otra opción*: editar el propio binario `/usr/sbin/sshd` con algun editor de binarios como `hexedit`.
+- *Otra opción*: editar el propio binario `/usr/sbin/sshd` con algun editor de binarios como `hexedit`.
 
 ### Acceso SSH con claves RSA
 
-- Metodo más seguro que la autenticación por contraseña
-    - Impide ataques por fuerza bruta
+- Metodo **más seguro que** la autenticación por **contraseña**
+    - **Impide** ataques por **fuerza bruta**
     - Limita las máquinas que pueden conectarse
     - Es mucho más facil robar una contraseña que una clave RSA
         - Las claves RSA se almacenan en las máquinas cliente cifradas con contraseña
 
 - Pasos para configurar acceso a SSH con claves RSA:
 
-    1. Generar par de claves en el cliente y mandar la clavepública al servidor
+```bash
+# 1. Generar par de claves en el cliente y mandar la clave pública al servidor
+ssh-keygen -t rsa –b 2048
+scp -p id_rsa.pub alumno@IP_SERVIDOR:/tmp/
 
-        ```bash
-        ssh-keygen -t rsa –b 2048
-        scp -p id_rsa.pub alumno@IP_SERVIDOR:/tmp/
-        ```
+# 2. En el servidor, añadir dicha clave al fichero de claves autorizadas:
+mkdir .ssh
+chmod 700 .ssh/
+cat /tmp/id_rsa.pub >> ~/.ssh/authorized_keys
+chmod 600 .ssh/authorized_keys
+rm /tmp/id_rsa.pub
 
-    2. En el servido, añadir dicha clave al fichero de claves autorizadas:
-
-        ```bash
-        mkdir .ssh
-        chmod 700 .ssh/
-        cat /tmp/id_rsa.pub >> ~/.ssh/authorized_keys
-        chmod 600 .ssh/authorized_keys
-        rm /tmp/id_rsa.pub
-        ```
-
-    3. Deshabilitar la autenticación con contraseña en el servidor modificando el archivo `/etc/ssh/sshd_config`:
-
-        ```bash
-        PasswordAuthentication no
-        ```
+# 3. Deshabilitar la autenticación con contraseña en el servidor modificando el archivo /etc/ssh/sshd_config:
+nano /etc/ssh/sshd_config
+PasswordAuthentication no
+```
 
 ### Segundo factor de autenticación (2FA)
 
 - Es una buena opcion si se quiere seguir usando la contraseña para acceder
 - Pasos:
 
-    1. Modificar el fichero `/etc/pam.d/sshd` y añadir configuracion para F2A concreto:
+```bash
+# 1. Modificar el fichero /etc/pam.d/sshd y añadir configuracion para F2A concreto:
+auth required pam_google_authenticator.so
 
-        ```bash
-        auth required pam_google_authenticator.so
-        ```
+# 2. En el fichero /etc/ssh/sshd_config, activar la verificación en dos pasos:
+ChallengeResponseAuthentication yes
 
-    2. En el fichero `/etc/ssh/sshd_config`, activar la verificación en dos pasos:
+# 3. Reiniciar el servidor SSH:
+sudo service ssh restart
+```
 
-        ```bash
-        ChallengeResponseAuthentication yes
-        ```
-
-    3. Reiniciar el servidor SSH:
-
-        ```bash
-        sudo service ssh restart
-        ```
-
-## 5.3 Otras medidas de seguridad: Syslog, SELinux, AppArmor, Grsecurity
+## 3. Otras medidas de seguridad: Syslog, SELinux, AppArmor, Grsecurity
 
 ### Syslog
 
-Sistema estándar logs (local+red)
-► Casi todas las distribuciones de Linux lo tienen
-Permite registrar todo tipo de eventos
-Los mensajes tienen un formato estandarizad
-Los logs se guardan en `/varl/log`
-Servidor para almacenamiento y gestion de logs: `syslogd/syslog-ng/rsyslog`
-Para usarlo se arranca:
-`/etc/init.d/sysklogd`
-Configuración en:
-`/etc/syslog.conf`
+- Sistema estándar logs (local+red)
+    - Casi todas las distribuciones de Linux lo tienen
+    - Permite registrar todo tipo de eventos
+- Los mensajes tienen un **formato estandarizado**
+- Los logs se guardan en:
+    - `/varl/log`
+- Servidor para almacenamiento y gestion de logs:
+    - `syslogd/syslog-ng/rsyslog`
+- Para usarlo se arranca:
+    - `/etc/init.d/sysklogd`
+- Configuración en:
+    - `/etc/syslog.conf`
 
 #### Niveles de log
 
@@ -540,27 +458,25 @@ Configuración en:
 #### Políticas de SELinux
 
 - La configuración se puede encontrar en `/etc/selinux/config`
-    - *Targeted*
+    - **Targeted**
         - Solo una serie de procesos se controlan con SELinux
         - Es la política por defecto
         - Es un control eficaz
         - Para el resto solo se aplica la politica estándar de linux (DAC)
-    - *Multinivel (MLS/MCS)*:
+    - **Multinivel (MLS/MCS)**:
         - Control estricto (insfraestructuras críticas, etc.)
 
 ### AppArmor
 
-- Programa de seguridad para Linux
-- Fue creado como una alternativa más sencilla que SELinux
-
-- Perfiles de AppArmor
+- **Programa de seguridad** para Linux
+- Fue creado como una alternativa **más sencilla que SELinux**
+- *Perfiles* de AppArmor
     - Ficheros de texto en `/etc/apparmor.d` con los nombres de los binarios
     - Dos tipos de reglas
         - *path*:
             - A que ficheros puede acceder una aplicación
         . *capability entries*:
             - Que privilegios puede usar un proceso
-
     - Dos modos de ejecución:
         - *complain*: solo logging, no toma acciones.
         - *enforce*: logging + tomar acciones
@@ -577,7 +493,7 @@ Configuración en:
     - **ASLR** (*Address Space Layout Randomization*)
 - Para **evitar *buffer overflows***
 
-## 5.4 Securizar el acceso a red: iptables, SIEM, UTM…
+## 4. Securizar el acceso a red: iptables, SIEM, UTM…
 
 - Bloquear hosts permitidos y denegados
     - `/etc/hosts.allow` y `/etc/hosts.deny`
@@ -587,7 +503,7 @@ Configuración en:
 
 - IPtables: componente de netfilter
     - Cortafuegos de estado
-    - iptables = Reglas + Cadenas + Tablas
+    - `iptables` = Reglas + Cadenas + Tablas
         - Se define mediante reglas que se evalúan secuencialmente
         - Las reglas se agrupan en cadenas
         - A su vez las cadenas se agrupan en tablas asociadas a diferentes tipos de procesamiento de paquetes
@@ -595,7 +511,7 @@ Configuración en:
 #### Tablas
 
 - `filter` → Filtra paquetes (es la que se usa por defecto)
-- `nat` → NAT paquetes
+- `nat`→ NAT paquetes
 - `mangle` → Modifica paquetes (por ejemplo su TTL)
 - `raw` → Permite deshabilitar el connection tracking
 - `security` → Usado por SELinux
@@ -649,10 +565,11 @@ Objetivos de reglas `(<target>`):
 ### SIEM
 
 - *Security Information and Event Management*
-Software que proporciona un **análisis en tiempo real** de las **alertas de seguridad generadas** por los dispositivos hardware y las aplicaciones que hay en una red
+- Software que proporciona:
+    - Un **análisis en tiempo real** de las **alertas de seguridad generadas** por los dispositivos hardware y las aplicaciones que hay en una red
 – Ejemplo.: *OSSIM*
 
-## 5.5 Proxies e IDS
+## 5. Proxies e IDS
 
 ### Proxy
 

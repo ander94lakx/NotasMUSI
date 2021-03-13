@@ -1,6 +1,6 @@
 # Tema 3: Seguridad en otros Sistemas Operativos
 
-## 3.1 Seguridad en macOS
+## 1. Seguridad en macOS
 
 ### Autenticación local & Open Directory
 
@@ -32,11 +32,11 @@
 - Triple DES
 - Directorios de almacenamiento de claves
 
-    ```bash
-    ~/Library/Keychains/
-    /Library/Keychains/
-    /Network/Library/Keychains/
-    ```
+```bash
+~/Library/Keychains/
+/Library/Keychains/
+/Network/Library/Keychains/
+```
 
 ### Sistemas de permisos y autorización
 
@@ -121,7 +121,7 @@
     - *Info* (Nivel 6)
     - *Debug* (Nivel 7)
 
-## 3.2 Seguridad en Android
+## 2. Seguridad en Android
 
 - Los dispositivos móviles son un punto de ataque en auge en los últimos años
 - Android es el SO móvil más extendido
@@ -171,7 +171,6 @@
         - A cada app (cuando se instala) se le asigna un UID y un GID únicos y asocia todos los ficheros a ellos
             - Asi, solo esa aplicación tiene acceso a ellos
 - Los servicios del Application Framework se ejecutan en un proceso separado (`system_server`)
-
 - El **Kernel** de Linux es el **encargado de aislar** las aplicaciones (sandboxing).
 - La máquina **Dalvik no es una limitación** en cuanto a seguridad:
     - No está enterado de los mecanismos de aislamiento
@@ -203,7 +202,7 @@
     - **Para actualizaciones** es buena medida
         - Garantiza que la actualización la ha hecho el mismo autor
 - Google Play establece una tasa y datos de tarjeta de crédito para subir aplicaciones
-    - Permite **rastrear al culpable** en caso de que las aplicación sea mailiciosa
+    - Permite **rastrear al culpable** en caso de que las aplicación sea maliciosa
     - Solo es una medida "**disuasoria**"
 - Si se habilita la instalación de `.apk` desde fuentes externas se pierde esa protección
 
@@ -244,7 +243,7 @@ Mecanismos para impedir accesos no debidos a memoria (problemas que puedan surgi
         - Entonces es el dispositivo **quien va preguntando por la red**
         - Con un sniffer se puede capturar esa información
         - *Rogue AP* para engañar al dispositivo
-        - (Afecta mas en versiones más antiguas)
+        - (Afecta más en versiones más antiguas)
 
 ► Se identifica cada red a través
 de su SSID (nombre de la red)
@@ -274,7 +273,7 @@ y su seguridad.
 - Deshabilitar servicios cuando no se usen
 - Desinstalar apps cuando no se usen
 
-## 3.3 Seguridad en iOS
+## 3. Seguridad en iOS
 
 ### Arquitectura
 
@@ -303,21 +302,17 @@ y su seguridad.
 - TouchID
 - FaceID
 
-### Proteccioón de datos
+### Protección de datos
 
-►
-Cifrado con soporte hardware:
-▪
-Modulo AES-256 entre memoria flash y RAM
+- **Cifrado con soporte hardware**
+    - Modulo AES-256 entre memoria flash y RAM
+- **Jerarquía de claves**:
+    - Cifrar cada fichero con una clave diferente (que se mezclan con el UID del dispositivo)
+- **Borrado de seguridad**
+    - Para borrar el dispositivo completamente (wipe) basta con olvidar sus claves
+- Las aplicaciones pueden especificar la clase de protección para los archivos de las aplicaciones
 
-jerarquía de claves para cifrar cada fichero con una clave
-diferente (que se mezclan con el UID del dispositivo):
-
-- Borrado de seguridad
-- Para borrar el dispositivo completamente (wipe) basta con olvidar sus claves.
-- Las aplicaciones pueden especificar la clase de protección  para los archivos de las aplicaciones
-
-Seguridad de las Apps
+### Seguridad de las Apps
 
 - **"Walled Garden"**:
     - Solo se pueden instalar Apps de la **AppStore**
@@ -343,7 +338,7 @@ Seguridad de las Apps
 
 - TLS (v1.2) y DTLS para las aplicaciones
 - VPN:
-    - Procotolos: IKEv2/IPSec, SSL-VPN, L2TP/IPSec
+    - Protocolos: IKEv2/IPSec, SSL-VPN, L2TP/IPSec
     - Modos: VPN On Demand, Per App VPN y Always-on VPN
 - **Wi-Fi utiliza direcciones MAC aleatorias**
     - En cada trama de escaneo activo (WiFi Probes)

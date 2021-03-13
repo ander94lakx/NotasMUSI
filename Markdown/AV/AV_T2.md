@@ -1,6 +1,6 @@
 # Tema 2: Vulnerabilidades
 
-## 2.2 Análisis de vulnerabilidades
+## 1. Análisis de vulnerabilidades
 
 - Existen **herramientas** integrales que permiten **escanear vulnerabilidades** en sistemas o redes enteras
 - Este proceso también se puede hacer de manera manual o más artesanal (probando técnicas, lanzando escaneos, etc)
@@ -26,7 +26,7 @@
 - Funciona como las anteriores
 - Comprueba si, cuando detecta una vulnerabilidad, se encuentra en la BD de Metasploit
 
-## 2.3 Metasploit
+## 2. Metasploit
 
 - **Payload**: código que tiene el fin de **comprometer una máquina** externa tras haber sido penetrada
     - *Shellcode*: tipo de payload que genera una shell en la víctima accesible remotamente
@@ -136,11 +136,11 @@
 
 ### Escalada de privilegios
 
-- Existe numerosas técnicas de escalada de privilegios en una maquina, como por ejemplo:
+- Existe númerosas técnicas de escalada de privilegios en una máquina, como por ejemplo:
     - Bypass UAC
     - Pass the hash
 
-## 2.4 Tipos de vulnerabilidades
+## 3. Tipos de vulnerabilidades
 
 ### Vulnerabilidades de código
 
@@ -234,7 +234,7 @@ int crash (char *param)
     char st[64];
     if ( strlen(param) > 64 )
     {
-        printf(“Argumento demasiado largo”);
+        printf("Argumento demasiado largo");
         exit(0);
     }
     strcpy(st, param); // La función strcpy siempre añade ‘\0’ al final 
@@ -254,12 +254,12 @@ int crash (char *param)
 ```cpp
 if(!access(file,W_OK))              // 1. Comprueba el acceso al archivo
 {
-    fich = fopen(file,”W+”);        // 2. Abre el archivo
+    fich = fopen(file,"W+");        // 2. Abre el archivo
     modificar_fichero(fich);
 }                                   // El proceso llega a 1 y tiene permiso. Pierde la 
 else                                // CPU y el otro proceso modifica el nombre
 {                                   // del archivo. El primer proceso al tomar la CPU
-    fprint(stderr,”Sin permiso”);   // de nuevo llegará a 2, no comprobará de nuevo 
+    fprint(stderr,"Sin permiso");   // de nuevo llegará a 2, no comprobará de nuevo 
 }                                   // si tiene el permiso y abrirá el archivo
 ```
 
@@ -294,7 +294,7 @@ int main(void)
     int a = 1;
     int b = 2;
     int c = 3;
-    scanf(“%29s”, texto);
+    scanf("%29s", texto);
     printf(texto); // No da formato al texto leído para imprimirlo
     return 0;
 }
@@ -323,7 +323,7 @@ int main ()
 }
 ```
 
-## 2.5 Buffer Overflow
+## 4. Buffer Overflow
 
 ### x86
 
@@ -359,7 +359,6 @@ int main ()
 
 - 8 Registros de propósito general
     - **AX, BX, CX, DX**: Operaciones aritméticas
-
 - **SI, DI, BP, SP**: Registros de dirección
 - **SI**: Dirección origen
 - **DI**: Dirección destino
@@ -384,25 +383,21 @@ MOV AX, 0x8000  ; Almacena lo que hay en la dirección de memoria 8000
 ADDB AX,BH,BL   ; Suma BH y BL y lo guarda en AX
 
 PUSH AX:        ; Guarda el dato almacenado en AX en la pila
-                ;
-                ;       De manera implícita “suma” 1 posición de memoria a SP
+                ;       De manera implícita "suma" 1 posición de memoria a SP
 
 POP AX          ; Guarda el primer elemento de la pila en AX (LIFO)
-                ;
-                ;       De manera implícita “resta” una posición de memoria a SP
+                ;       De manera implícita "resta" una posición de memoria a SP
 
 JMP 0x8048b70   ; salto incondicional (EIP)
 
 JNEZ 0x8048b70  ; Salta si el flag de cero no está activado (Reg. Flags)
 
 CALL Subrutina  ; Llama a la subrutina que está en la dirección de memoria
-                ; indicada por la etiqueta “Subrutina”
-                ;            
+                ; indicada por la etiqueta "Subrutina"
                 ;       De manera implícita PUSH EIP
 
 RET             ; Retoma la ejecución en el punto donde se ha quedado
                 ; antes de llamar a la subrutina
-                ;
                 ;       De manera implícita POP EIP
 ```
 
@@ -501,16 +496,16 @@ int main(int argc, char **argv) {
     - ¿Qué sucederá con la pila?
 - Si se ejecuta el código de la siguiente manera:
 
-    ```bash
-    gcc programa.c –o programa
-    ./programa AAAAAAAAAAAAAAAA..........
-    ```
+```bash
+gcc programa.c –o programa
+./programa AAAAAAAAAAAAAAAA..........
+```
 
 - Ocurre un desbordamiento de pila
 
-    ![Pila con Buffer Overflow](img/buffer_overflow_stack.png)
+![Pila con Buffer Overflow](img/buffer_overflow_stack.png)
 
-## 2.6 Mecanismos de protección
+## 5. Mecanismos de protección
 
 ### Programación segura
 
@@ -528,17 +523,17 @@ variables
 
 ### DEP (Data Execution Prevention)
 
-- Ayuda a evitar la ejecución del código desde las páginas de datos
+- Ayuda a **evitar la ejecución del código desde las páginas de datos**
 - Normalmente, el código no se ejecuta desde el Heap ni la pila
 - Dos tipos:
     - Por HW:
         - **Detecta código** que se está ejecutando desde estas ubicaciones y  **produce una excepción**
-            - XD/NX Intel o AMD (eXecute Disable o No Execute)
+            - **XD/NX** Intel o AMD (eXecute Disable o No Execute)
     - Por SW:
         - Reimplementación de funciones inseguras
-            - Ejemplo: Libsafe
+            - Ejemplo: **Libsafe**
         - Deteccion de ejecucion de código ilegítimo en la pila
-            - Ejemplo: SecureStack
+            - Ejemplo: **SecureStack**
 
 ### Stack/Canary Cookies
 

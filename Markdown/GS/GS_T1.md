@@ -1,40 +1,36 @@
 # Tema 1: La Seguridad de la información en las organizaciones
 
-## 1.1 Objetivo
+## 1. Objetivo
 
 > Comprender la seguridad de la información como una actividad orientada a **garantizar la confidencialidad, integridad y disponibilidad** de los recursos valiosos de un **sistema de información**.
 
-## 1.2 Introducción
+## 2. Introducción
 
-La **Seguridad** como proceso para:
+- La **Seguridad** como proceso para:
+    - Eliminar los **riesgos asociados** a:
+        - **Confidencialidad**
+        - **Integridad**
+        - **Disponibilidad**
+    - Del recurso más valioso: **la información**
+    - ¿**Qué** se protege?:
+        - *CID*
+    - ¿**De qué** activos?:
+        - Los activos *valiosos*
+    - ¿**Por qué medios**?:
+        - Controles implementados en:
+            - Políticas
+            - Estándares
+            - Procedimientos
 
-- Eliminar los **riesgos asociados** a:
-    - **Confidencialidad**
-    - **Integridad**
-    - **Disponibilidad**
-- Del recurso más valioso: **la información**
+## 3. La seguridad de la información implica la confidencialidad, integridad y disponibilidad
 
-- ¿**Qué** se protege?:
-    - *CID*
-- ¿**De qué** activos?:
-    - Los activos *valiosos*
-- ¿**Por qué medios**?:
-    - Controles implementados en:
-        - Políticas
-        - Estándares
-        - Procedimientos
-
-## 1.3 La seguridad de la información implica la confidencialidad, integridad y disponibilidad
-
-Tres perspectivas:
-
-- **Legal**
-    - Las regulaciones (internacionales, nacionales y regionales) para proteger la privacidad y los derechos de PI
-- **Técnica**
-    - Desarrollo, análisis, configuración de elementos técnicos relacionados con seguridad (HW, SW, redes)
-- **Organizativa**
-    - Análisis de riesgos
-
+- Tres perspectivas:
+    - **Legal**
+        - Las regulaciones (internacionales, nacionales y regionales) para proteger la privacidad y los derechos de PI
+    - **Técnica**
+        - Desarrollo, análisis, configuración de elementos técnicos relacionados con seguridad (HW, SW, redes)
+    - **Organizativa**
+        - Análisis de riesgos
 - Importante:
     - La seguridad de la información es una **actividad crítica en la empresa** la seguridad es un **proceso continuo de mejora**
         - Hay que revisar periódicamente los controles y las medidas implementadas para asegurares de que mitiguen los riesgos y se adapten a los nuevos
@@ -42,31 +38,27 @@ Tres perspectivas:
 
 ### Confidencialidad
 
-Propiedad de **prevenir la revelación** y divulgación intencionada o no intencionada **de información a personas o sistemas no autorizados**.
+- Propiedad de **prevenir la revelación** y divulgación intencionada o no intencionada **de información a personas o sistemas no autorizados**
 
 ### Integridad
 
-Integridad es la propiedad que busca **mantener los datos libres de
-modificaciones no autorizadas**.
-
-Formas de gestionarla:
-
-- Dar acceso de acuerdo al criterio del menor privilegio (criterio **need-to-know**):
-    - Solo se debe dar acceso a los usuarios a aquellos recursos de información que les sean absolutamente imprescindibles para realizar su trabajo
-- **Separación de obligaciones**:
-    - Para una determinada tarea, no haya nunca un solo usuario responsable de realizarla
-- **Rotación de obligaciones**:
-    - Propone que las tareas asignadas a
-los empleados cambien de responsable de vez en cuando
+- Integridad es la propiedad que busca **mantener los datos libres de
+modificaciones no autorizadas**
+- Formas de gestionarla:
+    - Dar acceso de acuerdo al criterio del menor privilegio (criterio **need-to-know**):
+        - Solo se debe dar acceso a los usuarios a aquellos recursos de información que les sean absolutamente imprescindibles para realizar su trabajo
+    - **Separación de obligaciones**:
+        - Para una determinada tarea, no haya nunca un solo usuario responsable de realizarla
+    - **Rotación de obligaciones**:
+        - Propone que las tareas asignadas a
+    los empleados cambien de responsable de vez en cuando
 
 ### Disponibilidad
 
-Disponibilidad propiedad de la información de **encontrarse a disposición de quienes deben acceder a ella** como usuarios autorizados, ya sean personas, procesos o aplicaciones.
-
-Dos situaciones típicas:
-
-- Ataques de **denegación de servicio** (Denial of Service, DoS)
-- **Pérdidas de datos o capacidades** de procesamiento de datos debidas a **catástrofes naturales**
+- Disponibilidad propiedad de la información de **encontrarse a disposición de quienes deben acceder a ella** como usuarios autorizados, ya sean personas, procesos o aplicaciones.
+- Dos situaciones típicas:
+    - Ataques de **denegación de servicio** (Denial of Service, DoS)
+    - **Pérdidas de datos o capacidades** de procesamiento de datos debidas a **catástrofes naturales**
 
 ### Otros conceptos
 
@@ -84,7 +76,7 @@ Dos situaciones típicas:
 - **Privacidad**  
     - Nivel de confidencialidad que tiene un usuario
 
-## 1.4 La seguridad es un asunto económico
+## 4. La seguridad es un asunto económico
 
 - A veces **no se toma suficientemente en cuenta la seguridad de la información**
     - Hasta que experimentan un ataque o una brecha de seguridad
@@ -104,7 +96,7 @@ Dos situaciones típicas:
     - Y también puede haber:
         - Costes post incidente
 
-## 1.5 La seguridad es un proceso
+## 5. La seguridad es un proceso
 
 - La seguridad es un proceso:
     - **Actividades continuas** dentro de
@@ -123,7 +115,7 @@ Dos situaciones típicas:
 
 ![Jerarquía de herramientas de gestión](img/jerarquia_htas_gestion.png)
 
-## 1.6 La clasificación de la información
+## 6. La clasificación de la información
 
 - La clasificación de la información permite **identificar el valor de los recursos de información**
     - Demuestra un **compromiso con la seguridad**
@@ -166,7 +158,7 @@ Dos situaciones típicas:
 - Especificar **procedimientos** para acceder o transferir esos activos de información
 - Crear un programa de concienciación empresarial sobre la clasificación y los controles
 
-## 1.7 La seguridad en la información implica la gestión de los riesgos
+## 7. La seguridad en la información implica la gestión de los riesgos
 
 - El **Control de Seguridad**:
     - *Objetivo*: reducir los efectos de una amenaza o vulnerabilidad
@@ -183,7 +175,7 @@ Dos situaciones típicas:
 - El riesgo en este caso redundaría en la pérdida de C/D/I
 - La organización debe implementar este control en la forma de políticas y en procedimientos concretos
 
-## 1.8 La seguridad se articula con controles de seguridad
+## 8. La seguridad se articula con controles de seguridad
 
 - Para poder medir el impacto y la posibilidad de que un evento no deseado suceda
     - Hay que analizar el riesgo y sus elementos
@@ -194,7 +186,7 @@ Dos situaciones típicas:
     3. Evitarlo o **eliminarlo** completamente
     4. **Transferir** el riesgo (no actúa sobre el riesgo en sí)
 
-## 1.9 La seguridad en tanto física como lógica
+## 9. La seguridad es tanto física como lógica
 
 - La seguridad física es parte de la seguridad de la información
 - Los controles de seguridad física son tan diversos como las amenazas
@@ -212,7 +204,7 @@ Dos situaciones típicas:
         - dispositivos de control de acceso a las instalaciones
         - ...
 
-## 1.10 La seguridad implica a las persona
+## 10. La seguridad implica a las persona
 
 - El factor humano es un elemento más del sistema de información
     - Las políticas y las herramientas deben tenerlos en cuenta

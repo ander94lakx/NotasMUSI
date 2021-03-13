@@ -43,6 +43,29 @@ distribuirse sin peligro de su seguridad
 red, etc.
 - Sistema de autenticación más robusto
 
+### Políticas
+
+- Política **restrictiva**:
+    - Trafico **bloqueado por defecto**
+    - **Reglas para admitir** cierto tráfico
+- Política **permisiva**:
+    - Trafico **admintido por defecto**
+    - **Reglas para bloquear** cierto tráfico
+
+### Tipos de cortafuegos
+
+- **De paquetes**
+    - Filtra los paquetes en función de:
+        - Campos de **cabecera de red (IP)** y **transporte (TCP, UDP,** etc.)
+    - **Algunos** más avanzados que incorporan una **tabla de estado**
+        - Seguimiento de las conexiones abiertas y manejar paquetes en función de eso
+- **De aplicación**
+    - Actúa de intermediario (proxy) en todas las transacciones que lo atraviesan
+    - Filtra **a nivel de aplicación** según la política
+- **De circuito**:
+    - Actúa de intermediario (proxy) redirigiendo tramas una vez que se ha establecido una conexión
+    - **No filtra** a nivel de **aplicación**
+
 ## 3. `iptables`
 
 - Componente construido sobre Netfilter
@@ -68,11 +91,9 @@ red, etc.
 - **FORWARD** → Paquetes para reenviar
 - **PREROUTING** → Paquetes antes de ser enrutados
 - **POSTROUTING** → Paquetes después de ser enrutados
-
-No todas las cadenas existen en todas las tablas
-
-- filter → INPUT, OUTPUT, FORWARD
-- nat, mangle → PREROUTING, POSTROUTING
+- No todas las cadenas existen en todas las tablas
+    - filter → INPUT, OUTPUT, FORWARD
+    - nat, mangle → PREROUTING, POSTROUTING
 
 ### Ruta de un paquete en `iptables`
 
@@ -115,45 +136,41 @@ Decisión de enrutamiento                                          |
 
 ### Estructura de las reglas
 
-`iptables [-t tabla] comando [condición] [acción]`
+```bash
+iptables [-t tabla] comando [condición] [acción]
+```
 
-Comandos:
-
-- `-A` especifica la regla
-- `-D` eliminar regla
-- `-L` listar reglas
-- `-F` elimina reglas (por cadena o de todas las cadenas)
-- `-P` establece la política por defecto en una cadena
-- ...
-
-Opciones (varian en función del comando usado):
-
-- `-v` modo verbose
-- `-n` muestra valores numéricos para IPs, puertos, ...
-- `-t` especifica a que tabla se aplica la regla
-- `-p` protocolo
-- `-s` IP origen
-- `-d` IP destino
-- `-i` interfaz de entrada
-- `-o` interfaz de salida
-- `--sport` puesto origen
-- `--dport` puerto destino
-- `-m state --state` estado de la conexión
-- `-m multiport` permite especificar varios puertos a los que aplicar la regla
-- ...
+- Comandos:
+    - `-A` especifica la regla
+    - `-D` eliminar regla
+    - `-L` listar reglas
+    - `-F` elimina reglas (por cadena o de todas las cadenas)
+    - `-P` establece la política por defecto en una cadena
+    - ...
+- Opciones (varian en función del comando usado):
+    - `-v` modo verbose
+    - `-n` muestra valores numéricos para IPs, puertos, ...
+    - `-t` especifica a que tabla se aplica la regla
+    - `-p` protocolo
+    - `-s` IP origen
+    - `-d` IP destino
+    - `-i` interfaz de entrada
+    - `-o` interfaz de salida
+    - `--sport` puesto origen
+    - `--dport` puerto destino
+    - `-m state --state` estado de la conexión
+    - `-m multiport` permite especificar varios puertos a los que aplicar la regla
+    - ...
 
 ### Estados
 
-Estados (Módulo coontrack):
+- Estados (Módulo coontrack):
+    - **NEW** → Nueva conexión
+    - **ESTABLISHED** → Conexión establecida
+    - **RELATED** → Nueva conexión asociada a otra establecida (abrir nueva conexión dentro de una existente)
+    - **INVALID** → El paquete seleccionado no puede ser asociado a una conexión conocida
 
-- **NEW** → Nueva conexión
-- **ESTABLISHED** → Conexión establecida
-- **RELATED** → Nueva conexión asociada a otra establecida (abrir
-nueva conexión dentro de una existente)
-- **INVALID** → El paquete seleccionado no puede ser asociado a
-una conexión conocida
-
-Estados de una conexión TCP:
+#### Estados de una conexión TCP:
 
 ```text
 |    Cliente    |     Firewall     |     Servidor     |
@@ -185,8 +202,7 @@ Estados de una conexión TCP:
 - Si un paquete cumple los requisitos de la regla:
     - Se tendrá en cuenta la acción
 - Si no cumple ninguna regla
-    - Se tiene en cuenta la política
-de la cadena
+    - Se tiene en cuenta la política de la cadena
 
 Acciones comunes:
 
@@ -197,16 +213,13 @@ Acciones comunes:
 
 ## 4. Topologías de defensa y DMZ
 
-Establecer una topologia de defensa es complicado y delicado:
-
-- Requiere planificación y establecer políticas, procedimientos, controles y responsables
-
-Debe fundamentarse en:
-
-- Una política de seguridad definida por la corporación
-- Determinar los responsables y beneficiarios de los servicios
-- Ubicación del cortafuegos
-- Control y mantenimiento del funcionamiento
+- Establecer una topologia de defensa es complicado y delicado:
+    - Requiere planificación y establecer políticas, procedimientos, controles y responsables
+- Debe fundamentarse en:
+    - Una política de seguridad definida por la corporación
+    - Determinar los responsables y beneficiarios de los servicios
+    - Ubicación del cortafuegos
+    - Control y mantenimiento del funcionamiento
 
 ### Tipos de arquitecturas
 
@@ -222,10 +235,9 @@ Debe fundamentarse en:
 
 ### DMZ
 
-Es una red local que se se ubica entre la red externa y la interna
-
-- Esta aislada de la red interna
-- Se usa para que ciertos servicios se puedan acceder desde el exterior sin tener que acceder a la red interna
+- Es una red local que se se ubica entre la red externa y la interna
+    - Esta aislada de la red interna
+    - Se usa para que ciertos servicios se puedan acceder desde el exterior sin tener que acceder a la red interna
 
 #### Arquitecturas con DMZ
 
@@ -233,19 +245,19 @@ Es una red local que se se ubica entre la red externa y la interna
 
 ![Multi-Homed host con DMZ (three-legged firewall)](img/mh-dmz.png)
 
-- Ventajas:
+- **Ventajas**:
     - Aísla los elementos que se quieren tener accesibles a través de la red exterior
     - Un único cortafuegos para todo
-- Contras:
+- **Contras**:
     - Dependiendo de la carga puede ser un cuello de botella
 
 #### Defensa en profundidad (DMZ entre cortafuegos)
 
 ![Defensa en profundidad (DMZ entre cortafuegos)](img/dep.png)
 
-- Ventajas:
+- **Ventajas**:
     - Se pueden establecer controles iniciales comunes para la DMZ y la red interna y después establecer un cortafuegos a nivel de aplicación o con configuraciones más complejas para la red interna
-- Contras:
+- **Contras**:
     - Requiere dos cortafuegos[^1]
     - Si se vulnera el primer cortafuegos la DMZ queda completamente expuesta
 
@@ -255,17 +267,17 @@ Es una red local que se se ubica entre la red externa y la interna
 
 ![Defensa en profundidad (cortafuegos inicial + three-legged firewall)](img/dep2.png)
 
-- Ventajas:
+- **Ventajas**:
     - Se puede establecer un primer cortafuegos de hardware y filtrar toda lo no necesario y dejar el resto de paquetes para un análisis más complejo (como con el anterior)
     - Si se vulnera el primer firewall no queda ninguna parte de la red expuesta a vulnerabilidades
-- Contras:
+- **Contras**:
     - Requiere de dos cortafuegos [^1]
 
 #### Defensa en profundidad (alta disponibilidad)
 
 ![Defensa en profundidad (alta disponibilidad)](img/dep-ad.png)
 
-- Ventajas:
+- **Ventajas**:
     - Dos puntos de acceso a internet: si falla uno el otro sigue activo (aumentas disponibilidad)
-- Contras:
+- **Contras**:
     - Aun teniendo dos firewalls con vulnerar uno se accedería a la red interna

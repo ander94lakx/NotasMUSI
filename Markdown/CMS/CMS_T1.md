@@ -1,32 +1,32 @@
 # Tema 1: Fundamentos de criptografía y seguridad
 
-## 1.1 ¿Qué es la criptografía?
+## 1. ¿Qué es la criptografía?
 
 - Herramientas matemáticas, técnicas y algoritmos
     - Que con el uso de una o más **claves**
     - Permiten cifrar la información, protegerla y dotarla al menos de:
         - **Confidencialidad** e **Integridad**
 
-## 1.2 Codificar VS Cifrar
+## 2. Codificar VS Cifrar
 
 - Codificar: usar un código para representar elementos
 - Cifrar: transformar inflamación mediante el uso de una **clave**
 
-## 1.3 Terminología
+## 3. Terminología
 
 - Mensaje: mensaje sin cifrar, puede ser texto, stream de bits, cualquier tipo de información
 - Criptograma: salida que se obtiene tras cifrar un mensaje
 - Clave: elemento que se utiliza para la transformación de un mensaje en un criptograma y viceversa
     - Clave de descifrado: clave que se utiliza para convertir un cifrado de un
 
-## 1.4 Contextualización de la criptografía
+## 4. Contextualización de la criptografía
 
 - Criptología: disciplina que se dedica al estudio de la escritura secreta
     - **Criptografía**: estudia de los algoritmos, protocolos y sistemas que se utilizan para proteger la información
     - Esteganografía: estudia cómo *ocultar* mensajes con información privada por un canal inseguro
     - **Criptoanálisis**: estudia los sistemas criptográficos para encontrar debilidades y romper dichos sistemas
 
-## 1.5 Clasificación de los criptosistemas
+## 5. Clasificación de los criptosistemas
 
 - Criptografía clásica
 - Criptografía moderna
@@ -38,13 +38,13 @@
             - Cifrado en flujo
             - Cifrado por bloque
 
-## 1.6. Personajes relevantes en el desarrollo de la criptografía
+## 6. Personajes relevantes en el desarrollo de la criptografía
 
 - Claude Shannon: padre de la teoría de la información
 - Horst Feistel: desarrolló el algoritmo DES (ya sustituido por AES)
 - Whitfield Diffie y Martin Hellman: desarrollaron un protocolo para establecer claves entre dos partes conocido como protocolo **Diffie-Hellman**
 
-## 1.7 Matemáticas discretas
+## 7. Matemáticas discretas
 
 Son el pilar fundamental de la criptografía.
 Principales conceptos usados ampliamente en criptografía:
@@ -168,45 +168,6 @@ Sirve para encontrar el inverso multiplicativo de x (`x = inv(a, n)`)
     - (x · a) mod n = 1
         - `(14 · 9) mod 25 = 126 mod 25 = (5 · 25 + 1) mod 25 = 1`
 
-#### Ejemplo para `inv(9, 275)`
-
-1. ¿Existe el inverso? ¿Son coprimos?
-    - Si `mcd(9, 275) = 1` -> sí existe
-2. AEE
-    - `g[0, 1] = n, a,`
-    - `u[0, 1] = 1, 0`
-    - `v[0, 1] = 0, 1`
-    - Mientras `g[i] != 0`:
-        - `y[i+1] = int(g[i-1] / g[i])`
-        - `g[i+1] = g[i-1] mod g[i]`
-        - `u[i+1] = u[i-1] - y[i+1] · u[i]`
-        - `v[i+1] = v[i-1] - y[i+1] · v[i]`
-
-```bash
-    i |  y[i]  g[i]  u[i]  v[i]
-    ------------------------------
-    0 |   -    275    1     0
-      |
-    1 |   -     9     0     1
-      |
-    2 |  30     5     1   -30
-      |
-    3 |   1     4    -1    31
-      |
-    4 |   1     1     2   -61
-    ------------------------------
-    5 |   4     0    -9   275
-
-    inv(9, 275) = -61 = 214
-    
-    -61 + 275 = 214
-```
-
-3. Comprobar
-    - u[f] = a && v[f] = n
-    - (x · a) mod n = 1
-        - `(214 · 9) mod 275 = 1926 mod 275 = (7 · 275 + 1) mod 275 = 1`
-
 ### Algoritmo de exponenciación rápida
 
 - `x = A^B mod n`
@@ -226,15 +187,15 @@ Sirve para encontrar el inverso multiplicativo de x (`x = inv(a, n)`)
         - Si b[i] = 0
             - `x^2 mod n`
 
-|  i  |  b  |  x                |  x  |
-| --- | --- | ----------------- | --- |
-|  6  |  1  | `1^2 · 19 mod 91` |  19 |
-|  5  |  0  |     `19^2 mod 91` |  88 |
-|  4  |  1  | `1^2 · 19 mod 91` |  80 |
-|  3  |  0  |     `19^2 mod 91` |  30 |
-|  2  |  0  |     `19^2 mod 91` |  81 |
-|  1  |  1  | `1^2 · 19 mod 91` |  80 |
-|  0  |  1  | `1^2 · 19 mod 91` |  24 |
+|  i  |  b  |  x                 |  x  |
+| --- | --- | ------------------ | --- |
+|  6  |  1  | `(1^2)  · 19 mod 91` |  19 |
+|  5  |  0  | `(19^2)      mod 91` |  88 |
+|  4  |  1  | `(88^2) · 19 mod 91` |  80 |
+|  3  |  0  | `(80^2)      mod 91` |  30 |
+|  2  |  0  | `(30^2)      mod 91` |  81 |
+|  1  |  1  | `(81^2) · 19 mod 91` |  80 |
+|  0  |  1  | `(80^2) · 19 mod 91` |  24 |
 
 ### Concepto de raíz primitiva
 
@@ -262,9 +223,9 @@ Sirve para encontrar el inverso multiplicativo de x (`x = inv(a, n)`)
         - `5^15 mod 17 = 7`
         - `5^16 mod 17 = 1`
 
-## 1.8 Problemas matemáticos en la criptografía
+## 8. Problemas matemáticos en la criptografía
 
-Se usan para tener funciones en un solo sentido
+- Se usan para tener funciones en un solo sentido
 
 ### Problema de la Factorización Entera (PFE)
 
@@ -287,7 +248,7 @@ Se usan para tener funciones en un solo sentido
     - `x = (log_α β) mod p`
     - Aun conociendo α, β y p, hallar x es computacionalmente intratable
 
-## 1.9 Teoría de la información
+## 9. Teoría de la información
 
 ### Concepto de entropía
 

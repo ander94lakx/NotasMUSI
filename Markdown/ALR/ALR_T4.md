@@ -8,9 +8,7 @@
     - La Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo que deroga:
         1. Ley 30/1992, de Régimen Jurídico de las Administraciones Públicas y del Procedimiento Administrativo Común.
         2. Ley 11/2007,de acceso electrónico de los ciudadanos a los Servicios Públicos
-
-Real Decreto 3/2010, de 8 de enero, por el que se regula el Esquema
-Nacional de Seguridad
+    - **Real Decreto 3/2010, de 8 de enero, por el que se regula el Esquema Nacional de Seguridad**
 
 ### ¿Para qué?
 
@@ -26,7 +24,7 @@ confianza
 electrónicos** cuyos destinatarios sean **ciudadanos** que puedan relacionarse con las **AAPP**
 - Incluye aspectos técnicos, organizativos y medidas de protección
 
-### :red_circle: Principios (Art 4 a 10 del RD 3/2010 ENS)
+### Principios (Art 4 a 10 del RD 3/2010 ENS) :red_circle:
 
 - **Seguridad Integral**
 - **Gestión de Riesgos** (minimizar hasta niveles aceptables)
@@ -40,36 +38,32 @@ electrónicos** cuyos destinatarios sean **ciudadanos** que puedan relacionarse 
 
 ## 2. Ámbito de aplicación
 
-### :red_circle: Ámbito de aplicación **subjetivo**
+### Ámbito de aplicación **subjetivo** :red_circle:
 
-**SÍ** aplica: (Guía CCN STIC 830)
-
-- **AAPP**
-    - _AGE_ (Administración General del Estado)
-    - _AACCAA_ (Administraciones de las Comunidades Autónomas)
-    - _AALL_ (Administraciones locales)
-- Entidades con **naturaleza bifronte** (privadas pero ofrecen servicio público)
-    - Colegios profesionales
-    - Cámaras de comercio
-    - ...
-- **Empresas proveedoras** de las AAPP que operan o desarrollan funciones para éstas
-
-**NO** aplica:
-
-- En las AAPP cuando desarrollen actividades en régimen de derecho privado
+- **SÍ** aplica: (Guía CCN STIC 830)
+    - **AAPP**
+        - _AGE_ (Administración General del Estado)
+        - _AACCAA_ (Administraciones de las Comunidades Autónomas)
+        - _AALL_ (Administraciones locales)
+    - Entidades con **naturaleza bifronte** (privadas pero ofrecen servicio público)
+        - Colegios profesionales
+        - Cámaras de comercio
+        - ...
+    - **Empresas proveedoras** de las AAPP que operan o desarrollan funciones para éstas
+- **NO** aplica:
+    - En las AAPP cuando desarrollen actividades en régimen de derecho privado
 
 ### Ámbito de aplicación **objetivo**
 
-Afecta a todos los **servicios** que se prestan a través de medios **electrónicos** cuyos destinatarios sean **ciudadanos** que puedan relacionarse con las AAPP.
-
-- **Ciudadano**: persona física, jurídica o ente sin personalidad que se relacionen, o  sean susceptibles de relacionarse, con las Administraciones Públicas. Todo  interlocutor excepto su personal
-- **Servicios públicos**: función de entidad oficial para satisfacer intereses o necesidades de ciudadanos
-- **Electrónicos**: hacen uso, total o parcialmente, de medios electrónicos para su  prestación
-- **SISTEMAS** incluidos en el ENS:
-    - Accesibles electrónicamente por ciudadanos
-    - Para ejercicio de derechos
-    - Para cumplimiento de deberes
-    - Para recabar información y estado de procedimiento
+- Afecta a todos los **servicios** que se prestan a través de medios **electrónicos** cuyos destinatarios sean **ciudadanos** que puedan relacionarse con las AAPP.
+    - **Ciudadano**: persona física, jurídica o ente sin personalidad que se relacionen, o  sean susceptibles de relacionarse, con las Administraciones Públicas. Todo  interlocutor excepto su personal
+    - **Servicios públicos**: función de entidad oficial para satisfacer intereses o necesidades de ciudadanos
+    - **Electrónicos**: hacen uso, total o parcialmente, de medios electrónicos para su  prestación
+    - **SISTEMAS** incluidos en el ENS:
+        - Accesibles electrónicamente por ciudadanos
+        - Para ejercicio de derechos
+        - Para cumplimiento de deberes
+        - Para recabar información y estado de procedimiento
 
 ## 3. Reforma: RD 951/2015
 
@@ -82,7 +76,7 @@ Afecta a todos los **servicios** que se prestan a través de medios **electróni
 ### Modificaciones
 
 - Artículo 11:
-    - Las AAPP “deberán disponer formalmente de su **política de seguridad** que articule la **gestión continuada de la seguridad**”.
+    - Las AAPP "deberán disponer formalmente de su **política de seguridad** que articule la **gestión continuada de la seguridad**".
 - Artículo 15:
     - Exigencia de **profesionales cualificados** seleccionados de forma objetiva
 - Artículo 18:
@@ -107,8 +101,8 @@ Artículo 29:
 
 ## 4. Directiva NIS
 
-- Directiva (UE) 2016/1148, de 6 de julio de 2016
-    - Relativa a las medidas destinadas a garantizar un elevado nivel común de seguridad de las redes y sistemas de información en la Unión
+- **Directiva (UE) 2016/1148**, de 6 de julio de 2016
+    - Relativa a las medidas destinadas a **garantizar un elevado nivel común de seguridad** de las redes y sistemas de información en la Unión
 - Entrada en vigor:
     - 19 de julio de 2016
 
@@ -152,7 +146,7 @@ Artículo 29:
 - Continuidad de la actividad
 - Mejora continua del proceso de seguridad
 
-### :red_circle: Dimensiones de la seguridad en el ENS
+### Dimensiones de la seguridad en el ENS :red_circle:
 
 - **Disponibilidad**.
     - Garantizar que los usuario o sistemas autorizados tienen acceso a los mismos cuando lo requieren
@@ -177,37 +171,32 @@ en sus dimensiones correspondientes.
     - En la práctica, es habitual asociar sistemas de información con aplicaciones
 concretas que ofrecen funcionalidades a un área determinada
 
-### :red_circle: Relación ENS-RGPD
+### Relación ENS-RGPD :red_circle:
 
 - **El RD 3/2010 que regula el ENS disponía que cumplir el ENS presupone cumplir con la protección de datos**
     - El ENS supone proteger la información de la administración pública y entre esa información se encuentran datos de carácter personal
 
-### Guias de implatacion ENS
-
 ## 6. ENS como proceso de mejora continua
 
-### :red_circle: Diferencias con ISO 27001
+### Diferencias con ISO 27001 :red_circle:
 
-|                                         | **ISO 27001**                                                                                         | **ENS (RD 3/2010)**                                                                                       |
-|-----------------------------------------|-------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| Ontología                               | Norma internacional de seguridad, sin rango legal                                                     | Regulación de carácter estatal, perteneciente al ordenamiento jurídico español derivado de la Ley 11/2017 |
-| Carácter                                | Certificación voluntaria                                                                              | Cumplimiento obligatorio                                                                                  |
-| Ámbito de aplicación                    | Para cualquier SGSI                                                                                   | Para los sistemas de información de las AAPP comprendidos en el ámbito de aplicación de la Ley 11/2017    |
-| Modulación de las medidas               | Según criterio del auditor                                                                            | Regulado en función de los tipos de activos y los niveles de seguridad requeridos                         |
-| Evidencia de cumplimiento o conformidad | Mediante certificación, expedida por un auditor autorizado, previa auditoría con resultado satisfecho | Mediante declaración de conformidad legal, previa auditoría con resultado satisfactorio                   |
+|                                             | **ISO 27001**                                                                                         | **ENS (RD 3/2010)**                                                                                       |
+|---------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| **Ontología**                               | Norma internacional de seguridad, sin rango legal                                                     | Regulación de carácter estatal, perteneciente al ordenamiento jurídico español derivado de la Ley 11/2017 |
+| **Carácter**                                | Certificación voluntaria                                                                              | Cumplimiento obligatorio                                                                                  |
+| **Ámbito de aplicación**                    | Para cualquier SGSI                                                                                   | Para los sistemas de información de las AAPP comprendidos en el ámbito de aplicación de la Ley 11/2017    |
+| **Modulación de las medidas**               | Según criterio del auditor                                                                            | Regulado en función de los tipos de activos y los niveles de seguridad requeridos                         |
+| **Evidencia de cumplimiento o conformidad** | Mediante certificación, expedida por un auditor autorizado, previa auditoría con resultado satisfecho | Mediante declaración de conformidad legal, previa auditoría con resultado satisfactorio                   |
 
 ### Fases del ENS
 
 1. Fase Plan de Adecuación (**PLAN**)
     - Identificación de **roles y responsabilidades**
-
         - Responsable de:
             - _Información_
             - _Servicio_
             - _Seguridad de la información_
-
     - Definir y aprobar la **política de seguridad**
-
         - Documento a alto nivel que define lo que es seguridad de la información en una organización
         - Debe ser accesible y comprensible
         - Debe incluir:
@@ -217,37 +206,27 @@ concretas que ofrecen funcionalidades a un área determinada
             - Estructura de los comités de gestión de seguridad
             - Directrices para la gestión de la documentación
             - Coherente para cumplir con el RGPD
-
     - **Identificar** y valorar los **activos** (Información, Servicios y Sistemas)
-
         - Inventario de activos a alto nivel
         - Datos de carácter personal
         - Servicios
         - Valorar los activos en función de sus dimensiones (Confidencialidad, Integridad, Disponibilidad, Trazabilidad, Autenticidad)
-
     - **Categorización** de los sistemas
-
         - Niveles:
             - _Alto_: Si alguna de sus dimensiones alcanza el nivel alto
             - _Medio_: si alguna de sus dimensiones alcanza el nivel medio (y no hay ninguna de nivel superior)
             - _Bajo_: si alguna de sus dimensiones alcanza el nivel bajo (y no hay ninguna de nivel superior)
         - En función de la categoría, tendrá que cumplir con unas u otras medidas del ENS
-
     - **Análisis de insuficiencias** de los sistemas respecto del ENS y RGPD
-
         - Elaborar un listado/relación de medidas que son aplicables a cada sistema
         - Se puede detectar:
             - Incumplimiento formal del ENS
             - Incumplimiento formal del RGPD
             - Existencia de riesgos no asumibles por la organización
-
     - Analizar y gestionar el riesgo
-
         - Metodología _MAGERIT_
         - Determinar nivel de riesgo aceptable
-
     - Elaborar una **declaración de aplicabilidad**
-
         - Para:
             - Cada una de las medidas de seguridad
             - Cada uno de los controles adicionales
@@ -255,27 +234,21 @@ concretas que ofrecen funcionalidades a un área determinada
             - Cuales han sido aplicados
             - Cuales ya se encontraban aplicados
             - Cuales _no_ se van a aplicar, justificando la decisión
-
     - **Plan de mejora** de la seguridad (PMS)
-
         - Contenido:
             - Una relación de los riesgos que trata
             - Una estimación de las fechas inicio/fin de implantación (+ hitos)
             - Responsable/s de su ejecución.
             - Valoración económica
             - Estado de implantación al elaborar PMS
-
 2. Fase de Implantación del SGSI (**DO**)
-
     - Implementar, mantener y evolucionar el plan de mejora de la seguridad aprobado
     - Definir el modo de medir la eficacia de los controles
     - **Formar** al personal con responsabilidades
     - **Concienciar** a todo el personal afectado
     - **Operar** todo aquello relevante y que debe ser registrado
-    - **Monitorizar** permitiendo una detección tremprana de eventos de seguridad y una respuesta ante incidentes de seguridad
-
+    - **Monitorizar** permitiendo una detección temprana de eventos de seguridad y una respuesta ante incidentes de seguridad
 3. Revisión (**CHECK**) y Mejora Continua (**ACT**)
-
     - Verificación y control del SGSI-ENS
     - Auditoría
         - Nivel bajo: **declaración de conformidad** (autoevaluación)

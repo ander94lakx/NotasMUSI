@@ -1,6 +1,6 @@
 # Tema 4: Técnicas y Herramientas de Seguridad Proactivas
 
-## 4.1 Introducción
+## 1. Introducción
 
 - **Intrusión**
     - Secuencia de acciones realizadas por un atacante que resulta en el compromiso de un sistema
@@ -11,16 +11,15 @@
 - **Anomalía**
     - Comportamiento que se desvía del normal
 
-## 4.2 Sistemas de detección y prevención de intrusiones
+## 2. Sistemas de detección y prevención de intrusiones
 
-Tipos de sistemas de detección de intrusión
-
-- **IDS de host (HIDS)**:
-    - Funcionan a nivel de máquina
-    - Monitorizar parámetros del sistema operativo.
-- **IDS de red (NIDS)**:
-    - Se sitúan en la red
-    - Capturar y monitorizar el tráfico
+- Tipos de IDS
+    - **IDS de host (HIDS)**:
+        - Funcionan a nivel de máquina
+        - Monitorizar parámetros del sistema operativo.
+    - **IDS de red (NIDS)**:
+        - Se sitúan en la red
+        - Capturar y monitorizar el tráfico
 
 ### Network IDS (NIDS)
 
@@ -53,7 +52,7 @@ Tipos de sistemas de detección de intrusión
 
 #### IDS basado en anomalías
 
-- **Generan un modelo** del “comportamiento normal” y buscan desviaciones del mismo
+- **Generan un modelo** del "comportamiento normal" y buscan desviaciones del mismo
     - **Pueden llegar a detectar *zero days***
     - Parten de la definición de un modelo de comunicaciones
     - Los **sistemas heterogéneos suponen un reto** para estos sistemas
@@ -75,25 +74,18 @@ Tipos de sistemas de detección de intrusión
 - Herramienta que puede usarse como complemento de un IDS
 - Usa hashes y checksums para comparar valores y encontrar diferencias en ficheros
 
-## 4.3 Snort
+## 3. Snort
 
 ### Usos
 
-1. **Sniffer**
-
 ```bash
+# 1. Sniffer
 snort -vde
-```
 
-2. **Packet Logger**
-
-```bash
+# 2. Packet Logger
 snort -vde -l ./log
-```
 
-3. **NIDS / IPS**
-
-```bash
+# 3. NIDS / IPS
 snort -d -l ./log -c snort.conf
 ```
 
@@ -120,7 +112,7 @@ snort -d -l ./log -c snort.conf
 
 ### Configuración
 
-- La configuracion se hace en ficheros `.conf`
+- La configuración se hace en ficheros `.conf`
     - Por defecto `/etc/snort/snort.conf`
     - `/etc/snort/rules` para las reglas más comunes
 - Variables
@@ -128,19 +120,19 @@ snort -d -l ./log -c snort.conf
     - `ipvar`: IP o rango de IPs
     - `portvar`: puerto o rango de puertos
 
-        ```bash
-        ipvar HOME_NET [192.168.1.0/24,10.1.1.0/24]
-        ipvar EXTERNAL_NET !$HOME_NET
-        ipvar [HTTP_SERVERS [192.168.1.50,192.168.1.52]
-        pportvar FTP_PORTS [21,2100,3535]
-        pportvar FILE_DATA_PORTS [$HTTP_PORTS,110,143]
-        ----
-        ipvar EXAMPLE [1.1.1.1,2.2.2.0/24,![2.2.2.2,2.2.2.3]]
-        ```
+```bash
+ipvar HOME_NET [192.168.1.0/24,10.1.1.0/24]
+ipvar EXTERNAL_NET !$HOME_NET
+ipvar [HTTP_SERVERS [192.168.1.50,192.168.1.52]
+pportvar FTP_PORTS [21,2100,3535]
+pportvar FILE_DATA_PORTS [$HTTP_PORTS,110,143]
+----
+ipvar EXAMPLE [1.1.1.1,2.2.2.0/24,![2.2.2.2,2.2.2.3]]
+```
 
 - Reglas
 
-    ![Estructura de una regla en Snort](img/snort_rules.png)
+![Estructura de una regla en Snort](img/snort_rules.png)
 
 - Acciones
     - `alert`: Genera una alerta y guarda el paquete
@@ -241,7 +233,7 @@ alert icmp any any -> any any (msg: "ICMP Packet" ; sid:477; rev:3; )
 alert icmp any any -> any any (msg:"ICMP Packet" ; sid:477; rev:3; dsize: > 200;)
 ```
 
-## 4.4 Sistemas trampa
+## 4. Sistemas trampa
 
 ### HoneyPots
 
@@ -253,18 +245,18 @@ alert icmp any any -> any any (msg:"ICMP Packet" ; sid:477; rev:3; dsize: > 200;
     - **Análisis**
         - Recopilar el máximo de información del atacante y sus técnicas
         - Investigación – Machine Learning – Reglas
-- ¿Dónde colocar un honeypot?
+- **¿Dónde colocar un honeypot?**
     - En el interior de la red
 
 ### HoneyNet
 
 - Tipo especial de honeypots
 - **Red entera** diseñada para ser atacada
-    Se usan **equipos reales** (físicos o virtuales) con SO y apps reales
+    - Se usan **equipos reales** (físicos o virtuales) con SO y apps reales
     - Recopilar el máximo de información del atacante y de las técnicas
 - Sistemas **difíciles de configurar**
-    ► SO reales con servicios reales (datos ficticios)
-- ¿Dónde desplegar uan honeynet?
+    - SO reales con servicios reales (datos ficticios)
+- **¿Dónde desplegar una honeynet?**
     - En un segmento separado pero conectado a la red y detrás del FW
 
 ### Padded Cell (Célula de aislamiento)
@@ -272,7 +264,7 @@ alert icmp any any -> any any (msg:"ICMP Packet" ; sid:477; rev:3; dsize: > 200;
 - IPS + sistema trampa (Honeypot o Honeynet).
 - El IPS redirige el tráfico potencialmente de ataque al Padded Cell para ser estudiado
 - Dificultad para administrarlos
-- ¿Dónde colocar un Padded Cell?
+- **¿Dónde colocar un Padded Cell?**
     - En otro segmento de red tras el switch
 
 ### Tipos de señuelos
@@ -288,18 +280,14 @@ alert icmp any any -> any any (msg:"ICMP Packet" ; sid:477; rev:3; dsize: > 200;
     - :heavy_minus_sign: Suponen un **alto riesgo**
 
 - Ejemplos
-    - MHN (Modern Honey Network)
-        - <https://threatstream.github.io/mhn/>
-        - <https://github.com/threatstream/mhn>
-    - T-Pot
-        - <http://dtag-devsec.github.io/mediator/feature/2019/04/01/tpot-1903.html>
-        - <https://github.com/dtag-dev-sec/tpotce/releases>
+    - [MHN (Modern Honey Network)](<https://github.com/threatstream/mhn>)
+    - [T-Pot](<https://github.com/dtag-dev-sec/tpotce/releases>)
     - Incluyen, entre otros:
         - Kippo (SSH)
         - Glastopf (WEB)
         - Dionaea (Busqueda Malware en FTP, SMB, HTTP, ...)
 
-## 4.5 Escáner de vulnerabilidades
+## 5. Escáner de vulnerabilidades
 
 - Herramienta **activa** que permite realizar un conjunto de pruebas sobre un sistema o red
     - Para encontrar debilidades y/o fallos de seguridad
@@ -322,7 +310,7 @@ alert icmp any any -> any any (msg:"ICMP Packet" ; sid:477; rev:3; dsize: > 200;
                 - Busca rastrios
                 - Busca "puestas abiertas"
 
-## 4.6 Test de penetración (PenTest)
+## 6. Test de penetración (Pentest)
 
 - **Descubrimiento**
     - Recolección de información acerca del sistema
@@ -335,16 +323,16 @@ alert icmp any any -> any any (msg:"ICMP Packet" ; sid:477; rev:3; dsize: > 200;
 - **Informe**
     - Documentación sobre todo el proceso y las contramedidas que deben llevarse a cabo
 
-## 4.7 Gestor de eventos de seguridad (SIEM)
+## 7. Gestor de eventos de seguridad (SIEM)
 
 - *Security Information & Event Management*
 - Es un sistema integral para gestionar la seguridad
 - **Interconecta muchos "módulos"** como
-    IDS/IPS
-    Sistemas de detección de malware
-    Analizadores de paquetes
-    Firewalls
-    ...
+    - IDS/IPS
+    - Sistemas de detección de malware
+    - Analizadores de paquetes
+    - Firewalls
+    - ...
 - **Recibe también** información de bases de datos de:
     - BD de vulnerabilidades
     - BD de patrones de amenazas

@@ -15,7 +15,7 @@
     - Entró en vigor el 24 de mayo de 2016
         - Efecto directo: no requiere trasposición al derecho interno
     - Es exigible desde el 25 de mayo de 2018.
-        - En diciembre de 2018 se aprobó una “nueva LOPD” (**LOPDGDD**)
+        - En diciembre de 2018 se aprobó una "nueva LOPD" (**LOPDGDD**)
 
 ### Conceptos básicos :red_circle:
 
@@ -71,16 +71,16 @@
 
 ### Principios y obligaciones
 
-|       |                                                              :es:                                                             |                                                                                           :eu:                                                                                          |
-|-------|:-----------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| **1** | Notificación e inscripción de ficheros al RGPD                                                                                | Registro de Actividades de Tratamiento de datos  personales + descripción de medidas                                                                                                    |
-| **2** | Deber de información del interesado                                                                                           | Deber de informar diferente                                                                                                                                                             |
-| **3** | Supuestos de licitud para el tratamiento y reglas de obtención del consentimiento                                             | Cambios en los supuestos y en el consentimiento y en el tratamiento de datos de menores                                                                                                 |
-| **4** | Formalización de contratos de acceso a datos por cuenta de terceros y contratos de prestación de servicios sin acceso a datos | Cambios en los contratos de encargo de tratamiento                                                                                                                                      |
-| **5** | Documento de seguridad + implantación de medidas  de seguridad (técnicas y organizativas)                                     | Responsabilidad proactiva: + Medidas de seguridad documentadas (no Doc. Seg.) + Notificación violaciones de seguridad + Privacidad desde el diseño y por defecto + EIPD + Accontability |
-| **6** | Información, concienciación o sensibilización del personal: Usuarios y Responsables de Seguridad                              | Además de usuarios y responsables a DPO                                                                                                                                                 |
-| **7** | Derechos A.R.C.O. (Acceso, Rectificación, Cancelación, Oposición)                                                             | ARCO + Limitación + Derecho portabilidad y Derecho de supresión (olvido)                                                                                                                |
-| **8** | Auditoria bienal de las medidas de seguridad                                                                                  | Auditorias cuando determine el responsable                                                                                                                                              |
+|       |                                                              España                                                           |                                                                                           Unión Europea                                                                                         |
+|-------|-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **1** | Notificación e inscripción de ficheros al RGPD                                                                                | Registro de Actividades de Tratamiento de datos personales + descripción de medidas                                                                                                             |
+| **2** | Deber de información del interesado                                                                                           | **Deber de informar diferente**                                                                                                                                                                 |
+| **3** | Supuestos de licitud para el tratamiento y reglas de obtención del consentimiento                                             | **Cambios en los supuestos** y en el consentimiento y en el tratamiento de datos de menores                                                                                                     |
+| **4** | Formalización de contratos de acceso a datos por cuenta de terceros y contratos de prestación de servicios sin acceso a datos | Cambios en los contratos de encargo de tratamiento                                                                                                                                              |
+| **5** | **Documento** de seguridad + implantación de **medida de seguridad** (técnicas y organizativas)                               | Responsabilidad proactiva: + Medidas de seguridad documentadas (no Doc. Seg.) + **Notificación violaciones de seguridad** + Privacidad desde el diseño y por defecto + **EIPD** + Accontability |
+| **6** | Información, concienciación o sensibilización del personal: Usuarios y Responsables de Seguridad                              | Además de usuarios y responsables a DPO                                                                                                                                                         |
+| **7** | Derechos **ARCO** (Acceso, Rectificación, Cancelación, Oposición)                                                             | **ARCO** + **Limitación** + Derecho **portabilidad** y Derecho de **supresión** (olvido)                                                                                                        |
+| **8** | **Auditoria bienal** de las medidas de seguridad                                                                              | **Auditorias cuando determine** el responsable                                                                                                                                                  |
 
 #### A) Registro de Actividades de Tratamiento de datos (Art. 30 RGPD)
 
@@ -95,7 +95,7 @@
 
 1. Partir de los ficheros inscritos en el Registro General de Protección de Datos (RGPD)
 2. Desgajar las operaciones de tratamiento concretas
-    - Por finalidedes (Ej.:  “gestión de clientes”, “gestión contable” o “gestión de recursos humanos y nóminas”)
+    - Por finalidades (Ej.:  "gestión de clientes", "gestión contable" o "gestión de recursos humanos y nóminas")
 3. Añadir la información del *Art. 30 del RGPD*
 
 #### B) Deber de información (Art. 13 y 14 RGPD)
@@ -139,8 +139,8 @@ En el caso del **Consentimiento**:
 
 #### D) El tratamiento de datos de menores de edad
 
-|                                                   :es:                                                  |                                    :eu:                                   |
-|:-------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
+|                                                   España                                                |                                    Unión Europea                          |
+|---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
 | A partir de los **14 años**, se requiere el consentimiento de P/M/T                                     | **16 años** como RG, pero los EEMM pueden **rebajar hasta 13 años**       |
 | Lenguaje comprensible para ellos                                                                        | Aviso de privacidad en lenguaje comprensible para niños                   |
 | **Asegurar mecanismos** para comprobar la **edad** del menor y el **consentimiento** prestado pro P/M/T | **Esfuerzos razonables** para verificar, teniendo en cuenta la tecnología |
@@ -170,7 +170,7 @@ Consecuencia de la aplicación de los derechos de Cancelación y Oposición (AR*
 - Limites:
     - No puede "pisar" otros derechos fundamentales
 
-##### Disposiciones generales derechos A.R.S.O.P.L
+##### Disposiciones generales derechos A.R.S.O.P.L.
 
 > ARSOPL (Acceso, Rectificación, Supresión (olvido), Oposición, Portabilidad, Limitación de tratamiento)
 
@@ -198,12 +198,10 @@ Se aplica a:
 - El Responsable de Tratamiento debe elegir un encargado del tratamiento que
     - Ofrezca *garantías suficientes* respecto a:
         - la implantación y el mantenimiento de medidas técnicas y organizativas
-
 - El Encargado ofrecerá:
     - Conocimientos especializados
     - Fiabilidad
     - Recursos
-
 - Para demostrar que el Encargado ofrece garantías suficientes:
     - RGPD prevé como mecanismos para probar la garantía:
         - **Códigos de conducta**
@@ -277,10 +275,10 @@ Aplicar medidas técnicas y organizativas apropiadas para que:
 - A:
     - Datos personales transmitidos, conservados o tratados de otra forma
 
-Es **oblligatorio notificar**:
+Es **obligatorio notificar**:
 
 - A la Autoridad de control competente
-    - Cuando entrañe **algun** riesgo para los derechos y libertades
+    - Cuando entrañe **algún** riesgo para los derechos y libertades
     - Plazo máximo de 72h desde que se haya tenido constancia
 - Al interesado
     - Cuando entrañe un **riesgo alto** para los derechos y libertades
@@ -333,7 +331,7 @@ Nueva figura, para evitar ambigüedades en las responsabilidades
     - Responsable
     - Encargado
     - Empleados.
-2.Supervisar el cumplimiento
+2. Supervisar el cumplimiento
     - Asignación de responsabilidades
     - Concienciación
     - Formación del personal
@@ -391,8 +389,6 @@ Sanciones más duras, *teóricamente*:
 -------------------------------------------------------------------------------
 
 ### Protección de datos en LATAM
-
-> :red_circle: Entran diferencias principales entre la protección de datos en LATAM y el modelo español/europeo
 
 #### Consideraciones generales
 

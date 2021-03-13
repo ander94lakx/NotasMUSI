@@ -1,12 +1,12 @@
 # Tema 3: Programas, procesos y políticas de Seguridad de la Información
 
-## 3.1 Introducción
+## 1. Introducción
 
 ![Programas, procesos y políticas de Seguridad de la Información](img/t3.png)
 
 La gestión de riesgos es una actividad central que se debe contextualizar en las opciones de mitigación del riesgo, con diferentes modelos económicos.
 
-## 3.2 Programas de gestión de la seguridad
+## 2. Programas de gestión de la seguridad
 
 - **Conjunto de actividades planificadas** dentro de una organización para garantizar la CID de los recursos de información
 - Deben ser **comunicados de forma entendible** a todos los empleados
@@ -30,7 +30,7 @@ La gestión de riesgos es una actividad central que se debe contextualizar en la
 - **Procedimientos**
     - Establecen las guías paso a paso que se deben realizar diariamente
 
-## 3.3 La gestión de riesgos
+## 3. La gestión de riesgos
 
 > Conjunto de procesos para identificar, analizar y evaluar los riesgos para tomar las decisiones sobre su asunción, mitigación o transferencia
 
@@ -72,7 +72,11 @@ La gestión de riesgos es una actividad central que se debe contextualizar en la
 
 ### Controles en la Gestión de Riesgos
 
-- **Mecanismos de mitigación** técnicos (por ejemplo, un firewall) o no técnicos (administrativos y físicos). Las medidas administrativas incluyen por ejemplo  políticas y procedimientos y las físicas por ejemplo alarmas, cerraduras o detectores de fuego
+- **Mecanismos de mitigación**:
+    - Técnicos (*un firewall*)
+    - No técnicos
+        - Administrativos (*políticas y procedimientos*)
+        - Físicos (*alarmas, cerraduras o detectores de fuego*)
 - **Salvaguardas** (safeguard): controles preventivos y proactivos
 - **Contramedidas**: controles correctivos (reactivos)
 
@@ -103,13 +107,13 @@ La gestión de riesgos es una actividad central que se debe contextualizar en la
     - **Valor del recurso**
     - **Valor de mercado del recurso**
 
-## 3.4 Diseño de políticas de seguridad
+## 4. Diseño de políticas de seguridad
 
-- Las políticas tienen muchas utilidades, pueden ser:
-- Un salvavidas durante un desastre
-- Un requisito de una función reguladora
-- Proporcionar protección contra la responsabilidad debida a un trabajador
-- Definir acciones para el control de los secretos comerciales
+- Las políticas tienen **muchas utilidades**, pueden ser:
+    - Un **salvavidas** durante un desastre
+    - Un **requisito** de una función reguladora
+    - Proporcionar **protección contra la responsabilidad** debida a un trabajador
+    - Definir **acciones para el control** de los secretos comerciales
 
 ### Tipos de Políticas
 

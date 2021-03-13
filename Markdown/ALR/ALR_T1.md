@@ -39,7 +39,7 @@
             - No se limita a 6 meses. En ese plazo hay una presunción que el defecto es de origen
             - No se limita a personas físicas. Consumidor también puede ser persona jurídica
         - Regla General: contra el vendedor sin perjuicio de que este la tenga contra el fabricante.
-            - Pero podemos contra fabricante si hacerlo contra vendedor es imposible o supone "una carga excesiva”.
+            - Pero podemos contra fabricante si hacerlo contra vendedor es imposible o supone "una carga excesiva".
 
 #### B) Leasing
 
@@ -78,7 +78,7 @@ Los contratos más comunes sobre el software son las licencias.
     - Transmisión
     - Copia
     - Ingeniería inversa
-    - Limitación de numero de equipos
+    - Limitación de número de equipos
 - Formas de aceptación
     - Instalación
     - Ruptura de envoltorio
@@ -172,15 +172,15 @@ Art. 1254 Cc – 1278 Cc hasta el 1279 Cc:
 Diferencias entre contrato tradicional y contrato inteligente
 
 |                          |   **Articulación**   |                  **Verificación**                  |          **Ejecución**          |
-|--------------------------|:--------------------:|:--------------------------------------------------:|:-------------------------------:|
-| **Contrato Tradicional** | Lenguaje natural     |                                                    |                                 |
+|--------------------------|----------------------|----------------------------------------------------|---------------------------------|
+| **Contrato Tradicional** | Lenguaje natural     | Depende de un tercero                              | Depende de un tercero           |
 | **Contrato Inteligente** | Lenguaje informático | El propio "contrato" toma información como "input" | El propio "contrato" la ejecuta |
 
 ### Algunas limitaciones
 
 - Las criptomonedas como pieza clave
 - Des/control de los elementos del contrato
-- Confianza en el ordenador que “lidere el sistema”
+- Confianza en el ordenador que "lidere el sistema"
 - Problemas técnicos: Lentitud, limitación de capacidad por transacción (80 bytes), pueden aparecer defectos de código, complejos de programar, etc.
 - Problemas jurídicos: Derivados de ser contratos electrónicos, ley y jurisdicción aplicable,temas penales,blanqueo de capitales, etc.
 
@@ -195,7 +195,7 @@ Diferencias entre contrato tradicional y contrato inteligente
 
 3. **Compra de un mueble (electrodoméstrico) con pago aplazado**
 
-    - *IMPORTANTE*: “Internet of Things”
+    - *IMPORTANTE*: "Internet of Things"
 
 4. ¿Compraventa de un inmueble…?
 

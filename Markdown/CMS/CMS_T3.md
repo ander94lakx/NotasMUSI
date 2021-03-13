@@ -1,6 +1,6 @@
 # Tema 3: Algoritmos de cifra simétrica
 
-## 3.1 Generalidades de la cifra en flujo
+## 1. Generalidades de la cifra en flujo
 
 ![Cifrado en flujo](img/cifrado_flujo.png)
 
@@ -32,7 +32,7 @@
 - NFSR (non linear)
     - Incluyen otras puertas lógicas → Periodo máximo
 
-## 3.2 Algoritmos de cifra en flujo (A5, RC4)
+## 2. Algoritmos de cifra en flujo (A5, RC4)
 
 ### A5
 
@@ -82,7 +82,7 @@ while GeneratingOutput:
 endwhile 
 ```
 
-## 3.3 Generalidades de la cifra en bloque
+## 3. Generalidades de la cifra en bloque
 
 - La información a cifrar o texto en claro se **agrupa en bloques** n de bits
     - Bloque en claro → bloque cifrado
@@ -124,7 +124,7 @@ endwhile
 
 - Evita el problema del paralelismo y error en la transmisión que afecta a todo el criptograma
 
-## 3.4 Algoritmos de cifra en bloque (DES, 3DES, IDEA, AES)
+## 4. Algoritmos de cifra en bloque (DES, 3DES, IDEA, AES)
 
 ### DES
 
@@ -145,7 +145,7 @@ endwhile
         - Cada caja:
             - 6 bits de entrada
             - 4 bits de salida
-            - Matrices ya definidas que en función de la entrada y la salida dan un numero concreto
+            - Matrices ya definidas que en función de la entrada y la salida dan un número concreto
 
 #### Esquema DES
 
