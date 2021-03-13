@@ -1,4 +1,4 @@
-# Tema 1: La Seguridad de la información en las organizaciones
+# Tema 1: La seguridad de la información en las organizaciones
 
 ## 1. Objetivo
 
