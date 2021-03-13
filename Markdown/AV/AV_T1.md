@@ -15,7 +15,7 @@
         - Usuarios malignos
 - Metodología
     - Permite realizar los procesos de pentesting y de auditoria en base a las mejores técnicas
-    - Ejemplo
+    - Ejemplos:
         - **OSSTMM**: Open Source Security Methodology Manual
         - **SANS**: Conducting a Penetration Test on an Organization
         - **NIST**: Guideline on Network Security Testing
