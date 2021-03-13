@@ -1,4 +1,4 @@
-# Tema 4: El Profesional de la Seguridad de la Información
+# Tema 4: El Profesional de la seguridad de la información
 
 ## 1. Introducción
 
