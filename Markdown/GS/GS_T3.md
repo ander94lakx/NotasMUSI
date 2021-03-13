@@ -1,4 +1,4 @@
-# Tema 3: Programas, procesos y políticas de Seguridad de la Información
+# Tema 3: Programas, procesos y políticas de seguridad de la Información
 
 ## 1. Introducción
 
