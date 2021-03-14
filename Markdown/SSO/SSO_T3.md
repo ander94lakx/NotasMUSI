@@ -244,8 +244,7 @@ Mecanismos para impedir accesos no debidos a memoria (problemas que puedan surgi
         - Con un sniffer se puede capturar esa información
         - *Rogue AP* para engañar al dispositivo
         - (Afecta más en versiones más antiguas)
-
-► Se identifica cada red a través
+- Se identifica cada red a través
 de su SSID (nombre de la red)
 y su seguridad.
 

@@ -251,8 +251,8 @@
     - No hereda los problemas previos
     - Pero el cambio no es transparente al usuario
     - Soluciones para la transición IPv4 a IPv6
-        ► Los OS tienen **doble pila IPv4-IPv6**
-        ► Uso de túneles o intermediarios para su convivencias: 6in4, Teredo, NAT64, etc.)
+        - Los OS tienen **doble pila IPv4-IPv6**
+        - Uso de túneles o intermediarios para su convivencias: 6in4, Teredo, NAT64, etc.)
 - **Privacidad de direcciones**
     - No hay NAT, por defecto accesibles en todo Internet
     - Se usaba MAC + IP (problema de seguridad)

@@ -67,6 +67,25 @@
 
 ### Despliegue y localización
 
+- Dos modos de colocación:
+    - **Network tap**
+        - Usado para NIDS
+        - El IDS no es detectado por la red
+    - **Inline**
+        - Usado para IPS
+        - Permite cortar las conexiones
+        - Limita el rendimiento en redes con mucho tráfico
+
+#### Network tap
+
+![NIDS Network Tap](img/nids_tap.png)
+
+#### Inline
+
+![IPS Inline](img/ips_inline.png)
+
+#### Colocación IDS/IPS en una red
+
 ![Localización IDS/IPS](img/localizacion_ids_ips.png)
 
 ### Verificador de integridad de ficheros
@@ -237,6 +256,8 @@ alert icmp any any -> any any (msg:"ICMP Packet" ; sid:477; rev:3; dsize: > 200;
 
 ### HoneyPots
 
+![Honeypot](img/honeypot.png)
+
 - **Sistemas simulados** que **imitan** la conducta de **servicios reales**
 - *FUNCIONES*:
     - **Distracción**
@@ -250,6 +271,8 @@ alert icmp any any -> any any (msg:"ICMP Packet" ; sid:477; rev:3; dsize: > 200;
 
 ### HoneyNet
 
+![Honeynet](img/honeynet.png)
+
 - Tipo especial de honeypots
 - **Red entera** diseñada para ser atacada
     - Se usan **equipos reales** (físicos o virtuales) con SO y apps reales
@@ -260,6 +283,8 @@ alert icmp any any -> any any (msg:"ICMP Packet" ; sid:477; rev:3; dsize: > 200;
     - En un segmento separado pero conectado a la red y detrás del FW
 
 ### Padded Cell (Célula de aislamiento)
+
+![Padded Cell](img/padded_cell.png)
 
 - IPS + sistema trampa (Honeypot o Honeynet).
 - El IPS redirige el tráfico potencialmente de ataque al Padded Cell para ser estudiado

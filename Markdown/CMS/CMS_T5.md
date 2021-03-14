@@ -60,10 +60,42 @@
     - B calcula K
         - `K = X(a)^b mod p = 4586^52 mod 4999 = (82^(104·52) mod 4999) = 3497`
 
+### MITM en Diffie y Hellman
+
+- El intercambio de claves puede verse comprometido por un ataque *Man in the Middle*
+    - Si C se pone en medio y en el intercambio de claves ofrece sus propios x(c), tanto A como B se comunican con C
+    - C solo tiene que descifrar lo que recibe, con ey enviarlo para que ni A ni B se enteren
+    - Mientras, C tiene acceso a todo
+
 ## 3. El algoritmo RSA
 
 ## 4. El algoritmo de Elgamal
 
 ## 5. Ataques a RSA
 
+- **Factorización del módulo n** en sus primos p y q
+    - Por fuerza bruta
+    - PFE: Problema de factorización entera
+    - (msieve153)
+- **Cifrado cíclico**
+    - Romper secreto sin conocer la clave privada
+    - Se cifra *todo el rato* con la clave publica hasta que se obtiene el el criptográma de nuevo
+        - Si se ha obtenido el criptograma, significa que lo anterior que se ha cifado es el mensaje secreto
+    - (genRSA, RingRSA)
+- **Paradoja del cumpleaños**
+    - Clave privada pareja
+    - (genRSA, LegionRSA)
+- **Ataques por canal lateral**
+
 ## 6. Certificados digitales
+
+### Certificado digital X.509
+
+- Estándar UIT-T para infraestructuras de claves públicas (PKI, *Public Key Infrastructure*)
+- Especifica, entre otros:
+    - Formatos estándar para certificados de claves públicas
+    - Un algoritmo de validación de la ruta de certificación
+- En los navegadores web se pueden comprobar los certificados que tiene una pagina
+- Los certificados los emiten las CA (*Certification Authority*)
+    - Son autoridades que se encargan de emitir los certificados
+    - Existe una jerarquía de CA intermedios

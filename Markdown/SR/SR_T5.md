@@ -153,9 +153,9 @@
 ### WPA3
 
 - **SAE reemplaza PSK** (Simultaneous Authentication of Equals)
-    ► Resistencia a KRACK
-    ► Resistencia a ataques de diccionario
-    ► Forward Secrecy
+    - Resistencia a KRACK
+    - Resistencia a ataques de diccionario
+    - Forward Secrecy
 - **PMF obligatorio** (*Proteted Management Frames*)
 - **OWE** (*Oportunistic Wireless Encryption*)
 - WPA3-Enteprise cifrado de 192-bits
