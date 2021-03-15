@@ -59,7 +59,7 @@ electrónicos** cuyos destinatarios sean **ciudadanos** que puedan relacionarse 
     - **Ciudadano**: persona física, jurídica o ente sin personalidad que se relacionen, o  sean susceptibles de relacionarse, con las Administraciones Públicas. Todo  interlocutor excepto su personal
     - **Servicios públicos**: función de entidad oficial para satisfacer intereses o necesidades de ciudadanos
     - **Electrónicos**: hacen uso, total o parcialmente, de medios electrónicos para su  prestación
-    - **SISTEMAS** incluidos en el ENS:
+    - **Sistemas incluidos** en el ENS:
         - Accesibles electrónicamente por ciudadanos
         - Para ejercicio de derechos
         - Para cumplimiento de deberes
@@ -75,29 +75,16 @@ electrónicos** cuyos destinatarios sean **ciudadanos** que puedan relacionarse 
 
 ### Modificaciones
 
-- Artículo 11:
-    - Las AAPP "deberán disponer formalmente de su **política de seguridad** que articule la **gestión continuada de la seguridad**".
-- Artículo 15:
-    - Exigencia de **profesionales cualificados** seleccionados de forma objetiva
-- Artículo 18:
-    - La utilización, (en función del nivel de seguridad necesario) de productos que **tengan certificada la funcionalidad de seguridad**
-- Artículo 19:
-    - Se elimina el hecho de que los sistemas no puedan alcanzar ninguna otra funcionalidad
-- Artículo 24:
-    - Deberán existir **procedimientos para la gestión de incidentes**
-        - (hasta ahora era suficiente con el registro de incidente)
-- Artículo 27:
-    - La declaración de aplicabilidad deberá estar firmada por el **responsable de seguridad**
-        - Las medidas a implantar  podrán ser pos otras compensatorias si se justifica que protegen igual o mejor de los riesgos sobre los activos
-Artículo 29:
-    - Se añade el concepto de Instrucciones técnicas de seguridad
-        - De obligado cumplimiento
-- Artículo 35:
-    - El CCN articulará los procedimientos necesarios para la recopilación y consolidación de la información referente al **Informe de estado de la seguridad**
-- Artículo 36:
-    - Las **AAPP notificarán al CCN** aquellos **incidentes** que tengan un **impacto  significativo** en la seguridad de la información y servicios prestado
-- Artículo 37:
-    - **Amplía la información que el CCN-CERT podrá recopilar** para dar soporte a los incidentes que le sean notificados
+- Las AAPP deberán disponer formalmente de una **política de seguridad** que articule la **gestión continuada de la seguridad**".
+- Exigencia de **profesionales cualificados** seleccionados de forma objetiva
+- La utilizaciónproductos que **tengan certificada la funcionalidad de seguridad**
+- Deberán existir **procedimientos para la gestión de incidentes**
+- La declaración de aplicabilidad deberá estar firmada por el **responsable de seguridad**
+- Se añade el concepto de **Instrucciones técnicas de seguridad**
+    - De obligado cumplimiento
+- El CCN articulará los procedimientos necesarios para la recopilación y consolidación de la información referente al **Informe de estado de la seguridad**
+- Las **AAPP notificarán al CCN** aquellos **incidentes** que tengan un **impacto significativo** en la seguridad de la información y servicios prestado
+- **Amplía la información que el CCN-CERT podrá recopilar** para dar soporte a los incidentes que le sean notificados
 
 ## 4. Directiva NIS
 
@@ -128,33 +115,14 @@ Artículo 29:
 
 ## 5. Nociones básicas del ENS
 
-### Requisitos básicos de la seguridad
-
-- Organización e implantación del proceso de seguridad
-- Análisis y gestión de los riesgos
-- Gestión de personal
-- Profesionalidad
-- Autorización y control de los accesos
-- Protección de las instalaciones
-- Adquisición de productos
-- Seguridad por defecto
-- Integridad y actualización del sistema
-- Protección de la información almacenada y en tránsito
-- Prevención ante otros sistemas de información interconectados
-- Registro de actividad
-- Incidentes de seguridad
-- Continuidad de la actividad
-- Mejora continua del proceso de seguridad
-
 ### Dimensiones de la seguridad en el ENS :red_circle:
 
 - **Disponibilidad**.
-    - Garantizar que los usuario o sistemas autorizados tienen acceso a los mismos cuando lo requieren
+    - Garantizar que los usuarios o sistemas autorizados tienen acceso a los mismos cuando lo requieren
 - **Integridad**
     - Garantizar que que el activo de información no ha sido alterado de manera no autorizada
 - **Confidencialidad**
-    - Propiedad o característica consistente en que la información ni se pone a disposición, ni se revela a individuos, entidades o
-procesos no autorizados.
+    - Propiedad o característica consistente en que la información ni se pone a disposición, ni se revela a individuos, entidades o procesos no autorizados
 - **Trazabilidad**
     - Que los cambios en los activos puedan ser imputadas exclusivamente a una entidad
 - **Autenticidad**
@@ -163,13 +131,11 @@ procesos no autorizados.
 ### Activos en el ENS
 
 - **Servicio**
-    - Los servicios tratan y procesan información, heredando las valoraciones de ésta
-en sus dimensiones correspondientes.
+    - Los servicios tratan y procesan información
 - **Información**
     - Cualquier conjunto de datos que tiene significado
 - **Sistemas de información**
-    - En la práctica, es habitual asociar sistemas de información con aplicaciones
-concretas que ofrecen funcionalidades a un área determinada
+    - Habitual asociar sistemas de información con aplicaciones concretas que ofrecen funcionalidades a un área determinada
 
 ### Relación ENS-RGPD :red_circle:
 

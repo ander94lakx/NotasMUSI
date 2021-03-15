@@ -14,9 +14,9 @@ Permite controlar los privilegios:
 - Evita el uso del token del administrador para operaciones que no lo requieren
 - Cuando se intenta usar el de administrador (elevación) se presenta una **ventana de diálogo UAC** para pedir permiso o credenciales
     - Los diálogos de elevación usan un código de colores:
-        - **Rojo**: si esta bloqueada la aplicación (GPO) o el publisher de esa aplicación (no permite arrancar)
-        - **Amarillo**: Si el publisher es desconocido
-        - **Azul**: si ESa firmado por Microsoft to el publisher esta verificado
+        - **Rojo**: si esta bloqueada la aplicación (GPO) o el publisher no es de confianza
+        - **Amarillo**: si el publisher es desconocido
+        - **Azul**: si la aplicación está firmada por Microsoft o el publisher está verificada
     - Se puede configurar cuándo se pregunta al usuario y si utiliza el modo de escritorio seguro
 
 ### BitLocker
@@ -129,17 +129,16 @@ Windows 10 mejora en una serie de aspectos la seguridad con respecto a anteriore
 
 ## 4. Windows Server 2008/2012/2016
 
-Son versiones especificas de Windows orientadas a servidores. Añaden funcionalidades típicas como:
-
-- **Controlador de Dominio** (Domain Controller)
-- Servidor de **WINS** (Windows Internet Naming Service) (Compatibilidad NetBIOS)
-- Servidor de **DNS** y de **DHCP**
-- Servidor de Terminal Server (Remote Desktop server)
-- Servidor de archivos
-- Servidor de impresión
-- Servidor de correo electrónico (MS Exchange)
-- Servidor web **IIS** (*Internet Information Services*)
-- Servidor de Máquinas Virtuales (Hyper-V) y Contenedores
+- Versiones especificas de Windows orientadas a servidores. Añaden funcionalidades típicas como:
+    - **Controlador de Dominio** (Domain Controller)
+    - Servidor de **WINS** (Windows Internet Naming Service) (Compatibilidad NetBIOS)
+    - Servidor de **DNS** y de **DHCP**
+    - Servidor de Terminal Server (Remote Desktop server)
+    - Servidor de archivos
+    - Servidor de impresión
+    - Servidor de correo electrónico (MS Exchange)
+    - Servidor web **IIS** (*Internet Information Services*)
+    - Servidor de Máquinas Virtuales (Hyper-V) y Contenedores
 
 ### Active Directory (AD)
 
@@ -374,17 +373,14 @@ de una comunicación
         - Obtener el **hash NTLM** de la cuenta krbtgt → construir un TGT
         - Ese TGT puede contar con la caducidad y permisos que se quiera
             - Solo podrá ser invalidado si expira o cambia la contraseña de la cuenta krbtgt
-
 - **Silver** Ticket
     - **Construir un TGS**
         - Para lo cual se necesita la **clave del servicio**
         - Obtener del **hash NTLM** de la cuenta propietaria del servicio → construir un TGS
         - **No** funcionará si el servicio verifica el PAC (*Privileged Attribute Certificate*)
-
-Más info:
-
-- <https://www.tarlogic.com/blog/como-funciona-kerberos/>
-- <https://www.sans.org/blog/kerberos-in-the-crosshairs-golden-tickets-silver-tickets-mitm-and-more/>
+- Más info:
+    - <https://www.tarlogic.com/blog/como-funciona-kerberos/>
+    - <https://www.sans.org/blog/kerberos-in-the-crosshairs-golden-tickets-silver-tickets-mitm-and-more/>
 
 ## 6. Powershell
 

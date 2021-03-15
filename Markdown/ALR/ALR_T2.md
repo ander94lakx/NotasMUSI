@@ -12,72 +12,52 @@
 
 ## 2. Regulación
 
-- El régimen jurídico de la propiedad está regulado básicamente en el **Código Civil**: Libro Segundo: Títulos Primero y Segundo.
+- El régimen jurídico de la propiedad está regulado en el **Código Civil**
 - Posibilidad de propiedad tanto de los bienes materiales como inmateriales.
 - Ejemplos
     - Bienes materiales: HW
     - Bienes inmateriales: SW
-- La vía de protección de los bienes inmateriales son los **derechos de
-Propiedad Intelectual**
+- La vía de protección de los bienes inmateriales son los **derechos de Propiedad Intelectual**
 
-## 3. La evolución de la protección de los bienes inmateriales
+## 3. Propiedad intelectual en España
 
-- Posibilidad de propiedad tanto de los bienes materiales como inmateriales.
-- Bienes inmateriales siempre han existido
-- Con la imprenta (las copias) se pone en valor su protección
-- El primer sistema legal de protección de la PI surgirá en Inglaterra en 1710
-    - Después se extiende a toda Europa
-- En España será Carlos III quien promulgue en 1792 la primera ley española de propiedad intelectual
-- El derecho de autor tuvo en sus orígenes un carácter eminentemente material y territorial
-    - Idioma barrera
-- Necesidad de proteger el intercambio cultural y también derechos morales:
-    - En 1886 el Convenio de Berna para la protección de obras literarias y artísticas
-- Pero en la nueva Sociedad de la Información mayor valor aún
-- Uno de los bienes más importantes: el **SW**
-
-## 4. Propiedad intelectual en España
-
-### Principios generales
-
-#### A) Autoría
+### A) Autoría
 
 Los titulares de Derechos de Autor serán:
 
 - *Personas Físicas* que lo hayan desarrollado (y fijado en un soporte)
-    - Automáticamente por creación.
-- **Personas Jurídicas**: Cuando desarrollado como **obra colectiva** (mas común)
+    - Automáticamente por creación
+- **Personas Jurídicas** cuando desarrollado como **obra colectiva** (mas común)
 - Hay matices en todo esto
 
-Obra colectiva:
+#### Tipos de obras
 
-- Cuando hay un sujeto que crea y coordina bajo su iniciativa una obra, en la que participan otros autores
+- Obra individual
+    - Un único autor (persona física)
+- Obra **colectiva**:
+    - Cuando hay un sujeto que crea y coordina bajo su iniciativa una obra, en la que participan otros autores
+- Obra en **colaboración**:
+    - Cuando es imposible determinar las autorías individuales
 
-Obra en colaboración:
+#### Titularidad (Art. 97 LPI)
 
-- Cuando es imposible determinar las autorías individuales
+- Autor:
+    - La persona o grupo de personas naturales **que lo hayan creado**
+    - o
+    - La **persona jurídica** que sea **contemplada como titular** de los derechos de autor
+- Autoría en:
+    - Obra colectiva:
+        - La persona natural o jurídica **que la edite y divulgue** bajo su nombre (a no ser pacto en contrario)
+    - Obra en colaboración:
+        - **Propiedad común**, repartida en le proporción en la que se determine
+    - Trabajador asalariado:
+        - Se toma como obra colectiva
+        - Los derechos de explotación corresponderán al empresario (salvo pacto en contrario)
 
-##### Titularidad (Art. 97 LPI)
-
-Autor:
-
-- La persona o grupo de personas naturales **que lo hayan creado**
-- o
-- La **persona jurídica** que sea **contemplada como titular** de los derechos de autor
-
-Autoría en:
-
-- Obra colectiva:
-    - La persona natural o jurídica que la edite y divulgue bajo su nombre (a no ser pacto en contrario)
-- Obra en colaboración:
-    - Propiedad común, repartida en le proporción en la que se determine
-- Trabajador asalariado:
-    - Los derechos de explotación corresponderán al empresario (salvo pacto en contrario)
-
-##### Objeto de protección (Art. 96 LPI)
+#### Objeto de protección (Art. 96 LPI)
 
 - **Programa de ordenador**
     - Toda secuencia de instrucciones o indicaciones destinadas a ser utilizadas,  directa o indirectamente, en un sistema informático para realizar una función o  una tarea o para obtener un resultado determinado, cualquiera que fuere su forma de expresión y fijación
-
 - *Condición*: que sea **original** (creación propia)
 - También se añade a la protección:
     - Documentación técnica
@@ -87,7 +67,7 @@ Autoría en:
 - No estarán protegidos:
     - Ideas y principios
 
-#### B) Duración (Art 26 TRLPI) :red_circle:
+### B) Duración (Art 26 TRLPI) :red_circle:
 
 - Persona física:
     - Vida del autor + 70 años después del fallecimiento
@@ -101,7 +81,7 @@ Autoría en:
 
 Pasadas esas fechas pasan a **dominio público**
 
-#### C) Contenido
+### C) Contenido
 
 - Derechos de carácter personal (derechos morales)
     - Características:
@@ -128,7 +108,7 @@ Pasadas esas fechas pasan a **dominio público**
     - Derecho de **Transformación**
         - Traducción, adaptación y cualquier otra modificación
 
-#### D) Registro
+### D) Registro
 
 - La **titularidad se adquiere por autoría**, no por registro
     - El **registro tiene efectos probatorios** de la autoría y titularidad de la obra, así como efectos publicitarios.
@@ -137,9 +117,7 @@ Pasadas esas fechas pasan a **dominio público**
     - Hay otras formas de prueba
         - Ej.: Depósito
 
-### Marco jurídico
-
-## 5. Protección jurídica del SW
+## 4. Protección jurídica del SW
 
 ### Origen
 
@@ -175,28 +153,10 @@ Pasadas esas fechas pasan a **dominio público**
     - Alto coste
     - Dificultado de determinar el estado de la técnica actual
 
-### Vías de protección
+### SW en España
 
-Diversas vías de protección. Ejemplos:
-
-- Propiedad intelectual
-    - Título VII del TRLPI: arts. 95 a 104.
-- Competencia desleal
-    - Secretos y denominaciones sociales
-- Código Penal
-    - Delitos contra la propiedad intelectual
-- Estatuto de los trabajadores
-    - Ej. Buena fe
-- ...
-- Derecho de obligaciones:
-    - Las obligaciones pueden modular lo anterior excepto en los temas indisponibles
-- Patentabilidad...
-
-### Sobre la posible patentabilidad del sw en España
-
-- El **SW como tal no se puede patentar** pues no son invenciones
-- La patentabilidad del sw si que es posible respecto de "las invenciones implementadas a través de ordenador".
-- Vid. Propuesta Directiva:
+- El **SW como tal no se puede patentar**  (no son invenciones)
+- La patentabilidad del SW si que es posible respecto de "las invenciones implementadas a través de ordenador"
 
 > "Se entenderá por invenciones implementadas en ordenador "toda invención para cuya ejecución se requiera la utilización de un ordenador, una red informática u otro aparato programable, al tener la invención una o más características que se realicen total o parcialmente mediante un programa o programas de ordenador"
 
@@ -204,42 +164,34 @@ Diversas vías de protección. Ejemplos:
     - Novedad
     - Actividad inventiva (aporte contribución técnica)
     - Aplicación industrial
-
 - Situación actual y perspectivas de futuro
     - Propuesta de Directiva Europea de Patentes de software
         - La Oficina Europea de Patentes
             - (organismo encargado de la aplicación administrativa del Convenio sobre la Patente Europea pero no es una institución de la Unión Europea)
 
-La Oficina Europea de Patentes llegó a la conclusión:
+> "Un programa de ordenador "como tal" no es excluido de patentabilidad si el programa, cuando es ejecutado o cargado en un ordenador, produce, o es capaz de producir, un efecto técnico que va más allá de las interacciones físicas normales entre el programa y el ordenador en el que se ejecuta" (Oficina Europea de Patentes)
 
-> "Un programa de ordenador "como tal" no es excluido de patentabilidad si el programa, cuando es ejecutado o cargado en un ordenador, produce, o es capaz de producir, un efecto técnico que va más allá de las interacciones físicas normales entre el programa y el ordenador en el que se ejecuta"
+- Sistema elegido en españa → **Derechos de autor**
+    - Instrumento que se ha usado siempre para la creación de obras del intelecto
 
-### Sistema elegido → **Derechos de autor**
+> "Son objeto de propiedad intelectual todas las creaciones originales, literarias artísticas o científicas expresadas en cualquier medio o soporte..." (Art. 10 del Texto Refundido de la Ley de Propiedad Intelectual (TRLPI))
 
-La propiedad intelectual es el instrumento que se ha usado siempre para la creación de obras del intelecto.
+> "No se consideran patentables las invenciones […] en particular […] los programas de ordenador" (Art. 2 de la Ley de Patentes)
 
-Art. 10 del Texto Refundido de la Ley de Propiedad Intelectual (TRLPI):
-
-> "Son objeto de propiedad intelectual todas las creaciones originales, literarias artísticas o científicas expresadas en cualquier medio o soporte..."
-
-Art. 2 de la Ley de Patentes:
-
-> "No se consideran patentables las invenciones […] en particular […] los programas de ordenador"
-
-## 6. Protección jurídica de las BBDD
+## 5. Protección jurídica de las BBDD
 
 ### Marco normativo
 
-Art 12 LPI:
-
-> ".. las colecciones de obras ajenas, de datos o de otros elementos independientes como las antologías y las bases de datos que por la se**lección o disposición de sus contenidos** constituyan **creaciones intelectuales**, sin perjuicio, en su caso, de los derechos que pudieran subsistir sobre dichos contenidos..."
-
-Libro II, título VIII del TRLPI: **protección sui generis** (art 133 -137)
+> ".. las colecciones de obras ajenas, de datos o de otros elementos independientes como las antologías y las bases de datos que por la se**lección o disposición de sus contenidos** constituyan **creaciones intelectuales**, sin perjuicio, en su caso, de los derechos que pudieran subsistir sobre dichos contenidos..." (Art. 12 LPI)
 
 ### Protección por derechos de autor
 
 - Si por la forma o por el contenido, es una creación propia del autor
-- Inversión substancial en la forma de recopilar y buscar los datos: *derecho sui generis*
+- Inversión substancial en la forma de recopilar y buscar los datos: **derecho sui generis**
+    - Derechos sui generis:
+        - Solo se exige la inversión
+    - Derechos de autor:
+        - Se exige originalidad
 
 ### Régimen
 
@@ -253,12 +205,7 @@ Libro II, título VIII del TRLPI: **protección sui generis** (art 133 -137)
 - La protección frente a la extracción no autorizada del contenido
     - 15 años tras la creación
 
-- Derechos sui generis:
-    - Solo se exige la inversión
-- Derechos de autor:
-    - Se exige originalidad
-
-## 7. Protección jurídica de las obras multimedia
+## 6. Protección jurídica de las obras multimedia
 
 - Definición:
     - Modalidad de obra audiovisual que contiene:
@@ -272,13 +219,12 @@ Libro II, título VIII del TRLPI: **protección sui generis** (art 133 -137)
 
 ### Derechos de autor
 
-La protección jurídica depende de de la originalidad de los elementos que forman esa obra
-
-- Figuras
-- Director-realizador
-- Autores de argumento, adaptación, guión
-- Autores de composiciones musicales
-- ...
+- La protección jurídica depende de de la originalidad de los elementos que forman esa obra
+    - Figuras
+    - Director-realizador
+    - Autores de argumento, adaptación, guión
+    - Autores de composiciones musicales
+    - ...
 
 ### Presunciones
 

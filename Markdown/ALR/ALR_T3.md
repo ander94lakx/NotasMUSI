@@ -28,7 +28,6 @@
         - Datos de localización
         - Identificador en línea
         - Elementos de identidad física, genética, psíquica, económica, cultural o social
-
 - Tratamiento
     - **Cualquier operación** o conjunto de operaciones realizadas **sobre datos personales** o conjuntos de datos personales, ya sea por procedimientos automatizados o no
     - Ejemplos:
@@ -41,33 +40,24 @@
         - Modificación
         - Limitación
         - Destrucción
-
 - **Responsable del tratamiento** (o responsable) :red_circle:
     - La persona física o jurídica, autoridad pública, servicio u otro organismo que:
         - (solo o junto con otros) **determine los fines y medios del tratamiento**
-
 - **Encargado del tratamiento** (o encargado) :red_circle:
     - La persona física o jurídica, autoridad pública, servicio u otro organismo que:
         - **Trate datos personales** por cuenta del responsable del tratamiento
-
 - **Interesado**
     - Se considerará persona física identificable toda persona cuya identidad pueda determinarse, directa o indirectamente
 
 ## 3. Novedades y obligaciones RGPD
 
-- **Ampliación ámbito territorial** de aplicación
-- Viejos y nuevos conceptos y principios
+- **Ampliación ámbito territorial**
 - El **tratamiento de datos personales como protagonista**
 - El **registro de las actividades de tratamiento**
-- Cambios en los derechos del titular de los datos
-- Cambio en el enfoque de las medidas de seguridad
 - **Evaluación del impacto relativa a la protección de datos (EIPD)**
-- Cambios en las reglas de licitud del tratamiento.
-- Cambios en el consentimiento
-- Cambios en el deber de información
+- Cambios en la **base jurídica** para el tratamiento de datos
 - Nueva figura del **delegado de protección de datos (DPD)**
-- Diferente régimen sancionador
-- Autoridades de control
+- ...z
 
 ### Principios y obligaciones
 
@@ -116,26 +106,21 @@
     - **Origen** de los tatos
     - Categorías o **tipos de datos**
 
-##### ¿Cómo informar a los interesados?
-
 #### C) Licitud del tratamiento (legitimación)
 
-**El consentimiento deja de ser la regla general para ser una de las causas posibles**. Causas:
-
-- **Ejecución de un contrato**
-- Cumplimiento del deber de una **obligación legal** (norma con rango de Ley)
-- Misión en **interés público** o ejercicio de poderes públicos (norma con rango de Ley)
-- **Interés legítimo** de responsable o tercero (interés y buena práctica ponderación)
-- **Consentimiento** del interesado
-- Excepcionalmente en supuestos de **urgencias**
-    - Protección de intereses vitales
-
-En el caso del **Consentimiento**:
-
-- **Inequívoco** y **explícito**
-    - MUY IMPORTANTE: ya no es válido el consentimiento tácito
-- No será válido en el momento en que la finalidad deja de existir
-- Debe ser sencillo e inmediato retirar el consentimiento en cualquier momento
+- **El consentimiento deja de ser la regla general para ser una de las causas posibles**. Causas:
+    - **Ejecución de un contrato**
+    - Cumplimiento del deber de una **obligación legal** (norma con rango de Ley)
+    - Misión en **interés público** o ejercicio de poderes públicos (norma con rango de Ley)
+    - **Interés legítimo** de responsable o tercero (interés y buena práctica ponderación)
+    - **Consentimiento** del interesado
+    - Excepcionalmente en supuestos de **urgencias**
+        - Protección de intereses vitales
+- En el caso del **Consentimiento**:
+    - **Inequívoco** y **explícito**
+        - MUY IMPORTANTE: ya no es válido el consentimiento tácito
+    - No será válido en el momento en que la finalidad deja de existir
+    - Debe ser sencillo e inmediato retirar el consentimiento en cualquier momento
 
 #### D) El tratamiento de datos de menores de edad
 
@@ -147,51 +132,46 @@ En el caso del **Consentimiento**:
 
 #### E) Derechos del interesado
 
-Derechos tradiciones ARCO  (Acceso, Rectificación, Cancelación, Oposición), pero añade **nuevos derechos**
+- Derechos tradiciones ARCO (Acceso, Rectificación, Cancelación, Oposición), pero añade **nuevos derechos**
 
 ##### Derecho a la portabilidad de los datos
 
-Es una forma avanzada del derecho de Acceso (**A**RCO):
-
-- Derecho a recibir los datos personales que le incumban
-    - En un formato estructurado
-    - Y derecho a transmitirlos a otro responsable del tratamiento
-- ¿Cuándo?
-    - El tratamiento se realice por **medios automatizados**
-    - Esté basado en:
-        - Consentimiento
-        - Ejecución de un contrato
+- Es una forma avanzada del derecho de Acceso (**A**RCO):
+    - Derecho a recibir los datos personales que le incumban
+        - En un formato estructurado
+        - Y derecho a transmitirlos a otro responsable del tratamiento
+    - ¿Cuándo?
+        - El tratamiento se realice por **medios automatizados**
+        - Esté basado en:
+            - Consentimiento
+            - Ejecución de un contrato
 
 ##### Derecho de supresión (derecho al olvido)
 
-Consecuencia de la aplicación de los derechos de Cancelación y Oposición (AR**CO**) en el ámbito on-line:
-
-- **Derecho a solicitar que sus datos personales sean borrados de internet**
-- Limites:
-    - No puede "pisar" otros derechos fundamentales
+- Consecuencia de la aplicación de los derechos de Cancelación y Oposición (AR**CO**) en el ámbito on-line:
+    - **Derecho a solicitar que sus datos personales sean borrados de internet**
+    - Limites:
+        - No puede "pisar" otros derechos fundamentales
 
 ##### Disposiciones generales derechos A.R.S.O.P.L.
 
-> ARSOPL (Acceso, Rectificación, Supresión (olvido), Oposición, Portabilidad, Limitación de tratamiento)
+> ARSOPL: Acceso, Rectificación, Supresión (olvido), Oposición, Portabilidad, Limitación de tratamiento
 
 - Gratuidad:
-    - Se establecen los supuestos en los que el Responsable puede cobrar una tasa o canon razonable (o incluso negarse a responder)
--Plazos:
+    - El responsable puede cobrar una tasa o canon razonable (o incluso negarse a responder)
+- Plazos:
     - **1 mes** para hacer efectivo el derecho del interesado (prorrogable a 2 meses si es muy complejo)
 - Medios Electrónicos:
     - Se debe poder realizar las solicitudes mediante medios electrónicos
 - Negativa a la solicitud:
     - Si no se conceda el ejercicio de derechos deberá ser informado en el mismo **plazo de un mes de los motivos**
         - Posibilidad de presentar la correspondiente **reclamación ante la Autoridad** competente
-- Información adicional:
-    - En aquellos casos en los que existan dudas razonables sobre la identidad de la persona física que realiza la solicitud
 
 #### F) Regulación de los prestadores de servicios con acceso a datos (Encargados de Tratamiento)
 
-Se aplica a:
-
-- *Encargados de Tratamiento*
-- *Posición dual*: El Responsable que también es Encargado)
+- Se aplica a:
+    - *Encargados de Tratamiento*
+    - *Posición dual*: El Responsable que también es Encargado)
 
 ##### Elección y supervisor del encargado
 
@@ -213,7 +193,7 @@ Se aplica a:
 - Deberá constar **por escrito**
     - También en **formato electrónico**
 - **Novedad → acto unilateral del Responsable de Tratamiento**
-    Ejemplo resolución administrativa notificado al Encargado
+    - Ejemplo: resolución administrativa notificado al Encargado
 - Los contratos anteriores al RGPD **deben actualizarse**
 - Contenido mínimo de esos contratos:
     - **Objeto**, duración y naturaleza
@@ -243,53 +223,35 @@ Se aplica a:
 
 ##### Privacy by design
 
-Incluir principios de protección de datos a lo largo de toda la vida del tratamiento:
-
-- Desde el momento en que se diseña
-- Se pone en práctica
-- Finalmente se suprime o finaliza el tratamiento
-
-Teniendo en cuenta:
-
-- Estado de la técnica
-- Coste
-- Naturaleza del tratamiento
-- Ámbito de aplicación
-- Contexto
-- Finalidad de tratamiento
-- Riesgos de diversa probabilidad
+- Incluir principios de protección de datos a lo largo de toda la vida del tratamiento:
+    - Desde el momento en que se diseña, mientras se pone en práctica y hasta que se finaliza el tratamiento
+    - Tener en cuenta factores como factores técnicos, coste, naturaleza del tratamiento, ámbito de aplicación, entre otros
 
 ##### Privacy by default
 
-Aplicar medidas técnicas y organizativas apropiadas para que:
-
-- Se realice los tratamientos de datos realmente necesarios para los fines del tratamiento
+- Aplicar medidas técnicas y organizativas apropiadas para que:
+    - Se realice los tratamientos de datos realmente necesarios para los fines del tratamiento
 
 #### H) Brechas o Violaciones de seguridad (Art. 4-12 RGPD)
 
-*Definición*:
-
-- Toda violación de la seguridad que ocasione:
-    - Destrucción, pérdida o alteración accidental o ilícita
-    - Comunicación o acceso no autorizados
-- A:
-    - Datos personales transmitidos, conservados o tratados de otra forma
-
-Es **obligatorio notificar**:
-
-- A la Autoridad de control competente
-    - Cuando entrañe **algún** riesgo para los derechos y libertades
-    - Plazo máximo de 72h desde que se haya tenido constancia
-- Al interesado
-    - Cuando entrañe un **riesgo alto** para los derechos y libertades
-
-Se debe describir en un **lenguaje claro y sencillo** la naturaleza de la violación de la seguridad de los datos personales
-
-- Contenido:
-    - **Descripción**
-    - **Datos de contacto** del DPD
-    - Posibles **consecuencias**
-    - Descripción de **medidas adoptadas**
+- *Definición*:
+    - Toda violación de la seguridad que ocasione:
+        - Destrucción, pérdida o alteración accidental o ilícita
+        - Comunicación o acceso no autorizados
+    - A:
+        - Datos personales transmitidos, conservados o tratados de otra forma
+- Es **obligatorio notificar**:
+    - A la **autoridad de control** competente
+        - Cuando entrañe **algún** riesgo para los derechos y libertades
+        - Plazo máximo de 72h desde que se haya tenido constancia
+    - Al **interesado**
+        - Cuando entrañe un **riesgo alto** para los derechos y libertades
+- Se debe describir en un **lenguaje claro y sencillo** la naturaleza de la violación de la seguridad de los datos personales
+    - Contenido:
+        - **Descripción**
+        - **Datos de contacto** del DPD
+        - Posibles **consecuencias**
+        - Descripción de **medidas adoptadas**
 
 #### I) Auditoría
 
@@ -297,20 +259,7 @@ Se debe describir en un **lenguaje claro y sencillo** la naturaleza de la violac
 - RGPD → alusiones (directas o indirectas) a esta obligación
     - Es pertinente **continuar sometiendo las medidas de seguridad a Auditoria**
 
-#### J) Formación, concienciación o sensibilización
-
-- Figuras relevantes
-    - LOPDGDD
-        - Responsable de tratamiento
-        - Interesado (titular de los datos)
-        - Usuario
-        - Encargado de tratamiento
-        - Responsable de seguridad
-    - RGPD
-        - *Todas las anteriores*
-        - **Delegado de Protección de Datos** (DPD)
-
-#### K) Delegado de Protección de Datos (DPD)
+#### J) Delegado de Protección de Datos (DPD)
 
 Nueva figura, para evitar ambigüedades en las responsabilidades
 
@@ -366,7 +315,7 @@ los datos, incluyendo las consultas previas
             - Experiencia convalidable por méritos
             - Superación de exámen en todas las modalidades
 
-#### L) Régimen sancionador (Art 58.2 RGPD)
+#### K) Régimen sancionador (Art 58.2 RGPD)
 
 Sanciones más duras, *teóricamente*:
 
@@ -392,21 +341,20 @@ Sanciones más duras, *teóricamente*:
 
 #### Consideraciones generales
 
-1. Los países latinoamericanos siguen un **modelo más Europeo que de EEUU**
-2. En general en Latinoamérica la **legislación** de protección de datos está **menos desarrollada que en Europa**
-3. En cambio en **transparencia** está **desarrollada antes** que en algunos países de
-Europa (Por ejemplo que España)
-4. Los países *más avanzados* en PD en Latinoamérica son :
+1. Siguen un **modelo más Europeo que de EEUU**
+2. En general, a **legislación** de protección de datos está **menos desarrollada que en Europa**
+3. En algunos países, la **transparencia** está **desarrollada antes** que en algunos países de Europa (por ejemplo que España)
+4. Los países *más avanzados* son:
     - *Chile*
     - *Colombia*
     - *México*
     - *Perú*
     - *Argentina*
     - *Uruguay*
-5. No obstante **Argentina y Uruguay** (recientemente) son los únicos reconocidos con **nivel adecuado de protección según la UE**
+5. **Argentina y Uruguay** son los únicos reconocidos con **nivel adecuado de protección según la UE**
 6. En muchos países se recoge el **derecho a la protección** de datos en **la constitución**
 7. Los principios, obligaciones y derechos suelen ser similares aunque con matices
-8. En **algunos países se exige** en el sector público la **ISO 27002**. (España similar un SGSI en el Esquema Nacional de Seguridad)
-9. En general donde se desarrolla la legislación se crean autoridades de protección de datos
-10. Como vemos al igual que en España existe legislación sectorial además de la general en protección de datos
-11. Algunos países han **adaptado sus legislaciones** siendo más **similares al RGPD** y otros están en proceso
+8. En **algunos países se exige** en el sector público la **ISO 27002**
+9. En general, cuentan con **autoridades de protección de datos**
+10. Legislaciones sectoriales, además de la general en protección de datos
+11. Algunos países han **adaptado sus legislaciones** siendo más **similares al RGPD** (otros en proceso)

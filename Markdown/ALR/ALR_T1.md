@@ -19,7 +19,7 @@
     - Ej. Diseño web + mantenimiento + posicionamiento etc…
     - Ej. Contrato housing + leasing servidor
 
-## 2. Contratos sobre __bienes__ informáticos
+## 2. Contratos sobre **bienes** informáticos
 
 ### 2.1 Contratos sobre hardware
 
@@ -60,15 +60,12 @@
 
 - El **leasing y el renting** son figuras contractuales que se usan normalmente para suministro de **empresas**
 - El contrato de **compraventa** suele ser más común para **particulares**
-
 - Ventajas Renting/Leasing
     - Las cuotas son gastos fiscales reducibles
     - Mejora la liquidez de la empresa
     - No pesa en el balance. Figura como pasivo extracontable
 
-### 2.2 Contratos sobre Software
-
-Los contratos más comunes sobre el software son las licencias.
+### 2.2 Contratos sobre Software (licencias)
 
 #### A) Software propietario
 
@@ -87,14 +84,14 @@ Los contratos más comunes sobre el software son las licencias.
 #### B) Software libre
 
 - Origen 1984. Proyecto GNU. Richard Stallman
-- S.O. Compatible con UNIX.
 - 2 peculiaridades: **totalmente gratuito y código abierto**
-- Stallman. Licencias **4 libertades**:
+- **4 libertades**:
     - Libertad de uso del programa
     - Libertad de estudio y adaptación
     - Libertad de distribución de copias
     - Libertad de mejora y hacer públicas las mejoras
-- Copyleft: cualquier sw derivado debe brindar esas 4 libertades
+- Copyleft:
+    - Cualquier SW derivado debe brindar esas 4 libertades
 - Ejemplos más comunes
     - GPL
     - Lesser-GPL (LGPL)
@@ -103,20 +100,20 @@ Los contratos más comunes sobre el software son las licencias.
 #### C) Licencias del modelo de negocio software de código abierto
 
 - Origen. 1998. Open Source Initiative
-- (!) **Open source software** (software de código abierto) / **Free software** (software libre)
+- **Open source software** (software de código abierto) / **Free software** (software libre)
 - La licencia más conocida es la licencia BSD
 - Permiten **crear software propietario tomando como base software abierto**.
 - Se imponen condiciones mínimas:
     - Referencia al copyright de anteriores desarrolladores
     - Prohibición de servirse del nombre de estos para avalar nuevos desarrollos
     - Exención de responsabilidad respecto de los primeros.
-- Ej. UNIX licencia BSD y S.O. Solaris es software propietario a partir de licencia BSD
+- Ej.: UNIX licencia BSD y S.O. Solaris es software propietario a partir de licencia BSD
 
 #### D) Las licencias intermedias
 
 - Ej. Mozilla Public License (MPL)
 
-## 3. Contratos sobre __servicios__ informáticos
+## 3. Contratos sobre **servicios** informáticos
 
 - Tienen por objeto servicios relacionados con el **desarrollo o actividad de los sistemas informáticos**
 - Hay muchos contratos
@@ -127,9 +124,7 @@ Los contratos más comunes sobre el software son las licencias.
     - Escrow
     - ...
 
-### Ejemplo de servicio informatico: Desarrollo de software a medida
-
-Puntos a rmarcar:
+### Ejemplo de servicio informático: *Desarrollo de software a medida*
 
 1. Fijar quién será el titular de los **derechos** sobre el software
 2. Definir con precisión el **objeto y el entorno**: DRU y Documento de especificaciones (descripción del equipo en el que el software va a operar, sistemas operativos, otro software con los que se interconectará)
@@ -141,19 +136,14 @@ Puntos a rmarcar:
 ## 4. Reflexiones, consejos y cláusulas habituales
 
 1. **REGLA DE ORO: Identificar riesgos e intentar cubrirlos**
-
     - Los riesgos son diferentes en función del tipo de contrato
     - Ejemplos
         - Housing = disponibilidad, privacidad (TID)
         - Desarrollos de sw a medida= propiedad intelectual
-
 2. Hay cláusulas **obligatorias y otras convenientes**
-
     - *Obligatorias*: Por ejemplo, objeto y precio o en algunos contratos una cláusula de tratamiento de datos por terceros (proveedor)
     - *Convenientes*: Estarás estarán en función del contrato. Por ejemplo la cláusula de penalización en contratos de desarrollo
-
 3. La **cláusula de responsabilidad** es importantes siempre Pero hay que distinguir entre:
-
     - **Limitación** de responsabilidad: Se puede pactar
     - Causas de **exención** de la responsabilidad
     - **SLA** / causas de responsabilidad y resolución
@@ -166,8 +156,7 @@ Puntos a rmarcar:
 
 ### Concepto
 
-Art. 1254 Cc – 1278 Cc hasta el 1279 Cc:
-> Un contrato inteligente es un acuerdo de voluntad entre las partes que se articula, verifica y ejecuta mediante código informático
+> Un contrato inteligente es un acuerdo de voluntad entre las partes que se articula, verifica y ejecuta mediante código informático (Art. 1254 – 1278,1279 Cc)
 
 Diferencias entre contrato tradicional y contrato inteligente
 
@@ -187,20 +176,12 @@ Diferencias entre contrato tradicional y contrato inteligente
 ### Ejemplos
 
 1. **Simples**:
-
     - Nevera de una habitación de hotel, apuestas deportivas, etc.
     - *PROBLEMA*: Hay que acudir a un tercero que verifique el resultado de la apuesta
-
 2. **Algunos contratos electrónicos**
-
 3. **Compra de un mueble (electrodoméstrico) con pago aplazado**
-
     - *IMPORTANTE*: "Internet of Things"
-
 4. ¿Compraventa de un inmueble…?
-
-    - *IMPORTANTE*: Anotación en Blockchain/anotación en registro…
-
+    - *IMPORTANTE*: Anotación en Blockchain/anotación en registro...
 5. **Sistemas Digital Rights Management (o DRM)** para gestionar licencias sobre contenido digital
-
 6. **Mundo financiero**: Préstamos, Herencias, etc.

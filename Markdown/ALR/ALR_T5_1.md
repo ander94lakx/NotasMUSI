@@ -2,21 +2,19 @@
 
 ## 1. Ley de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI)
 
-- Ley 34/2002 de Servicios de la Sociedad de la Información y del Comercio
-Electrónico (LSSI)
-    - Desarrolla la Directiva 2000/31/CE sobre el comercio electrónico
-
+- **Ley 34/2002 de Servicios de la Sociedad de la Información y del Comercio
+Electrónico (LSSI)**
 - Servicios de la Sociedad de la Información:
-    - Todo servicio prestado a distancia por via electrónica ya sea remunerado o no en medida en el que este constituya una actividad económica para el prestador
+    - Todo **servicio prestado a distancia por via electrónica** ya sea remunerado o no en medida en el **que** este **constituya una actividad económica para el prestador**
     - Ejemplos:
         1. La contratación de bienes o servicios por vía electrónica
         2. La organización y gestión de subastas por medios electrónicos o de mercados y centros comerciales virtuales
         3. La gestión de compras en la red por grupos de personas
         4. El envío de comunicaciones comerciales
         5. El suministro de información por vía telemática
-    - Servicios excluidos (Art. 5):
-        - Servicios prestados por notarios, registradores de la propiedad y mercantiles
-        - Servicios prestados por abogados y procuradores en el ejercicio de sus funciones
+    - Servicios excluidos:
+        1. Servicios prestados por notarios, registradores de la propiedad y mercantiles
+        2. Servicios prestados por abogados y procuradores en el ejercicio de sus funciones
 
 - Cuestión: ¿Se aplica la LSSI a las administraciones públicas?
     - En general **no** (recaudación de tributos o información sobre servicios de un tercero como casas rurales)
