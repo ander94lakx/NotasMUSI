@@ -2,76 +2,68 @@
 
 ## 1. Introducción
 
-Conocer en qué consiste:
-
-- El **gobierno corporativo de la seguridad de la información**
-    - Conceptos enfocados a la **estrategia de la seguridad** y cómo esta debe estar **alineada con los objetivos corporativos**
-- Los **principales estándares** (ISO38500, COBIT, ISO27001, ITIL)
-    - En especial la norma **ISO 27001**
-- Conceptos necesarios para gestionar la protección de la información
+- Conocer en qué consiste:
+    - El **gobierno corporativo de la seguridad de la información**
+        - Conceptos enfocados a la **estrategia de la seguridad** y cómo esta debe estar **alineada con los objetivos corporativos**
+    - Los **principales estándares** (ISO38500, COBIT, ISO27001, ITIL)
+        - En especial la norma **ISO 27001**
+    - Conceptos necesarios para gestionar la protección de la información
 
 ## 2. Gobierno de la seguridad de la información
 
-> El gobierno es el «conjunto de responsabilidades y prácticas ejercidas por la Dirección con la finalidad de brindar una **dirección estratégica**, garantizar que se logren los **objetivos**, determinar que los **riesgos** se administren en forma apropiada y verificar que los **recursos** de la empresa se utilicen con responsabilidad» (ISACA)
+- En la seguridad de la información, el gobierno de la seguridad trata de:
+    - Dar una **dirección estratégica** y **conseguir objetivos**:
+        - Se debe alinear la seguridad de la información con la estrategia de negocio
+        - Así mismo, se optimizarán las inversiones en la seguridad en apoyo a los objetivos del negocio
+    - **Gestionar** adecuadamente los **riesgos**:
+        - Identificar y valorar los riesgos
+        - Implantar medidas adecuadas para mitigar los riesgos y reducir el impacto potencial a un nivel aceptable
+    - Verificar que los **recursos** se utilicen con **responsabilidad**:
+        - Utilizar el conocimiento y la infraestructura disponible de la mejor forma posible
+        - Se deberá controlar y monitorizar la eficacia y la eficiencia de los controles ya implantados
 
-### Funciones del gobierno de la seguridad
-
-En la seguridad de la información, el gobierno de la seguridad trata de:
-
-- Dar una **dirección estratégica** y **conseguir objetivos**:
-    - Se debe alinear la seguridad de la información con la estrategia de negocio
-    - Así mismo, se optimizarán las inversiones en la seguridad en apoyo a los objetivos del negocio
-- **Gestionar** adecuadamente los **riesgos**:
-    - Identificar y valorar los riesgos
-    - Implantar medidas adecuadas para mitigar los riesgos y reducir el impacto potencial a un nivel aceptable
-- Verificar que los **recursos** se utilicen con **responsabilidad**:
-    - Utilizar el conocimiento y la infraestructura disponible de la mejor forma posible
-    - Se deberá controlar y monitorizar la eficacia y la eficiencia de los controles ya implantados
-
-### Visión, misión y objetivos en el gobierno de la seguridad
-
-#### Visión
+### Visión
 
 - Describe lo que la entidad desea que llegue a ser la seguridad de la información
     - Revision periódica
     - Guía para definir de la estrategia de seguridad
 
-#### Misión
+### Misión
 
 - **Por qué** la seguridad de la información **es relevante en la organización**
     - Describe una realidad invariable en el tiempo
     - Puede lograrse de diversas formas
     - Sirve para tomar decisiones
 
-#### Estrategia de seguridad
+### Estrategia de seguridad
 
 - Describe cómo alcanzar las metas definidas
 - Se revisa periódicamente debido a los permanentes cambios en el entorno
 - *Contiene*:
     - De qué forma la seguridad **da valor** a la entidad
     - Cómo **reducir los riesgos**
-    - Teniendo en cuenta normativas y costes
+        - Teniendo en cuenta normativas y costes
     - Cómo se protege la organización contra impactos de negocio
 
 ### Plan Director de Seguridad (PSD)
 
-- Herramienta fundamental a la hora de implantar la estrategia de seguridad en una organización
+- Herramienta fundamental **para implantar la estrategia de seguridad** en una organización
 - Periodo de 2 a 5
-- *Permite*
-- **Establecer directrices** de seguridad en consonancia con los objetivos corporativos
-- **Definir, planificar y formalizar** las actividades en seguridad
+- *Permite*:
+    - **Establecer directrices** de seguridad en consonancia con los objetivos corporativos
+    - **Definir, planificar y formalizar** las actividades en seguridad
 - *Determina:*
-    - El estado actual de la seguridad de la información
-    - El resultado deseado que se pretende alcanzar dentro de un periodo de tiempo
-    - El resultado debe ser alcanzable y medible
-    - El plan de proyectos que describa como se van a alcanzar dichos objetivos
+    - El **estado actual** de la seguridad de la información
+    - El **resultado deseado** que se pretende alcanzar dentro de un periodo de tiempo
+        - El resultado debe ser **alcanzable y medible**
+    - El **plan de proyectos** que describa como se van a alcanzar dichos objetivos
 
 #### Fases de un Plan Director de Seguridad
 
-- Definir modelo de seguridad
-- Análisis de la situación actual
-- Análisis GAP (donde se está y a donde se quiere llegar)
-- Definir plan de acción:
+1. Definir modelo de seguridad
+2. Análisis de la situación actual
+3. Análisis GAP (donde se está y a donde se quiere llegar)
+4. Definir plan de acción:
     - Proyectos y priorización
     - Aprobación y desarrollo del PDS
     - Seguimiento del plan y de los objetivos
@@ -80,7 +72,7 @@ En la seguridad de la información, el gobierno de la seguridad trata de:
 
 - Los objetivos y la estrategia corporativa
 - La gestión de los riesgos:
-- Conocer los riesgos y cómo gestionarlos
+    - Conocer los riesgos y cómo gestionarlos
 - Las necesidades del negocio
 - Estándares y buenas prácticas del sector
 - Las circunstancias tecnológicas y operativas
@@ -89,11 +81,11 @@ En la seguridad de la información, el gobierno de la seguridad trata de:
 
 - UNE-ISO/IEC 27001:2013 **"Sistemas de Gestión de la Seguridad de la Información (SGSI). Requisitos"**
 - Es el primero de la serie de estándares ISO 27000
-    - ISO 27001: Requerimientos del SGSI
-    - ISO 27002: Buenas prácticas en seguridad
-    - ISO 27003: Guía de implementación del SGSI
-    - ISO 27004: Métricas y mediciones del SGSI
-    - ISO 27005: Gestión del riesgo en el SGSI
+    - ISO 27001: **Requerimientos** del SGSI
+    - ISO 27002: **Buenas prácticas** en seguridad
+    - ISO 27003: **Guía de implementación** del SGSI
+    - ISO 27004: **Métricas** y mediciones del SGSI
+    - ISO 27005: **Gestión del riesgo** en el SGSI
     - ISO 27006-27010: Numeración reservada a diferentes temas de la seguridad de la información
 - Es la **norma principal** de la familia
     - Establece los **requisitos para la gestión del SGSI y su auditoría**
@@ -120,19 +112,9 @@ En la seguridad de la información, el gobierno de la seguridad trata de:
 
 ![Ciclo PDCA](img/pdca.png)
 
-Ciclo **PDCA**:
-
-- *Plan*: **diseño inicial** del SGSI
-- *Do*: se pone en marcha el SGSI
-- *Check*: se evalúa la marcha del SGSI
-- Se realizan auditorias (internas o externas)
-- *Act*: implantar als mejoras necesarias
-
 ### Requisitos generales de la norma ISO 27001
 
 #### Requisitos de documentación
-
-![Jerarquía de la documentación](img/jerarquia_doc.png)
 
 - Documentar la **política, alcance y objetivos del SGSI**
 - Documentar **procedimientos y controles** del SGSI
@@ -155,21 +137,17 @@ Ciclo **PDCA**:
     - Asegurar que los procesos del sistema de gestión de seguridad de la información **se implanten y funcionen**
     - Informar a la alta dirección sobre el **desempeño del sistema** y de cualquier **oportunidad de mejora**
 
-## 4. Buenas prácticas de seguridad en la gestión de servicios de TI
+## 4. Gestión de servicios de TI
 
-Servicio de TI:
-> Servicio a uno o más clientes, por un proveedor de servicios de TI. Un servicio de TI se basa en el uso de tecnologías de la información y apoya el cliente en sus procesos de negocio. Un servicio de TI se compone de una combinación de personas, procesos y tecnología, y deben definirse en un acuerdo de nivel de servicio.
+- Servicio de TI → uso de tecnologías de la información para:
+    - **Apoyo al cliente** en sus tareas
+    - Tres componentes claves:
+        - **Personas**
+        - **Procesos**
+        - **Tecnología**
+    - Acuerdos de Nivel de Servicio (*Service Level Agreement*, **SLA**)
 
-Elementos fundamentales en la gestión de servicios:
-
-- **Apoyo al cliente** en sus tareas
-- Tres componentes claves:
-    - **Personas**
-    - **Procesos**
-    - **Tecnología**
-- Acuerdos de Nivel de Servicio (*Service Level Agreement*, **SLA**)
-
-### Prácticas en los servicios de TI: **ITIL**
+### Buenas prácticas en los servicios de TI: **ITIL**
 
 - **Infrastructure Library (ITIL)**:
     - Primera versión de la IT que consistía en un conjunto de libros documentando los hallazgos de los estudios mencionados
@@ -182,12 +160,12 @@ Elementos fundamentales en la gestión de servicios:
 
 #### Principios fundamentales ITIL
 
-- ITIL **no es propietario**
-- ITIL **no es prescriptivo**
-    - no obliga a ninguna técnica o tecnología concreta
-- ITIL consiste en las **mejores prácticas**
+- **No es propietario**
+- **No es prescriptivo**
+    - No obliga a ninguna técnica o tecnología concreta
+- Consiste en las **mejores prácticas**
     - Resultado de la experiencia global acumulada
-- ITIL consiste en buenas prácticas
+- Consiste en buenas prácticas
     - Pero pueden aparecen nuevas prácticas mejores
 
 #### Características de las prácticas ITIL
@@ -221,14 +199,14 @@ Elementos fundamentales en la gestión de servicios:
 ## 5. El estándar ISO 22301
 
 - Origen en la norma Británica BS 25999
-    - Destinada a **responder y proteger ante contingencias**
-    - Comprende situaciones críticas como:
-        - Desastres meteorológicos
-        - Huelgas
-        - Cortes prolongados de suministros
-        - Enfermedades con gran alcance
-        - Atentados terroristas
-        - ...
+- Destinada a **responder y proteger ante contingencias**
+- Comprende situaciones críticas como:
+    - Desastres meteorológicos
+    - Huelgas
+    - Cortes prolongados de suministros
+    - Enfermedades con gran alcance
+    - Atentados terroristas
+    - ...
 
 ### Objetivos
 
@@ -242,12 +220,12 @@ Elementos fundamentales en la gestión de servicios:
 ### Requisitos
 
 - Requisitos para:
-    - **Planificación**
-    - **Implantación**
-    - **Operación**
-    - **Supervisión**
-    - **Mantenimiento**
-    - **Mejora continua**
+    - Planificación
+    - Implantación
+    - Operación
+    - Supervisión
+    - Mantenimiento
+    - Mejora continua
 - Son genéricos
 - Orientados a **garantizar la continuidad**
 - Aplicables a **todo tipo de organizaciones**
@@ -256,29 +234,29 @@ Elementos fundamentales en la gestión de servicios:
 
 ![Plan de continuidad del negocio](img/plan_continuidad_negocio.png)
 
-1. Delimitación del alcance y análisis de contexto
+1. Delimitación del **alcance y análisis de contexto**
     - Se identifican procesos críticos
     - Análisis del Impacto de Negocio (BIA)
     - Análisis de riesgos
-2. Definición de la estrategia de contingencia
+2. Definición de la **estrategia de contingencia**
     - Categorizar activos
     - Respuesta ante indisponibilidad
     - Continuidad de los procesos críticos
-3. Elaboración del plan de continuidad
+3. Elaboración del **plan de continuidad**
     - Plan de Crisis
         - Cómo reaccionar y qué acciones tomar
     - Plan de Recuperación ante Desastres
         - Restauración de la infraestructura
     - Detalle de procedimientos y guías
-4. Definición del plan de mantenimiento y de las pruebas
+4. Definición del **plan de mantenimiento** y de las pruebas
     - Definición de mejoras continuas
     - Definición de pruebas
-5. Realización de las pruebas
+5. Realización de las **pruebas**
     - Verificar la eficacia y eficiencia
 
 ## 6. Modelos de madurez para la seguridad de la información
 
-Sirve para situar y **evaluar el grado de desarrollo de una gestión** sistemática, predecible y optimizable
+- Sirve para situar y **evaluar el grado de desarrollo de una gestión** sistemática, predecible y optimizable
 
 ### El modelo de madurez CMMI
 

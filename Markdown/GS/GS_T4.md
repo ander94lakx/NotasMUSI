@@ -21,7 +21,7 @@
 
 - Proyectos de **marcado carácter técnico**
 - Analizar y diagnosticar el nivel real de seguridad
-- Tareas:
+- *Tareas:*
     - Hacking ético
     - Test de intrusión
     - Análisis forense
@@ -33,7 +33,7 @@
 
 - Proyectos relacionados con la gestión de los riesgos
 - Adecuación del cumplimiento normativo en materia de seguridad
-    - Tareas:
+- *Tareas:*
     - Certificación
     - Análisis y gestión de riesgos
     - Desarrollo de cuerpo normativo
@@ -46,7 +46,7 @@
 
 - Actividades encaminadas a garantizar la disponibilidad de la información
 - Gestión de una contingencia grave que afectara a la organización y sus activos
-- Tareas:
+- *Tareas:*
     - Planes de continuidad (BCP)
     - Planes de recuperación (DRP)
     - Gestión de crisis
@@ -63,8 +63,8 @@
 
 ### Despliegue de soluciones de seguridad
 
-- Se pueden incluir muchas de las otras categorías.
-- Tareas:
+- Se pueden incluir muchas de las otras categorías
+- *Tareas:*
     - Análisis, diseño e implantación de soluciones como:
         - Accesibilidad
         - Control de la Información
@@ -86,7 +86,7 @@
 ### Seguridad física/patrimonial
 
 - Actividades relacionadas con la seguridad física de los activos es clave para proteger la información
-- Tareas
+- *Tareas:*
     - Test de intrusión físicos
     - Auditoria o seguridad integral (seguridad física + lógica)
 

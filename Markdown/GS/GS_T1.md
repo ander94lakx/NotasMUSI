@@ -1,10 +1,8 @@
 # Tema 1: La seguridad de la información en las organizaciones
 
-## 1. Objetivo
+## 1. Introducción
 
-> Comprender la seguridad de la información como una actividad orientada a **garantizar la confidencialidad, integridad y disponibilidad** de los recursos valiosos de un **sistema de información**.
-
-## 2. Introducción
+![La seguridad de la información en las organizaciones](img/t1.png)
 
 - La **Seguridad** como proceso para:
     - Eliminar los **riesgos asociados** a:
@@ -22,15 +20,12 @@
             - Estándares
             - Procedimientos
 
-## 3. La seguridad de la información implica la confidencialidad, integridad y disponibilidad
+## 2. La seguridad de la información implica la confidencialidad, integridad y disponibilidad
 
 - Tres perspectivas:
-    - **Legal**
-        - Las regulaciones (internacionales, nacionales y regionales) para proteger la privacidad y los derechos de PI
-    - **Técnica**
-        - Desarrollo, análisis, configuración de elementos técnicos relacionados con seguridad (HW, SW, redes)
-    - **Organizativa**
-        - Análisis de riesgos
+    - **Legal**: Las regulaciones (internacionales, nacionales y regionales) para proteger la privacidad y los derechos de PI
+    - **Técnica**: Desarrollo, análisis, configuración de elementos técnicos relacionados con seguridad (HW, SW, redes)
+    - **Organizativa**: Análisis de riesgos
 - Importante:
     - La seguridad de la información es una **actividad crítica en la empresa** la seguridad es un **proceso continuo de mejora**
         - Hay que revisar periódicamente los controles y las medidas implementadas para asegurares de que mitiguen los riesgos y se adapten a los nuevos
@@ -42,7 +37,7 @@
 
 ### Integridad
 
-- Integridad es la propiedad que busca **mantener los datos libres de
+- Propiedad que busca **mantener los datos libres de
 modificaciones no autorizadas**
 - Formas de gestionarla:
     - Dar acceso de acuerdo al criterio del menor privilegio (criterio **need-to-know**):
@@ -55,28 +50,20 @@ modificaciones no autorizadas**
 
 ### Disponibilidad
 
-- Disponibilidad propiedad de la información de **encontrarse a disposición de quienes deben acceder a ella** como usuarios autorizados, ya sean personas, procesos o aplicaciones.
+- Propiedad de la información de **encontrarse a disposición de quienes deben acceder a ella** como usuarios autorizados, ya sean personas, procesos o aplicaciones
 - Dos situaciones típicas:
     - Ataques de **denegación de servicio** (Denial of Service, DoS)
     - **Pérdidas de datos o capacidades** de procesamiento de datos debidas a **catástrofes naturales**
 
 ### Otros conceptos
 
-- **Sistemas de identificación**
-    - Medios por los que los usuarios reclaman su identidad
-        - Usuario/Contraseña
-        - Tokens
-        - Sistemas físicos
-- **Autentificación**
-    - Evaluación de la evidencia de la identidad de un usuario
-- **Rendición de cuentas**
-    - Capacidad de un sistema de atribuir cada acción realizada a un usuario
-- **Autorización**
-    - Derechos y permisos asignados a recursos o información
-- **Privacidad**  
-    - Nivel de confidencialidad que tiene un usuario
+- **Sistemas de identificación**: Medios por los que los usuarios reclaman su identidad (usuario/contraseña, tokens, sistemas físicos)
+- **Autentificación**: evaluación de la evidencia de la identidad de un usuario
+- **Rendición de cuentas**: capacidad de un sistema de atribuir cada acción realizada a un usuario
+- **Autorización**: derechos y permisos asignados a recursos o información
+- **Privacidad**: nivel de confidencialidad que tiene un usuario
 
-## 4. La seguridad es un asunto económico
+## 3. La seguridad es un asunto económico
 
 - A veces **no se toma suficientemente en cuenta la seguridad de la información**
     - Hasta que experimentan un ataque o una brecha de seguridad
@@ -96,12 +83,10 @@ modificaciones no autorizadas**
     - Y también puede haber:
         - Costes post incidente
 
-## 5. La seguridad es un proceso
+## 4. La seguridad es un proceso
 
 - La seguridad es un proceso:
-    - **Actividades continuas** dentro de
-        - Un plan sistemático
-            - Que debe **evaluarse continuamente**
+    - **Actividades continuas** → (dentro de) → Un plan sistemático → (que debe) → **evaluarse continuamente**
     - Que implica:
         - La **identificación de activos de información**
         - Documentación en implementación de:
@@ -113,9 +98,7 @@ modificaciones no autorizadas**
     - Usando:
         - Herramientas de gestión
 
-![Jerarquía de herramientas de gestión](img/jerarquia_htas_gestion.png)
-
-## 6. La clasificación de la información
+## 5. La clasificación de la información
 
 - La clasificación de la información permite **identificar el valor de los recursos de información**
     - Demuestra un **compromiso con la seguridad**
@@ -125,20 +108,14 @@ modificaciones no autorizadas**
 
 - General:
     - **Sin clasificar**
-        - Información no sensible
-        - No afecta a la confidencialidad
     - **Sensible** pero no clasificada
-        - Impacto menor si se difunde
     - **Confidencial**
-        - Puede causar daño si se difunde
     - **Secreta**
-        - Su difusión causaría un daño importante
     - **Alto secreto**
-        - Su difusión causaría un daño extremadamente grave
-- Según el entorno empresarial
-    - Uso publico
-    - Uso interno
-    - Confidencial
+- Según el entorno empresarial:
+    - Uso **publico**
+    - Uso **interno**
+    - **Confidencial**
 
 ### Roles de clasificación de la información
 
@@ -158,7 +135,7 @@ modificaciones no autorizadas**
 - Especificar **procedimientos** para acceder o transferir esos activos de información
 - Crear un programa de concienciación empresarial sobre la clasificación y los controles
 
-## 7. La seguridad en la información implica la gestión de los riesgos
+## 6. La seguridad en la información implica la gestión de los riesgos
 
 - El **Control de Seguridad**:
     - *Objetivo*: reducir los efectos de una amenaza o vulnerabilidad
@@ -175,21 +152,20 @@ modificaciones no autorizadas**
 - El riesgo en este caso redundaría en la pérdida de C/D/I
 - La organización debe implementar este control en la forma de políticas y en procedimientos concretos
 
-## 8. La seguridad se articula con controles de seguridad
+## 7. La seguridad se articula con controles de seguridad
 
 - Para poder medir el impacto y la posibilidad de que un evento no deseado suceda
     - Hay que analizar el riesgo y sus elementos
 - Una vez un riesgo ha sido analizado y evaluado se puede:
-
     1. **Aceptar** tal cual
     2. Tratar de tomar alguna **medida para mitigar su impacto o su probabilidad** de ocurrencia
     3. Evitarlo o **eliminarlo** completamente
     4. **Transferir** el riesgo (no actúa sobre el riesgo en sí)
 
-## 9. La seguridad es tanto física como lógica
+## 8. La seguridad es tanto física como lógica
 
-- La seguridad física es parte de la seguridad de la información
-- Los controles de seguridad física son tan diversos como las amenazas
+- La seguridad física es **parte de la seguridad** de la información
+- Los **controles** de seguridad física son **tan diversos como las amenazas**
     - Controles administrativos:
         - Planificación de requisitos y gestión de la seguridad de las instalaciones
         - Controles administrativos al personal
@@ -204,7 +180,7 @@ modificaciones no autorizadas**
         - dispositivos de control de acceso a las instalaciones
         - ...
 
-## 10. La seguridad implica a las persona
+## 9. La seguridad implica a las personas
 
 - El factor humano es un elemento más del sistema de información
     - Las políticas y las herramientas deben tenerlos en cuenta

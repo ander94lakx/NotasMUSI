@@ -1,8 +1,8 @@
-# Tema 3: Programas, procesos y políticas de seguridad de la Información
+# Tema 3: Programas, procesos y políticas de seguridad de la información
 
 ## 1. Introducción
 
-![Programas, procesos y políticas de Seguridad de la Información](img/t3.png)
+![Programas, procesos y políticas de seguridad de la información](img/t3.png)
 
 La gestión de riesgos es una actividad central que se debe contextualizar en las opciones de mitigación del riesgo, con diferentes modelos económicos.
 
@@ -21,26 +21,24 @@ La gestión de riesgos es una actividad central que se debe contextualizar en la
 
 ### Políticas, estándares, líneas base y procedimientos
 
-- **Políticas**
-    - Establecen las directrices generales
-- **Estándares**
-    - Establecen las herramientas requeridas
-- **Líneas base**
-    - Establecen los parámetros que se utilizarán
-- **Procedimientos**
-    - Establecen las guías paso a paso que se deben realizar diariamente
+- **Políticas**: Establecen las directrices generales
+- **Estándares**: Establecen las herramientas requeridas
+- **Líneas base**: Establecen los parámetros que se utilizarán
+- **Procedimientos**: Establecen las guías paso a paso que se deben realizar diariamente
 
 ## 3. La gestión de riesgos
 
-> Conjunto de procesos para identificar, analizar y evaluar los riesgos para tomar las decisiones sobre su asunción, mitigación o transferencia
-
-- El riesgo es la posibilidad de ocurrencia de un evento no deseado
-- Deben ser estudiados y analizados, para poder tomar decisiones
-- Las decisiones pueden ser:
-    1. **Aceptar** tal cual
-    2. Tratar de tomar alguna **medida para mitigar su impacto o su probabilidad** de ocurrencia
-    3. **Transferir** el riesgo
-    4. Evitarlo o **eliminarlo** completamente
+- Riesgo: posibilidad de ocurrencia de un evento no deseado
+- Gestión del riesgo:
+    - Conjunto de procesos:
+        - Para → identificar, analizar y evaluar los riesgos
+        - Para → tomar las decisiones sobre su asunción, mitigación o transferencia
+    - Deben ser estudiados y analizados, para poder tomar decisiones
+    - Las decisiones pueden ser:
+        1. **Aceptar** tal cual
+        2. Tratar de tomar alguna **medida para mitigar su impacto o su probabilidad** de ocurrencia
+        3. **Transferir** el riesgo
+        4. Evitarlo o **eliminarlo** completamente
 
 ### Preguntas sobre la Gestión de Riesgos
 
@@ -61,7 +59,7 @@ La gestión de riesgos es una actividad central que se debe contextualizar en la
 - ¿**Es rentable**?
     - Análisis coste/beneficio
 
-### Elementos y actividades de la Gestión de Riesgos
+### Definiciones de conceptos relacionados con la gestión del riesgo
 
 - Basada en estándares como ISO 17799
 - Algunas definiciones previas importantes son las siguientes:
@@ -70,7 +68,7 @@ La gestión de riesgos es una actividad central que se debe contextualizar en la
     - **Vulnerabilidad**: una debilidad o fallo en un recurso
     - **Exposición**: una oportunidad para que una amenaza cause un daño
 
-### Controles en la Gestión de Riesgos
+### Controles (Gestión de Riesgos)
 
 - **Mecanismos de mitigación**:
     - Técnicos (*un firewall*)
@@ -80,7 +78,7 @@ La gestión de riesgos es una actividad central que se debe contextualizar en la
 - **Salvaguardas** (safeguard): controles preventivos y proactivos
 - **Contramedidas**: controles correctivos (reactivos)
 
-### Procesos en la Gestión de Riesgos
+### Procesos (Gestión de Riesgos)
 
 - **Evaluación** del riesgo (risk assessment). A su vez, se considera dentro de esta fase otras, como:
     - Análisis de riesgos:
@@ -89,7 +87,7 @@ La gestión de riesgos es una actividad central que se debe contextualizar en la
 - **Implementación** de controles
 - **Evaluación continua** de los controles
 
-### Análisis de Riesgos Cuantitativo
+### Análisis de riesgos cuantitativo
 
 - Valoración económica de los recursos
 
@@ -100,7 +98,7 @@ La gestión de riesgos es una actividad central que se debe contextualizar en la
 | Tasa de ocurrencia anualizada (annualized rate of occurency, ARO) | Frecuencia de la ocurrencia de la amenaza anual                     |
 | Expectativa de pérdida anual (annualized loss expectancy, ALO)    | SLE*ARO                                                             |
 
-### Desventajas del Análisis de Riesgo
+#### Desventajas del análisis de riesgos cuantitativo
 
 - Dificultad de **medir el valor de los recursos**
     - **Coste inicial y continuo**
@@ -108,12 +106,6 @@ La gestión de riesgos es una actividad central que se debe contextualizar en la
     - **Valor de mercado del recurso**
 
 ## 4. Diseño de políticas de seguridad
-
-- Las políticas tienen **muchas utilidades**, pueden ser:
-    - Un **salvavidas** durante un desastre
-    - Un **requisito** de una función reguladora
-    - Proporcionar **protección contra la responsabilidad** debida a un trabajador
-    - Definir **acciones para el control** de los secretos comerciales
 
 ### Tipos de Políticas
 
@@ -131,10 +123,17 @@ La gestión de riesgos es una actividad central que se debe contextualizar en la
 - Pueden considerarse las "plantillas" o "**requisitos generales**"
     - Determinan cómo se diseñarán e implementarán los diferentes elementos de la seguridad
 
+### Utilidades
+
+- Un **salvavidas** durante un desastre
+- Un **requisito** de una función reguladora
+- Proporcionar **protección contra la responsabilidad** debida a un trabajador
+- Definir **acciones para el control** de los secretos comerciales
+
 ### Diseño de políticas
 
 - **Definen los objetivos de la seguridad**
-- La participación de la dirección en la definición de las políticas muestra  implicación y compromiso de la organización en sus niveles directivos
+- La **participación de la dirección** en la definición de las políticas muestra  implicación y compromiso de la organización en sus niveles directivos
 - Las políticas se aplican a la organización entera.
 - Facilitan tener unos **estándares de seguridad coherentes**
     - Los clientes pueden apreciarlo

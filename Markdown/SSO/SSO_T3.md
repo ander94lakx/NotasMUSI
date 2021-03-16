@@ -357,3 +357,63 @@ y su seguridad.
 - Requiere vulnerabilidades de escalado de privilegios
     - Cada vez más difíciles de encontrar
     - Apple actualiza los sistemas para parchearlas y no deja instalar versiones vulnerables
+
+## 4. Virtualización
+
+- **Simulación de los recursos de un ordenador**
+    - Se crea una capa de abstracción entre
+        - El hardware de la máquina física (host)
+        - El sistema operativode la máquina virtual
+
+### Tipos de virtualización
+
+- Virtualización asistida por hardware
+    - Extensiones introducidas en las arquitecturas x86 para facilitar la virtualización
+- Virtualización de almacenamiento
+    - Unir varios dispositivos de alacenamiento en red para crear uno solo
+- Virtualización completa
+    - Ejecutar código de la máquina virtual sobre el procesador físico
+- Paravirtualización
+    - Modificar el *guest* para que ayude en el proceso de virtualización
+
+### Ventajas
+
+- Aumenta la utilización y la productividad
+- Protección
+- Aumenta la capacidad de trabajo, la facilidad de reservar recursos y el tiempo de reacción
+- Simplicidad y coste
+- Flexibilidad y agilidad en migraciones y la capacidad de crecimiento organizado
+- Seguridad mediante snapshots en caso de catástrofe
+
+### Desventajas
+
+- Las aplicaciones son más lentas
+- Interoperabilidad entre diferentes máquinas
+- Aplicaciones nativas del microprocesador
+- El tiempo de procesamiento es mayor.
+- Limitación de recursos (GPU, ...)
+
+### Software de virtualización
+
+- **Xen**
+    - Herramienta de virtualización que se ejecuta por debajo del sistema operativo y actúa como hipervisor del mismo
+
+- **KVM** (Kernel-based Virtual Machine)
+    - Basado en Qemu
+    - Solución para incrementar la virtualización completa con Linux
+
+- **Open VZ**
+    - Tecnología de virtualización en el nivel de sistema operativo para Linux
+
+| Características           | Xen                               | KVM                                 | OpenVZ                         |
+|---------------------------|-----------------------------------|-------------------------------------|--------------------------------|
+| *Virtualización completa* | :heavy_check_mark:                | :heavy_check_mark:                  | :x:                            |
+| *Paravirtualización*      | :heavy_check_mark:                | :heavy_check_mark:                  | :x:                            |
+| *Contenedores*            | :x:                               | :x:                                 | :heavy_check_mark:             |
+| *Licencia*                | GPL                               | GPL                                 | GPL                            |
+| *Arquitecturas*           | i686, x86-64, IA64, PPC           | i686, x86-64, IA64, PPC, S390       | i686, x86-64, IA64, PPC, SPARC |
+| *Rendimiento*             | ParaV muy rapida, VCompleta media | ParaV muy rapida, VCompleta media   | Nativo                         |
+| *SMP*                     | :heavy_check_mark:                | :heavy_check_mark:                  |                                |
+| *CPU*                     | :heavy_check_mark:                | :heavy_check_mark:                  |                                |
+| *Independiente de Host*   | :heavy_check_mark:                | :x:                                 | :x:                            |
+| *Observaciones*           | VCompleta necesita VT/AMD-V       | VCompleta y ParaV necesita VT/AMD-V | Migración en vivo              |
