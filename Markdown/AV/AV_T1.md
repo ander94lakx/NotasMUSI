@@ -8,7 +8,7 @@
     - **White-Hat**
         - Amplios conocimientos
         - Código ético
-    - **Gray-Hat**
+    - **Grey-Hat**
         - Combinación de White-Hay y Black-Hat
     - **Black-Hat**
         - No cumplen la ley
@@ -257,7 +257,7 @@
 #### TCP Connect() (`-sT`)
 
 - Intenta abrir una conexión TCP
-- Para determinar **puertos abiertos**ç
+- Para determinar **puertos abiertos**
 - Realiza todo el Handshake TCP
 
 #### TCP SYN (`-sS`)
@@ -268,6 +268,7 @@
 - Envía un paquete SYN al receptor
     - Si **se recibe SYN+ACK** → **ABIERTO**
         - En ese caso se envía un RST+ACK para finalizar la conexión (no se abre)
+    - Si no recibe nada → CERRADO o FILTRADO (hay firewalls que son muy listos y son capaces de detectar SYN scans)
 
 #### TCP ACK (`-sA`)
 
@@ -303,6 +304,9 @@
 - Más complejo
 - Requiere de una máquina extra (zombie)
 - Lento y poco usado
+    - Mejor usar TCP SYN
+    - Solo es util cuando no puede ejecutar `nmap` como `root`
+        - Es el único tipo de escaneo que no necesita modificar paquetes
 
 ### Wireshark (sniffing de paquetes)
 
@@ -319,21 +323,21 @@
 - Tras recopilar una gran cantidad de información, toca analizarla y quedarse con la **información util**
 - **¿Que se puede hacer con cada tipo de información?**
 
-| Dato                                      | Uso                                                                           |
-|-------------------------------------------|-------------------------------------------------------------------------------|
-| Nombres                                   | Deducir el usuario y cuentas en servicios                                     |
-| Emails                                    | Conseguir accesos remotos a servidores                                        |
-| La plataforma                             | Posibles vulnerabilidades o elementos mal configurados de esa |  |plataforma  |
-| Un sitio web o subdominio                 | Vulnerabilidades y puestos                                                    |
-| Agentes externos (ISP, proveedores, etc.) | Posibles vías a través de las que interceptar comunicaciones                  |
-| Una intranet/extranet                     | Extraer datos internos interesantes                                           |
-| Una carpeta o archivo oculto              | Datos de interés                                                              |
-| Teléfonos y direcciones                   | Para hacer ingeniería social                                                  |
-| Passwords                                 | Para probarlas en servicios                                                   |
-| Datos personales                          | Probarlos como passwords o usarlos como ingeniería social                     |
-| Un tipo de regla de firewall o IDS        | Técnicas para aludirlo o inhabilitarlo                                        |
-| Arquitecturas y Protocolos                | Información para saber como poder articular un ataque                         |
-| Puertos abiertos                          | Extraer información como versión, servicios, vulnerabilidades de ese servicio |
-| Dirección IP                              | Tratar de ubicar en la red                                                    |
-| Clase de antivirus                        | Buscar vulnerabilidades que no detecte ese antivirus                          |
-| Una versión de aplicación                 | Búsqueda de vulnerabilidades concretas                                        |
+| Dato                                        | Uso                                                                               |
+|---------------------------------------------|-----------------------------------------------------------------------------------|
+| *Nombres*                                   | Deducir el **usuarios y cuentas** en servicios                                    |
+| *Emails*                                    | Conseguir accesos remotos a servidores                                            |
+| *La plataforma*                             | **Posibles vulnerabilidades** o elementos mal configurados de esa |  |plataforma  |
+| *Un sitio web o subdominio*                 | **Vulnerabilidades** y puertos                                                    |
+| *Agentes externos (ISP, proveedores, etc.)* | Posibles vías a través de las que **interceptar comunicaciones**                  |
+| *Una intranet/extranet*                     | **Extraer datos** internos interesantes                                           |
+| *Una carpeta o archivo oculto*              | Datos de interés                                                                  |
+| *Teléfonos y direcciones*                   | Para hacer **ingeniería social**                                                  |
+| *Passwords*                                 | Para **probarlas** en servicios                                                   |
+| *Datos personales*                          | Probarlos como **passwords** o usarlos como ingeniería social                     |
+| *Un tipo de regla de firewall o IDS*        | **Técnicas para aludirlo** o inhabilitarlo                                        |
+| *Arquitecturas y Protocolos*                | Información para **saber como** poder **articular un ataque**                     |
+| *Puertos abiertos*                          | Extraer información como **versión, servicios, vulnerabilidades** de ese servicio |
+| *Dirección IP*                              | Tratar de ubicar en la red                                                        |
+| *Clase de antivirus*                        | Buscar vulnerabilidades que no detecte ese antivirus                              |
+| *Una versión de aplicación*                 | Búsqueda de **vulnerabilidades** concretas                                        |
