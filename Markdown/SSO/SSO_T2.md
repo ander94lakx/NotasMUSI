@@ -2,12 +2,9 @@
 
 ## 1. Introducción a la seguridad en Linux
 
-- Los OS basados en Linux tienen tres partes: HW, kernel y aplicaciones
-
 ### Kernel
 
-- Para entender la seguridad en el núcleo de Linux hay que tener claro los
-siguientes aspectos:
+- Aspectos relevantes sobre la seguridad en Linux:
     - Las opciones de red
     - Los algoritmos de cifrado que soporta
     - Hardware de cifrado que soporta
@@ -68,33 +65,34 @@ d r w x r - x r - x  2  ander  ander  4096  Feb 12 22:39  .landscape/
     - Arranque normal
     - Arranque en modo *live*
 - Recomendable utilizar el modo live para hacer cualquier operación previa sobre los discos o particiones
+- **Recomendación:** cifrado del disco con LUKS
 
-**Recomendación:** cifrado del disco con LUKS.
-
-#### sistema de carpetas de Linux
+#### Estructura de directorios de Linux
 
 - `/`
-    - `/bin`: binarios
-    - `/boot`: archivos relacionados con GRUB
-    - `/dev`: Discos duros, etc.
-    - `/etc`: ficheros de configuración del sistema y de aplicaciones + scripts que se ejecutan al iniciar el sistema
-    - `/home`: carpetas personales, accesibles solo por cada usuario y root
-    - `/lib`: librerías del sistema y drivers
-    - `/lost+found`: donde se almacenan las cosas en caso de que pete
-    - `/media`, `/mnt`: punto de montaje para unidades extraíbles o temporales
-    - `/opt`: paquetes adicionales para aplicaciones
-    - `/proc`: información dinámica del kernel de Linux
-    - `/root`: es la carpeta personal del administrador (`root` no tiene carpeta en `/home`)
-    - `/sbin`: binarios del sistema
-    - `/tmp`: ficheros temporales (se limpia cada vez que arranca el sistema)
-    - `/usr`: configuración y aplicaciones instaladas
-    - `/var`: ficheros dinámicos, como buffers, logs, ...
+    - **`/bin`**: binarios
+    - **`/boot`**: archivos relacionados con GRUB
+    - **`/dev`**: discos duros, etc.
+    - **`/etc`**: ficheros de **configuración del sistema** y de aplicaciones + scripts que se ejecutan al iniciar el sistema
+    - **`/home`**: carpetas personales, accesibles solo por cada usuario y root
+    - **`/lib`**: librerías del sistema y drivers
+    - **`/lost+found`**: donde se almacenan las cosas en caso de que pete
+    - **`/media`**, **`/mnt`**: punto de montaje para **unidades extraíbles** o temporales
+    - **`/opt`**: paquetes adicionales para aplicaciones
+    - **`/proc`**: información **dinámica del kernel** de Linux
+    - **`/root`**: es la carpeta personal del administrador (`root` no tiene carpeta en `/home`)
+    - **`/sbin`**: binarios del sistema
+    - **`/tmp`**: ficheros temporales (se limpia cada vez que arranca el sistema)
+    - **`/usr`**: **configuración y aplicaciones** instaladas
+    - **`/var`**: ficheros dinámicos, como buffers, **logs**, ...
+
+#### Particionado en la instalación
 
 - **Conviene separar en particiones** ciertos directorios del sistema
-    - Lo más común es separar `/boot` y `/home` del resto del fs:
+    - Lo más común es **separar `/boot` y `/home`** del resto del fs:
         - Se separa el sector de arranque del resto para securizarlo
         - Se separa `/home` del resto para tener por separado los archivos personales
-    - Añadir una partición `swap` para paginar memoria
+    - Añadir una **partición `swap`** para paginar memoria
 
 ### Protección del sistema de arranque (BIOS/UEFI, GRUB, Terminal…)
 
@@ -125,8 +123,8 @@ update-grub
 #### *Hardening*: Ejecución de comandos de administración
 
 - `root` (`UID=0`) es el administrador del sistema y tiene permisos completos
-- solo es recomendable para algunas operaciones de administrador
-    - Es mejor técnica ganar privilegios desde un usuario normal. Dos métodos
+    - Solo es recomendable para algunas operaciones de administrador
+    - Es mejor técnica ganar privilegios desde un usuario normal. Dos métodos:
         1. Convertirse en `root` usando `su`
         2. Usar `sudo`
             - Modificar `/etc/sudoers` para ver que usuarios pueden ejecutar sudo
@@ -137,11 +135,10 @@ update-grub
 
 #### *Hardening*: Usuarios
 
-- Gestionar los usuarios que hay en el sistema para evitar que tenga privilegios de más o usuarios no necesarios
+- **Gestionar los usuarios** que hay en el sistema para **evitar que tenga privilegios de más** o usuarios no necesarios
 - Hay muchos más usuarios de los creados "manualmente"
     - Hay programas o servicios que tienen sus propios usuarios y grupos específicos que se son creados automáticamente por ellos
-
-- Comandos básicos
+- Comandos básicos:
     - `useradd`/`groupadd`
     - `usermod`/`groupmod`
     - `userdel`/`groupdel`
@@ -151,8 +148,8 @@ update-grub
 
 #### *Hardening*: Permisos
 
-- Es conveniente saber como modificar los permisos para evitar que usuarios no autorizados accedan a donde no deban.
-- `chmod`
+- Es conveniente saber **como modificar los permisos** para evitar que usuarios no autorizados accedan a donde no deban
+- **`chmod`**
     - Para cambiar los permisos de un archivo, directorio, etc.
         - Modo "caracteres"
         - Modo "octetos" (más comodo)
@@ -177,18 +174,18 @@ update-grub
 | `chmod u=rw,go=`         | `chmod 600`    |
 | `chmod u=rwx,go=`        | `chmod 700`    |
 
-- Umask permite configurar los permisos por defecto para los ficheros creados por un usuario
+- **Umask permite configurar los permisos por defecto** para los ficheros creados por un usuario
     - <https://phoenixnap.com/kb/what-is-umask>
 - Permisos SETUID y SETGID
-    - SETUID → El proceso adquiere los permisos del propietario del fichero:
-        - chmod u+s calculadora
-    - SETGID → El proceso adquiere los permisos del grupo del fichero:
-        - chmod g+s calculadora
+    - **SETUID** → El proceso adquiere los permisos del propietario del fichero:
+        - `chmod u+s calculadora`
+    - **SETGID** → El proceso adquiere los permisos del grupo del fichero:
+        - `chmod g+s calculadora`
 - **Auditoría 101**: Buscar ficheros con bit `SETUID y SETGID:
 
-    ```bash
-    find / \( -perm -4000 -o -perm 2000 \) –ls
-    ```
+```bash
+find / \( -perm -4000 -o -perm 2000 \) –ls
+```
 
 - `lsattr`/`chattr`
     - Listar o modificar los atributos de los ficheros
@@ -231,28 +228,28 @@ sudo vi /etc/init/cron.conf             # Modificar arranques al iniciar
 #### *Hardening*: Cifrado de información
 
 - Dos niveles de cifrado
-    - Cifrado a nivel sistema de ficheros:
+    - Cifrado a **nivel** sistema de **ficheros**:
         - eCryptfs, EncFS, …
-    - Cifrado a nivel de bloque/dispositivo:
+    - Cifrado a **nivel** de bloque/**dispositivo**:
         - dm-crypt+LUKS
         - Veracrypt …
 
 #### *Hardening*: Terminales habilitados
 
-- Los "terminales" que usamos habitualmente no son terminales reales, sino emulaciones de terminal.
-- En linux, se puede acceder a las terminales reales mediante CTRL+ALT+F1-12 (dependiendo de que terminales se encuentre habilitadas)
-- Se puede modificar las terminales habilitadas modificando el fichero `/etc/securetty`
+- Los "terminales" que se usan habitualmente no son terminales reales, sino emulaciones de terminal
+- En linux, se puede acceder a las **terminales reales** mediante **CTRL+ALT+F1-12** (dependiendo de que terminales se encuentre habilitadas)
+- Se puede modificar las terminales habilitadas modificando el fichero **`/etc/securetty`**
 
 ## 2. Autenticación SSH
 
-- El uso de SSH es muy común para poder realizar labores de administración o despliegue sobre servidores de manera remota
-- SSH es uno de los servicios de Linux más usados
-- Es uno de los vectores principales por donde se puede intentar atacar
+- El **uso de SSH es muy común** para poder realizar labores de administración o despliegue sobre servidores de manera remota
+- SSH es uno de los servicios de Linux **más usados**
+- Es uno de los **vectores principales** por donde se puede **intentar atacar**
     - Fuerza bruta ([Hydra](https://github.com/vanhauser-thc/thc-hydra))
     - Explotación de vulnerabilidades
     - Malas configuraciones
     - Robo de credenciales
-- Es esencial fortificarlo
+- Es esencial **fortificarlo**
     - Directivas de configuración
     - Limitar informacion hacia el exerior
     - Claves RSA
@@ -271,26 +268,38 @@ sudo vi /etc/init/cron.conf             # Modificar arranques al iniciar
 
 #### Configuración segura del servidor SSH
 
+- Muchas opciones que revisar para asegurar que la configuración es segura. Entre otras:
+    - ¿**Cambiar el puerto** por defecto?
+    - Permitir **únicamente interfaz** que va a recibir las peticiones
+        - Solo desde red de gestión
+    - Utilizar solamente la **última versión**
+    - **Nunca permitir a root** conectarse por SSH
+    - Limitar el acceso**usuarios concretos**
+    - **Reducir**
+        - **tiempo de intento** de autenticación
+        - **número de intentos** de autenticación
+    - **Denegar** conexiones al **servidor gráfico** X11
+
 ```bash
 Port 22                             # ¿Se recomienda cambiar el puerto por defecto?
 ListenAddress 192.168.1.2           # Interfaz que va a recibir las peticiones 
-                                    #       → Solo desde red de gestión
+                                        # Solo desde red de gestión
 Protocol 2                          # Utilizar solamente la última versión (2)
 PermitRootLogin no                  # Nunca permitir a root conectarse por SSH
-AllowUsers user1 user2@83.45.258.21 # Permitir acceso a solo a usuarios concretos
+AllowUsers user1 user2@83.45.258.21 # Permitir acceso solo a usuarios concretos
 LoginGraceTime 10                   # Reducir tiempo de "intento" de autenticación
 MaxAuthTries 10                     # Reducir número de intentos de autenticación
 MaxStartups N                       # Número de sesiones sin autenticación
 X11Forwarding no                    # Denegar conexiones al servidor gráfico X11
 ```
 
-### Minimizar la exposiciñon de informacion
+### Minimizar la exposiciónn de informacion
 
 - Ejemplo de banner SSH:
 
 ```bash
 kali@kali~$ ssh alumno@192.168.1.48
-alumno@192.168.1.48's password
+alumno@192.168.1.48 password:
 Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.19.0-25-generic x86-64)
 
 * Documentation: https://help.ubuntu.com
@@ -309,13 +318,13 @@ Banner /etc/ssh/sshd_banner
 /etc/init.d/sshd restart
 ```
 
-- *Otra opción*: editar el propio binario `/usr/sbin/sshd` con algun editor de binarios como `hexedit`.
+- *Otra opción*: editar el propio binario `/usr/sbin/sshd` con algun editor de binarios como `hexedit`
 
 ### Acceso SSH con claves RSA
 
 - Metodo **más seguro que** la autenticación por **contraseña**
     - **Impide** ataques por **fuerza bruta**
-    - Limita las máquinas que pueden conectarse
+    - **Limita las máquinas** que pueden conectarse
     - Es mucho más facil robar una contraseña que una clave RSA
         - Las claves RSA se almacenan en las máquinas cliente cifradas con contraseña
 
@@ -341,7 +350,6 @@ PasswordAuthentication no
 ### Segundo factor de autenticación (2FA)
 
 - Es una buena opcion si se quiere seguir usando la contraseña para acceder
-- Pasos:
 
 ```bash
 # 1. Modificar el fichero /etc/pam.d/sshd y añadir configuracion para F2A concreto:
@@ -358,18 +366,18 @@ sudo service ssh restart
 
 ### Syslog
 
-- Sistema estándar logs (local+red)
+- **Sistema estándar logs** (local + red)
     - Casi todas las distribuciones de Linux lo tienen
     - Permite registrar todo tipo de eventos
 - Los mensajes tienen un **formato estandarizado**
 - Los logs se guardan en:
-    - `/varl/log`
+    - **`/varl/log`**
 - Servidor para almacenamiento y gestion de logs:
     - `syslogd/syslog-ng/rsyslog`
 - Para usarlo se arranca:
     - `/etc/init.d/sysklogd`
 - Configuración en:
-    - `/etc/syslog.conf`
+    - **`/etc/syslog.conf`**
 
 #### Niveles de log
 
@@ -425,8 +433,8 @@ sudo service ssh restart
 
 #### Discretionary Access Control (DAC)
 
-- Mecanismo de control de acceso común para sistemas UNIX
-    - Todo proceso se ejecuta bajo un usuario y un grupo:
+- Mecanismo de **control de acceso** común para sistemas UNIX
+    - **Todo proceso se ejecuta bajo un usuario y un grupo**:
         - Por ejemplo: `apache` se ejecutará como `apache:apache`
         - El proceso httpd tiene acceso a todos los ficheros y directorios a los que tiene acceso el usuario apache
         - Esto se extiende a todos los scripts que se ejecuten bajo este demonio (php, cgi, ...)
@@ -434,7 +442,7 @@ sudo service ssh restart
 #### Mandatory Access Control (MAC) (SELinux)
 
 - Permite **definir permisos** para los procesos **mediante políticas**
-- Controla con qué partes del sistema puede interactuar cada proceso.
+- **Controla con qué partes** del sistema **puede interactuar cada proceso**
     - Protege datos de acceso no autorizado
     - Protege otros demonios de acceso no autorizado
     - Protege puertos/sockets/ficheros

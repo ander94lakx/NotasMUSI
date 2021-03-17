@@ -397,11 +397,9 @@ y su seguridad.
 
 - **Xen**
     - Herramienta de virtualización que se ejecuta por debajo del sistema operativo y actúa como hipervisor del mismo
-
 - **KVM** (Kernel-based Virtual Machine)
     - Basado en Qemu
     - Solución para incrementar la virtualización completa con Linux
-
 - **Open VZ**
     - Tecnología de virtualización en el nivel de sistema operativo para Linux
 

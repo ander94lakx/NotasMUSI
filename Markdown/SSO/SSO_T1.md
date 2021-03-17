@@ -311,86 +311,87 @@ de una comunicación
 #### Kerberos: fases de autenticación
 
 1. Obtención de credenciales del KDC:
-    - Autenticación del usuario → Ticket Granting Ticket (TGT)
+    - **Autenticación del usuario → TGT** (*Ticket Granting Ticket*)
 2. Petición de autenticación al KDC para un servicio:
-    - <TGT, Servicio> → Ticket Granting Service (TGS)
+    - **<TGT, Servicio> → TGS** (*Ticket Granting Service*)
 3. Presentación del ticket al servidor final:
-    - TGS → Servicio
+    - **TGS → Servicio**
 
 ### Ataques a contraseñas en Windows
 
 #### Ataques a contraseñas (LM/NTLM)
 
-- Ataques online
+- *Online*
     - Inyección de DLL
-    - **Leer la memoria del proceso LSASS (*Local Security Authority Subsystem*)**
-- Ataques offline
+    - Leer la **memoria del proceso `lsass`** (*Local Security Authority Subsystem*)
+- *Offline*
     - Conseguir las credenciales cifradas
         - Herramientas: Cain&Abel, Hashcat...
-- Ataques de acceso físico
+- Ataques de *acceso físico*
 - Ataque sin descifrar
-    - *Pass the hash*
+    - **Pass the hash**
 
 #### Ataques a contraseñas (Kerberos)
 
-- *Overpass The Hash/Pass The Key (PTK)*
-- *Pass-the-ticket*
+- **Overpass The Hash/Pass The Key (PTK)**
+- **Pass-the-ticket**
 - En caso de que el atacante tenga acceso de administrador en una máquina:
-    - *Golden/Silver Ticket*
-- Kerberoasting
+    - **Golden/Silver Ticket**
+- **Kerberoasting**
     - Intentar obtener la contraseña de un servicio a partir de su TGS
 - Herramientas:
-    - Mimikatz
+    - [Mimikatz](<https://github.com/gentilkiwi/mimikatz>)
 
 ##### Overpass The Hash/Pass The Key (PTK)
 
 - **Utilizar el hash del usuario** para conseguir **suplantarle frente al KDC**
     - Acceder a los servicios del dominio disponibles para dicho usuario
-- Dónde sacar los hashes:
-    - Ficheros SAM (equipos) (Mimikatz)
-    - Fichero `NTDS.DIT` (BD del AD)
-    - Memoria del proceso `lsass` (Mimikatz)
+- **Dónde** sacar los hashes:
+    - Ficheros **SAM** (equipos) (Mimikatz)
+    - Fichero **`NTDS.DIT`** (BD del AD)
+    - Memoria del proceso **`lsass`** (Mimikatz)
         - También pueden llegar a sacarse contraseñas en claro
 
 ##### Pass The Ticket (PTT)
 
-- Obtener un ticket de usuario y utilizarlo para ganar acceso a los recursos a los que el usuario tenga permisos
-    - Es necesario conseguir también la clave de sesión respectiva
+- **Obtener un ticket de usuario** y utilizarlo para ganar acceso a los recursos a los que el usuario tenga permisos
+    - Es **necesario conseguir también la clave de sesión** respectiva
 - Para obtener los tickets:
-    - Man-In-The-Middle (viajan sobre UDP o TCP)
-        - Con eso no se consigue la clave de sesión. No obstante, mediante este técnica no se consigue acceso a la clave de sesión.
-    - Memoria del proceso `lsass`, donde también se pueden encontrar las claves de sesión
-- Es mejor obtener un TGT que un TGS
-- Los tickets caducan en 10h 10h
+    - **MITM** (viajan sobre UDP o TCP)
+        - Con eso no se consigue la clave de sesión
+    - Memoria del proceso **`lsass`**, donde también se pueden encontrar las claves de sesión
+- *Observaciones*:
+    - Es mejor obtener un TGT que un TGS
+    - Los tickets caducan en 10h
 
 ##### Golden Ticket y Silver Ticket
 
-> KRBTGT: cuenta local por defecto que actúa como cuenta de servicio para el servicio de Distribution Center (KDC) service
+> `krbtgt`: cuenta local por defecto que actúa como cuenta de servicio para el servicio de Distribution Center (KDC) service
 
 - **Golden** Ticket
     - **Construir un TGT**
         - Para lo cual se necesita la **clave del krbtgt**
-        - Obtener el **hash NTLM** de la cuenta krbtgt → construir un TGT
-        - Ese TGT puede contar con la caducidad y permisos que se quiera
+            - Obtener el **hash NTLM** de la **cuenta krbtgt** → construir un TGT
+        - Ese TGT puede contar con la **caducidad y permisos que se quiera**
             - Solo podrá ser invalidado si expira o cambia la contraseña de la cuenta krbtgt
 - **Silver** Ticket
     - **Construir un TGS**
         - Para lo cual se necesita la **clave del servicio**
-        - Obtener del **hash NTLM** de la cuenta propietaria del servicio → construir un TGS
+            - Obtener del **hash NTLM** de la **cuenta propietaria del servicio** → construir un TGS
         - **No** funcionará si el servicio verifica el PAC (*Privileged Attribute Certificate*)
 - Más info:
-    - <https://www.tarlogic.com/blog/como-funciona-kerberos/>
-    - <https://www.sans.org/blog/kerberos-in-the-crosshairs-golden-tickets-silver-tickets-mitm-and-more/>
+    - [Tarlogic (Cómo funciona Kerberos)](<https://www.tarlogic.com/blog/como-funciona-kerberos/>)
+    - [SANS (Golden and Silver Tickets)](<https://www.sans.org/blog/kerberos-in-the-crosshairs-golden-tickets-silver-tickets-mitm-and-more/>)
 
-## 6. Powershell
+## 6. PowerShell
 
 - Interfaz de comandos + lenguaje de scripting
     - Construido sobre .NET Framework
-- Puede ejecutar
-- cmdlets (programas .NET diseñados para PowerShell)
-- Scripts PowerShell (archivos `.ps1`)
-- Funciones PowerShell
-- Ejecutables *standalone*
+- Puede ejecutar:
+    - cmdlets (programas .NET diseñados para PowerShell)
+    - Scripts PowerShell (archivos `.ps1`)
+    - Funciones PowerShell
+    - Ejecutables *standalone*
 - Algunos de sus "comandos básicos" tienen alias para ser equivalentes a los de CMD o shells tipo Unix
 
 ### Comandos útiles en auditoría
@@ -415,9 +416,9 @@ de una comunicación
 - *Signed*:
     - Solo permite ejecutar scripts firmados por una entidad reconocida
 - *RemoteSigned*:
-    - Ejecutar los scripts que estén escritos o implementados en el propio equipo y scripts remotos que este firmados
+    - Ejecutar los scripts que estén escritos o implementados en el propio equipo y **scripts remotos** que este **firmados**
 
-### Potencial de Powershell: Herramientas de seguridad y hacking
+### Herramientas de seguridad y hacking para PowerShell
 
 - [Empire (fork)](https://github.com/BC-SECURITY/Empire)
 - [NetRipper](https://github.com/NytroRST/NetRipper)

