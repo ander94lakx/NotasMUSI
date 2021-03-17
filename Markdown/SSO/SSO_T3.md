@@ -10,24 +10,24 @@
         - Servicios de directorio para autenticación en red
 - **PAM** (*Pluggable Authentication Modules*):
     - macOS, como Linux, soporta PAM
-- **Open Directory**:
- Servicio de directorio que almacena información sobre la red, los usuarios y recursos. **Tres componentes** principales:
-    - **Servidor LDAP** (basado en OpenLDAP)
-        - Se usa en grandes organizaciones
-    - **Servidor de contraseñas**
-        - Controla la autenticación
-        - Separado del servidor LDAP
-    - **KDC** (*Kerberos Distribution Center*) para intercambiar claves de forma segura (SSO (*Single Sign-On*))
-        - KDC local pero se puede conectar Open Directory al KDC de otra máquina
-        - Con un solo usuario y contraseña Kerberos gestiona la autenticación a **todos** los servicios y sistemas
-        - Safari, NFS, SMB, AFP, mail, Telnet, SSH, VPN, ...
+- **Open Directory**: Servicio de directorio que almacena información sobre la red, los usuarios y recursos
+    - **Tres componentes** principales:
+        - **Servidor LDAP** (basado en OpenLDAP)
+            - Se usa en grandes organizaciones
+        - **Servidor de contraseñas**
+            - Controla la autenticación
+            - Separado del servidor LDAP
+        - **KDC** (*Kerberos Distribution Center*) para intercambiar claves de forma segura (SSO (*Single Sign-On*))
+            - KDC local pero se puede conectar Open Directory al KDC de otra máquina
+            - Con un solo usuario y contraseña Kerberos gestiona la autenticación a **todos** los servicios y sistemas
+            - Safari, NFS, SMB, AFP, mail, Telnet, SSH, VPN, ...
 - **Active Directory** (AD):
     - Permite a macOS interactuar con redes Windows
 - **Tarjetas inteligentes**
 
 ### Keychain
 
-- Es el gestor de contraseñas integrado en macOS
+- Es el **gestor de contraseñas** integrado en macOS
 - Centraliza todas las contraseñas
 - Triple DES
 - Directorios de almacenamiento de claves
@@ -40,7 +40,7 @@
 
 ### Sistemas de permisos y autorización
 
-- macOS hereda el sistema de permisos de UNIX
+- macOS hereda el sistema de **permisos de UNIX**
 - Cuenta `root` deshabilitada por defecto
     - `sudo` para ejecutar comandos con elevación de privilegios
 - Tres tipos de usuarios en macOS
@@ -53,7 +53,7 @@
 
 ### FileVault
 
-- Herramienta de cifrado de disco
+- Herramienta de **cifrado de disco**
 - AES-XTS-128 o AES-XTS-256
 - Muy util para un usuario
     - En ámbitos multiusuario puede dar problemas
@@ -61,19 +61,19 @@
 
 ### GateKeeper
 
-- Protección para aplicaciones que se descargan directamente de internet:
+- **Protección** para aplicaciones que se **descargan directamente de internet**:
     - (Tiene algunas funciones como el UAC de Windows)
-    - Añade atributos de metadatos en el momento de la descarga, con información como origen, fecha, hora…
+    - **Añade atributos** de metadatos en el momento de la **descarga**, con información como origen, fecha, hora…
     - Avisa al intentar ejecutar aplicaciones descargadas de internet
     - Si la aplicación no esta firmada genera otro aviso
 
 ### Xprotect
 
-- Sistema de protección contra malware integrado en macOS:
-    - Contiene un conjunto de firmas para malware conocido
+- Sistema de **protección contra malware** integrado en macOS:
+    - Contiene un conjunto de **firmas para malware** conocido
     - Hace comprobaciones de versiones de las aplicaciones:
-    - Deshabilita versiones de aplicaciones que contienen vulnerabilidades conocidas
-    - Se actualiza automáticamente
+        - Deshabilita versiones de aplicaciones que contienen vulnerabilidades conocidas
+    - Se **actualiza automáticamente**
     - Ficheros principales:
         - `XProtect.plist`: firmas de malware
         - `XProtect.meta.plist`: versiones de plugins contiene las versiones de los plugins
@@ -83,15 +83,15 @@
 
 #### Application Layer Firewall (ALF)
 
-- Firewall personal
-    - Por defecto viene desactivado
-- Se configura mediante una interfaz gráfica
+- Firewall personal a **nivel de aplicación**
+    - Por defecto **viene desactivado**
+- Se configura mediante una **interfaz gráfica**
 - Permite bloquear solo las **conexiones entrantes**
 - Como **política por defecto** bloquea las conexiones entrantes a software no firmado
 
 #### Packet Filter (PF)
 
-- Cortafuegos a más bajo nivel
+- Cortafuegos a **más bajo nivel**
     - Estilo iptables
 - Se configura con:
     - `pfctl`: utilidad para configurarlo
@@ -209,25 +209,24 @@
 #### Comunicación entre aplicaciones
 
 - Las aplicaciones se ejecutan cada una en su **sandbox**
-- Para comunicarse entre ellas existen diferentes mecanismos en Android_
+- **Para comunicarse** entre ellas existen **diferentes mecanismos** en Android:
     - ***Bundles***: para mandar información (como serializar objetos)
     - ***Binders***: para obtener referencias a otros servicios (datos +  invocar métodos)
     - ***Intents***: para invocar componentes (*Activities*)
 
 #### Protección de memoria
 
-Mecanismos para impedir accesos no debidos a memoria (problemas que puedan surgir de *rootear*):
-
-- *NoExecute*: para impedir ejecución de codigo en la pila o el heap
-- *ProPolice* / *safe_iop*: evitar overflows
-- *calloc()*: integer overflows
-- ***ASLR***: randomizar direcciones para evitar *buffer overflows*
+- Mecanismos para impedir accesos no debidos a memoria (problemas que puedan surgir de *rootear*):
+    - ***NoExecute***: para impedir ejecución de código en la pila o el heap
+    - *ProPolice* / *safe_iop*: evitar overflows
+    - *calloc()*: integer overflows
+    - **ASLR**: randomizar direcciones para evitar *buffer overflows*
 
 #### Cifrado
 
-- Por defecto, Android cifra la unidad del sistema
+- **Por defecto**, Android cifra la unidad del sistema
 - AES128 + CBC + ESSIV:SHA256
-- Basado en **dm-crypt* del kernel
+- Basado en *dm-crypt* del kernel
 - **No es infalible**
     - **Keylogger** en el **sector de arranque** (si no esta cifrado)
     - Ataques **Cold Boot**
@@ -239,14 +238,12 @@ Mecanismos para impedir accesos no debidos a memoria (problemas que puedan surgi
     - Lista de SSID y su seguridad
     - Para intentar conectarse en un futuro
 - **Problema con SSID oculto**:
-        - Si está oculto el SSID el AP no va a mandar información de que está ahi
-        - Entonces es el dispositivo **quien va preguntando por la red**
-        - Con un sniffer se puede capturar esa información
-        - *Rogue AP* para engañar al dispositivo
-        - (Afecta más en versiones más antiguas)
-- Se identifica cada red a través
-de su SSID (nombre de la red)
-y su seguridad.
+    - Si está oculto el SSID el AP no va a mandar información de que está ahi
+    - Entonces es el dispositivo **quien va preguntando por la red**
+    - Con un sniffer se puede capturar esa información
+    - *Rogue AP* para engañar al dispositivo
+    - (Afecta más en versiones más antiguas)
+- Se identifica cada red a través de su SSID (nombre de la red) y su seguridad.
 
 ### "Rootear"
 
@@ -404,7 +401,7 @@ y su seguridad.
     - Tecnología de virtualización en el nivel de sistema operativo para Linux
 
 | Características           | Xen                               | KVM                                 | OpenVZ                         |
-|---------------------------|-----------------------------------|-------------------------------------|--------------------------------|
+|---------------------------|:---------------------------------:|:-----------------------------------:|:------------------------------:|
 | *Virtualización completa* | :heavy_check_mark:                | :heavy_check_mark:                  | :x:                            |
 | *Paravirtualización*      | :heavy_check_mark:                | :heavy_check_mark:                  | :x:                            |
 | *Contenedores*            | :x:                               | :x:                                 | :heavy_check_mark:             |
