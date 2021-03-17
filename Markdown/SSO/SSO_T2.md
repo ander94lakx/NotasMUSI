@@ -371,7 +371,7 @@ sudo service ssh restart
     - Permite registrar todo tipo de eventos
 - Los mensajes tienen un **formato estandarizado**
 - Los logs se guardan en:
-    - **`/varl/log`**
+    - **`/var/log`**
 - Servidor para almacenamiento y gestion de logs:
     - `syslogd/syslog-ng/rsyslog`
 - Para usarlo se arranca:
@@ -425,17 +425,19 @@ sudo service ssh restart
 - Es un módulo de seguridad propio del kernel de linux
     - **Proteger** un sistema contra **malas configuraciones o aplicaciones comprometidas**
 - Define una política de seguridad que establece, por ejemplo, a qué ficheros puede acceder cada proceso (independientemente de sus permisos)
-- SELinux asigna etiquetas asociadas a usuarios y procesos:
+- SELinux asigna **etiquetas asociadas a usuarios y procesos**:
     - Nombre de Usuario
     - Rol
     - Tipo/Nivel/Dominio
-- Las restricciones vienen determinadas por las reglas establecidas en la política
+- Las **restricciones** vienen determinadas por las **reglas establecidas en la política**
 
 #### Discretionary Access Control (DAC)
 
-- Mecanismo de **control de acceso** común para sistemas UNIX
-    - **Todo proceso se ejecuta bajo un usuario y un grupo**:
-        - Por ejemplo: `apache` se ejecutará como `apache:apache`
+- Mecanismo de **control de acceso** común para **sistemas UNIX**
+    - **Todo proceso se ejecuta bajo un usuario y un grupo**
+    - El proceso **tiene acceso a lo del usuario y grupo**
+    - Por ejemplo:
+        - `apache` se ejecutará como `apache:apache`
         - El proceso httpd tiene acceso a todos los ficheros y directorios a los que tiene acceso el usuario apache
         - Esto se extiende a todos los scripts que se ejecuten bajo este demonio (php, cgi, ...)
 
@@ -455,7 +457,7 @@ sudo service ssh restart
 
 #### Modos de SELinux
 
-- Tres modos
+- Tres **modos**
     - **Enforcing**
         - Alerta y aplica acciones establecidas si se viola alguna regla
     - **Permissive**
@@ -478,16 +480,16 @@ sudo service ssh restart
 
 - **Programa de seguridad** para Linux
 - Fue creado como una alternativa **más sencilla que SELinux**
-- *Perfiles* de AppArmor
+- **Perfiles** de AppArmor
     - Ficheros de texto en `/etc/apparmor.d` con los nombres de los binarios
-    - Dos tipos de reglas
-        - *path*:
+    - Dos **tipos de reglas**
+        - **Path**:
             - A que ficheros puede acceder una aplicación
-        . *capability entries*:
+        - **Capability entries**:
             - Que privilegios puede usar un proceso
-    - Dos modos de ejecución:
-        - *complain*: solo logging, no toma acciones.
-        - *enforce*: logging + tomar acciones
+    - Dos **modos** de ejecución:
+        - **complain**: solo logging, no toma acciones
+        - **enforce**: logging + tomar acciones
 
 ### Grsecurity
 
@@ -499,9 +501,9 @@ sudo service ssh restart
     - Pila no ejecutable
     - Espacio de memoria de aplicación solo lectura
     - **ASLR** (*Address Space Layout Randomization*)
-- Para **evitar *buffer overflows***
+        - Para **evitar *buffer overflows***
 
-## 4. Securizar el acceso a red: iptables, SIEM, UTM…
+## 4. Securizar el acceso a red: IPtables, SIEM, UTM…
 
 - Bloquear hosts permitidos y denegados
     - `/etc/hosts.allow` y `/etc/hosts.deny`
@@ -510,28 +512,28 @@ sudo service ssh restart
 ### IPTables (Netfilter)
 
 - IPtables: componente de netfilter
-    - Cortafuegos de estado
-    - `iptables` = Reglas + Cadenas + Tablas
+    - **Cortafuegos de estado**
+    - `**Reglas + Cadenas + Tablas**
         - Se define mediante reglas que se evalúan secuencialmente
         - Las reglas se agrupan en cadenas
         - A su vez las cadenas se agrupan en tablas asociadas a diferentes tipos de procesamiento de paquetes
 
 #### Tablas
 
-- `filter` → Filtra paquetes (es la que se usa por defecto)
-- `nat`→ NAT paquetes
-- `mangle` → Modifica paquetes (por ejemplo su TTL)
-- `raw` → Permite deshabilitar el connection tracking
-- `security` → Usado por SELinux
+- **`filter`** → Filtra paquetes (es la que se usa por defecto)
+- **`nat`** → NAT paquetes
+- **`mangle`** → Modifica paquetes (por ejemplo su TTL)
+- **`raw`** → Permite deshabilitar el connection tracking
+- **`security`** → Usado por SELinux
 
 #### Cadenas
 
 - Varían en funció de la tabla
-    - `INPUT`: paquetes de entrada
-    - `OUTPUT`: paquetes de salida
-    - `FORWARD`: paquetes que no tienen como origen ni destino el cortafuegos
-    - `PREROUTING`: enrutar paquetes de entrada de NAT
-    - `POSTROUTING`: erutar paquetes de salidad de NAT
+    - **`INPUT`**: paquetes de entrada
+    - **`OUTPUT`**: paquetes de salida
+    - **`FORWARD`**: paquetes que no tienen como origen ni destino el cortafuegos
+    - **`PREROUTING`**: enrutar paquetes de entrada de NAT
+    - **`POSTROUTING`**: erutar paquetes de salidad de NAT
 
 #### Reglas
 
@@ -541,10 +543,10 @@ iptables –t <table> –{A|I|R|D} <chain> <match> –j <target>
 
 Objetivos de reglas `(<target>`):
 
-- `ACCEPT`: Se acepta el paquete
-- `DROP`: Se descarta el paquete
-- `REJECT`: Igual que 'DROP', pero envía un paquete de error al origen
-- `LOG`: Loguear el paquete
+- **`ACCEPT`**: Se acepta el paquete
+- **`DROP`**: Se descarta el paquete
+- **`REJECT`**: Igual que 'DROP', pero envía un paquete de error al origen
+- **`LOG`**: Loguear el paquete
 - `QUEUE`: Este destino hace que el paquete sea enviado a una cola de recepción.
 - `DNAT`: Se reescribe la dirección y/o puertos destino del paquete
 - `SNAT`: Se reescribe la dirección y/o puertos origen del paquete con una IP estática
@@ -555,7 +557,7 @@ Objetivos de reglas `(<target>`):
 ### UTM
 
 - *Unified Threat Management*
-- Un producto todo-en-uno que incluye múltiples soluciones de seguridad:
+- Un **producto todo-en-uno** que incluye múltiples soluciones de seguridad:
     - Firewall de red
     - NIDS
     - Antivirus
@@ -581,23 +583,23 @@ Objetivos de reglas `(<target>`):
 
 ### Proxy
 
-- Serivdor intermediarioentre peticiones
-- Permite
-    - Control de acceso
-    - Registro del trafico
-    - Restriccion de contendios
-    - Mejora de rendimiento
+- Serivdor intermediario entre peticiones
+- *Permite*
+    - **Control de acceso**
+    - **Registro del trafico**
+    - **Restriccion de contenidos**
+    - **Mejora de rendimiento**
     - Anonimato
     - ...
-- Ventajas
+- *Ventajas*
     - Tener comunicaciones bajo control
-    - Fácil denegar o permitir el acceso a subredes y equipos
+        - Fácil denegar o permitir el acceso a subredes y equipos
+        - Es facil crear *blacklists*
     - Caché comun (acelera acceso a webs que suelen usar varios usuarios)
-    - Es facil crear *blacklists*
     - Generacion de informes de trafico
     - El proxy hace de barrera
-- Desventajas
-    - Es necesrio configurarlo en cada aplicación
+- *Desventajas*
+    - Es necesario configurarlo en cada aplicación
     - Si falla se corta la conexion a internet (proxy de respaldo)
     - Requiere mantenimiento
     - Privacidad y seguridad (todo pasa por el proxy)
@@ -608,9 +610,9 @@ Objetivos de reglas `(<target>`):
 - Se configura en `/etc/squid/squid.conf`
 - Listas de control de acceso donde se identifica a que elementos se aplica y los filtros
 
-    ```bash
-    acl <nombre_lista> <tipo> <elemento_lista>
-    ```
+```bash
+acl <nombre_lista> <tipo> <elemento_lista>
+```
 
 - Parámetros
     - `http_port`: Puerto del proxy
@@ -629,7 +631,7 @@ Objetivos de reglas `(<target>`):
         - Sirve para poder detectar intrusiones en el sistema final y recoger información sobre ellas
         - Ejemplo: *OSSEC*
     - **Network-based (NIDS)**
-        - Captura tráfico de una interfaz de red (m
+        - Captura tráfico de una interfaz de red
             - Modo online (inline)
             - Tipo offline (network tap)
         - Compara las capturas con firmas preestablecidas
