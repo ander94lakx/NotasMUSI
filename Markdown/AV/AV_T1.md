@@ -81,8 +81,8 @@
     - "nunca compartir la contraseña", no dar información de más, ...
 - **Filtrado** de correo
     - El mail es uno de los puntos principales de phising
-- **Descentralización**
-    - En una empresa, es decir, tener bien definidos y separados los diferentes sistemas por los que se va a transmitir la información
+- **Centralización**
+    - Tener bien definidos los diferentes sistemas por los que se va a transmitir la información
 
 ### SEToolkit
 
