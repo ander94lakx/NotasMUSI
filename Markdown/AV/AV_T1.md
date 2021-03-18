@@ -118,7 +118,7 @@
 ### Primeros pasos
 
 - Seleccionar un objetivo
-- Navegar por su pagina web, aplicaciones,.. bucar erores
+- Navegar por su pagina web, aplicaciones,.. buscar errores
 - Buscar "elementos olvidados", errores en llamadas a servidores o BD, ....
 
 ### Buscadores
@@ -183,8 +183,41 @@
 - 4 Técnicas:
     - **Forzar una transferencia de zona** en el servidor DNS
     - **Resolución inversa** mediante los registros PTR a partir de una IP
-    - Ataques de **fuerza bruta** utilizando **diccionarios o fuzzers**
-    - Ataques de fuerza bruta **identificando relaciones**
+    - Ataques de **fuerza bruta**
+        - Utilizando **diccionarios o fuzzers**
+        - **identificando relaciones**
+
+#### Forzar transferencia de zona
+
+- Consiste en que un servidor de **DNS primario copie** toda su información **a un servidor secundario**
+    - Se pueden conseguir **todas las IP y las máquinas asociadas a ese DNS**
+- 4 formas:
+
+1. Instalar o iniciar un nuevo servidor DNS en una zona ya existente
+2. Cuando acaba el periodo de actualización de una zona
+3. Cuando ocurre algun cambio o modificacione en una zona y es necesario actualizar para replicar los cambios en el resto
+4. Cuando se solicita manualmente la transferenca de zona
+
+#### Resolución inversa
+
+- **Obtener los DNS a través de una IP**
+- A través de los **registros PTR**
+    - Registro​ de un dominio que define las direcciones IP de todos los sistemas
+    - Utiliza una notación invertida
+
+```text
+34.216.184.93.in-addr.arpa.     IN      PTR     example.com.
+```
+
+#### Ataques de fuerza bruta contra DNS
+
+- Tedioso
+    - Diccionarios pueden ayudar
+    - Se puede hacer **fuzzing**
+        - Introducir valores aleatorios o inválidos para ver si una entrada los admite
+    - Se puede buscar relaciones
+        - Consiste en que si obtenemos un servidor con un nombre, buscar servidores con nombres relacionados
+            - Por ejemplo: se encuentra `neptuno.ehu.eus` → podemos probar con `jupiter.ehu.eus`
 
 ### Metadatos
 
@@ -193,14 +226,14 @@
     - Mails
     - Programas usados
     - Y muchos más
-- Hay herramientas que permiten automatizar la extracción de archivos y metadatos de un dominio, como la FOCA
+- Hay **herramientas** que **permiten automatizar** la **extracción y clasificación** de archivos y metadatos de un dominio, como la FOCA
 
 #### FOCA
 
 - Herramienta para ayudar en la recolección de ficheros publicados en websites, la extracción de metadatos y el análisis de los mismos
 - <https://www.elevenpaths.com/es/innovacion-laboratorio/herramientas/foca>
 
-### Otras herramientas de footprintign
+### Otras herramientas de footprinting
 
 ### TheHarvester
 
@@ -223,12 +256,12 @@
 
 ### Recomendaciones contra procesos de footprinting
 
-- Hay una serie de recomendaciones para evitar o minimizar el efecto de estos procesos de footprinting por parte de las organizaciones y/o personas:
-- **Cuidar la información pública** que hay en Internet
-    - Configurar lo que se quiere que sea público y privado
-- Tener **bien configurados y actualizados los servidores** web y DNS de la compañía
-- Tener **separados los correos** de la entidad de los personales
-- **Limpiar de metadatos** los documentos públicos
+- Hay una serie de **recomendaciones** para evitar o **minimizar el efecto** de estos procesos de footprinting por parte de las organizaciones y/o personas:
+    - **Cuidar la información pública** que hay en Internet
+        - Configurar lo que se quiere que sea público y privado
+    - Tener **bien configurados y actualizados los servidores** web y DNS de la compañía
+    - Tener **separados los correos** de la entidad de los personales
+    - **Limpiar de metadatos** los documentos públicos
 
 ## 4. Fingerprinting
 
@@ -259,6 +292,9 @@
 - Intenta abrir una conexión TCP
 - Para determinar **puertos abiertos**
 - Realiza todo el Handshake TCP
+- Mejor usar TCP SYN
+    - Solo es util cuando no puede ejecutar `nmap` como `root`
+        - Es el único tipo de escaneo que no necesita modificar paquetes
 
 #### TCP SYN (`-sS`)
 
@@ -304,9 +340,6 @@
 - Más complejo
 - Requiere de una máquina extra (zombie)
 - Lento y poco usado
-    - Mejor usar TCP SYN
-    - Solo es util cuando no puede ejecutar `nmap` como `root`
-        - Es el único tipo de escaneo que no necesita modificar paquetes
 
 ### Wireshark (sniffing de paquetes)
 
