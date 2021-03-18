@@ -115,7 +115,6 @@
 ### WPA2
 
 - Diseñado para sustituir a WPA
-- Usa vectores de inicialización (IV) de 48 bits
 - Claves dinámicas y diferentes para cada usuario
 - Usa el modo:
     - Counter Cipher Mode with Block Chaining Message Authentication Code Protocol
@@ -180,6 +179,19 @@
     - TOOLS:
         - Dragonslayer, Dragondrain, Dragontime, Dragonforce
 
+### Comparativa WEP / WPA / WPA2 / WPA3
+
+|                         | WEP          | WPA                           | WPA2                          | WPA3                                             |
+|-------------------------|--------------|-------------------------------|-------------------------------|--------------------------------------------------|
+| Año                     | 1999         | 2003                          | 2004                          | 2018                                             |
+| Método de cifrado       | RC4          | TKIP con RC4                  | CCMP con AES                  | AES                                              |
+| Tamaño clave de sesión  | 40-bit       | 128-bit                       | 128-bit                       | 128-bit (WPA3-Personal) 192-bit (WPA-Enterprise) |
+| Tipo de cifrado         | Flujo        | Flujo                         | Bloque                        | Bloque                                           |
+| IV                      | 24-bit       | 48-bit                        | -                             | -                                                |
+| Integridad              | CRC-32       | Message Integrity Code (MIC)  | CBC-MAC                       | SHA                                              |
+| Gestión de clave        | Not provided | 4-way handshaking             | 4-way handshaking             | SAE handshake                                    |
+| Autenticación           | OSA / SKA    | PSK & 802.1x with EAP variant | PSK & 802.1x with EAP variant | SAE & 802.1x with EAP variant                    |
+
 ### **Recomendaciones** para redes inalámbricas
 
 - **Usar WPA3**
@@ -223,7 +235,7 @@
 
 - Protección a **todo el paquete IP**
     - Modifica el paquete (encapsulándolo dentro de otro)
-- **Seguridad entre los extremos** del túnel (podría ser el extremo de la comunicación o no
+- **Seguridad entre los extremos** del túnel (podría ser el extremo de la comunicación o no)
 
 ![IPSec Tunnel Mode](img/ipsec_tunnel.png)
 
