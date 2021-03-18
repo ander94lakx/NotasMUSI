@@ -230,8 +230,8 @@ Acciones comunes:
 - Es la más sencilla de todas
     - Firewall para separa la red interna de internet
 - Problemas:
-    - Para exponer algún servicio hay que exponer la red interna
-    - Ataques laterales
+    - Para exponer algún servicio hay que **exponer la red interna**
+    - **Ataques laterales**
 
 ### DMZ
 
@@ -246,32 +246,32 @@ Acciones comunes:
 ![Multi-Homed host con DMZ (three-legged firewall)](img/mh-dmz.png)
 
 - **Ventajas**:
-    - Aísla los elementos que se quieren tener accesibles a través de la red exterior
-    - Un único cortafuegos para todo
+    - **Aísla los elementos** que se quieren tener **accesibles** a través de la red exterior
+    - Un **único cortafuegos** para todo
 - **Contras**:
-    - Dependiendo de la carga puede ser un cuello de botella
+    - Dependiendo de la carga puede ser un **cuello de botella**
 
 #### Defensa en profundidad (DMZ entre cortafuegos)
 
 ![Defensa en profundidad (DMZ entre cortafuegos)](img/dep.png)
 
 - **Ventajas**:
-    - Se pueden establecer controles iniciales comunes para la DMZ y la red interna y después establecer un cortafuegos a nivel de aplicación o con configuraciones más complejas para la red interna
+    - Se pueden establecer **controles iniciales comunes** para la DMZ y la red interna y después establecer un cortafuegos a nivel de aplicación o con **configuraciones más complejas para la red interna**
 - **Contras**:
-    - Requiere dos cortafuegos[^1]
-    - Si se vulnera el primer cortafuegos la DMZ queda completamente expuesta
-
-**NOTA:** Al usar dos cortafuegos es sumamente recomendable que sean de marcas o modelos diferentes, para evitar que ambos tengan las mismas vulnerabilidades
+    - Requiere **dos cortafuegos**
+    - Si **se vulnera el primer** cortafuegos la **DMZ queda** completamente **expuesta**
+- **NOTA:** Al usar dos cortafuegos es sumamente recomendable que sean de **marcas o modelos diferentes**, para evitar que ambos tengan las mismas vulnerabilidades
 
 #### Defensa en profundidad (cortafuegos inicial + three-legged firewall)
 
 ![Defensa en profundidad (cortafuegos inicial + three-legged firewall)](img/dep2.png)
 
 - **Ventajas**:
-    - Se puede establecer un primer cortafuegos de hardware y filtrar toda lo no necesario y dejar el resto de paquetes para un análisis más complejo (como con el anterior)
-    - Si se vulnera el primer firewall no queda ninguna parte de la red expuesta a vulnerabilidades
+    - Se puede establecer un primer cortafuegos de hardware y filtrar toda lo no necesario y dejar el resto de paquetes para un análisis más complejo (**como con el anterior**)
+    - Si se **vulnera el primer firewall no queda ninguna parte de la red expuesta** a vulnerabilidades
 - **Contras**:
-    - Requiere de dos cortafuegos [^1]
+    - Requiere de **dos cortafuegos**
+    - El **segundo cortafuegos debe soportar más trafico** que en la anterior configuración
 
 #### Defensa en profundidad (alta disponibilidad)
 
