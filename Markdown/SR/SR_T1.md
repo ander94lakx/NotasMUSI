@@ -169,7 +169,7 @@
 
 ### Mejoras Respecto IPv4
 
-- **Incremento spacio de direcciones** (128 bits – 3.4x10^38 direcciones)
+- **Incremento espacio de direcciones** (128 bits – 3.4x10^38 direcciones)
     - De 4.000.000.000
     - A 340.000.000.000.000.000.000.000.000.000.000.000.000
 - **Mejora** del soporte **Multicast**
