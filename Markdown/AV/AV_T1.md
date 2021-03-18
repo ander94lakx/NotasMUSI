@@ -195,8 +195,8 @@
 
 1. Instalar o iniciar un nuevo servidor DNS en una zona ya existente
 2. Cuando acaba el periodo de actualización de una zona
-3. Cuando ocurre algun cambio o modificacione en una zona y es necesario actualizar para replicar los cambios en el resto
-4. Cuando se solicita manualmente la transferenca de zona
+3. Cuando ocurre algún cambio o modificación en una zona y es necesario actualizar para replicar los cambios en el resto
+4. Cuando se solicita manualmente la transferencia de zona
 
 #### Resolución inversa
 
@@ -235,7 +235,7 @@
 
 ### Otras herramientas de footprinting
 
-### TheHarvester
+#### TheHarvester
 
 - Herramienta para realizar una **búsqueda en los principales motores** y RRSS como Google, Bing, Twitter o LinkedIn, entre otras
 - Encuentra correos, servidores y subdominios del dominio junto con sus direcciones IP

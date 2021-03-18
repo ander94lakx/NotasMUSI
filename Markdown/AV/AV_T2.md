@@ -8,11 +8,11 @@
 
 ### Nessus
 
-- La más popular de todas,
-    - Escaneo de vulnerabilidades **muy simple pero muy versátil** y potente
+- La más popular de todas
+    - Escaneo de vulnerabilidades muy fácil de usar pero **muy versátil y potente**
 - Interfaz web
-    - Permite lanzar escaneos desde ahi
-    - Obtener reportes e información desde ahi
+    - Permite lanzar escaneos desde ahí
+    - Obtener reportes e información desde ahí
         - Potente **generación de informes**
 
 ### OpenVAS
@@ -28,9 +28,9 @@
 
 ## 2. Metasploit
 
-- **Payload**: código que tiene el fin de **comprometer una máquina** externa tras haber sido penetrada
+- **Payload**: **código** que tiene el fin de **comprometer una máquina** externa **tras haber sido penetrada**
     - *Shellcode*: tipo de payload que genera una shell en la víctima accesible remotamente
-- **Exploit**: Software, script o procedimiento que aprovecha una vulnerabilidad y con el que se puede comprometer un sistema
+- **Exploit**: Software, script o procedimiento que **aprovecha una vulnerabilidad y con el que se puede comprometer un sistema**
     - *Activos*: explotarán una máquina objetivo por fuerza bruta hasta inyectar el payload o encontrar un error
     - *Pasivos*: eseran a que una máquina víctima se conecte a la máquina host para explotarlos
 - **Metasploit**
@@ -46,14 +46,14 @@
 ### Herramientas de Metasploit
 
 - **MsfConsole**
-- Interfaz por consola,
+    - Interfaz por consola
     - La más usada y flexible
 - **Armitage**
     - Potente herramienta para manejar Metasploit de una forma gráfica
 - **MsfUpdate**
     - Para actualizar Metasploit
 - **Msfvenom**
-    Herramienta para crear y codificar payloads
+    - Herramienta para crear y codificar payloads
 
 ### Comandos Metasploit
 
@@ -64,13 +64,13 @@
 - `show encoders` → Algoritmos que se ejecutan sobre los payloads para ofuscarlos
 - `show options` → Muestra las opciones sobre un exploit
 - `show advanced`
-- `use [path_del_exploit]` → Para seleccionar un exploit
-- `info` → Sobre el exploit seleccionado
-- `search [palabra]` → Para buscar. Aconsejable unto al parámetro «type»: `search type:exploit mp4`
-- `set [opcion] [valor]` → Definiremos las opciones requeridas por los módulos de exploit, payload...
+- **`use [path_del_exploit]`** → Para seleccionar un exploit
+- **`info`** → Sobre el exploit seleccionado
+- **`search [palabra]`** → Para buscar. Aconsejable unto al parámetro «type»: `search type:exploit mp4`
+- **`set [opcion] [valor]`** → Definiremos las opciones requeridas por los módulos de exploit, payload...
 - `unset [opcion]` → Elimina un parámetro
-- `exploit`/`run` → Ejecuta el exploit
-- `sessions` → Para interactuar con las máquinas explotadas
+- **`exploit`/`run`** → Ejecuta el exploit
+- **`sessions`** → Para interactuar con las máquinas explotadas
 - `back` → Permite volver atrás en los módulos
 
 ### Comandos Meterpreter
@@ -132,7 +132,7 @@
     - Dar por exitosa la prueba de penetración mediante ese vector
         - Desplazamientos horizontales
         - Intentar obtener otros recursos
-- Tras haber explotado la máquina, se pasaría a la fase de **post-expolotación**F
+- Tras haber explotado la máquina, se pasaría a la fase de **post-expolotación**
 
 ### Escalada de privilegios
 
@@ -175,7 +175,7 @@
 - Causada por un **mal uso de la memoria dinámica**
     - A usar funciones como como `malloc` o `free` (C/C++)
 
-#### Use after free
+#### Heap Overflow → Use after free
 
 - Cuando un programa **continúa utilizando un puntero** después de haber sido liberado (con `free()`)
 - Se puede usar la técnica **Heap Spraying**:
@@ -198,12 +198,12 @@ int *get_pointer(int *ant)
 }
 ```
 
-#### Dereference after free
+#### Heap Overflow → Dereference after free
 
 - Tipo concreto de *use after free*
     - Al intentar acceder a memoria dinámica previamente liberada por un `free()`
 
-##### Double free
+#### Heap Overflow → Double free
 
 - Cuando **se libera un puntero más de una vez**
 - Se corrompe la estructura de datos
@@ -270,7 +270,7 @@ else                                // CPU y el otro proceso modifica el nombre
 
 - Desbordamientos de enteros cuando no se controlan
     - Inputs de usuario, etc.
-- **No suelen dar en si problema**s de seguridad (peta u overflow y ya)
+- **No suelen dar en sí problemas de seguridad** (peta u *overflow* y ya)
     - **Solo cuando** esas variables **se usan para** tomar decisiones
         - Asignar memoria, indices de arrays, etc.
 
@@ -491,7 +491,7 @@ int main(int argc, char **argv) {
 
 - El programa de arriba tiene la vulnerabilidad de Buffer Overflow
     - No controla la entrada, por lo que se puede menter más de la cuenta
-- Si `strcpy` copia Buffer en `buf` hasta que encuentra un carácter de fin de String:
+- Si **`strcpy` copia `Buffer` en `buf` hasta que encuentra un carácter de fin de String `\0`**:
     - ¿Qué sucederá con la pila?
 - Si se ejecuta el código de la siguiente manera:
 
@@ -537,7 +537,7 @@ variables
 ### Stack/Canary Cookies
 
 - Medida complementaria a DEP
-- **Añadir un valor en el stack** para comprobar que el mismo no es sobreescrito.
+- **Añadir un valor en el stack** para comprobar que el mismo no es sobreescrito
 - Modificar la forma en la que el compilador genera el "prólogo" y el "epílogo" de las funciones
 
 ### ASLR (Address Space Layout Randomization)
