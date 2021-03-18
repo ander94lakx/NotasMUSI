@@ -136,36 +136,39 @@
 
 ### Escalada de privilegios
 
-- Existe númerosas técnicas de escalada de privilegios en una máquina, como por ejemplo:
+- Númerosas técnicas de escalada de privilegios en una máquina, como por ejemplo:
     - Bypass UAC
-    - Pass the hash
+    - Pass-the-hash
+
+#### Bypass UAC
+
+- Consiste en buscar alguna manera de **saltarse el UAC para elevar privilegios**
+    - ¿Como?
+        - Muchas técnicas
+            - Una de ellas consiste en saltar a un proceso que no requiera UAC para realizar labores de administracion (como un proceso firmado por Microsoft)
+
+#### Pass-the-hash
+
+- Consiste en buscar alguna manera para poder acceder a algún sistema desde el punto en el que se está
+- Sistemas de autenticación como NTLM solo requieren usar el hash para loguearse
+    - Extraer hash de la memoria (Mimikatz)
 
 ## 3. Tipos de vulnerabilidades
 
 ### Vulnerabilidades de código
 
 - **Factores** a tener en cuenta en una vulnerabilidad de código
-    - *Producto*
-        - A qué productos afecta
-    - *Dónde*
-        - Dentro del sistema o del programa, donde se halla
-    - *Causa y consecuencia*
-        - Fallo técnico concreto que se cometió
-    - *Impacto*
-        - Hasta donde se puede llegar o que puede lograr un atacante
-    - *Vector*
-        - Forma que tiene el atacante de aprovechar la vulnerabilidad
+    - **Producto**: A qué productos afecta
+    - **Dónde**: Dentro del sistema o del programa, donde se halla
+    - **Causa y consecuencia**: Fallo técnico concreto que se cometió
+    - **Impacto**: Hasta donde se puede llegar o que puede lograr un atacante
+    - **Vector**: Forma que tiene el atacante de aprovechar la vulnerabilidad
 - **Ejemplo**:
-    - *Producto y versión*
-        - MSPaint 7
-    - *Causa / Consecuencia*
-        - Se omite la comprobación del parámetro tamaño (causa) y se produce un desbordamiento de memoria intermedia (consecuencia)
-    - *Dónde*
-        - En la función SetImageSize del componente image_size.dll. (librería usada por mspaint.exe)
-    - *Impacto*
-        - Ejecutar código arbitrario
-    - *Vector*
-        - Envío de un archivo de imagen manipulado (con el código que quiere ejecutar incrustado en su interior, y el parámetro incorrecto retocado) a la víctima, y ésta abrirla
+    - *Producto y versión*: MSPaint 7
+    - *Causa / Consecuencia*: Se omite la comprobación del parámetro tamaño (causa) y se produce un desbordamiento de memoria intermedia (consecuencia)
+    - *Dónde*: En la función SetImageSize del componente image_size.dll. (librería usada por mspaint.exe)
+    - *Impacto*: Ejecutar código arbitrario
+    - *Vector*: Envío de un archivo de imagen manipulado (con el código que quiere ejecutar incrustado en su interior, y el parámetro incorrecto retocado) a la víctima, y ésta abrirla
 
 ### Heap Overflow
 
@@ -176,8 +179,8 @@
 
 - Cuando un programa **continúa utilizando un puntero** después de haber sido liberado (con `free()`)
 - Se puede usar la técnica **Heap Spraying**:
-    - LLenar el HEAP de NOPs y shellcodes
-    - Resbalar desde los NOPs hasta un shellcode
+    - **Llenar el HEAP de NOPs y shellcodes**
+    - **Resbalar** desde los NOPs hasta un shellcode
 
 ```cpp
 int *get_pointer(int *ant)
@@ -225,8 +228,8 @@ free(ab); // Volvemos a liberar
 
 - Uso incorrecto de un valor por +-1
     - Mala programación al iterar estructuras de datos (pasarse del array o [-1])
-- Normalmente crashea el programa
-    En ocasiones se pueden aprovechar para eludir restricciones o ejecutar código
+- **Normalmente *crashea*** el programa
+    - En ocasiones se pueden aprovechar para eludir restricciones o ejecutar código
 
 ```cpp
 int crash (char *param)
@@ -342,7 +345,7 @@ int main ()
 | ESI           | SI                |   | FS      |
 |---------------|-------------------|   |---------|
 | EDI           | DI                |   | GS      |
-|---------------|-------------------|
+|---------------|-------------------|   |---------|
 | EBP           | BP                |
 |---------------|-------------------|
 | ESP           | SP                |
@@ -377,12 +380,11 @@ int main ()
 ```assembly
 NOP             ; No hace nada
 
-MOV AX, 0x8000  ; Almacena lo que hay en la dirección de memoria 8000
-                ; en el registro AX
+MOV AX, 0x8000  ; Almacena lo que hay en la dirección de memoria 8000 en el registro AX
 
 ADDB AX,BH,BL   ; Suma BH y BL y lo guarda en AX
 
-PUSH AX:        ; Guarda el dato almacenado en AX en la pila
+PUSH AX         ; Guarda el dato almacenado en AX en la pila
                 ;       De manera implícita "suma" 1 posición de memoria a SP
 
 POP AX          ; Guarda el primer elemento de la pila en AX (LIFO)
@@ -392,12 +394,10 @@ JMP 0x8048b70   ; salto incondicional (EIP)
 
 JNEZ 0x8048b70  ; Salta si el flag de cero no está activado (Reg. Flags)
 
-CALL Subrutina  ; Llama a la subrutina que está en la dirección de memoria
-                ; indicada por la etiqueta "Subrutina"
+CALL Subrutina  ; Llama a la subrutina que está en la dirección indicada por la etiqueta "Subrutina"
                 ;       De manera implícita PUSH EIP
 
-RET             ; Retoma la ejecución en el punto donde se ha quedado
-                ; antes de llamar a la subrutina
+RET             ; Retoma la ejecución en el punto donde se ha quedado antes de llamar a la subrutina
                 ;       De manera implícita POP EIP
 ```
 
@@ -427,8 +427,7 @@ RET             ; Retoma la ejecución en el punto donde se ha quedado
 
 ### Ejemplo de uso de Pila
 
-- Para comprender el funcionamiento de la pila, es conveniente comprender un ejemplo basico, en el que se examine el estado de la memora a cada paso
-- El siguiete ejemplo:
+- El siguiente ejemplo:
 
 ```cpp
 int suma (int a, int b, int c){

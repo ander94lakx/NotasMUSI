@@ -113,7 +113,7 @@
         - **Cámaras IP**
         - **Metadatos**
         - Etc.
-    - Datos que se van a usar en fases posteriores de la auditoría
+    - Datos que se van a **usar en fases posteriores** de la auditoría
 
 ### Primeros pasos
 
@@ -354,7 +354,7 @@
 ## 5. Análisis de la información
 
 - Tras recopilar una gran cantidad de información, toca analizarla y quedarse con la **información util**
-- **¿Que se puede hacer con cada tipo de información?**
+- **¿Qué se puede hacer con cada tipo de información?**
 
 | Dato                                        | Uso                                                                               |
 |---------------------------------------------|-----------------------------------------------------------------------------------|
