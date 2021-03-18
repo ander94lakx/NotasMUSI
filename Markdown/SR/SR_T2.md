@@ -56,13 +56,13 @@
 
 - Servicio suministrado por uno o más niveles de un sistema abierto de comunicación
     - Garantiza la seguridad del sistema y de las transferencias de datos
-- *SERVICIOS:*
+- *Servicios:*
     - **Autenticación** (entidades o datos)
         - De entidades (con conexión)
         - Del origen de datos (sin conexión)
     - **Control de acceso**
         - Prevención del uso no autorizado de un recurso
-    - Servicio de **Confidencialidad**
+    - **Confidencialidad**
         - De la conexión
         - No orientada a conexión
         - De campos seleccionados
@@ -93,7 +93,7 @@
     - Mecanismos de Notarización
 
 | Servicio / Mecanismo                   | Cifrado | Firma | Control de acceso | Integridad | Intercambio de autentificación | Relleno tráfico | Control del enrutamiento | Notarización |
-|----------------------------------------|---------|-------|-------------------|------------|--------------------------------|-----------------|--------------------------|--------------|
+|----------------------------------------|:-------:|:-----:|:-----------------:|:----------:|:------------------------------:|:---------------:|:------------------------:|:------------:|
 | Autenticacion entidades origen/destino | :x:     | :x:   |                   |            | :x:                            |                 |                          |              |
 | Autenticacion del origen de los datos  | :x:     | :x:   |                   |            |                                |                 |                          |              |
 | Control de acceso                      |         |       | :x:               |            |                                |                 |                          |              |
@@ -104,7 +104,7 @@
 | Disponibilidad                         |         |       |                   | :x:        | :x:                            |                 |                          |              |
 
 | Servicio / Ataque                      | Obtención del mensaje | Análisis del tráfico | Suplantación de identidad | Repetición | Modificación del mensaje | Denegación de servicio (DoS) |
-|----------------------------------------|-----------------------|----------------------|---------------------------|------------|--------------------------|------------------------------|
+|----------------------------------------|:---------------------:|:--------------------:|:-------------------------:|:----------:|:------------------------:|:----------------------------:|
 | Autenticacion entidades origen/destino |                       |                      | :x:                       |            |                          |                              |
 | Autenticacion del origen de los datos  |                       |                      | :x:                       |            |                          |                              |
 | Control de acceso                      |                       |                      | :x:                       |            |                          |                              |
