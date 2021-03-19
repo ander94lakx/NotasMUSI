@@ -401,7 +401,7 @@ Management Protocol*)
     - Error con la validación con padding oracle al utilizar el cifrado de bloque en modo CBC en SSLv3
     - Posteriormente se ha publicado que también puede afectar a algunas implementaciones de TLS que no siguen la recomendación del RFC de comprobar el contenido del padding
 - **DROWN**
-    Decrypting RSA with Obsolete and Weakened eNcryption
+    - Decrypting RSA with Obsolete and Weakened eNcryption
     - Más info: <https://drownattack.com/>
 - **SSLStrip**
 
