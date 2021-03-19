@@ -76,7 +76,9 @@
 
 - Autenticación WEP
     - Open System Authentication (OSA)
+        - Asume que se ha autenticado si se entienden los mensajes
     - Shared Key Authentication (SKA)
+        - Debilidad ya que se puede sacar la clave al autenticar
 - Confidencialidad e Integridad WEP
     - Sistema de cifrado incluido en el estándar original IEEE 802.11
     - Basado en el algoritmo de cifrado **RC4**
@@ -87,11 +89,12 @@
 
 - **Esta roto desde hace tiempo**
 - Autenticación Insegura
-    - AP Falso (Rogue AP)
+    - **Rogue AP**
 - Integridad Insegura
 - Confidencialidad
-    - Colisión de Vectores de Inicialización (IV)
-    - Uso de Clave Estática y Compartida
+    - **Colisión de IV** (Vectores de Inicialización)
+        - Solo 24 bits
+    - Uso de **clave estática** y compartida
     - Ataque Generación Secuencia Cifrante (IV débiles)
     - Ataque reenvío
     - Ataque Fragmentación
@@ -104,45 +107,49 @@
 - Definido en el estándar 802.11i
     - WPA: **compatible** con hardware anterior
     - WPA2: **nueva** versión **incompatible**
-- Características WPA:
-    - **IV** de 48 bits
+- **Mejoras** WPA:
+    - **IV de 48 bits** (WEP 24 bits)
     - **TKIP** (*Temporal Key Integrity Protocol*)
-        - Cambia dinámicamente las claves
+        - Cambia dinámicamente las claves compartidas (WEB clave maestra compartida única)
         - Diferente para cada usuario
-    - Usa un algoritmo llamado **Michael** para generar un **Message Integrity Check** (MIC)
-    - Usa el algoritmo **RC4**
+    - **MIC** (*Message Integrity Check*) para garantizar integridada
+    - Aunque sigue usando el algoritmo **RC4**
 
 ### WPA2
 
 - Diseñado para sustituir a WPA
 - Claves dinámicas y diferentes para cada usuario
-- Usa el modo:
-    - Counter Cipher Mode with Block Chaining Message Authentication Code Protocol
-        - de **AES (AES-CCMP)**
--Versiones:
-    - WPA2-Personal
+- Mejoras:
+    - **AES-CCMP**
+        - AES (mejor que RC4)
+        - CCMP para añadir mecanismos de integridadd (Counter Cipher Mode with Block Chaining Message Authentication Code Protocol)
+- Dos versiones:
+    - **WPA2-Personal**
         - Uso doméstico y en pequeñas empresas
         - **Clave precompartida WPA-PSK** (de 8 a 63 caracteres)
-        - PMK = PBKDF2(HMAC−SHA1, PSK, SSID, 4096, 256)
-    - WPA2-Enterprise
+            - A partir de esa se gera una clave maestra
+                - **PMK de 256 bits** = PBKDF2(HMAC−SHA1, PSK, SSID, 4096, 256)
+    - **WPA2-Enterprise**
         - Uso en grandes organizaciones
         - **Claves diferentes para usuarios distintos**
-        - Requiere 802.1x y EAP (RADIUS)
-        - Autenticación mediante el protocolo **EAP**
+        - **Autenticación** mediante el protocolo **EAP**
 
-#### Ataques a WPA2
+#### Ataques a WPA(2)
 
 - **Ataque a PSK**
-    - WPA2-Personal
+    - WPA y WPA2-Personal
 - **Rogue AP**
     - WPA2-Enterprise
 - BYO Disaster:
-    <https://www.youtube.com/watch?v=-uqTqJwTFyU>
-- **Ataque DoS contra Michael** en WPA
-- Ataque Becks-Tews contra WPA
+    - <https://www.youtube.com/watch?v=-uqTqJwTFyU>
+- **Ataque DoS contra Michael**
+    - WPA
+- Ataque Becks-Tews
+    - WPA
 - Ataques contra **WPS** (*Wi-Fi Protected Setup*)
     - <https://null-byte.wonderhowto.com/how-to/hack-wpa-wpa2-wi-fipasswords-with-pixie-dust-attack-using-airgeddon-0183556/>
 - **KRACK** Key Reinstallation Attack
+    - **Golpe definitivo a WPA2**
     - <https://www.krackattacks.com/>
 - **Phising**
     - Known Beacons, KARMA
@@ -151,16 +158,20 @@
 
 ### WPA3
 
-- **SAE reemplaza PSK** (Simultaneous Authentication of Equals)
-    - Resistencia a KRACK
-    - Resistencia a ataques de diccionario
+- **SAE reemplaza PSK** (**Simultaneous Authentication of Equals**)
+    - Resistencia a **KRACK**
+    - Resistencia a **ataques de diccionario**
     - Forward Secrecy
+        - Garantizar que a través de una clave temporal no se puede sacar el resto de claves (ni anteriores ni posteriores)
 - **PMF obligatorio** (*Proteted Management Frames*)
 - **OWE** (*Oportunistic Wireless Encryption*)
+    - Para **negociar claves en redes abiertas** y usar una comunicacion cifrada
+    - **No es infalible** (se puede comprometer al negociar esas claves)
+    - Pero es **mejor que nada** para redes abiertas
 - WPA3-Enteprise cifrado de 192-bits
 - WPA3-enterprise CNSA
-- **Substituye WPS** por Easy Connect (Códigos QR)
-- **Compatible con dispositivos WPA2**
+- **Substituye WPS** por **Easy Connect** (Códigos QR)
+- **Compatible con dispositivos WPA2** (usa AES)
 
 #### Ataques WPA3
 
