@@ -296,14 +296,15 @@ alert icmp any any -> any any (msg:"ICMP Packet" ; sid:477; rev:3; dsize: > 200;
 
 - **Baja interacción**
     - :heavy_plus_sign: **Simulan** servicios, aplicaciones y sistemas operativos
-    - :heavy_plus_sign: Suponen un **riesgo bajo y son fáciles** de implantar y mantener
-    - :heavy_minus_sign: Son fácilmente detectables por atacantes con experiencia
-    - :heavy_minus_sign: Capturan una cantidad de información limitada
+    - :heavy_plus_sign: **Riesgo bajo**
+    - :heavy_plus_sign: **Fáciles** de implantar y mantener
+    - :heavy_minus_sign: Son **fácilmente detectables** por atacantes con experiencia
+    - :heavy_minus_sign: Capturan una cantidad de **información limitada**
 - **Alta interacción**
     - :heavy_plus_sign: / :heavy_minus_sign: Servicios, aplicaciones y SO **reales**
     - :heavy_plus_sign: Capturan **mucha información**
     - :heavy_minus_sign: Suponen un **alto riesgo**
-
+    - :heavy_minus_sign: **Difíciles** de implantar y mantener
 - Ejemplos
     - [MHN (Modern Honey Network)](<https://github.com/threatstream/mhn>)
     - [T-Pot](<https://github.com/dtag-dev-sec/tpotce/releases>)
@@ -329,11 +330,11 @@ alert icmp any any -> any any (msg:"ICMP Packet" ; sid:477; rev:3; dsize: > 200;
             - **Testing by exploit**
                 - Consiste en lanzar atanques
                 - Es muy agresivo
-                - Es efectibvo
+                - Es efectivo
             - **Metodos de inferencia**
-                - Es un metodo pasivo
-                - Busca rastrios
-                - Busca "puestas abiertas"
+                - Es un método pasivo
+                - Busca rastros
+                - Busca "puertas abiertas"
 
 ## 6. Test de penetración (Pentest)
 
@@ -362,4 +363,4 @@ alert icmp any any -> any any (msg:"ICMP Packet" ; sid:477; rev:3; dsize: > 200;
     - BD de vulnerabilidades
     - BD de patrones de amenazas
     - BD de eventos
-- Permite **generar respuestas** ante incidentes **y reportes** sobre la segurida
+- Permite **generar respuestas** ante incidentes **y reportes** sobre la seguridad
