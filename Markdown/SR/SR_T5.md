@@ -228,7 +228,7 @@
         - Proporciona **Integridad** y **Autenticación**
     - **ESP** (*Encapsulating Security Payload*) [(RFC 4303)](https://tools.ietf.org/html/rfc4303)
         - Proporciona **Confidencialidad**
-        - Depende del modo tambien puede proporcionar **Integridad** y **Autenticarión**
+        - Depende del modo tambien puede proporcionar **Integridad** y **Autenticación**
 - Opcionales
     - **IPComp**: Usado para comprimir
 
