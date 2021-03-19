@@ -405,13 +405,13 @@ Management Protocol*)
     - Más info: <https://drownattack.com/>
 - **SSLStrip**
 
-    ![SSLStrip](img/sslstrip.png)
+![SSLStrip](img/sslstrip.png)
 
 ## 5. Redes Privadas Virtuales (VPN)
 
-*Virtual Private Networks*
-Proveen canales seguros de Comunicación sobre redes inseguras
-Es una alternativa más barata y facil a las redes físicas privadas
+- *Virtual Private Networks*
+- Proveen canales seguros de Comunicación sobre redes inseguras
+- Es una alternativa más barata y facil a las redes físicas privadas
 
 ### Arquitecturas VPN
 
