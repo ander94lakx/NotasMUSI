@@ -317,14 +317,14 @@
 
 - Sirve para descubrir **puertos cerrados**
 - Paquete con todos los flags desactivados
-    - Si no se recibe nada → **ABIERTO**
+    - Si no se recibe nada → ABIERTO o FILTRADO
     - Si se recibe RST+ACK → **CERRADO**
 
 #### TCP XMAS (`-sX`)
 
 - Envía paquetes con los flags FIN, PSH y URG activados
 - Sirve para descubrir **puertos cerrados**
-    - Si no se recibe nada → **ABIERTO**
+    - Si no se recibe nada → ABIERTO o FILTRADO
     - Si se recibe RST+ACK → **CERRADO**
 
 #### TCP FIN (`-sF`)
@@ -332,7 +332,7 @@
 - Sirve para descubrir **puertos cerrados**
 - Sirve para descubrir **puertos cerrados**
 - Manda un paquete con el flag de FIN activado
-    - Si no se recibe nada → **ABIERTO**
+    - Si no se recibe nada → ABIERTO o FILTRADO
     - Si se recibe RST+ACK → **CERRADO**
 
 #### TCP IDLE (`-sI`)
