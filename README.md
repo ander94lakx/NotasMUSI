@@ -18,7 +18,7 @@ My personal notes for the different subjects of my Master's degree in Computer s
   - [Tema 5.1](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/ALR/ALR_T5_1.md) - Sociedad de la Información y Comercio Electrónico
   - [Tema 5.2](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/ALR/ALR_T5_2.md) - Firma Electrónica
 
-- **Análisis de Riesgos Legales** (ARL) :two: :white_circle:
+- **Análisis de Riesgos Legales** (ARL) :two: :yellow_circle:
 
   - [Tema 1](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/ARL/ARL_T1.md) - Seguridad de la información y gestión de riesgos
   - [Tema 2](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/ARL/ARL_T2.md) - Metodologías y herramientas de análisis y gestión de riesgos
