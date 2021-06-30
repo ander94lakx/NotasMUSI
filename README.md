@@ -46,7 +46,7 @@ My personal notes for the different subjects of my Master's degree in Computer s
   - [Tema 4](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/CMS/CMS_T4.md) - Autenticación y Funciones Hash
   - [Tema 5](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/CMS/CMS_T5.md) - Algoritmos de cifra asimétrica
 
-- **Delitos Informáticos** (DI) :two: :white_circle:
+- **Delitos Informáticos** (DI) :two: :yellow_circle:
 
   - [Tema 1](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/DI/DI_T1.md) - Introducción a la delincuencia informática
   - [Tema 2](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/DI/DI_T2.md)- Tipos delictivos I. Fraudes en la red
