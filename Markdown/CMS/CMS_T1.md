@@ -236,7 +236,7 @@ Sirve para encontrar el inverso multiplicativo de x (`x = inv(a, n)`)
     - Con números pequeños es fácil pero con números más grandes se complica
         - No hay un método para hacerlo, solo fuerza bruta
         - el tiempo necesario para obtener los factores crece de manea exponencial cuanto más grande sean los factores
-            - En la practica es imposible romperlo
+            - En la práctica es imposible romperlo
                 - La computación cuántica puede que haga que eso cambie
 
 ### Problema del Logaritmo discreto (PLD)

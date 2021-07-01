@@ -1,6 +1,6 @@
 # Tema 2: Metodologías y herramientas de análisis y gestión de riesgos
 
-## 2.1 MAGERIT
+## 1. MAGERIT
 
 - Metodología de carácter público
     - Desarrollada por el Ministerio de Administraciones Públicas (MAP)
@@ -49,7 +49,7 @@
 - Diagrama de toma de decisiones
 ![Proceso de toma de decisiones MAGERIT](img/MAGERIT-riesgos.png)
 
-## 2.2 ISO 27005
+## 2. ISO 27005
 
 - *ISO 27005: Risk Management of Information Security*
     - Norma de la familia ISO 27000
@@ -99,7 +99,7 @@ Existen muchos métodos para ello
     - Cuantitativos
     - Combinación
 
-## 2.3 NIST 800-39
+## 3. NIST 800-39
 
 - *NIST SP 800-39*:
     - *Managing Information Security Risk: Organization, Mission, and Information System View*
@@ -121,7 +121,7 @@ Existen muchos métodos para ello
         - Identificar los cambios
         - Verificar que se han implementado las respuestas
 
-## 2.4 NIST 800-30 Rev. 1
+## 4. NIST 800-30 Rev. 1
 
 - *NIST SP 800-30 Rev. 1: Guide for Conducting Risk Assessments*
 
