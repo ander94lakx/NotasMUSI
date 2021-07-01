@@ -70,7 +70,7 @@
 | **5** | **Documento** de seguridad + implantación de **medida de seguridad** (técnicas y organizativas)                               | Responsabilidad proactiva: + Medidas de seguridad documentadas (no Doc. Seg.) + **Notificación violaciones de seguridad** + Privacidad desde el diseño y por defecto + **EIPD** + Accontability |
 | **6** | Información, concienciación o sensibilización del personal: Usuarios y Responsables de Seguridad                              | Además de usuarios y responsables a DPO                                                                                                                                                         |
 | **7** | Derechos **ARCO** (Acceso, Rectificación, Cancelación, Oposición)                                                             | **ARCO** + **Limitación** + Derecho **portabilidad** y Derecho de **supresión** (olvido)                                                                                                        |
-| **8** | **Auditoria bienal** de las medidas de seguridad                                                                              | **Auditorias cuando determine** el responsable                                                                                                                                                  |
+| **8** | **Auditoría bienal** de las medidas de seguridad                                                                              | **Auditorías cuando determine** el responsable                                                                                                                                                  |
 
 #### A) Registro de Actividades de Tratamiento de datos (Art. 30 RGPD)
 
@@ -257,7 +257,7 @@
 
 - **No** se fija de forma obligatoria con un **plazo temporal**
 - RGPD → alusiones (directas o indirectas) a esta obligación
-    - Es pertinente **continuar sometiendo las medidas de seguridad a Auditoria**
+    - Es pertinente **continuar sometiendo las medidas de seguridad a Auditoría**
 
 #### J) Delegado de Protección de Datos (DPD)
 

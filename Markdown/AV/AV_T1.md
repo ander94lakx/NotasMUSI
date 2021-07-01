@@ -14,7 +14,7 @@
         - No cumplen la ley
         - Usuarios malignos
 - Metodología
-    - Permite realizar los procesos de pentesting y de auditoria en base a las mejores técnicas
+    - Permite realizar los procesos de pentesting y de auditoría en base a las mejores técnicas
     - Ejemplos:
         - **OSSTMM**: Open Source Security Methodology Manual
         - **SANS**: Conducting a Penetration Test on an Organization

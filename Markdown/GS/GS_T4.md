@@ -88,7 +88,7 @@
 - Actividades relacionadas con la seguridad física de los activos es clave para proteger la información
 - *Tareas:*
     - Test de intrusión físicos
-    - Auditoria o seguridad integral (seguridad física + lógica)
+    - Auditoría o seguridad integral (seguridad física + lógica)
 
 ### Protección de Infraestructura Criticas
 
