@@ -1,6 +1,6 @@
 # Tema 3: Ciclo de vida de la gestión de riesgos
 
-## 3.1 Introducción
+## 1. Introducción
 
 Los contextos cambian
 ►En general los parámetros y factores que influyen en la estimación del riesgo varían
@@ -11,7 +11,7 @@ proceso cíclico de evaluación y tratamiento del riesgo
 mejora continua
 metodología objetiva, fiable, medible y replicable
 
-## 3.2 Evaluación de riesgos de TI
+## 2. Evaluación de riesgos de TI
 
 - **Evaluación** de riesgos: proceso global compuesto de tres procesos:
     1. **Identificación** del riesgo
@@ -75,7 +75,7 @@ metodología objetiva, fiable, medible y replicable
     - Todos los niveles de riesgo **son estimativos**
     - Dejar **constancia** del **nivel de exactitud**
 
-## 3.3 Respuesta y mitigación del riesgo
+## 3. Respuesta y mitigación del riesgo
 
 - *Opciones* de tratamiento del riesgo (ISO 31000)
     - **Evitar** el riesgo decidiendo no iniciar o continuar con la actividad que lo causa
@@ -111,7 +111,7 @@ metodología objetiva, fiable, medible y replicable
     - Grado de **eficacia intrínseca**
         - Cuando su implantación es total
 
-## 3.4 Monitoreo y reporte de riesgos y controles
+## 4. Monitoreo y reporte de riesgos y controles
 
 - Monitorización permanente
     - Para analizar, comprender y controlar mejor

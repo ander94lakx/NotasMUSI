@@ -1,6 +1,6 @@
 # Tema 3: Tipos delictivos II
 
-## 3.1 Daños informáticos
+## 1. Daños informáticos
 
 - Existen innumerables vías de comisión de delitos relacionados con daños informáticos
 - Algunas de las más comunes y actuales son:
@@ -139,7 +139,7 @@
         - Diferentes técnicas para hacerlo (XSS, etc.)
         - Permite llegar a muchos usuarios fácilmente
 
-## 3.3 Propiedad intelectual
+## 2. Propiedad intelectual
 
 - **No todas las difusiones** de contenidos protegidos bajo los derechos de autor **son considerados delictivos**
 - Las penas por piratería (sea o no a través de internet) se legislan en **Artículos 270-272 del CP**
@@ -159,7 +159,7 @@
     - **Cada vez tiene menos impacto** debido al cambio en los modelos de negocio de distribución de contenidos
         - Servicios legales de streaming como Netflix o Spotify, entre otros
 
-## 3.4 Delitos relacionados con la difusión de contenidos
+## 3. Delitos relacionados con la difusión de contenidos
 
 - Todos aquellos **delitos que son lesivos** para intereses diversos
     - Injurias (*lesionar la dignidad de otra persona*)
@@ -221,7 +221,7 @@
                 - **1 a 3 años**, enaltecimiento, humillación de las victimas, etc.
                     - de 2 a 3 si se usa las TIC
 
-## 3.5 Otros ciberdelitos
+## 4. Otros ciberdelitos
 
 ### Ciberacoso, ciberbullying
 

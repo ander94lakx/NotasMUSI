@@ -1,10 +1,10 @@
 # Tema 1: Introducción a la delincuencia informática
 
-## 1.1 Introducción
+## 1. Introducción
 
 > **Ciberdelincuencia**: todas aquellas conductas delictivas en las que las TIC sean el medio por el que se atacan y se lesionan distintos bienes jurídicos, o bien sean estas sobre las que recaiga la acción delictiva.
 
-## 1.2 Características de la ciberdelincuencia
+## 2. Características de la ciberdelincuencia
 
 - Son delitos de **fácil comisión**
 - Tienen un **elemento internacional**. Es frecuente que el autor y sus victimas se encuentren en distintos países
@@ -18,7 +18,7 @@
 - Están castigados en el Código Penal con **escasa pena** (los tipos más usuales de ciberdelitos máximo de cuatro años de prisión)
 - Los **investigadores policiales** necesitan importantes conocimientos técnicos
 
-## 1.3 Características del ciberdelincuente
+## 3. Características del ciberdelincuente
 
 - **Originalmente** solían ser **personas individuales**
     - Estafadores para obtener dinero fácil
@@ -51,7 +51,7 @@
     - **Muchos recursos y conocimiento**
 - Otras motivaciones
 
-## 1.4 Ciberdelincuencia organizada
+## 4. Ciberdelincuencia organizada
 
 - Aquella centrada en la comisión de delitos a través o contra las TIC's, sin mantener relación alguna con la delincuencia tradicional
 
@@ -99,7 +99,7 @@ En una campaña de phishing por parte de un grupo cibercriminal, se podrían enc
 - Alojadores de contenidos o dominios
     - Recursos ajenos usados por la organización para alojar su infraestructura
 
-## 1.5 Respuesta al ciberdelito
+## 5. Respuesta al ciberdelito
 
 - Distintas organizaciones internacionales y nacionales
     - UE

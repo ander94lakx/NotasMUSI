@@ -1,6 +1,6 @@
 # Tema 2: Tipos delictivos I. Fraudes en la red
 
-## 2.1 Introducción
+## 1. Introducción
 
 - Las estafas son los delitos que **más rápido y con más éxito** han realizado la migración **desde la vida real a la virtual**
 - Existe una mayor incidencia de **cifra negra** (delitos no denunciados)
@@ -11,7 +11,7 @@
     - Fraude en medios de pago físicos
     - Otros tipos de fraude
 
-## 2.2 Estafas en banca electrónica. **Phishing**
+## 2. Estafas en banca electrónica. **Phishing**
 
 - **Phishing**:
     - Aquellas **acciones** desarrolladas **con fin de obtener**
@@ -120,7 +120,7 @@
 - Comprobar **dominios en las direcciones de correos** electrónicos
 - **No descargar adjuntos** en correos electrónicos de remitentes desconocidos
 
-## 2.3 Fraude en medios de pago físico
+## 3. Fraude en medios de pago físico
 
 - Cualquier fraude relacionado con medios de pago físicos
     - Tarjetas de crédito
@@ -173,7 +173,7 @@
         - Codificadores de tarjetas
     - Este tipo de productos también se pueden vender en el mercado negro
 
-## 2.4 Otros tipos de fraude en la red
+## 4. Otros tipos de fraude en la red
 
 - Existen todo tipo de forma para estafar por la red, solo limitadas por la imaginación del delincuente
 - Algunos ejemplos conocidos:

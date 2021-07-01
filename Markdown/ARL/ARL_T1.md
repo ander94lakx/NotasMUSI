@@ -1,6 +1,6 @@
 # Tema 1: Seguridad de la información y gestión de riesgos
 
-## 1.2 Seguridad de la información y gestión de riesgos
+## 1. Seguridad de la información y gestión de riesgos
 
 - Garantizar la **seguridad de la información** es uno de los **objetivos prioritarios de cualquier organización**
 - La **información** es uno de los **activos más importantes** de una organización
@@ -66,7 +66,7 @@
             - Criterios
     - Para **disminuir el riesgo residual**
 
-## 1.3 Política de seguridad de la información
+## 2. Política de seguridad de la información
 
 Política de seguridad de la información:
 Son las directrices y los principios de alto nivel
@@ -76,7 +76,7 @@ Identificar las características de la organización
 Obligaciones legales y contractuales
 Aprobada por la alta dirección
 
-## 1.4 ISO 31000: Gestión del Riesgo – Directrices
+## 3. ISO 31000: Gestión del Riesgo – Directrices
 
 Herramienta para gestionar el riesgo
 Marco de referencia cuyo objetivo sea integrar el proceso de gestión del riesgo

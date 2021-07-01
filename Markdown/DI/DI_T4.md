@@ -1,6 +1,6 @@
 # Tema 4: Denuncias sobre ciberdelitos
 
-## 4.1 Introducción
+## 1. Introducción
 
 - Existen **3 vías** para **informar** a las autoridades un **hecho** que **pudiera ser considerado como delictivo**:
     - Comunicación
@@ -29,7 +29,7 @@
     - Por **escrito o** mediante **palabra**
     - Hechos que pudieran ser considerados como delito
 
-## 4.2 Denunciando ciberdelitos
+## 2. Denunciando ciberdelitos
 
 - A la hora de presentar denuncias o querellas relacionadas con ciberdelitos:
     - **Consejos**
@@ -86,7 +86,7 @@
     - Terrorismo
     - Debidamente justificado
 
-## 4.3 Salvaguarda de evidencias digitales
+## 3. Salvaguarda de evidencias digitales
 
 - Las evidencias digitales, por su naturaleza, son **frágiles** y pueden ser:
     - *Manipuladas*
@@ -119,7 +119,7 @@
             - ID, lugar, fecha, hora, descripción, lugar de almacenamiento, accesos a la evidencia
     - **Nunca alterar el original**
 
-## 4.4 ISO/IEC 27037:2012
+## 4. ISO/IEC 27037:2012
 
 - **ISO 27037** (*Guidelines for identification, collection, acquisition and preservation of digital evidence*)
 - Base de actuación para:
