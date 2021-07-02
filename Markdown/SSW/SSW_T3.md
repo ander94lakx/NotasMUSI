@@ -8,7 +8,7 @@
     - Comprobar el tamaño de los campos numéricos
     - *Prevenir vulnerabilidades de meta-caracteres*
         - SQL injection
-        - Manipulación de rutas (Path Traversal)
+        - Path Traversal
         - Inyección de comandos
         - Falsificación de logs
 - *Desbordamiento de buffer*
@@ -16,16 +16,16 @@
     - Seguridad en llamadas a métodos nativos
     - Desbordamiento de buffer basado en el stack
     - *Reserva dinámica de memoria (heap overflow)*
-        - Memoria no utilizada, sin desasignar (memory leaks)
+        - Memory leaks
         - Use after free
         - Dereference after free
         - Double free
         - Null dereference
     - *Manipulación de strings*
-        - Funciones inherentemente peligrosas
+        - Funciones peligrosas
         - Errores de truncado
-        - Mantenimiento del carácter nulo de terminación
-        - Errores de formato de cadena (format strings)
+        - Mantenimiento del `\0`
+        - Format strings
 - *Integers overflows*
     - Integer overflows
     - Conversiones entre enteros con signo y sin signo
@@ -661,7 +661,7 @@ for (Iterator i=users.iterator(); i.hasNext();) {
 - :no_entry_sign:
 - **Problema**:
     - No se mira el valor de retorno de `read()` (numero de bytes leídos)
-    - Se procesa el archivo sin mas
+    - Se procesa el archivo sin más
     - Se puede aprovechar para meter informacion dañina
 - **Solución**:
     - Comprobar siempre que los valores de retorno de una funcion sean los esperados
