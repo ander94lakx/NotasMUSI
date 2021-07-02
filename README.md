@@ -18,13 +18,13 @@ My personal notes for the different subjects of my Master's degree in Computer s
   - [Tema 5.1](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/ALR/ALR_T5_1.md) - Sociedad de la Información y Comercio Electrónico
   - [Tema 5.2](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/ALR/ALR_T5_2.md) - Firma Electrónica
 
-- **Análisis de Riesgos Legales** (ARL) :two: :yellow_circle:
+- **Análisis de Riesgos Legales** (ARL) :two: :green_circle:
 
   - [Tema 1](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/ARL/ARL_T1.md) - Seguridad de la información y gestión de riesgos
   - [Tema 2](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/ARL/ARL_T2.md) - Metodologías y herramientas de análisis y gestión de riesgos
   - [Tema 3](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/ARL/ARL_T3.md) - Ciclo de vida de la gestión de riesgos
 
-- **Auditoría de la Seguridad** (AS) :two: :white_circle:
+- **Auditoría de la Seguridad** (AS) :two: :yellow_circle:
 
   - [Tema 1](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/AS/AS_T1.md) - Introducción al concepto de auditoría de sistemas de información
   - [Tema 2](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/AS/AS_T2.md) - Gobierno y gestión de la función de auditoría
@@ -46,7 +46,7 @@ My personal notes for the different subjects of my Master's degree in Computer s
   - [Tema 4](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/CMS/CMS_T4.md) - Autenticación y Funciones Hash
   - [Tema 5](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/CMS/CMS_T5.md) - Algoritmos de cifra asimétrica
 
-- **Delitos Informáticos** (DI) :two: :yellow_circle:
+- **Delitos Informáticos** (DI) :two: :green_circle:
 
   - [Tema 1](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/DI/DI_T1.md) - Introducción a la delincuencia informática
   - [Tema 2](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/DI/DI_T2.md)- Tipos delictivos I. Fraudes en la red
@@ -81,7 +81,7 @@ My personal notes for the different subjects of my Master's degree in Computer s
   - [Tema 2](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/SSO/SSO_T2.md) - Seguridad en Linux
   - [Tema 3](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/SSO/SSO_T3.md) - Seguridad en otros Sistemas Operativos
 
-- **Seguridad en el Software** (SSW) :two: :white_circle:
+- **Seguridad en el Software** (SSW) :two: :green_circle:
 
   - [Tema 1](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/SSW/SSW_T1.md) - El problema de la seguridad en el software
   - [Tema 2](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/SSW/SSW_T2.md) - Seguridad en el ciclo de vida del software
