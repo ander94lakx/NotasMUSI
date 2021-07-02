@@ -50,18 +50,18 @@
             - **DFD** (Diagrama de flujo de datos): Entidades externas, procesos, almacenes de datos, flujos de trabajo, ...
         2. *Identificación de amenazas*
             - **STRIDE** para identificar las amenazas
-                *Spoofing* -> Autenticación
-                *Tampering* -> Integridad
-                *Repudiation* -> No repudio
-                *Infromation disclosure* -> Confidencialidad
-                *DoS* -> Disponibilidad
-                *Elevation o privilege* -> Autorización
+                *Spoofing* 🠒 Autenticación
+                *Tampering* 🠒 Integridad
+                *Repudiation* 🠒 No repudio
+                *Infromation disclosure* 🠒 Confidencialidad
+                *DoS* 🠒 Disponibilidad
+                *Elevation o privilege* 🠒 Autorización
             - **DREAD** para valorar las amenazas
-                - *Damage* -> ¿cuál es el daño que puede originar la vulnerabilidad si llega a ser explotada?
-                - *Reproducibility* -> ¿es fácil reproducir las condiciones que propicien el ataque?
-                - *Exploitability* -> ¿es sencillo llevar a cabo el ataque?
-                - *Affected* -> ¿cuántos usuarios se verían afectados?
-                - *Discoverability* -> ¿es fácil encontrar la vulnerabilidad?
+                - *Damage* 🠒 ¿cuál es el daño que puede originar la vulnerabilidad si llega a ser explotada?
+                - *Reproducibility* 🠒 ¿es fácil reproducir las condiciones que propicien el ataque?
+                - *Exploitability* 🠒 ¿es sencillo llevar a cabo el ataque?
+                - *Affected* 🠒 ¿cuántos usuarios se verían afectados?
+                - *Discoverability* 🠒 ¿es fácil encontrar la vulnerabilidad?
                 - Riesgo = Probabilidad 𝑥 Impacto potencial = (𝑅 + 𝐸 + 𝐷𝐼) 𝑥 (𝐷 + 𝐴) = 𝑃 𝑥 𝐼𝑃
         3. *Mitigación*
         4. *Valoración*
@@ -74,7 +74,7 @@
             - Secuencia completa de acciones que resulta en una pérdida para la organización
 - Son un excelente **medio de análisis de amenazas**
 - Consiste en **pensar la forma en la que una funcionalidad puede ser explotada**
-- Casos de abuso -> **Casos de uso de seguridad**
+- Casos de abuso 🠒 **Casos de uso de seguridad**
     - Con los casos de abuso se ven las amenazas
     - Con los casos de uso de seguridad se ven los requisitos de seguridad
 
@@ -96,11 +96,11 @@ Atacante
         - Métodos más frecuentes de explotación (exploit)
         - Técnicas usadas para comprometer el software
 - Proporciona valor en todas las fases del desarrollo
-    - Especificar requisitos -> para ver a que se enfrenta
-    - Diseño -> para que el diseño sea seguro
-    - Programación -> eliminar vulnerabilidades del código
-    - Pruebas -> Elaborar pruebas contra esos patrones
-    - Despliegue -> elegir que políticas de seguridad implementar
+    - Especificar requisitos 🠒 para ver a que se enfrenta
+    - Diseño 🠒 para que el diseño sea seguro
+    - Programación 🠒 eliminar vulnerabilidades del código
+    - Pruebas 🠒 Elaborar pruebas contra esos patrones
+    - Despliegue 🠒 elegir que políticas de seguridad implementar
 - Un catálogo de patrones de ataques:
     - **CAPEC** (*Common Attack Pattern Enumeration and Classification*) **del MITRE**
         - Contiene muchísima información de cada patrón:
@@ -112,7 +112,7 @@ Atacante
     - **Método sistemático para caracterizar la seguridad** de un sistema
 - El objetivo del atacante se coloca en la parte superior
     - Posibles alternativas de ataque en las ramas del árbol
-        - En las hojas -> diferentes métodos de ataque
+        - En las hojas 🠒 diferentes métodos de ataque
 - El recorrido en árbol permite identificar **todas las posibles técnicas** que podrían ser utilizados para comprometer la seguridad del sistema
 - Se enfoca en las **causas** del problema
 - **Representación**
@@ -325,7 +325,7 @@ Atacante
     - **Transformadores de predicados**
     - **Model checking**: Busca patrones comunes para ver si están o si faltan y son necesarios (asignar/liberar memoria, ...)
     - **SAT Solvers**: evalúa expresiones en búsqueda de alguna combinación de valores que hagan la expresión TRUE
-- *Ejemplos de herramientas*: FindBugs, SCA Forify, Cppcheck
+- *Ejemplos de herramientas*: FindBugs, SCA Fortify, Cppcheck
 
 ## 10. Pruebas de penetración
 
