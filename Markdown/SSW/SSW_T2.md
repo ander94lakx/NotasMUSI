@@ -6,17 +6,17 @@
     - Ciclo de vida de desarrollo de SW que permite:
         - Desarrollo de software mas seguro
 - **Elementos**:
-    - [Modelado de amenazas](#2.-Modelado-de-amenazas)
-    - [Casos de abuso](#3.-Casos-de-abuso)
-    - [Modelado de ataques](#4.-Modelado-de-ataques)
-    - [Ingeniería requisitos de seguridad](#5.-Ingeniería-de-requisitos-de-seguridad)
-    - [Análisis de riesgo arquitectónico](#6.-Análisis-de-riesgo-arquitectónico)
-    - [Patrones de diseño](#7.-Patrones-de-diseño)
-    - [Pruebas de seguridad basadas en riesgo](#8.-Pruebas-de-seguridad-basadas-en-riesgo)
-    - [Revisión de código](#9.-Revisión-de-código)
-    - [Pruebas de penetración](#10.-Pruebas-de-penetración)
-    - [Operaciones de seguridad](#11.-Operaciones-de-seguridad)
-    - [Revisión externa](#12.-Revisión-externa)
+    - [Modelado de amenazas](#2-Modelado-de-amenazas)
+    - [Casos de abuso](#3-Casos-de-abuso)
+    - [Modelado de ataques](#4-Modelado-de-ataques)
+    - [Ingeniería requisitos de seguridad](#5-Ingeniería-de-requisitos-de-seguridad)
+    - [Análisis de riesgo arquitectónico](#6-Análisis-de-riesgo-arquitectónico)
+    - [Patrones de diseño](#7-Patrones-de-diseño)
+    - [Pruebas de seguridad basadas en riesgo](#8-Pruebas-de-seguridad-basadas-en-riesgo)
+    - [Revisión de código](#9-Revisión-de-código)
+    - [Pruebas de penetración](#10-Pruebas-de-penetración)
+    - [Operaciones de seguridad](#11-Operaciones-de-seguridad)
+    - [Revisión externa](#12-Revisión-externa)
 
 | Práctica de seguridad / Fase SDLC      | 1- Requisitos | 2- Diseño | 3- Codificación | 4- Pruebas | 5- Despliegue | 6- Operación |
 |----------------------------------------|:-------------:|:---------:|:---------------:|:----------:|:-------------:|:------------:|
