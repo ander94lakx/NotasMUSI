@@ -149,7 +149,7 @@
     - Permite que las pruebas sean:
         - **Cuantificables**
         - **Consistentes y repetibles**
-        - **Válidas** mas allá del periodo actual
+        - **Válidas** más allá del periodo actual
         - Exhaustivas
         - Coherentes
 - Ejemplos de metodologías de auditorías *técnicas*
