@@ -65,15 +65,15 @@
 
 ## 4. Auditoría de las operaciones
 
-Áreas que deberían cubrirse se encuentran las siguientes (operaciones de, por ejemplo, un CPD):
-    - La vigilancia de las instalaciones
-    - Funciones y responsabilidades del personal del centro de datos
-    - Segregación de las tareas del personal del centro de datos
-    - Respuesta a emergencias y desastres
-    - Mantenimiento de las instalaciones y el equipo
-    - Planificación de la capacidad del centro de datos
-    - Gestión de activos
-    - Contenido y ubicación del almacenamiento fuera de línea
+- *Áreas* que deberían cubrirse se encuentran las siguientes (operaciones de, por ejemplo, un CPD):
+    - La **vigilancia de las instalaciones**
+    - **Funciones y responsabilidades** del personal del centro de datos
+    - **Segregación de las tareas** del personal del centro de datos
+    - **Respuesta a emergencias** y desastres
+    - **Mantenimiento** de las instalaciones y el equipo
+    - Planificación de la **capacidad del centro** de datos
+    - **Gestión de activos**
+    - **Contenido y ubicación del almacenamiento** fuera de línea
 
 ## 5. Auditorías técnicas de seguridad
 
