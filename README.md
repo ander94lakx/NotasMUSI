@@ -2,13 +2,15 @@
 
 My personal notes for the different subjects of my Master's degree in Computer security (in spanish)
 
+> :green_circle: 🠒 Terminado :yellow_circle: 🠒 Falta alguna cosa :orange_circle: 🠒 Faltan temas :white_circle: 🠒 404 Apuntes not found
+
 - **Análisis de Riesgos Legales** (ARL) :two: :green_circle:
 
   - [Tema 1](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/ARL/ARL_T1.md) - Seguridad de la información y gestión de riesgos
   - [Tema 2](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/ARL/ARL_T2.md) - Metodologías y herramientas de análisis y gestión de riesgos
   - [Tema 3](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/ARL/ARL_T3.md) - Ciclo de vida de la gestión de riesgos
 
-- **Auditoría de la Seguridad** (AS) :two: :yellow_circle:
+- **Auditoría de la Seguridad** (AS) :two: :green_circle:
 
   - [Tema 1](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/AS/AS_T1.md) - Introducción al concepto de auditoría de sistemas de información
   - [Tema 2](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/AS/AS_T2.md) - Gobierno y gestión de la función de auditoría
@@ -23,7 +25,7 @@ My personal notes for the different subjects of my Master's degree in Computer s
   - [Tema 3](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/DI/DI_T3.md) - Tipos delictivos II
   - [Tema 4](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/DI/DI_T4.md) - Denuncias sobre ciberdelitos
 
-- **Seguridad en Aplicaciones Online y Bases de Datos** (SAOBD) :two: :white_circle:
+- **Seguridad en Aplicaciones Online y Bases de Datos** (SAOBD) :two: :yellow_circle:
 
   - [Tema 1](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/SAOBD/SAOBD_T1.md) - Aplicaciones, servicios web y bases de datos
   - [Tema 2](https://github.com/ander94lakx/NotasMUSI/blob/master/Markdown/SAOBD/SAOBD_T2.md) - Seguridad en aplicaciones online
