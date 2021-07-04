@@ -120,7 +120,6 @@ Marco de referencia cuyo objetivo sea integrar el proceso de gestión del riesgo
 - **La alta dirección deberían asegurar** que la **gestión del riesgo**:
     - Esté **integrada** en todas las actividades de la organización
     - **Demostrar el liderazgo** y compromiso:
-
 - La alta dirección:
     - **Rinde cuentas por gestionar el riesgo**
 - Los órganos de supervisión:
