@@ -228,12 +228,18 @@ de su nivel de privilegios
 
 ### Cabeceras de seguridad HTTP
 
-- **`Strict-Transport-Security` (HSTS)**: especifica que solo se pueden usar conexiones HTTPS
-- **`Public-Key-Pins` (HPKP)**: mecanismo de seguridad para HTTPS para resistir la suplantación con certificados fraudulentos
-- **`X-Frame-Options`**: mejora la protección contra el clickjacking
-- **`X-XSS-Protection`**: protección básica contra ataques XSS
-- **`X-Content-Type-Options`**: evita que el navegador interpreta otro tipo de contenido que el declarado en el header
-- **`X-Content-Security-Policy`**: Establece una política de CSP que ayuda a mitigar diferentes tipos de ataques como inyecciones o XSS
+- **`Strict-Transport-Security` (HSTS)**
+    - Especifica que solo se pueden usar conexiones HTTPS
+- **`Public-Key-Pins` (HPKP)**
+    - Mecanismo de seguridad para HTTPS para resistir la suplantación con certificados fraudulentos
+- **`X-Frame-Options`**
+    - Mejora la protección contra el clickjacking
+- **`X-XSS-Protection`**
+    - Protección básica contra ataques XSS
+- **`X-Content-Type-Options`**
+    - Evita que el navegador interpreta otro tipo de contenido que el declarado en el header
+- **`X-Content-Security-Policy`**
+    - Establece una política de CSP que ayuda a mitigar diferentes tipos de ataques como inyecciones o XSS
 
 ### Seguridad en aplicaciones RIA
 
