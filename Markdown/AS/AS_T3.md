@@ -5,7 +5,7 @@
 ## 2. Estándares de auditoría
 
 - **Definen los requerimientos obligatorios** para la auditoría de sistemas y la generación del informe
-- Son elaboradas por **organismos internacionales de la auditoría** de sistemas como, por ejemplo: 
+- Son elaboradas por **organismos internacionales de la auditoría** de sistemas como, por ejemplo:
     - **ISACA** (*Information System Audit and Control Association*)
     - **IIA** (*Institute of Internal Auditors*)
 
