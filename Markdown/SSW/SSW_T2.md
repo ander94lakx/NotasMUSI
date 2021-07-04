@@ -278,7 +278,7 @@ Atacante
 - **Inyección de fallos en binarios**
     - Permite simular fallos ante situaciones anómalas en binarios en ejecución
 - **Escaneo de vulnerabilidades**
-    - Permite automatizar las busqueda de vulnerabilidades conocidas en los sistemas
+    - Permite automatizar las búsquedaa de vulnerabilidades conocidas en los sistemas
     - *Ejemplos de herramientas*: Nessus, OpenVAS, Nmap
 
 ### Caja gris

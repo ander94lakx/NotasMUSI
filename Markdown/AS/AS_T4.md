@@ -157,7 +157,7 @@
     - Pruebas de **DoS**
     - **Búsqueda de *rogue AP***
     - ...
-    - Uso de metodologías como **OWISAM** (*Open WIreless Security Assessment Methodology*)
+    - Uso de metodologías como **OWISAM** (*Open Wireless Security Assessment Methodology*)
     - *Herramientas*: Aircrack-ng, Wifite, ...
 
 ### Auditorías de sistemas de seguridad perimetral

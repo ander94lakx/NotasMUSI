@@ -53,7 +53,7 @@
 
 - *ISO 27005: Risk Management of Information Security*
     - Norma de la familia ISO 27000
-- Define un **ciclo para la gestión del riesgo** y como llevar a cabo el a**nálisis y el tratamiento de riesgos**
+- Define un **ciclo para la gestión del riesgo** y como llevar a cabo el **análisis y el tratamiento de riesgos**
 ![Ciclo gestión del riesgo ISO 27005](img/ISO-27005.png)
 - Dos aproximaciones para la apreciación de riesgos:
     - *Alto nivel*

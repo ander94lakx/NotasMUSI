@@ -34,7 +34,7 @@
 - Con esos datos se puede:
     - **Continuar el ciclo (phishing bancario)**
     - Vender o usar los datos (para cualquier tipo de phishing)
-        - Generacion de botnets
+        - Generación de botnets
         - Venta de datos, usuarios, contraseñas, ...
         - Preparación de nuevos ataques
 

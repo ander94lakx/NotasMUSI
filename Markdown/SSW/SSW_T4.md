@@ -42,12 +42,12 @@
     - **Keyloggers**: malware que captura pulsaciones de teclas para robar información privada como, por ejemplo, contraseñas o números de tarjetas de crédito
     - **Spyware**: malware usado para obtener información de una víctima sin su conocimiento
     - **Adware**: malware que permite inyectar anuncios a sus víctimas
-    - **Rootkits**: malware que se integra en las capas bajas del ssitema para intentar con el objetivo de tomar control total del equipo
+    - **Rootkits**: malware que se integra en las capas bajas del sistema para intentar con el objetivo de tomar control total del equipo
     - **Botnet**: malware que infecta maquinas con el objetivo de poder controlar un gran número de ellas remotamente para acciones maliciosas
     - **Spammers**: malware que envía correo electrónico no solicitado de forma masiva a través de Internet
     - **Ransomware**: Malware que bloquea el acceso a recursos o datos del sistema para exigir un rescate a cambio de liberarlos
     - **Rogueware**: Malware que se hace pasar por malware para intentar obtener beneficio económico de las víctimas a través de la extorsión
-    - **Advanced persistent threat (APT)**: ataque organizado y prolongado en el tiempo que hace uso de diversos tipos de tecnicas, exploits y malwares
+    - **Advanced persistent threat (APT)**: ataque organizado y prolongado en el tiempo que hace uso de diversos tipos de técnicas, exploits y malwares
 - **MAEC** (*Malware atribute enumeration and characterization*)
     - Formato de caracterización de malware creado por el MITRE
 

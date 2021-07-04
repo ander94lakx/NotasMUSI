@@ -236,7 +236,7 @@ cmp(“hola”,”adios”); // El programa realiza un crash
 ### Seguridad en llamadas a métodos nativos
 
 - **Lenguajes como Java eliminan algunos peligros** que tienen lenguajes como C/C++:
-    - Manipulación de punteros implicita
+    - Manipulación de punteros implícita
     - Límites de arrays, strings son automáticamente comprobados
     - Null pointers capturados en excepciónes
     - Las operaciones aritméticas están bien definidas

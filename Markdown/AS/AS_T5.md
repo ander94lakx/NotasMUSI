@@ -107,7 +107,7 @@
         - Mejorar la imagen
         - Compromiso con el cumplimiento legal
 - **Antes** de realizar una auditoría de certificación (externa) 🠒 **auditoría interna**
-    - Segun la ISO 27001, objetivos de auditoría interna:
+    - Según la ISO 27001, objetivos de auditoría interna:
         - Verificar los requisitos de la empresa
         - Verificar los requisitos de la norma (114 controles)
     - Considerar:

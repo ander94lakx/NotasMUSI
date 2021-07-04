@@ -231,7 +231,6 @@
         - *Laboral*: descrédito
         - *Sexual*: Obtener contenido sexual de la victima
         - *Personal*: venganza, humillación, ...
-
 - **Ciberbullying**
     - Ciberacoso **entre menores** en edad escolar
     - *Finalidad*: **humillación**

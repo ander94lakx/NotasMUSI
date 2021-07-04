@@ -84,20 +84,19 @@
 
 ### Ejemplo de ciberdelincuencia organizada: Phishing
 
-En una campaña de phishing por parte de un grupo cibercriminal, se podrían encontrar diferentes actores, que siempre son perfiles muy específicos:
-
-- Desarrolladores de malware
-    - Quien desarrolla el malware
-- Explotadores del malware
-    - Quienes se encargan de gestionar el robo de la información de los usuarios infectados
-- Distribuidores de datos robados
-    - Quienes venden los datos en la deep web o a otras organizaciones
-- Compradores de datos
-    - Otras organizaciones que compran los datos para usarlos en nuevos delitios o para revenderlos
-- "Mulas" para distribuir dinero
-    - Quienes mueven el dinero para blanquearlo u ocultarlo
-- Alojadores de contenidos o dominios
-    - Recursos ajenos usados por la organización para alojar su infraestructura
+- En una campaña de phishing por parte de un grupo cibercriminal, se podrían encontrar diferentes actores, que siempre son perfiles muy específicos:
+    - Desarrolladores de malware
+        - Quien desarrolla el malware
+    - Explotadores del malware
+        - Quienes se encargan de gestionar el robo de la información de los usuarios infectados
+    - Distribuidores de datos robados
+        - Quienes venden los datos en la deep web o a otras organizaciones
+    - Compradores de datos
+        - Otras organizaciones que compran los datos para usarlos en nuevos delitos o para revenderlos
+    - "Mulas" para distribuir dinero
+        - Quienes mueven el dinero para blanquearlo u ocultarlo
+    - Alojadores de contenidos o dominios
+        - Recursos ajenos usados por la organización para alojar su infraestructura
 
 ## 5. Respuesta al ciberdelito
 
