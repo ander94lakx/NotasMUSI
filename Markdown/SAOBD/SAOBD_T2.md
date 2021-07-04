@@ -333,7 +333,7 @@ de su nivel de privilegios
 - **Controlan desde dentro** su estado (variables, memoria, peticiones)
 - Permiten **detectar** amenazas **en tiempo real**
 - Tienen un gran inconveniente: **disminuir el rendimiento**
-- Segun sus acciones, se dividen en:
+- Según sus acciones, se dividen en:
     - RAST/IAST 🠒 Generar un informe
     - RASP 🠒 Bloquear
 
