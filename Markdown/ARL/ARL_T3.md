@@ -116,9 +116,9 @@
     - Para analizar, comprender y controlar mejor
 - *Definiciones*
     - **Medida**
-        - Indicación cuantitativa de un **atributos de un elemento**
+        - Indicación de un **atributos de un elemento**
     - **Métrica**
-        - Indicación cuantitativa
+        - Indicación **cuantitativa**
         - En que **grado se posee** un **atributo**
     - **Indicador de riesgos**
         - Métrica o combinación de varias
