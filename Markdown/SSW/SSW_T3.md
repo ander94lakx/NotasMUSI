@@ -375,7 +375,7 @@ int main(int argc, char **argv) {
 
 - :no_entry_sign:
 - **Problema**:
-    - El punteo `buf1R1` se vuelve a usar tras ser liberado
+    - El punteo `buf2R1` se vuelve a usar tras ser liberado
     - Puede desde crashear a leer algo corrupto o malicioso
 - **Solución**:
     - No usar punteros liberados
