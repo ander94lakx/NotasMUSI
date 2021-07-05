@@ -78,8 +78,8 @@
 
 ## 3. ISO 31000: Gestión del Riesgo – Directrices
 
-Herramienta para gestionar el riesgo
-Marco de referencia cuyo objetivo sea integrar el proceso de gestión del riesgo
+- Herramienta para gestionar el riesgo
+    - Marco de referencia cuyo objetivo sea integrar el proceso de gestión del riesgo
 
 ![ISO 31000](img/iso-31000.png)
 
