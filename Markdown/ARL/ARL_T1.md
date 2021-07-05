@@ -210,12 +210,12 @@
     - Los **objetivos** pertinentes a considerar
     - Su **alineamiento con los objetivos** de la organización
     - *Consideraciones*:
-        Los **objetivos** y las decisiones que se necesitan tomar
-        Los **resultados esperados** de las etapas a ejecutar en el proceso
-        El **tiempo**, la ubicación, las inclusiones y las exclusiones especificas
-        Las **herramientas y las técnicas** apropiadas de evaluación del riesgo
-        Los **recursos** requeridos, responsabilidades y registros a conservar
-        Las **relaciones** con otros proyectos, procesos y actividades
+        - Los **objetivos** y las decisiones que se necesitan tomar
+        - Los **resultados esperados** de las etapas a ejecutar en el proceso
+        - El **tiempo**, la ubicación, las inclusiones y las exclusiones especificas
+        - Las **herramientas y las técnicas** apropiadas de evaluación del riesgo
+        - Los **recursos** requeridos, responsabilidades y registros a conservar
+        - Las **relaciones** con otros proyectos, procesos y actividades
 2. **Contextos** externo e interno
     - Necesaria su comprensión y reflejarlos en el proceso de gestión del riesgo
     - Establecimiento del contexto del proceso de gestión del riesgo
