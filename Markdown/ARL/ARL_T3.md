@@ -2,9 +2,9 @@
 
 ## 1. Introducción
 
-Los contextos cambian
-►En general los parámetros y factores que influyen en la estimación del riesgo varían
-.►Se debe revisar las evaluaciones inicial, para que siga reflejando la situación del momento.
+- Los contextos cambian:
+    - Los parámetros y factores que influyen en la estimación del riesgo varían
+    - Se debe revisar las evaluaciones inicial, para que siga reflejando la situación del momento
 
 - **Ciclo de vida de la gestión de riesgos**
 proceso cíclico de evaluación y tratamiento del riesgo
