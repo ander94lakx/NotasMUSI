@@ -68,13 +68,13 @@
 
 ## 2. Política de seguridad de la información
 
-Política de seguridad de la información:
-Son las directrices y los principios de alto nivel
-Estrategia para definir objetivos
-En términos de negocio
-Identificar las características de la organización
-Obligaciones legales y contractuales
-Aprobada por la alta dirección
+- Política de seguridad de la información:
+    - Son las directrices y los principios de alto nivel
+    - Estrategia para definir objetivos
+    - En términos de negocio
+    - Identificar las características de la organización
+    - Obligaciones legales y contractuales
+    - Aprobada por la alta dirección
 
 ## 3. ISO 31000: Gestión del Riesgo – Directrices
 
