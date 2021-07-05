@@ -3,6 +3,7 @@
 ## 1. Introducción y objetivos
 
 > Auditoría: **Proceso sistemático** que consiste en **obtener y evaluar evidencias** sobre las afirmaciones relativas a los **actos y eventos sobre los sistemas** de información
+
 > Auditoría: Una **visión formal y sistemática** para determinar **hasta qué punto** una organización está **cumpliendo los objetivos** establecidos por la gerencia
 
 ## 2. Fundamentos y conceptos de la auditoría de sistemas de información
