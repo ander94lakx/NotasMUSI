@@ -94,7 +94,7 @@
     - La **facilidad de obtención de beneficio** por parte del atacante de la explotación de la vulnerabilidad
     - Las **capacidades técnicas** del **atacante**
     - La **facilidad de explotación** de la vulnerabilidad
-Existen muchos métodos para ello
+- Existen muchos métodos para ello:
     - Cuantitativos
     - Cuantitativos
     - Combinación
