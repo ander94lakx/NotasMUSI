@@ -5,11 +5,10 @@
 - Los contextos cambian:
     - Los parámetros y factores que influyen en la estimación del riesgo varían
     - Se debe revisar las evaluaciones inicial, para que siga reflejando la situación del momento
-
-- **Ciclo de vida de la gestión de riesgos**
-proceso cíclico de evaluación y tratamiento del riesgo
-mejora continua
-metodología objetiva, fiable, medible y replicable
+- **Ciclo de vida de la gestión de riesgos**:
+    - Proceso cíclico de evaluación y tratamiento del riesgo
+    - Mejora continua
+    - Metodología objetiva, fiable, medible y replicable
 
 ## 2. Evaluación de riesgos de TI
 
