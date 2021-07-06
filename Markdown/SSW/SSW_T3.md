@@ -323,7 +323,7 @@ int main(void) {
     - Se reserva memoria para 45 floats en una funcion local
     - Se retorna
     - Desde fuera no se tiene acceso al puntero 🠒 **No se puede liberar la memoria**: Memory leak
-        - `malloc()` **no limplia** la memoria cuando la reserva
+        - `malloc()` **no limpia** la memoria cuando la reserva
     - Puede desde malgastar memora a suponer un problema de seguridad
 - **Solución**:
     - Librera la memoria tras usarla
