@@ -54,32 +54,32 @@
 ## 3. Obtención del malware
 
 - Antes de poder analizar malware, hay que obtenerlo
-- **Formas de obtención** del malware
-- Páginas de Internet
-- Motores de búsqueda
-- Capturándolo en una máquina infectada de la organización
-- Capturándolo en una honeynet, honeypot y honeytokens
-    - Honeypot
-        - Sistema real o simulado con vulnerabilidades deliberadas para observar intrusiones e obtener malware
-        - *Clasificación de tipos*
-            - Uso
-                - Investigación: para estudiar las técnicas de ataques
-                - Producción: para evaluar como mejorar las defensas de la organización
-            - Implementación
-                - Física: caro pero más realista
-                - Virtual: barato pero menos realista
-            - Tipo de interacción
-                - Baja interacción: bajo riesgo pero emulación limitada (servicios, vulnerabilidades concretas, ...)
-                - Alta interacción: mayor riesgo pero simulan sistemas enteros y la información es más valiosa
-        - Ejemplos: Suricata, honeytrap
-    - Honeynet
-        - Red con uno o más honeypots
-        - Buscan simular redes o entornos enteros
-        - *Requisitos*
-            - Control de datos
-            - Captura de datos
-            - Recolección y análisis de datos
-        - Ejemplos: Modern Honey Network (MHN), T-Pot
+- **Formas de obtención** de malware:
+    - Páginas de Internet
+    - Motores de búsqueda
+    - Capturándolo en una máquina infectada de la organización
+    - Capturándolo en una honeynet, honeypot y honeytokens
+        - Honeypot
+            - Sistema real o simulado con vulnerabilidades deliberadas para observar intrusiones e obtener malware
+            - *Clasificación de tipos*
+                - Uso
+                    - Investigación: para estudiar las técnicas de ataques
+                    - Producción: para evaluar como mejorar las defensas de la organización
+                - Implementación
+                    - Física: caro pero más realista
+                    - Virtual: barato pero menos realista
+                - Tipo de interacción
+                    - Baja interacción: bajo riesgo pero emulación limitada (servicios, vulnerabilidades concretas, ...)
+                    - Alta interacción: mayor riesgo pero simulan sistemas enteros y la información es más valiosa
+            - Ejemplos: Suricata, honeytrap
+        - Honeynet
+            - Red con uno o más honeypots
+            - Buscan simular redes o entornos enteros
+            - *Requisitos*
+                - Control de datos
+                - Captura de datos
+                - Recolección y análisis de datos
+            - Ejemplos: Modern Honey Network (MHN), T-Pot
 
 ## 4. Entorno y herramientas análisis de malware
 
