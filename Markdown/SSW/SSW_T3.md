@@ -320,7 +320,7 @@ int main(void) {
 
 - :no_entry_sign:
 - **Problema**:
-    - Se reserva memoria para 45 floats en una funcion local
+    - Se reserva memoria para 45 floats en una función local
     - Se retorna
     - Desde fuera no se tiene acceso al puntero 🠒 **No se puede liberar la memoria**: Memory leak
         - `malloc()` **no limpia** la memoria cuando la reserva
@@ -581,8 +581,8 @@ int main(void) {
 - :no_entry_sign:
 - **Problema**:
     - No se especifica el formato en `printf()`
-    - Un atacante podría usar `%x` y `%s` para acceder a los conenidos
-        - Podría usar `%n` para escribir en las direcciones de memoria
+    - Un atacante podría usar `%x` y `%s` en la entrada para acceder a los conenidos
+        - Podría usar `%n` en la entrada para escribir en las direcciones de memoria
 - **Solución**:
     - Filtrar parámetros de formato de cadena
 
@@ -605,7 +605,8 @@ buf = malloc(readamt);
 
 - :no_entry_sign:
 - **Problema**:
-    - Si `getstringsize()` llega a devulver `0` 🠒 malloc brutalmente grande
+    - Si `getstringsize()` llega a devolver `0` 🠒 `malloc()` brutalmente grande
+        - restar -1 a un `unsigned int` (32 bits): `0000 0000 -> FFFF FFFF = 4.294.967.295`
 - **Solución**:
     - Comprobar límites superiores e inferiores
 
@@ -672,8 +673,8 @@ strcpy(cp_buf, buf);
 
 - :no_entry_sign:
 - **Problema**:
-    - No se comprueba el código de error de `fgets()`
-    - Si ha dado error, puede dejar el buffer sin `\0` 🠒 buffer overflow
+    - No se comprueba el valor que devuelve `fgets()` (devuelve `NULL` si no ha podido leer)
+    - Si ha dado error, `buf` puede no tener un `\0` para finalizar 🠒 **buffer overflow**
 - **Solución**:
     - Comprobar los códigos de error
 
@@ -695,11 +696,12 @@ for (Iterator i=users.iterator(); i.hasNext();) {
 
 - :no_entry_sign:
 - **Problema**:
-    - No se mira el valor de retorno de `read()` (numero de bytes leídos)
-    - Se procesa el archivo sin más
-    - Se puede aprovechar para meter informacion dañina
+    - No se mira el valor de retorno de `read()` (número de bytes leídos)
+        - Se procesa el archivo sin más
+    - Se puede aprovechar para para que los datos de un usuario pasen a otro
+        - Al leer menos cantidad, la parte del final de `byteArray` **no se sobreescribe**
 - **Solución**:
-    - Comprobar siempre que los valores de retorno de una funcion sean los esperados
+    - Comprobar siempre que los valores de retorno de una función sean los esperados
 
 ### Manejo de errores mediante excepciones
 
@@ -813,7 +815,7 @@ String generateCouponCode(String couponBase) {
 
 - :no_entry_sign:
 - **Problema**:
-    - Se usa una funcion de generacion de numeros aleatoria insegura
+    - Se usa una función de generacion de numeros aleatoria insegura
 - **Solución**:
     - Usar implementacion segura: `Java.security.SecureRandom`
     - Usar un PRNG criptográfico
