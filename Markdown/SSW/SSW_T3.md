@@ -965,13 +965,13 @@ int main(int argc, char* argv[]) {
 
 - :no_entry_sign:
 - **Problema**:
-    - El programa de arriba usa perror para escribir un error en la salida de errores estandar
+    - El programa de arriba usa `perror` para escribir un error en la salida de errores estandar
         - Lo que escribe es el argumento
     - Si otro programa (el de abajo) ejecuta el primero pero cerrando el FD 2 (el de errores)
-    - Cuando el programa de arriba haga open le devolverá el FD 2 (el siguiente libre)
-    - Cuando haga el `perror(argv[1])` escribira el argumento
+    - Cuando el programa de arriba haga `open()` le devolverá el FD 2 (el siguiente libre)
+    - Cuando haga el `perror(argv[1])` escribirá el argumento
         - Pero no en la salida de errores, sino en `/etc/passwd`
-        - El programa atacante aprovecha esto para escribir una entrada en ese archivo que le de accesos con privilegios root
+        - El programa atacante aprovecha esto para escribir una entrada en ese archivo que le da accesos con privilegios root
 - **Solución**:
     - Asegurarse que los tres primeros descriptores de archivo (0, 1, 2) se abren a archivos seguros conocidos antes del comienzo de su ejecución
 
