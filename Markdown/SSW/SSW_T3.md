@@ -323,6 +323,7 @@ int main(void) {
     - Se reserva memoria para 45 floats en una funcion local
     - Se retorna
     - Desde fuera no se tiene acceso al puntero 🠒 **No se puede liberar la memoria**: Memory leak
+        - `malloc()` **no limplia** la memoria cuando la reserva
     - Puede desde malgastar memora a suponer un problema de seguridad
 - **Solución**:
     - Librera la memoria tras usarla
@@ -345,7 +346,8 @@ if (errors > 0) {
 - :no_entry_sign:
 - **Problema**:
     - Se esta usando un **puntero** que **ya ha sido liberado**
-    - Si un **atacante llena esa zona** 🠒 **buffer overfloy**
+        - El comportamiento que puede tener **es indefinido**
+    - Si un atacante llena esa zona 🠒 puede llega a **buffer overflow**
 - **Solución**:
     - No usar punteros ya liberados
 
@@ -395,7 +397,8 @@ free(ab);
 - :no_entry_sign:
 - **Problema**:
     - Se libera un puntero dos veces
-    - Puede corromper la memoria o abrir brechas para realizar buffer overflow
+    - El comportamiento que puede tener **es indefinido**
+        - Puede corromper la memoria o abrir brechas para realizar buffer overflow
 - **Solución**:
     - No liberar un puntero ya liberado
 
@@ -419,7 +422,9 @@ int main(int argc, char *argv[]) {
 - :no_entry_sign:
 - **Problema**:
     - Se usa un puntero nulo
-    - Segmentation fault
+    - El comportamiento que puede tener **es indefinido**
+        - Segmentation fault
+    - En lenguajes con tratamiento de excepciones 🠒 `NullPointerException`
 - **Solución**:
     - No usar punteros nulos (comprobacion)
 
@@ -435,10 +440,34 @@ int main(int argc, char *argv[]) {
 #### Funciones inherentemente peligrosas
 
 - Entre ellas, las más comunes en C son:
-    - `gets()`
-    - `scanf()` (`fscanf()`, `wscanf()`)
-    - `strcpy()` (`wcscpy()`, `lstrcpy()`)
-    - `sprintf()` (`fprintf()`, `printf()`, `swprintf()`)
+    - **`gets()`**
+        - Lee hasta encontrar `\0`
+        - Si la entrada es más grande que el destino 🠒 **buffer overflow**
+        - **Versiones seguras**: (piden longitud máxima)
+            - Linux 🠒 `fgets()`
+            - Windows 🠒 `gets_s()`
+    - **`scanf()`** (`fscanf()`, `wscanf()`)
+        - Lee con formato
+            - Con `"%s"` lee hasta encontrar un caracter no ASCII
+                - Con `"%29s"` se puede controlar el numero de caracteres
+        - Si la entrada es más grande que el destino 🠒 **buffer overflow**
+        - **Versiones seguras**: (pide longitud máxima)
+            - Linux 🠒 No hay
+            - Windows 🠒 `scanf_s()`
+    - **`strcpy()`** (`wcscpy()`, `lstrcpy()`)
+        - Copia el contenido de un buffer en otro
+            - Copia de origen a destino hasta que en origen encuentra `\0`
+        - Si el origen es más grande que el destino 🠒 **buffer overflow**
+        - **Versiones seguras**: (pide longitud máxima)
+            - Linux 🠒 `strncpy()`
+            - Windows 🠒 `strcpy_s()`
+    - **`sprintf()`** (`fprintf()`, `printf()`, `swprintf()`)
+        - "Imprime" con formato pero en otro string
+        - Si la combinación resultante es más grande que el destino 🠒 **buffer overflow**
+        - Se puede hacer algo más segura si se usan modificadores como `"%16s"`
+        - **Versiones seguras**: (pide longitud máxima)
+            - Linux 🠒 `snprintf()`
+            - Windows 🠒 `sprintf_s()`
 
 ```c
 char line[512];
@@ -477,11 +506,8 @@ sprintf(speed, "%s/%d", (cp = getenv("TERM")) ? cp : "", (def_rspeed > 0) ? def_
 - :no_entry_sign:
 - **Problema**:
     - Se explotan llamadas a funciones inseguras
-    - Este tipo de funciones tienen  el inconventiene de leer hasta carácter nulo `\0`
-        - Las hace fácilmente explotables
-    - Segun el tipo se pueden hacer diferentes acciones:
-        - Jugar con las combicaciones de tamaños y conversiones de formatos
-            - Buffer overflow
+        - Este tipo de funciones tienen el inconventiene de leer hasta carácter nulo `\0`
+        - No limitan el tamaño de la entrada/origen, por lo que si es más grande que el destino 🠒 **buffer overflow**
 - **Solución**:
     - Usar versiones seguras de estas funciones
 
@@ -500,7 +526,14 @@ strncpy(path, buf, len);
 - :no_entry_sign:
 - **Problema**:
     - **Off-by-one**
-        - Al copias se usa un len incorrecto, ya que el `\0` se pone despues y la longitud que de puede ser hasta `sizeof(path)`
+        - `readlink()` copia el contenido en `buf`
+            - Tiene un límite, determinado por `sizeof(path)`
+            - **No añade un `\0`** al copiar
+        - Si copia el máximo que puede, la siguiente linea añade un `\0` en la posicion siguiente al final, **fuera del array**
+            - Esto puede causar problemas
+                - La memoria esa está marcada como libre, asi que se puede pisar en cualquier momento
+        - Después, al hacer `strncpy()` (es función segura) para copiar el contenido a `path` **se copiará todo menos el `\0`** porque está fuera de `buf` y `len` limita la cantidad de datos a copiar
+            - **Buffer overflow** en `path`
 - **Solución**:
     - Nunca truncar los datos
     - Si la entrada es demasiado grande ir leyendo iterativamente
@@ -518,7 +551,9 @@ int length = strlen(buf);
     - `readlink()` no termina con `\0` su buffer
     - Valor incorrecto de `length`
 - **Solución**:
-    - Nunca asumir que los datos estan bien terminados
+    - Nunca asumir que los datos están bien terminados
+    - En ocasiones, añadir **`\0` al final**
+        - Ojo con el *problema del **off-by-one***
 
 #### Errores de formato de cadena (format strings)
 
@@ -545,7 +580,7 @@ int main(void) {
 
 - :no_entry_sign:
 - **Problema**:
-    - No se espedifica el tipo de dato en `printf()`
+    - No se especifica el formato en `printf()`
     - Un atacante podría usar `%x` y `%s` para acceder a los conenidos
         - Podría usar `%n` para escribir en las direcciones de memoria
 - **Solución**:
