@@ -190,11 +190,11 @@ Objetivo: Falsificar una Reserva de vuelos
     - **Análisis de debilidad**
         - Impacto de dependencias del software externo
 
-## 7. Patrones de diseño
+## 7. Patrones de seguridad
 
 - *Patrón de diseño*:
     - Una solución general repetible a un problema de **ingeniería de software**
-- *Patrón de diseño **de seguridad***:
+- *Patrón **de seguridad***:
     - Una solución general repetible a un problema de **seguridad del software**
 
 ## 8. Pruebas de seguridad basadas en riesgo
@@ -209,7 +209,7 @@ Objetivo: Falsificar una Reserva de vuelos
         - Inyección de fallos en el código fuente
     - **Caja negra**
         - Pruebas de penetración
-        - Análisis dinámico
+        - Análisis dinámico (DAST)
         - Fuzzing testing
         - Análisis de código binario
         - Inyección de fallos en binarios
