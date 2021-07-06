@@ -3,46 +3,46 @@
 ## 1. Listado de vulnerabilidades en el código (ejemplos, problemas y soluciones)
 
 - *Manejo de la entrada de datos*
-    - Límites de confianza
-    - Comprobar la longitud de entrada
-    - Comprobar el tamaño de los campos numéricos
+    - [ ] Límites de confianza
+    - [ ] Comprobar la longitud de entrada
+    - [ ] Comprobar el tamaño de los campos numéricos
     - *Prevenir vulnerabilidades de meta-caracteres*
-        - SQL injection
-        - Path Traversal
-        - Inyección de comandos
-        - Falsificación de logs
+        - [ ] SQL injection
+        - [ ] Path Traversal
+        - [ ] Inyección de comandos
+        - [ ] Falsificación de logs
 - *Desbordamiento de buffer*
-    - Seguridad de tipo
-    - Seguridad en llamadas a métodos nativos
-    - Desbordamiento de buffer basado en el stack
+    - [ ] Seguridad de tipo
+    - [ ] Seguridad en llamadas a métodos nativos
+    - [ ] Desbordamiento de buffer basado en el stack
     - *Reserva dinámica de memoria (heap overflow)*
-        - Memory leaks
-        - Use after free
-        - Dereference after free
-        - Double free
-        - Null dereference
+        - [ ] Memory leaks
+        - [ ] Use after free
+        - [ ] Dereference after free
+        - [ ] Double free
+        - [ ] Null dereference
     - *Manipulación de strings*
-        - Funciones peligrosas
-        - Errores de truncado
-        - Mantenimiento del `\0`
-        - Format strings
+        - [ ] Funciones peligrosas
+        - [ ] Errores de truncado
+        - [ ] Mantenimiento del `\0`
+        - [ ] Format strings
 - *Integers overflows*
-    - Integer overflows
-    - Conversiones entre enteros con signo y sin signo
+    - [ ] Integer overflows
+    - [ ] Conversiones entre enteros con signo y sin signo
 - *Errores y excepciones*
-    - Manejar errores mediante códigos de retorno
-    - Manejo de errores mediante excepciones
-    - Desasignar los recursos que no se van a utilizar en adelante
+    - [ ] Manejar errores mediante códigos de retorno
+    - [ ] Manejo de errores mediante excepciones
+    - [ ] Desasignar los recursos que no se van a utilizar en adelante
 - *Privacidad y confidencialidad*
-    - Mantener las password fuera del código fuente
-    - Número aleatorios
+    - [ ] Mantener las password fuera del código fuente
+    - [ ] Número aleatorios
 - *Programas privilegiados*
-    - Manejo de los privilegios
+    - [ ] Manejo de los privilegios
     - *Ataques de escalada de privilegios*
-        - Ataque de condiciones de carrera en el acceso a ficheros
-        - Ficheros temporales inseguros
-        - Inyección de comandos
-        - Descriptores de ficheros
+        - [ ] Ataque de condiciones de carrera en el acceso a ficheros
+        - [ ] Ficheros temporales inseguros
+        - [ ] Inyección de comandos
+        - [ ] Descriptores de ficheros
 
 ## 2. Manejo de la entrada de datos
 
