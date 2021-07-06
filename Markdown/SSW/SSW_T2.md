@@ -50,12 +50,12 @@
             - **DFD** (Diagrama de flujo de datos): Entidades externas, procesos, almacenes de datos, flujos de trabajo, ...
         2. *Identificación de amenazas*
             - **STRIDE** para identificar las amenazas
-                *Spoofing* 🠒 Autenticación
-                *Tampering* 🠒 Integridad
-                *Repudiation* 🠒 No repudio
-                *Infromation disclosure* 🠒 Confidencialidad
-                *DoS* 🠒 Disponibilidad
-                *Elevation o privilege* 🠒 Autorización
+                - *Spoofing* 🠒 Autenticación
+                - *Tampering* 🠒 Integridad
+                - *Repudiation* 🠒 No repudio
+                - *Infromation disclosure* 🠒 Confidencialidad
+                - *DoS* 🠒 Disponibilidad
+                - *Elevation o privilege* 🠒 Autorización
             - **DREAD** para valorar las amenazas
                 - *Damage* 🠒 ¿cuál es el daño que puede originar la vulnerabilidad si llega a ser explotada?
                 - *Reproducibility* 🠒 ¿es fácil reproducir las condiciones que propicien el ataque?
@@ -81,8 +81,8 @@
 ## 4. Modelado de ataques
 
 - Dos perspectivas
-Defensor
-Atacante
+    - Defensor
+    - Atacante
 - Formas de modelar la perspectiva del atacante
     - **Patrones de ataque**
     - **Árboles de ataque**
@@ -106,7 +106,7 @@ Atacante
         - Contiene muchísima información de cada patrón:
             - Severidad, requisitos, posibles explotaciones, recursos necesarios, ejemplos, soluciones, ...
 
-### Patrones de ataque
+### Árboles de ataque
 
 - Árboles de ataque:
     - **Método sistemático para caracterizar la seguridad** de un sistema
@@ -116,7 +116,7 @@ Atacante
 - El recorrido en árbol permite identificar **todas las posibles técnicas** que podrían ser utilizados para comprometer la seguridad del sistema
 - Se enfoca en las **causas** del problema
 - **Representación**
-    Sencilla de seguir
+    - Sencilla de seguir
         - **Textual**
         - **Gráfica**
     - Conexión AND
@@ -125,22 +125,22 @@ Atacante
         - Son diferentes formas de llegar al mismo lugar
     - *Ejemplo*:
 
-        ```text
-        Objetivo: Falsificar una Reserva de vuelos
-            1. Convencer al empleado de agregar una reserva falsa
-                1.1 Chantaje empleado
-                1.2 Amenazar empleado
-            2. Acceder y modificar la base de datos de vuelos
-                2.1 Realizar una inyección SQL en la página Web
-                2.2 Iniciar una sesión en la base de datos
-                    2.2.1 Adivinar la contraseña
-                    2.2.2 Obtener la contraseña rastreando la red (sniff)
-                    2.2.3 Robar la contraseña del servidor
-                        2.2.3.1 Obtener una cuenta del servidor (AND)
-                            2.2.3.1.1 Desbordamiento de buffer
-                            2.2.3.1.2 Obtener acceso cuenta empleado
-                        2.2.3.2 Explotar condición de carrera acceso perfil protegido
-        ```
+```text
+Objetivo: Falsificar una Reserva de vuelos
+    1. Convencer al empleado de agregar una reserva falsa
+        1.1 Chantaje empleado
+        1.2 Amenazar empleado
+    2. Acceder y modificar la base de datos de vuelos
+        2.1 Realizar una inyección SQL en la página Web
+        2.2 Iniciar una sesión en la base de datos
+            2.2.1 Adivinar la contraseña
+            2.2.2 Obtener la contraseña rastreando la red (sniff)
+            2.2.3 Robar la contraseña del servidor
+                2.2.3.1 Obtener una cuenta del servidor (AND)
+                    2.2.3.1.1 Desbordamiento de buffer
+                    2.2.3.1.2 Obtener acceso cuenta empleado
+                2.2.3.2 Explotar condición de carrera acceso perfil protegido
+```
 
 ## 5. Ingeniería de requisitos de seguridad
 
@@ -150,13 +150,13 @@ Atacante
     - Requisitos **servicios de seguridad** (funcionales o positivos)
         - **Funciones que implementan políticas de seguridad**
             - **Ejemplos**: control de acceso, autorización, cifrado, gestión de claves
-        - Requisitos de **software seguro** (no funcionales o negativos)
-            - Requisitos que afectan directamente a la **probabilidad de que el software sea seguro**
-                - Completos
-                - Precisos
-                - Coherentes
-                - Trazables
-                - Verificables
+    - Requisitos de **software seguro** (no funcionales o negativos)
+        - Requisitos que afectan directamente a la **probabilidad de que el software sea seguro**
+            - Completos
+            - Precisos
+            - Coherentes
+            - Trazables
+            - Verificables
 - Es necesario definir también estos requisitos al inicio del SDLC (fase de requisitos)
 - Herramientas:
     1. Identificación de amenazas (DFD)
