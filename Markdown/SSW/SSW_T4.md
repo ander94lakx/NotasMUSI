@@ -183,7 +183,7 @@
 
 - *Herramientas*: DependencyWalker, PEBrowse, PEiD, pestudio, ...
 
-### Análisis estático
+### Análisis de código
 
 1. Comprobación del funcionamiento general del mismo
 2. **Análisis estático de código**
