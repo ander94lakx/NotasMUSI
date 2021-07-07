@@ -70,4 +70,53 @@
         - **Coste potencial de la no implementación del control**
     - **Riesgo vs. control vs. coste**
 
-## ANEXO: Listado con ejemplos de controles
+## ANEXO: Listado con ejemplos de controles (thanks [@1nc0gn1t0guy](https://github.com/1nc0gn1t0guy))
+
+- Controles *preventivos*:
+    1. Conexión redundante a la red eléctrica con compañías diferentes.
+    2. Backups
+    3. Realizar firmas antes de realizar cualquier pago
+    4. Pedir que los empleados no fumen para evitar incendios
+    5. Utilizar IPS
+    6. Utilizar contraseñas seguras
+    7. No usar dispositivos móviles en el entorno de trabajo
+    8. No utilizar el ordenador corporativo en casa
+    9. No utilizar el ordenador corporativo en redes públicas
+    10. Utilizar principio de mínimos privilegios
+    11. Concienciar a los empleados sobre las buenas prácticas
+    12. Entrenar a los empleados
+    13. Usar fuerte criptografía para la transmisión de datos
+    14. Controlar los programas descargados en los ordenadores
+    15. Proteger los ordenadores contra robo o daños naturales
+- Controles *detectivos*:
+    1. Utilizar herramientas para controlar los ordenadores en la nube
+    2. Puntos de verificación en los trabajos de producción
+    3. Mensajes de error
+    4. Utilizar IDS
+    5. Generar alertas sobre intrusiones
+    6. Utilizar cámaras de seguridad conectadas 24/7
+    7. Usar alarmas contra incendios
+    8. Usar alarmas contra inundación
+    9. Usar alarmas contra intrusos
+    10. Detector de subidas de tensión
+    11. Antivirus controlando el ordenador para detectar amenazas
+    12. Detector de intrusiones wifi
+    13. Detector de ataques de fuerza bruta
+    14. Sistemas SIEM
+    15. Detector de escaneo de puertos
+- Controles *correctivos*:
+    1. Sistema de restauración automático
+    2. Utilización de un SAI frente a apagón
+    3. Sumideros para evacuar agua en caso de inundación
+    4. Extintores de emergencia
+    5. Sistema de apagado de incendios automático
+    6. Utilización de fusibles frente a subidas de tensión
+    7. Corte de acceso a sistemas ante un ataque
+    8. IPS que corte el acceso a un sistema posiblemente atacado
+    9. Sistema de apagado automático de sistemas
+    10. Utilización de los backups en caso de error
+    11. Demanda en caso de traición a la empresa
+    12. Formateo en caso de error
+    13. Subcontratar equipo de respuesta a incidentes
+    14. Finalización del contrato
+    15. Honey net para engañar al atacante y contener su ataque mientras se mitiga el fallo
