@@ -151,41 +151,41 @@
 - Sesiones:
     - Variables que se pueden utilizar en cada una de las interacciones del usuario con la aplicación Web hasta que finalice su sesión
 - **ID de sesión** (token):
-- *Formas*:
-    - **Cookie** (cabecera HTTP estándar): `Cookie: id=012345; ...`
-        - El más común
-        - Otra cabecera HTTP estándar `Set-Cookie: id=012345`
-            - **Usar**:
-                - **`secure`** (solo HTTPS)
-                - **`HttpOnly`** (no desde scripts)
-        - Enviada en cada petición
-    - Parámetro URL (URL rewriting): `https://portal.example.com/ private;id=01234...`
-    - Argumento URL (petición GET): `https://portal.example.com/ private?id=01234...`
-    - Argumento cuerpo (petición POST): `id=012345&...`
-    - Campo oculto de formulario (HTML): `<input type="hidden" name="id" value="012345">`
-- *Debe ser*:
-    - **No predecible** (~ aleatorio)
-    - **Largo**, para evitar ataques de fuerza bruta
-    - **Sin significado**, para que no se puedan extraer datos de él
-    - **Expiración**, **limitaciones de uso**, ...
-- *Ataques*:
-    - **Revelación** (pasivo)
-    - **Captura de la sesión** (activo)
-        - MITM, vulnerabilidades del navegador
-        - **Robo** de sesión
-            - XSS para inyectar código para enviar `document.cookie` a una URL suya
-            - Sidejacking
-        - **Fijación de sesión**
-    - Predicción y **fuerza bruta** de la sesión
-- *Defensas*:
-    - **Timeouts** y **limpiar** cookies en cliente
-    - Renovación de ID al autenticar o cambiar privilegios
-    - Propiedades de las cookies
-        - **`secure`** (solo HTTPS)
-        - **`HttpOnly`** (no desde scripts)
-        - **`SameSite: strict`**
-    - **Nunca revelar** ID de sesión (secure)
-    - Monitorizar
+    - *Formas*:
+        - **Cookie** (cabecera HTTP estándar): `Cookie: id=012345; ...`
+            - El más común
+            - Otra cabecera HTTP estándar `Set-Cookie: id=012345`
+                - **Usar**:
+                    - **`secure`** (solo HTTPS)
+                    - **`HttpOnly`** (no desde scripts)
+            - Enviada en cada petición
+        - Parámetro URL (URL rewriting): `https://portal.example.com/ private;id=01234...`
+        - Argumento URL (petición GET): `https://portal.example.com/ private?id=01234...`
+        - Argumento cuerpo (petición POST): `id=012345&...`
+        - Campo oculto de formulario (HTML): `<input type="hidden" name="id" value="012345">`
+    - *Debe ser*:
+        - **No predecible** (~ aleatorio)
+        - **Largo**, para evitar ataques de fuerza bruta
+        - **Sin significado**, para que no se puedan extraer datos de él
+        - **Expiración**, **limitaciones de uso**, ...
+    - *Ataques*:
+        - **Revelación** (pasivo)
+        - **Captura de la sesión** (activo)
+            - MITM, vulnerabilidades del navegador
+            - **Robo** de sesión
+                - XSS para inyectar código para enviar `document.cookie` a una URL suya
+                - Sidejacking
+            - **Fijación de sesión**
+        - Predicción y **fuerza bruta** de la sesión
+    - *Defensas*:
+        - **Timeouts** y **limpiar** cookies en cliente
+        - Renovación de ID al autenticar o cambiar privilegios
+        - Propiedades de las cookies
+            - **`secure`** (solo HTTPS)
+            - **`HttpOnly`** (no desde scripts)
+            - **`SameSite: strict`**
+        - **Nunca revelar** ID de sesión (secure)
+        - Monitorizar
 
 ### Autorización
 
