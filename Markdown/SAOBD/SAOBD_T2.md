@@ -283,7 +283,7 @@ de su nivel de privilegios
 
 - **Tipos** de herramientas semiautomáticas:
     - Análisis estático:
-        - **SAST** (*Static Analysis Security Rools*)
+        - **SAST** (*Static Analysis Security Tools*)
     - Análisis dinámico:
         - Black box:
             - **DAST** (*Dynamic Analysis Security Tools*)
@@ -302,7 +302,7 @@ de su nivel de privilegios
 - Siempre va a haber un proceso de:
     - **Interpretar** resultados
     - Descartar **falsos positivos**
-        - Estas herramientas tienden a mostrar mas errores de los que hay "por si acaso"
+        - Estas herramientas tienden a mostrar más errores de los que hay "por si acaso"
     - Búsqueda manual de **falsos negativos**
 - *Ejemplos*: Fortify SCA,, Synopsys
 - Son **muy útiles desde fases tempranas** del desarrollo
@@ -318,7 +318,6 @@ de su nivel de privilegios
         - XSS, SQLi, Path traversal, Command Injection, defectos de configuración, HTTP response splitting, ...
 - También dan falsos positivos (y falsos negativos)
 - *Ejemplos*: Webinspect, OWASP ZAP, ...
-
 - *Fases*:
     - **Reconocimiento** de las capas de la aplicación
         - Averiguar: tecnologías usadas, OS, servidor de aplicaciones, SGBD, puertos, lenguajes, ...
@@ -367,7 +366,7 @@ de su nivel de privilegios
         - No evita ataques
     - En línea
         - **Proxy inverso**
-            - Bloquean de forma activa el tráfico (~ IDS)
+            - Bloquean de forma activa el tráfico (~ IPS)
         - **Proxy transparente**
             - Puente de nivel 2 entre el FW de red y el servidor de aplicaciones
     - **Embebido en host**
