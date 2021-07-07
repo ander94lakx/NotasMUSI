@@ -200,7 +200,7 @@ proveedor de servicio vía HTTP, SMTP…
                 - Sobre un atributo
                 - Sobre decisiones de autorización
 - __**XACML**__ (*eXtensible Access Control Markup Language*)
-    - EStandar bajo XML para crear un lenguaje para definir la **autorización**
+    - Estándar bajo XML para crear un lenguaje para definir el **control de acceso** (y autorización)
     - Permite flexibilidad para definir las politicas de autorización
     - *Dos esquemas*:
         - **Esquema** para **mensajes de autorización**
