@@ -113,8 +113,8 @@ proveedor de servicio vía HTTP, SMTP…
 - Los servicios web son vulnerables a muchas de las vulnerabilidades de las aplicaciones web:
     - SQLI, XSS, Path traversal, Command Injection, ....
 - Pero hay una serie de **vulnerabilidades especificas** para estos servicios y sus tecnologías
-    - **XML Injection
-    - ****Xquery Injection**
+    - **XML Injection**
+    - **Xquery Injection**
     - **Xpath Injection**
     - **XML External Entities**
         - LFI/RFI poniendo rutas a archivos en el mensaje
@@ -144,7 +144,7 @@ proveedor de servicio vía HTTP, SMTP…
 - __**WS-Policy**__
     - Capacidades, requisitos y **características generales de seguridad** de las entidades de un sistema de Web Services basados en XML
     - Base para otras especificaciones
-        - WS-Ssecurity-Policy (oasis)
+        - WS-Security-Policy (oasis)
         - WS-Reliable-Messaging (oasis)
         - WS Addressing (w3c)
         - WS SecureConversation (oasis)
@@ -199,7 +199,7 @@ proveedor de servicio vía HTTP, SMTP…
                 - Pueden informar acerca de la autenticación
                 - Sobre un atributo
                 - Sobre decisiones de autorización
-- __**XACML**__ (*eXtensible Authorization Markup Language*)
+- __**XACML**__ (*eXtensible Access Control Markup Language*)
     - EStandar bajo XML para crear un lenguaje para definir la **autorización**
     - Permite flexibilidad para definir las politicas de autorización
     - *Dos esquemas*:
