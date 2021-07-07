@@ -56,7 +56,7 @@
 
 ## 4. Arquitecturas y tecnologías de desarrollo de las aplicaciones web
 
--*Clasificación de aplicaciones*:
+- *Clasificación de aplicaciones*:
     - No Web
         - Cliente – Servidor
         - SOA (Java, RMI, Corba, ...)
