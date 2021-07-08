@@ -1,15 +1,13 @@
 # Tema 3: El proceso de auditoría de sistemas de la información
 
-## 1. Introducción y objetivos
-
-## 2. Estándares de auditoría
+## 1. Estándares de auditoría
 
 - **Definen los requerimientos obligatorios** para la auditoría de sistemas y la generación del informe
 - Son elaboradas por **organismos internacionales de la auditoría** de sistemas como, por ejemplo:
     - **ISACA** (*Information System Audit and Control Association*)
     - **IIA** (*Institute of Internal Auditors*)
 
-## 3. Herramientas y técnicas de auditoría
+## 2. Herramientas y técnicas de auditoría
 
 - Conjunto de **programas y ayudas** para el trabajo de los auditorías
 - *Ejemplos*:
@@ -23,7 +21,7 @@
     - Herramientas de evaluación de seguridad
         - Ejemplos: Nessus, Wireshark, Winaudit, Nmap, CASE (BD), CAAT, ...
 
-## 4. Planificación de la auditoría
+## 3. Planificación de la auditoría
 
 - *Esquema de auditoría*:
     - **Objetivo** de la auditoría
@@ -46,19 +44,19 @@
         - Tener en cuenta tareas, fases y deadlines
 - Toda la planificación se refleja en 🠒 **Plan de auditoría**
 
-## 5. Metodología de auditoría
+## 4. Metodología de auditoría
 
 - Conjunto de procedimientos documentados de auditoría diseñados para alcanzar los objetivos de auditoría planificados
 - Depende del tipo de auditoria a realizar
 - Hay muchos metodologías de auditorias enfocadas tanto a auditorías de gestión como a auditorías técnicas
 
-## 6. Objetivos de la auditoría
+## 5. Objetivos de la auditoría
 
 - Metas específicas que deben cumplirse por parte de la auditoría
     - Aseguramiento de CID
     - Aseguramiento de cumplimiento legal o regulatorio
 
-## 7. Evidencia
+## 6. Evidencia
 
 - Información usada por el auditor para determinar si se cumple con los criterios u objetivos establecidos
 - Criterios para evaluar lo confiable que es una evidencia:
@@ -75,7 +73,7 @@
     - Observación de procesos y desempeño de empleados
     - Muestreo
 
-## 8. Comunicación de los resultados de la auditoría
+## 7. Comunicación de los resultados de la auditoría
 
 - Hay que:
     - Asegurarse de que los **hechos** presentados **en el informe** estén **correctos**
