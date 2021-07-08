@@ -86,13 +86,12 @@
 
 ### Estructura y contenido del informe de auditoría
 
-Podríamos distinguir dos tipos de informe:
-Informe **preliminar**
-    - Borrador que se distribuye a ciertos interesados (gerencia o direcciones de departamentos auditados)
-Informe **definitivo**
-    - Informe preliminar + observaciones y desacuerdos
-
-**Estructura** del informe de auditoria:
+- Distinguir dos tipos de informe:
+    - Informe **preliminar**
+        - Borrador que se distribuye a ciertos interesados (gerencia o direcciones de departamentos auditados)
+    - Informe **definitivo**
+        - Informe preliminar + observaciones y desacuerdos
+- **Estructura** del informe de auditoria:
     - Antecedentes
     - Alcance
     - Resumen de la auditoría
