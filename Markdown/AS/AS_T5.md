@@ -260,7 +260,7 @@
 
 ### OASAM (*Open Android Security Assessment Methodology*)
 
-- Metodología abierta para probar la seguridad de redes inalambricas con **9 categorías**:
+- Metodología abierta para probar la seguridad de dispositivos Android con **9 categorías**:
     1. **OASAM-INFO**: Recolección de información
     2. **OASAM-CONF**: Configuration and Deploy Management
     3. **OASAM-AUTH**: Autenticación
