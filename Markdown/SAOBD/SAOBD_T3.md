@@ -188,7 +188,7 @@ proveedor de servicio vía HTTP, SMTP…
 
 ### Sistemas de gestión de identidades: autenticación, autorización
 
-- __**SAML**__ (*Security Authorization Markup Language*)
+- __**SAML**__ (*Security Assertion Markup Language*)
     - Protocolo que permite implementar los servicios de **autenticación y autorización** en SW
         - **Declaración**:
             - *Authentication*: informa sobre la autenticación de un sujeto particular
@@ -201,7 +201,7 @@ proveedor de servicio vía HTTP, SMTP…
                 - Sobre decisiones de autorización
 - __**XACML**__ (*eXtensible Access Control Markup Language*)
     - Estándar bajo XML para crear un lenguaje para definir el **control de acceso** (y autorización)
-    - Permite flexibilidad para definir las politicas de autorización
+    - Permite flexibilidad para definir las políticas de autorización
     - *Dos esquemas*:
         - **Esquema** para **mensajes de autorización**
         - **Esquema** para **políticas de acceso**
