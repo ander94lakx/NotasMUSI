@@ -2,7 +2,29 @@
 
 My personal notes for the different subjects of my Master's degree in Computer security (in spanish)
 
-> :green_circle: 🠒 Terminado :yellow_circle: 🠒 Falta alguna cosa :orange_circle: 🠒 Faltan temas :white_circle: 🠒 404 Apuntes not found
+## Dislcaimer
+
+> 1. The notes in this repository may contain mistakes and errors of any kind. I am not responsible for any mistakes that I may put in them, nor for any failed exams that may be caused by studying from them. They were useful for me to summarize all the syllabus of the master and study from them (besides getting a fucking great score).
+> 
+> 2. The notes of this repository follow the structure of the master I studied.  Other masters may have another type of structure and content, so it may not have all the necessary content for your studies.
+> 
+> 3. The notes are in Spanish, the language in which I studied the master.Even so, the schematic form of the notes may not be the most appropriate way to study this type of content if you do not understand Spanish well. It is also not the most recommended content to be used to learn the language.
+> 
+> 4. This is free documentation and it is licences using the Unlicense license, only modified to change "software" for "documentation". Therefore, you may copy, modify, publish, use, compile, sell, distribute and steal this documentation and I don't give a fuck about it.
+
+## Estado
+
+El estado de los apuntes se basa en la siguiente escala, y se indica en cada asignatura.
+
+> :green_circle: 🠒 Terminado
+> 
+> :yellow_circle: 🠒 Falta alguna cosa
+> 
+> :orange_circle: 🠒 Faltan temas
+> 
+> :white_circle: 🠒 404 Apuntes not found
+
+## Índice
 
 - **Análisis de Riesgos Legales** (ARL) :two: :green_circle:
 
