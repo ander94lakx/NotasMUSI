@@ -1,6 +1,6 @@
 # NotasMUSI
 
-My personal notes for the different subjects of my Master's degree in Computer security (in spanish)
+My personal notes for the different subjects of my Master's degree in Computer Security (in Spanish)
 
 ## Dislcaimer
 
@@ -8,7 +8,7 @@ My personal notes for the different subjects of my Master's degree in Computer s
 > 
 > 2. The notes of this repository follow the structure of the master I studied.  Other masters may have another type of structure and content, so it may not have all the necessary content for your studies.
 > 
-> 3. The notes are in Spanish, the language in which I studied the master.Even so, the schematic form of the notes may not be the most appropriate way to study this type of content if you do not understand Spanish well. It is also not the most recommended content to be used to learn the language.
+> 3. The notes are in Spanish, the language in which I studied the master. Even so, the schematic form of the notes may not be the most appropriate way to study this type of content if you do not understand Spanish well. It is also not the most recommended content to be used to learn the language.
 > 
 > 4. This is free documentation and it is licences using the Unlicense license, only modified to change "software" for "documentation". Therefore, you may copy, modify, publish, use, compile, sell, distribute and steal this documentation and I don't give a fuck about it.
 
